@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prodigytasfin.github.io/sitemap.xml
