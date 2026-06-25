@@ -9,13 +9,18 @@ name="viewport"
 content="width=device-width, initial-scale=1"
 
 >
-  <meta name="google-site-verification" content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc" />
+
+<meta
+name="google-site-verification"
+content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc"
+
+>
 
   <title>Next Flow Apps | Focus, Music and Digital Wellbeing Apps</title>
 
 <meta
 name="description"
-content="Discover Android apps by Next Flow Apps, including HushFlow for background audio, Noctra for digital wellbeing and FocusFlow for focused work."
+content="Discover Android apps by Next Flow Apps, including HushFlow for background audio, Noctra for dopamine detox and digital wellbeing, and FocusFlow for focused work."
 
 >
 
@@ -39,7 +44,7 @@ content="Next Flow Apps | Focus, Music and Digital Wellbeing Apps"
 
 <meta
 property="og:description"
-content="Independent Android apps for background listening, digital wellbeing and focused work."
+content="Independent Android apps for background listening, dopamine detox, digital wellbeing and focused work."
 
 >
 
@@ -60,6 +65,7 @@ content="Next Flow Apps"
   <!-- Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
@@ -100,11 +106,36 @@ content="Next Flow Apps"
         "@id": "https://prodigytasfin.github.io/#website",
         "url": "https://prodigytasfin.github.io/",
         "name": "Next Flow Apps",
-        "description": "Independent Android apps for background listening, digital wellbeing and focused work.",
+        "description": "Independent Android apps for background listening, dopamine detox, digital wellbeing and focused work.",
         "publisher": {
           "@id": "https://prodigytasfin.github.io/#organization"
         },
         "inLanguage": "en"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://prodigytasfin.github.io/hushflow/#app",
+        "name": "HushFlow: Background Player",
+        "operatingSystem": "Android",
+        "applicationCategory": "MultimediaApplication",
+        "url": "https://prodigytasfin.github.io/hushflow/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
+        "publisher": {
+          "@id": "https://prodigytasfin.github.io/#organization"
+        }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://prodigytasfin.github.io/noctra/#app",
+        "name": "Noctra: Dopamine Detox",
+        "operatingSystem": "Android",
+        "applicationCategory": "ProductivityApplication",
+        "url": "https://prodigytasfin.github.io/noctra/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.noctra",
+        "description": "A dopamine detox and digital wellbeing app designed to reduce doomscrolling, control distracting apps and rebuild focus.",
+        "publisher": {
+          "@id": "https://prodigytasfin.github.io/#organization"
+        }
       }
     ]
   }
@@ -128,7 +159,7 @@ content="Next Flow Apps"
         <span>Next Flow Apps</span>
       </a>
 
-
+```
   <button
     class="menu-toggle"
     type="button"
@@ -159,7 +190,7 @@ content="Next Flow Apps"
     </a>
   </nav>
 </div>
-
+```
 
   </header>
 
@@ -172,15 +203,15 @@ content="Next Flow Apps"
             Independent Android app studio
           </span>
 
-
+```
       <h1 id="hero-heading">
         Apps designed for focus, calm and better digital habits.
       </h1>
 
       <p class="lead">
         Next Flow Apps creates focused Android experiences for
-        background listening, healthier screen habits and productive
-        work sessions.
+        background listening, dopamine detox, healthier screen
+        habits and productive work sessions.
       </p>
 
       <div class="actions">
@@ -224,8 +255,8 @@ content="Next Flow Apps"
 
       <p>
         Explore Android apps for uninterrupted background listening,
-        healthier screen habits, focused study and productive work
-        sessions.
+        healthier screen habits, dopamine detox, focused study and
+        productive work sessions.
       </p>
     </div>
 
@@ -250,8 +281,9 @@ content="Next Flow Apps"
         <h3>HushFlow</h3>
 
         <p>
-          A background audio player with screen-off playback, sleep
-          timer, queue controls, playlists and sound customization.
+          A background audio player with screen-off playback,
+          sleep timer, queue controls, playlists and sound
+          customization.
         </p>
 
         <div class="actions">
@@ -272,28 +304,43 @@ content="Next Flow Apps"
 
       <!-- Noctra -->
       <article class="app-card">
-        <span
-          class="app-logo letter-logo"
-          aria-hidden="true"
+        <img
+          class="app-logo"
+          src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw"
+          width="512"
+          height="512"
+          alt="Noctra dopamine detox and digital wellbeing app icon"
+          loading="lazy"
+          decoding="async"
+          referrerpolicy="no-referrer"
         >
-          N
-        </span>
 
-        <span class="badge warn">
-          Coming Soon
+        <span class="badge ok">
+          Available on Google Play
         </span>
 
         <h3>Noctra</h3>
 
         <p>
-          A digital wellbeing and dopamine detox app designed to reduce
-          doomscrolling, improve focus and support healthier screen
-          habits.
+          A dopamine detox and digital wellbeing app designed to
+          reduce doomscrolling, control distracting apps, rebuild
+          focus and support healthier screen habits.
         </p>
 
-        <a class="btn primary" href="/noctra/">
-          Explore Noctra
-        </a>
+        <div class="actions">
+          <a class="btn primary" href="/noctra/">
+            Explore Noctra
+          </a>
+
+          <a
+            class="btn"
+            href="https://play.google.com/store/apps/details?id=com.tasfin.noctra"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get it on Google Play
+          </a>
+        </div>
       </article>
 
       <!-- FocusFlow -->
@@ -357,8 +404,8 @@ content="Next Flow Apps"
         <h3>Made for daily use</h3>
 
         <p>
-          Practical Android tools for listening, concentration and
-          healthier technology habits.
+          Practical Android tools for listening, concentration,
+          digital wellbeing and healthier technology habits.
         </p>
       </article>
 
@@ -388,8 +435,8 @@ content="Next Flow Apps"
       <p>
         Next Flow Apps is an independent Android app brand created by
         Tasfin Hasan Sakib. The apps focus on background listening,
-        digital wellbeing, concentration and more intentional
-        technology use.
+        dopamine detox, digital wellbeing, concentration and more
+        intentional technology use.
       </p>
 
       <address class="contact-details">
@@ -470,7 +517,7 @@ content="Next Flow Apps"
     </a>
   </div>
 </section>
-
+```
 
   </main>
 
@@ -486,7 +533,7 @@ content="Next Flow Apps"
           <span>Next Flow Apps</span>
         </a>
 
-
+```
     <p>
       Independent Android apps by Tasfin Hasan Sakib.
     </p>
@@ -527,7 +574,6 @@ content="Next Flow Apps"
     <a href="/focusflow/">FocusFlow</a>
     <a href="/privacy-policy.html">Privacy Policies</a>
 
-
     <a
       href="https://www.instagram.com/nextflow_apps/"
       target="_blank"
@@ -541,7 +587,7 @@ content="Next Flow Apps"
     </a>
   </nav>
 </div>
-
+```
 
   </footer>
 
