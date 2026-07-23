@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /draft/
 
 Sitemap: https://prodigytasfin.github.io/sitemap.xml
