@@ -4,179 +4,551 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Noctra</title>
+  <meta name="description" content="Privacy Policy for Noctra – dopamine detox and digital wellbeing app for Android." />
+  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --secondary: #444;
+      --muted: #666;
+      --line: #eee;
+      --line-strong: #ddd;
+      --surface: #fafafa;
+      --radius: 10px
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #111;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased
     }
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 50px 24px;
-    }
-    h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.25rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-top: 2.2rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-    p {
-      margin-bottom: 1rem;
-      color: #333;
-    }
-    ul {
-      margin: 0.5rem 0 1rem 1.8rem;
-      color: #333;
-    }
-    li {
-      margin-bottom: 0.25rem;
-    }
+
     a {
+      color: inherit
+    }
+
+    .container {
+      width: min(820px, calc(100% - 48px));
+      margin-inline: auto
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 20;
+      transform: translateY(-150%);
+      padding: .55rem .8rem;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none
+    }
+
+    .skip-link:focus {
+      transform: translateY(0)
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px)
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      text-decoration: none
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: #111;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      overflow: hidden
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .15rem
+    }
+
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: .45rem .7rem;
+      border-radius: 6px;
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
       color: #111;
-      text-decoration: underline;
-      text-underline-offset: 2px;
+      background: var(--surface)
     }
-    a:hover {
-      color: #000;
+
+    .menu-toggle {
+      display: none
     }
+
+    .policy-hero {
+      padding: 48px 0 24px
+    }
+
+    .policy-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -.04em;
+      margin: 0 0 .25rem
+    }
+
+    .policy-hero .lead {
+      color: var(--secondary);
+      font-size: 1.08rem
+    }
+
     .last-updated {
-      font-size: 0.95rem;
-      color: #777;
-      margin-top: -0.25rem;
-      margin-bottom: 1.5rem;
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: .5rem
     }
-    .footer-note {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #eee;
-      padding-top: 1.5rem;
+
+    .policy-section {
+      padding: 24px 0 8px;
+      border-bottom: 1px solid var(--line)
     }
-    @media (max-width: 600px) {
-      .container { padding: 30px 16px; }
-      h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; }
+
+    .policy-section:last-of-type {
+      border-bottom: 0
+    }
+
+    .policy-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 .5rem;
+      letter-spacing: -.02em
+    }
+
+    .policy-section p {
+      color: var(--secondary);
+      margin-bottom: .75rem
+    }
+
+    .policy-section ul {
+      padding-left: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: .75rem
+    }
+
+    .policy-section li {
+      margin-bottom: .25rem
+    }
+
+    .policy-section a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: .6rem 1.5rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, border-color .2s
+    }
+
+    .back-link:hover {
+      background: var(--surface);
+      border-color: #bbb
+    }
+
+    .site-footer {
+      padding: 42px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem
+    }
+
+    .footer-grid p {
+      color: var(--secondary);
+      font-size: .9rem;
+      margin-bottom: .5rem
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: .5rem 1rem
+    }
+
+    .footer-links a {
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--text)
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      font-style: normal
+    }
+
+    .contact-details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    @media(max-width:820px) {
+      .container {
+        width: min(100% - 32px, 820px)
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        min-height: 40px;
+        padding: .4rem .7rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background: #fff;
+        font-weight: 700;
+        cursor: pointer
+      }
+
+      .nav-links {
+        position: absolute;
+        inset: 72px 16px auto;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: .5rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
+      }
+
+      .nav-links.is-open {
+        display: flex
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated"><strong>Last updated:</strong> June 2, 2026</p>
 
-    <p>This Privacy Policy explains how <strong>Noctra</strong> collects, uses, stores, and protects information when you use the Noctra mobile application.</p>
-    <p>Noctra is a dopamine detox, digital detox, focus, habit tracking, and attention recovery app designed to help users reduce distractions, manage focus sessions, track habits, and build healthier digital routines.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h2>1. Information We Collect</h2>
-    <p>Noctra is designed to collect only the information needed to provide core app features. Depending on how you use the app, the following information may be stored locally on your device:</p>
-    <ul>
-      <li>Focus session history, detox minutes, and recovery session progress</li>
-      <li>Habit tracking data, streaks, completed sessions, and failed sessions</li>
-      <li>App quota settings, boredom box settings, and selected recovery modes</li>
-      <li>Urge logs, reflection notes, mood selections, and personal progress entries</li>
-      <li>Selected atmospheres, ambience preferences, and personalization settings</li>
-      <li>Premium or subscription entitlement status provided through Google Play Billing</li>
-    </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Next Flow Apps home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+        </span>
+        <span>Next Flow Apps</span>
+      </a>
 
-    <h2>2. App Usage Access</h2>
-    <p>Noctra may request Usage Access permission to help estimate app usage, support digital detox features, app quota awareness, and distraction tracking. This permission may allow the app to read information such as which apps are used and how long they are used.</p>
-    <p>This information is used only to provide Noctra’s app limit, screen time, detox, and focus-related features. Noctra does not sell this information.</p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+        Menu
+      </button>
 
-    <h2>3. Do Not Disturb Access</h2>
-    <p>Noctra may request Do Not Disturb access to support Recovery Shield or focus protection features. If enabled, Noctra may help reduce calls and notifications during active focus or recovery sessions.</p>
-    <p>This permission is optional and can be disabled at any time from your Android device settings.</p>
-
-    <h2>4. Notifications</h2>
-    <p>Noctra may request notification permission to send reminders, session updates, streak reminders, or focus-related alerts. You can disable notifications at any time from your device settings.</p>
-
-    <h2>5. Local Storage</h2>
-    <p>Most Noctra data is stored locally on your device. This may include your focus history, detox progress, habit data, reflection notes, settings, and app preferences.</p>
-    <p>If you uninstall the app or clear app data, locally stored information may be permanently deleted.</p>
-
-    <h2>6. Payments and Subscriptions</h2>
-    <p>Noctra may offer premium subscriptions or in-app purchases through Google Play Billing. Payment processing is handled by Google Play. Noctra does not collect or store your credit card, debit card, bank, or payment account information.</p>
-    <p>Subscription status may be used to unlock Premium or Sanctuary features inside the app.</p>
-
-    <h2>7. Advertising</h2>
-    <p>Noctra may display ads, including rewarded ads, to support free features such as rewarded extensions or temporary unlocks. Ads may be provided by third-party advertising services such as Google AdMob.</p>
-    <p>Advertising partners may collect or process certain device information, ad identifiers, approximate location, interaction data, or diagnostic information according to their own privacy policies.</p>
-
-    <h2>8. Analytics and Diagnostics</h2>
-    <p>Noctra may use analytics or crash reporting tools to understand app performance, fix bugs, improve stability, and improve user experience. This may include device type, app version, crash logs, performance information, and general usage events.</p>
-    <p>Noctra does not use analytics to personally identify users.</p>
-
-    <h2>9. How We Use Information</h2>
-    <p>Noctra uses information to:</p>
-    <ul>
-      <li>Provide focus, detox, habit tracking, and recovery features</li>
-      <li>Track progress, streaks, sessions, and usage patterns</li>
-      <li>Support app limits, boredom box, and digital detox tools</li>
-      <li>Enable Premium and Sanctuary features</li>
-      <li>Improve app performance, stability, and user experience</li>
-      <li>Show ads or rewarded content where applicable</li>
-      <li>Respond to support or privacy requests</li>
-    </ul>
-
-    <h2>10. Data Sharing</h2>
-    <p>Noctra does not sell your personal information. However, some information may be processed by third-party services used to operate the app, such as:</p>
-    <ul>
-      <li>Google Play Billing for subscriptions and purchases</li>
-      <li>Google AdMob or advertising partners for ads and rewarded ads</li>
-      <li>Analytics or crash reporting tools for app stability and diagnostics</li>
-    </ul>
-    <p>These third-party services process data according to their own privacy policies.</p>
-
-    <h2>11. Data Security</h2>
-    <p>Noctra uses reasonable technical and organizational measures to protect user data. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
-
-    <h2>12. Data Retention and Deletion</h2>
-    <p>Data stored locally on your device remains there unless you delete it, clear app data, or uninstall the app. You may also reset or delete certain progress data inside the app if such options are available.</p>
-    <p>For subscription and payment-related records, retention is handled by Google Play according to Google’s policies.</p>
-
-    <h2>13. Children’s Privacy</h2>
-    <p>Noctra is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information through the app, please contact us so we can take appropriate action.</p>
-
-    <h2>14. Medical Disclaimer</h2>
-    <p>Noctra is a productivity, focus, habit tracking, and digital wellness tool. It is not a medical app and does not provide medical advice, diagnosis, or treatment. If you are dealing with addiction, mental health concerns, or any serious condition, please seek help from a qualified professional.</p>
-
-    <h2>15. Your Choices</h2>
-    <p>You can control your privacy by:</p>
-    <ul>
-      <li>Disabling app permissions from Android settings</li>
-      <li>Disabling notifications from device settings</li>
-      <li>Revoking Usage Access permission</li>
-      <li>Revoking Do Not Disturb access</li>
-      <li>Clearing app data or uninstalling the app</li>
-      <li>Contacting us for privacy-related questions</li>
-    </ul>
-
-    <h2>16. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated Last updated date. Continued use of Noctra after changes means you accept the updated policy.</p>
-
-    <h2>17. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></p>
-    <p><strong>App:</strong> Noctra<br>
-    <strong>Developer:</strong> Tasfin Hasan Sakib</p>
-
-    <div class="footer-note">
-      &copy; 2026 Noctra. All rights reserved.
+      <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container policy-hero">
+      <h1>Privacy Policy – Noctra</h1>
+      <p class="lead">This policy explains how Noctra handles your information. Your privacy matters to us.</p>
+      <p class="last-updated"><strong>Last updated:</strong> <span data-date>July 2026</span></p>
+    </div>
+
+    <div class="container">
+
+      <section class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Noctra ("we", "our", or "the App") is a dopamine detox, digital wellbeing, and focus‑training app for Android. We are committed to protecting your privacy. This policy describes what information we collect, how we use it, and your rights regarding your data.</p>
+        <p>By using Noctra, you agree to the collection and use of information in accordance with this policy.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>2. Information We Collect</h2>
+        <p>Noctra is designed to collect only the information needed to provide core app features. Most data stays <strong>locally on your device</strong>. Depending on how you use the app, the following information may be stored locally:</p>
+        <ul>
+          <li>Focus session history, detox minutes, and recovery session progress</li>
+          <li>Habit tracking data, streaks, completed sessions, and failed sessions</li>
+          <li>App quota settings, boredom box settings, and selected recovery modes</li>
+          <li>Urge logs, reflection notes, mood selections, and personal progress entries</li>
+          <li>Selected atmospheres, ambience preferences, and personalisation settings</li>
+          <li>Premium or subscription entitlement status provided through Google Play Billing</li>
+          <li>Device information (model, Android version) – used for compatibility and crash analysis</li>
+        </ul>
+        <p>We do <strong>not</strong> collect personally identifiable information (PII) such as your name, email, or payment details.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>3. App Usage Access (UsageStats)</h2>
+        <p>Noctra may request <strong>Usage Access</strong> permission to help estimate app usage, support digital detox features, app quota awareness, and distraction tracking. This permission allows the app to read information such as which apps are used and how long they are used.</p>
+        <p>This information is used <strong>only</strong> to provide Noctra's app limit, screen time, detox, and focus-related features. Noctra does not sell this information. The data never leaves your device.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>4. Do Not Disturb Access</h2>
+        <p>Noctra may request Do Not Disturb access to support Recovery Shield or focus protection features. If enabled, Noctra may help reduce calls and notifications during active focus or recovery sessions.</p>
+        <p>This permission is <strong>optional</strong> and can be disabled at any time from your Android device settings.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>5. Notifications</h2>
+        <p>Noctra may request notification permission to send reminders, session updates, streak reminders, or focus-related alerts. You can disable notifications at any time from your device settings.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>6. Local Storage</h2>
+        <p>Most Noctra data is stored <strong>locally on your device</strong>. This may include your focus history, detox progress, habit data, reflection notes, settings, and app preferences.</p>
+        <p>If you uninstall the app or clear app data, locally stored information will be permanently deleted.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>7. Payments and Subscriptions</h2>
+        <p>Noctra may offer premium subscriptions or in-app purchases through Google Play Billing. Payment processing is handled by Google Play. Noctra does <strong>not</strong> collect or store your credit card, debit card, bank, or payment account information.</p>
+        <p>Subscription status may be used to unlock Premium or Sanctuary features inside the app.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>8. Advertising</h2>
+        <p>Noctra may display ads, including rewarded ads, to support free features such as rewarded extensions or temporary unlocks. Ads may be provided by third-party advertising services such as Google AdMob.</p>
+        <p>Advertising partners may collect or process certain device information, ad identifiers, approximate location, interaction data, or diagnostic information according to their own privacy policies.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>9. Analytics and Diagnostics</h2>
+        <p>Noctra may use analytics or crash reporting tools to understand app performance, fix bugs, improve stability, and improve user experience. This may include device type, app version, crash logs, performance information, and general usage events.</p>
+        <p>Noctra does <strong>not</strong> use analytics to personally identify users.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>10. How We Use Information</h2>
+        <p>Noctra uses information to:</p>
+        <ul>
+          <li>Provide focus, detox, habit tracking, and recovery features</li>
+          <li>Track progress, streaks, sessions, and usage patterns</li>
+          <li>Support app limits, boredom box, and digital detox tools</li>
+          <li>Enable Premium and Sanctuary features</li>
+          <li>Improve app performance, stability, and user experience</li>
+          <li>Show ads or rewarded content where applicable</li>
+          <li>Respond to support or privacy requests</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>11. Data Sharing</h2>
+        <p>Noctra does <strong>not</strong> sell your personal information. However, some information may be processed by third-party services used to operate the app, such as:</p>
+        <ul>
+          <li>Google Play Billing – for subscriptions and purchases</li>
+          <li>Google AdMob – for ads and rewarded ads</li>
+          <li>Firebase / Crashlytics – for anonymous crash reporting and stability</li>
+        </ul>
+        <p>These third-party services process data according to their own privacy policies.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>12. Data Security</h2>
+        <p>Noctra uses reasonable technical and organisational measures to protect user data. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>13. Data Retention and Deletion</h2>
+        <p>Data stored locally on your device remains there unless you delete it, clear app data, or uninstall the app. You may also reset or delete certain progress data inside the app if such options are available.</p>
+        <p>For subscription and payment-related records, retention is handled by Google Play according to Google's policies.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>14. Children's Privacy</h2>
+        <p>Noctra is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately so we can take steps to remove it.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>15. Medical Disclaimer</h2>
+        <p>Noctra is a productivity, focus, habit tracking, and digital wellness tool. It is <strong>not</strong> a medical app and does not provide medical advice, diagnosis, or treatment. If you are dealing with addiction, mental health concerns, or any serious condition, please seek help from a qualified professional.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>16. Your Choices</h2>
+        <p>You can control your privacy by:</p>
+        <ul>
+          <li>Disabling app permissions from Android settings</li>
+          <li>Disabling notifications from device settings</li>
+          <li>Revoking Usage Access permission</li>
+          <li>Revoking Do Not Disturb access</li>
+          <li>Clearing app data or uninstalling the app</li>
+          <li>Contacting us for privacy-related questions</li>
+        </ul>
+      </section>
+
+      <section class="policy-section">
+        <h2>17. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by updating the "Last updated" date at the top of this page. Continued use of Noctra after changes means you accept the updated policy.</p>
+      </section>
+
+      <section class="policy-section">
+        <h2>18. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a><br>
+          <strong>App:</strong> Noctra<br>
+          <strong>Developer:</strong> Tasfin Hasan Sakib
+        </p>
+        <p>We will respond to your inquiry as quickly as possible, typically within 30 days.</p>
+      </section>
+
+      <a class="back-link" href="/noctra/">← Back to Noctra</a>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/" aria-label="Next Flow Apps home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+          </span>
+          <span>Next Flow Apps</span>
+        </a>
+        <p>Developer: Tasfin Hasan Sakib</p>
+        <address class="contact-details">
+          <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
+          <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
+        </address>
+        <p>© <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/noctra/privacy-policy">Privacy Policy</a>
+        <a href="/app-ads.txt">app-ads.txt</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Auto-update year & date
+    document.querySelectorAll('[data-year]').forEach(el => {
+      el.textContent = new Date().getFullYear() || '2026';
+    });
+    document.querySelector('[data-date]')?.textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long'
+    });
+  </script>
+
 </body>
 </html>
