@@ -267,21 +267,27 @@
     }
 
     .visual {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       min-height: 310px;
-      place-content: center;
       padding: 2rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
       background: var(--surface);
-      text-align: center
+      text-align: center;
+      gap: .75rem
     }
 
-    .visual svg {
-      width: 86px;
-      height: 86px;
-      margin: 0 auto 1rem;
-      stroke: #111
+    .visual .visual-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 2px solid var(--line-strong);
+      background: #fff;
+      padding: 4px
     }
 
     .visual strong {
@@ -290,7 +296,8 @@
     }
 
     .visual span {
-      color: var(--secondary)
+      color: var(--secondary);
+      font-size: .95rem
     }
 
     .section {
@@ -517,6 +524,11 @@
       .visual {
         min-height: 220px
       }
+
+      .visual .visual-icon {
+        width: 64px;
+        height: 64px
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -582,11 +594,7 @@
         </div>
 
         <div class="visual" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-          </svg>
+          <img class="visual-icon" src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps icon" />
           <strong>Next Flow Apps</strong>
           <span>Focus · Calm · Digital wellbeing</span>
         </div>
