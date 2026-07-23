@@ -23,8 +23,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 
     <style>
-        /* (Copy the exact same CSS from the index above – I'll include it once here for brevity, but in production you'd reuse the same block) */
-        /* For this response I will embed the full CSS again to keep each file self-contained. */
         /* ── Reset & Base ── */
         *,
         *::before,
@@ -114,6 +112,38 @@
             border: 1px solid #ddd;
             padding: 4px 14px;
             border-radius: 100px;
+        }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: #888;
+            padding: 20px 0 10px;
+        }
+        .breadcrumb a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .breadcrumb a:hover {
+            color: #111;
+        }
+
+        /* ── Badge ── */
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 14px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+        .badge.ok {
+            background: #e8f5e9;
+            color: #1e7b2e;
+            border: 1px solid #c8e6c9;
         }
 
         /* ── Buttons ── */
@@ -263,7 +293,7 @@
 
         /* ── Hero ── */
         .hero {
-            padding: 60px 0 40px;
+            padding: 40px 0 40px;
         }
         .hero-grid {
             display: grid;
@@ -278,7 +308,7 @@
         .visual {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             padding: 40px 32px;
             background: #f8f8f8;
@@ -287,16 +317,24 @@
             min-height: 200px;
             animation: fadeInUp 0.8s ease both;
             animation-delay: 0.15s;
+            gap: 16px;
+        }
+        .visual .app-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 1px solid #eee;
+            background: #fff;
         }
         .visual strong {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             letter-spacing: -0.03em;
         }
         .visual span {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #555;
-            margin-top: 6px;
         }
         @media (max-width: 820px) {
             .hero-grid {
@@ -307,8 +345,12 @@
                 min-height: 140px;
                 padding: 28px 24px;
             }
+            .visual .app-logo {
+                width: 80px;
+                height: 80px;
+            }
             .visual strong {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
         }
 
@@ -363,6 +405,39 @@
             font-size: 0.95rem;
             color: #555;
             margin-bottom: 0;
+        }
+
+        /* ── FAQ ── */
+        .faq .grid {
+            gap: 16px;
+        }
+        .faq details {
+            padding: 16px 20px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            background: #fafafa;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .faq details:hover {
+            border-color: #ccc;
+            background: #fff;
+        }
+        .faq details summary {
+            font-weight: 600;
+            color: #111;
+            outline: none;
+            cursor: pointer;
+        }
+        .faq details p {
+            margin-top: 12px;
+            color: #444;
+            font-size: 0.95rem;
+            max-width: 100%;
+        }
+        .faq details a {
+            color: #111;
+            text-decoration: underline;
         }
 
         /* ── Contact / CTA ── */
@@ -482,8 +557,44 @@
         .feature:nth-child(3) {
             animation-delay: 0.12s;
         }
+        .feature:nth-child(4) {
+            animation-delay: 0.18s;
+        }
+        .feature:nth-child(5) {
+            animation-delay: 0.24s;
+        }
+        .feature:nth-child(6) {
+            animation-delay: 0.30s;
+        }
+        .feature:nth-child(7) {
+            animation-delay: 0.36s;
+        }
         .cta-panel {
             animation: fadeInUp 0.6s ease both;
+        }
+        .faq details {
+            animation: fadeInUp 0.5s ease both;
+        }
+        .faq details:nth-child(2) {
+            animation-delay: 0.05s;
+        }
+        .faq details:nth-child(3) {
+            animation-delay: 0.10s;
+        }
+        .faq details:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+        .faq details:nth-child(5) {
+            animation-delay: 0.20s;
+        }
+        .faq details:nth-child(6) {
+            animation-delay: 0.25s;
+        }
+        .faq details:nth-child(7) {
+            animation-delay: 0.30s;
+        }
+        .faq details:nth-child(8) {
+            animation-delay: 0.35s;
         }
 
         @media (max-width: 480px) {
@@ -491,7 +602,7 @@
                 padding: 0 16px;
             }
             .hero {
-                padding: 36px 0 24px;
+                padding: 24px 0 24px;
             }
             .section {
                 padding: 40px 0 24px;
@@ -530,7 +641,7 @@
                 <a href="/hushflow/" aria-current="page">HushFlow</a>
                 <a href="/noctra/">Noctra</a>
                 <a href="/temvica/">Temvica</a>
-                <a href="#contact">Contact</a>
+                <a href="/#contact">Contact</a>
                 <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </nav>
         </div>
@@ -538,62 +649,148 @@
 
     <main id="main-content">
 
+        <!-- Breadcrumb -->
+        <div class="container breadcrumb">
+            <a href="/">Home</a> / HushFlow
+        </div>
+
+        <!-- Hero -->
         <section class="hero" aria-labelledby="hero-heading">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <span class="eyebrow">Background audio player</span>
-                    <h1 id="hero-heading">Uninterrupted listening, even when your screen is off.</h1>
-                    <p class="lead">HushFlow is a dedicated background audio player with screen‑off playback, a built‑in sleep timer, queue management, and custom sound playlists. Perfect for podcasts, music, or ambient noise.</p>
+                    <span class="badge ok">Available on Google Play</span>
+                    <h1 id="hero-heading">Background listening without interruptions.</h1>
+                    <p class="lead">Play music in the background with screen-off playback, sleep timer, queue, and EQ.</p>
                     <div class="actions">
-                        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
+                        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get HushFlow on Google Play</a>
                         <a class="btn" href="#features">Explore Features</a>
                     </div>
                     <p class="trust">Available on Android.</p>
                 </div>
                 <div class="visual" aria-hidden="true">
+                    <img class="app-logo" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="512" height="512" alt="HushFlow Android music player icon" decoding="async" referrerpolicy="no-referrer" />
                     <strong>HushFlow</strong>
                     <span>Background audio · Sleep timer · Queues</span>
                 </div>
             </div>
         </section>
 
+        <!-- Features -->
         <section id="features" class="section" aria-labelledby="features-heading">
             <div class="container">
                 <div class="section-head">
-                    <h2 id="features-heading">Designed for effortless listening</h2>
-                    <p>Everything you need for a seamless audio experience, without distractions.</p>
+                    <h2 id="features-heading">HushFlow features for background music and multitasking</h2>
+                    <p>An Android music player built for background listening, queue manager workflows, custom playlists where available, and sound customization.</p>
                 </div>
                 <div class="grid feature-grid">
                     <article class="feature">
-                        <h3>Play with Screen Off</h3>
-                        <p>Audio continues to play even when your device is locked, so you can put your phone away and keep listening.</p>
+                        <h3>Background and screen-off playback</h3>
+                        <p>HushFlow can continue playing supported audio while you open another app, minimize the app, lock the screen, study, work or relax.</p>
                     </article>
                     <article class="feature">
-                        <h3>Sleep Timer &amp; Fade</h3>
-                        <p>Set a timer to stop playback automatically, with a gentle volume fade for a natural bedtime transition.</p>
+                        <h3>Playback controls</h3>
+                        <p>Use notification playback controls, lock-screen controls, an in-app mini player, play and pause controls, track navigation and repeat playback.</p>
                     </article>
                     <article class="feature">
-                        <h3>Smart Queues</h3>
-                        <p>Build and manage playlists on the fly. Reorder, shuffle, or repeat tracks with intuitive controls.</p>
+                        <h3>Queue and playlists</h3>
+                        <p>Add tracks to the queue, reorder queued tracks, remove tracks, repeat playback and use custom playlist support for simple queue management.</p>
                     </article>
                     <article class="feature">
-                        <h3>Sound Customization</h3>
-                        <p>Adjust playback speed, equaliser presets, and gain control to tailor the sound to your preference.</p>
+                        <h3>Sleep timer</h3>
+                        <p>Set a music sleep timer with a countdown, stop after the current track, and support sleeping, relaxation or study sessions.</p>
+                    </article>
+                    <article class="feature">
+                        <h3>Audio discovery</h3>
+                        <p>Browse supported categories including Focus, Sleep, Mood, Pop and Jazz for focus music, sleep music and background listening.</p>
+                    </article>
+                    <article class="feature">
+                        <h3>Audio Lab</h3>
+                        <p>Shape sound with a 10-band equalizer, bass boost, virtualizer, loudness enhancer, audio presets and saved sound settings.</p>
+                    </article>
+                    <article class="feature">
+                        <h3>Free and Premium</h3>
+                        <p>Free includes core background playback, selected ad-supported access and basic listening tools. Premium can include ad-free listening, custom playlist support, full Audio Lab access, and more.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="cta-heading">
-            <div class="container cta-panel">
-                <h2 id="cta-heading">Start listening without limits</h2>
-                <p>Get HushFlow on Google Play and enjoy uninterrupted background audio today.</p>
-                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+        <!-- FAQ -->
+        <section class="section faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading">HushFlow FAQ</h2>
+                <div class="grid two">
+                    <details>
+                        <summary>Can HushFlow play while the screen is off?</summary>
+                        <p>Yes. HushFlow is designed for screen-off playback of supported audio.</p>
+                    </details>
+                    <details>
+                        <summary>Can I use HushFlow while using other apps?</summary>
+                        <p>Yes. You can play music in background while using other apps.</p>
+                    </details>
+                    <details>
+                        <summary>Does HushFlow include a sleep timer?</summary>
+                        <p>Yes. The sleep timer can use a countdown and may stop after the current track.</p>
+                    </details>
+                    <details>
+                        <summary>Can I control playback from the lock screen?</summary>
+                        <p>Yes. HushFlow supports lock-screen controls and notification controls where Android allows them.</p>
+                    </details>
+                    <details>
+                        <summary>Does HushFlow include an equalizer?</summary>
+                        <p>Yes. HushFlow includes a 10-band equalizer and related Audio Lab controls.</p>
+                    </details>
+                    <details>
+                        <summary>Is HushFlow free?</summary>
+                        <p>HushFlow offers a free experience with core playback and selected ad-supported access.</p>
+                    </details>
+                    <details>
+                        <summary>What is included with HushFlow Premium?</summary>
+                        <p>Premium can include ad-free listening, custom playlist support, full Audio Lab access, saved sound preferences and additional premium features.</p>
+                    </details>
+                    <details>
+                        <summary>Do audio effects work on every Android device?</summary>
+                        <p>Audio-effect availability and performance may vary depending on device, operating system and connected audio output.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
+        <!-- Download CTA -->
+        <section class="section" aria-labelledby="cta-heading">
+            <div class="container cta-panel">
+                <h2 id="cta-heading">Start background listening with HushFlow</h2>
+                <p>Get HushFlow from its official Google Play listing.</p>
+                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get HushFlow on Google Play</a>
+            </div>
+        </section>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "MobileApplication",
+                "name": "HushFlow",
+                "operatingSystem": "Android",
+                "applicationCategory": "MultimediaApplication",
+                "description": "Play music in the background with screen-off playback, sleep timer, queue controls, playlists and a 10-band equalizer on Android.",
+                "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Next Flow Apps",
+                    "sameAs": ["https://www.instagram.com/nextflow_apps/"]
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
@@ -603,11 +800,11 @@
                     </span>
                     <span>Next Flow Apps</span>
                 </a>
-                <p>Independent Android apps by Tasfin Hasan Sakib.</p>
-                <address class="contact-details">
-                    <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
-                    <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
-                </address>
+                <p>Developer: Tasfin Hasan Sakib</p>
+                <p>
+                    Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a><br />
+                    Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a>
+                </p>
                 <p>&copy; <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
             </div>
             <nav class="footer-links" aria-label="Footer navigation">
@@ -615,7 +812,8 @@
                 <a href="/hushflow/">HushFlow</a>
                 <a href="/noctra/">Noctra</a>
                 <a href="/temvica/">Temvica</a>
-                <a href="/privacy-policy.html">Privacy Policies</a>
+                <a href="/privacy-policy.html">Privacy policies</a>
+                <a href="/app-ads.txt">app-ads.txt</a>
                 <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="mailto:nextflowapps@gmail.com">Email</a>
             </nav>
@@ -623,6 +821,7 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.getElementById('site-menu');
         if (toggle && menu) {
@@ -632,6 +831,7 @@
                 toggle.textContent = isOpen ? 'Close' : 'Menu';
             });
         }
+        // Auto-update year
         document.querySelector('[data-year]')?.textContent = new Date().getFullYear();
     </script>
 
