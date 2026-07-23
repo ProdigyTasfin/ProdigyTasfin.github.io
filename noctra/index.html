@@ -3,25 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noctra: Dopamine Detox and Digital Wellbeing App</title>
-  <meta name="description" content="Reduce doomscrolling, block distracting apps and rebuild focus with Noctra, a dopamine detox and digital wellbeing app for Android." />
+  <title>Noctra: App Blocker and Dopamine Detox for Android</title>
+  <meta name="description" content="Block distracting Android apps, reduce doomscrolling, control screen time and rebuild healthier focus habits with Noctra." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://nextflow-apps.com/noctra/" />
   <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Noctra: Dopamine Detox and Digital Wellbeing App" />
-  <meta property="og:description" content="Reduce doomscrolling, block distracting apps and rebuild focus with Noctra for Android." />
+  <meta property="og:title" content="Noctra: App Blocker and Dopamine Detox for Android" />
+  <meta property="og:description" content="Reduce doomscrolling, block distracting Android apps and develop healthier digital habits with Noctra." />
   <meta property="og:url" content="https://nextflow-apps.com/noctra/" />
   <meta property="og:site_name" content="Next Flow Apps" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" />
-  <meta property="og:image:alt" content="Noctra dopamine detox and digital wellbeing app icon" />
+  <meta property="og:image:alt" content="Noctra app icon – app blocker and dopamine detox for Android" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Noctra: App Blocker and Dopamine Detox for Android" />
+  <meta name="twitter:description" content="Block distracting apps, reduce doomscrolling and rebuild healthier focus habits on Android." />
+  <meta name="twitter:image" content="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Noctra",
+    "alternateName": "Noctra: Digital Detox",
+    "url": "https://nextflow-apps.com/noctra/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.noctra",
+    "operatingSystem": "Android",
+    "applicationCategory": "ProductivityApplication",
+    "description": "Noctra is an Android app blocker and digital wellbeing app designed to reduce doomscrolling, limit distracting apps and support healthier focus habits.",
+    "isAccessibleForFree": true,
+    "author": {
+      "@type": "Person",
+      "name": "Tasfin Hasan Sakib"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Next Flow Apps",
+      "url": "https://nextflow-apps.com/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://play.google.com/store/apps/details?id=com.tasfin.noctra"
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -340,6 +376,10 @@
       grid-template-columns: 1fr 1fr
     }
 
+    .three {
+      grid-template-columns: repeat(3, 1fr)
+    }
+
     .feature,
     .app-card,
     .policy-card,
@@ -357,6 +397,25 @@
     .feature:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, .06)
+    }
+
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem
+    }
+
+    .step .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #111;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: .75rem
     }
 
     .cta-panel {
@@ -446,7 +505,12 @@
     .footer-links a {
       color: var(--secondary);
       font-size: .9rem;
-      font-weight: 600
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--text)
     }
 
     .fade-in-up {
@@ -529,6 +593,7 @@
       .hero-grid,
       .feature-grid,
       .two,
+      .three,
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem
@@ -588,6 +653,7 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/" aria-current="page">Noctra</a>
         <a href="/temvica/">Temvica</a>
+        <a href="/support.html">Support</a>
         <a href="/#contact">Contact</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
@@ -605,21 +671,48 @@
       <div class="container hero-grid">
         <div>
           <span class="badge ok">Available on Google Play</span>
-          <h1 id="noctra-heading">Take back control of your attention.</h1>
-          <p class="lead">Noctra is a dopamine detox and digital wellbeing app for Android designed to reduce doomscrolling, control distracting apps and build healthier focus habits.</p>
+          <h1 id="noctra-heading">Block distracting apps and take control of your screen time</h1>
+          <p class="lead">Noctra is an Android app blocker and digital wellbeing tool that helps you reduce doomscrolling, set screen time limits, and build healthier focus habits — without relying on willpower alone.</p>
           <div class="actions">
-            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Get Noctra on Google Play</a>
-            <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow @nextflow_apps</a>
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Download Noctra on Google Play</a>
+            <a class="btn" href="#features">Explore features</a>
           </div>
+          <p class="trust">Available for Android · Free to download</p>
           <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">
             <a href="/noctra/privacy-policy" style="text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>
+            &nbsp;·&nbsp;
+            <a href="/support.html" style="text-decoration:underline;text-underline-offset:2px;">Support</a>
           </p>
         </div>
 
         <div class="visual" aria-hidden="true">
-          <img class="visual-icon" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" alt="Noctra app icon" />
+          <img class="visual-icon" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" alt="Noctra app icon" width="512" height="512" loading="eager" decoding="async" />
           <strong>Noctra</strong>
-          <span>Dopamine detox · App limits · Focus sessions</span>
+          <span>App blocker · Dopamine detox · Focus sessions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems -->
+    <section class="section" aria-labelledby="problems-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="problems-heading">Do any of these sound familiar?</h2>
+          <p>Many people struggle with the same challenges when it comes to their phone habits.</p>
+        </div>
+
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li>Opening social media without thinking, multiple times a day</li>
+            <li>Losing hours to endless scrolling when you meant to take a short break</li>
+            <li>Finding it hard to focus while studying, working, or reading</li>
+            <li>Repeatedly checking distracting apps even when you know you shouldn't</li>
+            <li>Setting screen-time boundaries but struggling to stick to them</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">Noctra was built to help with exactly these problems.</p>
+            <p style="margin-bottom:0">It gives you practical tools — not just motivation — to interrupt automatic habits and create healthier digital routines.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -629,34 +722,90 @@
       <div class="container">
         <div class="section-head fade-in-up">
           <h2 id="tools-heading">Digital wellbeing tools for intentional phone use</h2>
-          <p>Noctra combines anti-doomscroll protection, app blocking, focus sessions, recovery tools, habit tracking and calm atmospheres in one focused Android experience.</p>
+          <p>Noctra combines app blocking, focus sessions, recovery tools, habit tracking and calm atmospheres in one focused Android experience.</p>
         </div>
 
         <div class="grid feature-grid">
           <article class="feature fade-in-up delay-1">
-            <h3>Reduce mindless scrolling</h3>
-            <p>Anti-doomscroll interventions help interrupt automatic scrolling loops and encourage more intentional phone use.</p>
+            <h3>Distracting app blocking</h3>
+            <p>Select the apps that pull you away from what matters. Noctra can detect when you open them and display a blocking screen to help you pause and reconsider.</p>
           </article>
           <article class="feature fade-in-up delay-2">
-            <h3>Control distracting apps</h3>
-            <p>Select distracting apps, apply usage limits and display blocking interventions when your configured limits are reached.</p>
+            <h3>Daily app limits</h3>
+            <p>Set usage limits for specific apps. When you reach your limit, Noctra can intervene and help you step away rather than continuing to scroll.</p>
           </article>
           <article class="feature fade-in-up delay-3">
-            <h3>Start focused work sessions</h3>
-            <p>Use focused sessions for studying, coding, reading, writing, remote work and deep concentration.</p>
+            <h3>Anti-doomscrolling interventions</h3>
+            <p>Interrupt automatic scrolling loops with gentle interventions that encourage you to pause, breathe, and decide whether you really want to keep scrolling.</p>
           </article>
           <article class="feature fade-in-up delay-4">
-            <h3>Recover with calm atmospheres</h3>
-            <p>Ambient soundscapes and recovery sessions provide a calmer alternative to high-stimulation apps and endless content.</p>
+            <h3>Focus sessions</h3>
+            <p>Start a focused session for studying, coding, reading, writing or deep work. Noctra helps you stay on track by reducing distractions during your session.</p>
           </article>
           <article class="feature fade-in-up delay-5">
-            <h3>Practice boredom training</h3>
-            <p>The Boredom Box helps you spend short periods without constant stimulation and rebuild comfort with quiet time.</p>
+            <h3>Recovery with calm atmospheres</h3>
+            <p>Ambient soundscapes and recovery sessions provide a calmer alternative to high-stimulation apps and endless content feeds.</p>
           </article>
           <article class="feature fade-in-up delay-6">
             <h3>Understand your habits</h3>
-            <p>Track focus time, urges, detox sessions, streaks and patterns that influence your relationship with your phone.</p>
+            <p>Track focus time, urges, detox sessions, streaks and patterns that influence your relationship with your phone. See your progress over time.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="how-heading">How Noctra works</h2>
+          <p>Simple steps to start building healthier digital habits.</p>
+        </div>
+
+        <div class="grid three">
+          <div class="step fade-in-up delay-1">
+            <div class="step-number">1</div>
+            <h3>Choose your distracting apps</h3>
+            <p>Select the apps you want to limit or block — social media, games, news, or anything else that pulls you away from focus.</p>
+          </div>
+          <div class="step fade-in-up delay-2">
+            <div class="step-number">2</div>
+            <h3>Set limits or start a focus session</h3>
+            <p>Define daily usage limits, block certain apps during focus time, or start a structured session to stay on track.</p>
+          </div>
+          <div class="step fade-in-up delay-3">
+            <div class="step-number">3</div>
+            <h3>Noctra interrupts the habit</h3>
+            <p>When you open a distracting app, Noctra can display a blocking screen or intervention — giving you a moment to pause and choose intentionally.</p>
+          </div>
+          <div class="step fade-in-up delay-4" style="grid-column: span 1;">
+            <div class="step-number">4</div>
+            <h3>Review your progress</h3>
+            <p>Track your focus sessions, detox streaks, and screen-time patterns. Over time, you'll see your digital habits shift in a healthier direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section class="section" aria-labelledby="audience-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="audience-heading">Who is Noctra for?</h2>
+          <p>Noctra is designed for anyone who wants to use their phone more intentionally.</p>
+        </div>
+
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li><strong>Students</strong> – stay focused during study sessions without social media interruptions.</li>
+            <li><strong>Developers and remote workers</strong> – maintain deep focus during work hours.</li>
+            <li><strong>Anyone trying to reduce social media use</strong> – build healthier boundaries with scrolling apps.</li>
+            <li><strong>People who want better screen-time habits</strong> – understand your patterns and make gradual improvements.</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">Noctra is not about perfection.</p>
+            <p style="margin-bottom:0">It's about making small, consistent changes that add up over time. Whether you want to cut back on doomscrolling, create more focus time, or simply understand your phone habits better, Noctra provides the tools to help you get there.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -665,46 +814,26 @@
     <section class="section" aria-labelledby="accessibility-heading">
       <div class="container cta-panel">
         <h2 id="accessibility-heading">Accessibility Service use</h2>
-        <p>Noctra uses Android's Accessibility Service to provide real-time app blocking, app usage limits, Anti-Doomscroll interventions and Sentinel Mode.</p>
+        <p>Noctra uses Android's Accessibility Service to provide real-time app blocking, app usage limits, and anti-doomscrolling interventions.</p>
         <p>When the service is enabled, Noctra detects when an app selected for blocking or limiting is opened. It can then display the blocking screen, usage-limit warning or intervention configured by the user.</p>
-        <p>Accessibility access is required for these app-control features to work in real time. Noctra does not use this service to read passwords, payment information, private messages or text you type. Accessibility data is not sold or used for advertising.</p>
+        <p>Accessibility access is required for these app-control features to work in real time. <strong>Noctra does not use this service to read passwords, payment information, private messages or text you type.</strong> Accessibility data is not sold or used for advertising.</p>
         <p>The service is enabled manually through Android Settings and can be disabled at any time.</p>
+        <div class="actions">
+          <a class="btn" href="/noctra/privacy-policy">Read the privacy policy</a>
+        </div>
       </div>
     </section>
 
-    <!-- Key tools -->
-    <section class="section" aria-labelledby="features-heading">
+    <!-- Privacy -->
+    <section class="section" aria-labelledby="privacy-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="features-heading">Features for focus and digital recovery</h2>
-          <p>Build a calmer digital routine using practical tools instead of relying only on motivation.</p>
+          <h2 id="privacy-heading">Privacy is important</h2>
+          <p>Noctra is designed to respect your privacy. Most data stays on your device, and we do not sell your information.</p>
         </div>
-
-        <div class="grid two">
-          <article class="feature fade-in-up delay-1">
-            <h3>Dopamine detox sessions</h3>
-            <p>Step away from reels, shorts, games, social media and other instant-reward habits through structured recovery sessions.</p>
-          </article>
-          <article class="feature fade-in-up delay-2">
-            <h3>App blocking and usage limits</h3>
-            <p>Create boundaries around selected apps and activate real-time interventions when distracting apps are opened.</p>
-          </article>
-          <article class="feature fade-in-up delay-3">
-            <h3>Focus and deep work</h3>
-            <p>Start focused sessions for study, work, reading, coding and other activities that require sustained attention.</p>
-          </article>
-          <article class="feature fade-in-up delay-4">
-            <h3>Habit and urge tracking</h3>
-            <p>Record urges, triggers, completed sessions and progress to understand patterns behind distracting phone use.</p>
-          </article>
-          <article class="feature fade-in-up delay-5">
-            <h3>Ambient soundscapes</h3>
-            <p>Use calm atmospheres and background audio during focus, relaxation and digital recovery sessions.</p>
-          </article>
-          <article class="feature fade-in-up delay-6">
-            <h3>Progress insights</h3>
-            <p>Review focus time, detox time, streaks, session history and long-term consistency.</p>
-          </article>
+        <div style="max-width:660px">
+          <p>For full details about how Noctra handles your data, including information about app permissions, third-party services, and your rights, please read the <a href="/noctra/privacy-policy" style="font-weight:600;text-decoration:underline;text-underline-offset:2px;">Noctra Privacy Policy</a>.</p>
+          <p>If you have any questions about privacy or data, you can <a href="/support.html" style="font-weight:600;text-decoration:underline;text-underline-offset:2px;">contact support</a> at any time.</p>
         </div>
       </div>
     </section>
@@ -715,77 +844,127 @@
         <h2 id="faq-heading">Frequently asked questions</h2>
         <div class="grid two">
           <details>
-            <summary>Is Noctra available on Google Play?</summary>
-            <p>Yes. Noctra is publicly available for Android through Google Play.</p>
-            <p><a href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">View Noctra on Google Play</a></p>
+            <summary>What is Noctra?</summary>
+            <p>Noctra is an Android app blocker and digital wellbeing tool designed to help you reduce doomscrolling, limit distracting apps, and build healthier screen-time habits.</p>
           </details>
           <details>
-            <summary>What is Noctra designed for?</summary>
-            <p>Noctra is designed to help reduce doomscrolling, control distracting apps, build focus routines and develop healthier digital habits.</p>
+            <summary>How does Noctra block distracting apps?</summary>
+            <p>Noctra uses Android's Accessibility Service to detect when you open a selected app. It can then display a blocking screen or intervention to help you pause and reconsider.</p>
           </details>
           <details>
-            <summary>Does Noctra include app blocking?</summary>
-            <p>Yes. Noctra includes app-control features that can detect selected distracting apps and display configured blocking or usage-limit interventions.</p>
+            <summary>Can Noctra help reduce doomscrolling?</summary>
+            <p>Yes. Noctra includes anti-doomscrolling interventions that interrupt automatic scrolling loops and encourage more intentional phone use.</p>
+          </details>
+          <details>
+            <summary>Does Noctra work on Android?</summary>
+            <p>Yes. Noctra is available for Android devices and can be downloaded from Google Play.</p>
           </details>
           <details>
             <summary>Why does Noctra use Accessibility Service?</summary>
-            <p>Android Accessibility Service allows Noctra to identify when a selected app is opened and respond in real time with the blocking or anti-doomscroll intervention configured by the user.</p>
+            <p>Noctra uses Accessibility Service to detect when selected distracting apps are opened, enabling real-time blocking and usage-limit interventions. It does not read passwords or private messages.</p>
           </details>
           <details>
-            <summary>Can Accessibility Service be disabled?</summary>
-            <p>Yes. The service is enabled manually by the user through Android Settings and can be disabled at any time.</p>
+            <summary>Is Noctra free?</summary>
+            <p>Yes. Noctra is free to download and use. Some advanced features may be available through optional in-app purchases, but the core app-blocking and focus tools are free.</p>
           </details>
           <details>
-            <summary>Does Noctra read private messages or passwords?</summary>
-            <p>Noctra does not use Accessibility Service to read passwords, payment information, private messages or text you type.</p>
+            <summary>Can I choose which apps to block?</summary>
+            <p>Yes. You can select exactly which apps you want to limit or block. Noctra gives you full control over your settings.</p>
+          </details>
+          <details>
+            <summary>Does Noctra collect private messages or passwords?</summary>
+            <p>No. Noctra does not use Accessibility Service to read passwords, payment information, private messages or any text you type.</p>
           </details>
         </div>
       </div>
     </section>
+
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Noctra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noctra is an Android app blocker and digital wellbeing tool designed to help you reduce doomscrolling, limit distracting apps, and build healthier screen-time habits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Noctra block distracting apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noctra uses Android's Accessibility Service to detect when you open a selected app. It can then display a blocking screen or intervention to help you pause and reconsider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Noctra help reduce doomscrolling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Noctra includes anti-doomscrolling interventions that interrupt automatic scrolling loops and encourage more intentional phone use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Noctra work on Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Noctra is available for Android devices and can be downloaded from Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Noctra use Accessibility Service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Noctra uses Accessibility Service to detect when selected distracting apps are opened, enabling real-time blocking and usage-limit interventions. It does not read passwords or private messages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Noctra free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Noctra is free to download and use. Some advanced features may be available through optional in-app purchases, but the core app-blocking and focus tools are free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose which apps to block?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can select exactly which apps you want to limit or block. Noctra gives you full control over your settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Noctra collect private messages or passwords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Noctra does not use Accessibility Service to read passwords, payment information, private messages or any text you type."
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Download CTA -->
     <section class="section" aria-labelledby="cta-heading">
       <div class="container cta-panel">
-        <h2 id="cta-heading">Start rebuilding your attention</h2>
+        <h2 id="cta-heading">Start taking control of your screen time</h2>
         <p>Download Noctra from Google Play and begin creating healthier boundaries around distracting apps, endless scrolling and high-stimulation phone habits.</p>
         <div class="actions">
           <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Download Noctra on Google Play</a>
-          <a class="btn" href="mailto:nextflowapps@gmail.com">Contact Next Flow Apps</a>
+          <a class="btn" href="/support.html">Contact support</a>
           <a class="btn" href="/noctra/privacy-policy">Privacy Policy</a>
         </div>
       </div>
     </section>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "@id": "https://prodigytasfin.github.io/noctra/#app",
-        "name": "Noctra: Dopamine Detox",
-        "alternateName": "Noctra",
-        "url": "https://prodigytasfin.github.io/noctra/",
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.noctra",
-        "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.noctra",
-        "operatingSystem": "Android",
-        "applicationCategory": "ProductivityApplication",
-        "description": "Noctra is a dopamine detox and digital wellbeing app for Android designed to reduce doomscrolling, block distracting apps, support focus sessions and build healthier phone habits.",
-        "image": "https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw",
-        "author": {
-          "@type": "Organization",
-          "name": "Next Flow Apps",
-          "url": "https://prodigytasfin.github.io/",
-          "email": "nextflowapps@gmail.com",
-          "sameAs": ["https://www.instagram.com/nextflow_apps/"]
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://play.google.com/store/apps/details?id=com.tasfin.noctra"
-        }
-      }
-    </script>
 
   </main>
 
@@ -811,8 +990,12 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
+        <a href="/support.html">Support</a>
         <a href="/noctra/privacy-policy">Privacy Policy</a>
         <a href="/refund-policy">Refund Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Noctra on Google Play</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
       </nav>
     </div>
   </footer>
