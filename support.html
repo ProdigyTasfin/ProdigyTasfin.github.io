@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support My Journey | Next Flow Apps</title>
+  <meta name="description" content="Support Tasfin Hasan Sakib, an independent Android app developer building tools for focus, productivity, and digital wellbeing." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://prodigytasfin.github.io/support.html" />
+  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Support My Journey | Next Flow Apps" />
+  <meta property="og:description" content="Support Tasfin Hasan Sakib, an independent Android app developer building tools for focus, productivity, and digital wellbeing." />
+  <meta property="og:url" content="https://prodigytasfin.github.io/support.html" />
+  <meta property="og:site_name" content="Next Flow Apps" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --secondary: #444;
+      --muted: #666;
+      --line: #eee;
+      --line-strong: #ddd;
+      --surface: #fafafa;
+      --radius: 10px
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: inherit
+    }
+
+    .container {
+      width: min(720px, calc(100% - 48px));
+      margin-inline: auto
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 20;
+      transform: translateY(-150%);
+      padding: .55rem .8rem;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none
+    }
+
+    .skip-link:focus {
+      transform: translateY(0)
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px)
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      text-decoration: none
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: #111;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      overflow: hidden
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .15rem
+    }
+
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: .45rem .7rem;
+      border-radius: 6px;
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: #111;
+      background: var(--surface)
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: #111;
+      background: var(--surface)
+    }
+
+    .menu-toggle {
+      display: none
+    }
+
+    .support-hero {
+      padding: 64px 0 32px
+    }
+
+    .support-hero h1 {
+      font-size: clamp(2.6rem, 6vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -.04em;
+      margin: 0 0 .25rem
+    }
+
+    .support-hero .lead {
+      color: var(--secondary);
+      font-size: 1.15rem;
+      max-width: 60ch
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin-bottom: 1rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: .25rem .55rem;
+      color: #555;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase
+    }
+
+    .section {
+      padding: 40px 0 20px
+    }
+
+    .section:last-of-type {
+      padding-bottom: 60px
+    }
+
+    .section-head {
+      margin-bottom: 1.5rem
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin: 0 0 .25rem;
+      letter-spacing: -.02em
+    }
+
+    .section-head p {
+      color: var(--secondary)
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 .25rem;
+      letter-spacing: -.01em
+    }
+
+    p {
+      color: var(--secondary);
+      margin-bottom: .75rem;
+      max-width: 65ch
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      color: var(--secondary);
+      margin: .5rem 0 .75rem
+    }
+
+    ul li {
+      margin-bottom: .3rem
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    .app-tag {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .1rem .6rem;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      margin-right: .3rem
+    }
+
+    .highlight-box {
+      background: var(--surface);
+      border-left: 4px solid var(--text);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1rem 0
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 2.5rem 0
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: .65rem 1.5rem;
+      border: 1px solid #111;
+      border-radius: 6px;
+      background: #fff;
+      color: #111;
+      font-size: .92rem;
+      font-weight: 650;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      margin-top: .5rem
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #111;
+      color: #fff
+    }
+
+    .btn.primary {
+      background: #111;
+      color: #fff
+    }
+
+    .btn.primary:hover {
+      background: #333
+    }
+
+    .btn.bmc {
+      background: #ffdd00;
+      border-color: #ffdd00;
+      color: #111;
+      font-weight: 700
+    }
+
+    .btn.bmc:hover {
+      background: #f5c900;
+      border-color: #f5c900;
+      color: #111
+    }
+
+    .btn.bmc svg {
+      margin-right: 8px
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 1rem 0
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      font-style: normal;
+      margin-top: .5rem
+    }
+
+    .contact-details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
+    .site-footer {
+      padding: 42px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem
+    }
+
+    .footer-grid p {
+      color: var(--secondary);
+      font-size: .9rem;
+      margin-bottom: .5rem
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: .5rem 1rem
+    }
+
+    .footer-links a {
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--text)
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: .6rem 1.5rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, border-color .2s
+    }
+
+    .back-link:hover {
+      background: var(--surface);
+      border-color: #bbb
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp .65s ease forwards
+    }
+
+    .delay-1 {
+      animation-delay: .1s
+    }
+    .delay-2 {
+      animation-delay: .2s
+    }
+    .delay-3 {
+      animation-delay: .3s
+    }
+    .delay-4 {
+      animation-delay: .4s
+    }
+    .delay-5 {
+      animation-delay: .5s
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    :focus-visible {
+      outline: 3px solid #111;
+      outline-offset: 3px
+    }
+
+    @media(max-width:820px) {
+      .container {
+        width: min(100% - 32px, 720px)
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        min-height: 40px;
+        padding: .4rem .7rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background: #fff;
+        font-weight: 700;
+        cursor: pointer
+      }
+
+      .nav-links {
+        position: absolute;
+        inset: 72px 16px auto;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: .5rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
+      }
+
+      .nav-links.is-open {
+        display: flex
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem
+      }
+
+      .btn-group {
+        flex-direction: column
+      }
+
+      .btn-group .btn {
+        width: 100%;
+        justify-content: center
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .fade-in-up {
+        opacity: 1;
+        animation: none
+      }
+
+      .btn {
+        transition: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Next Flow Apps home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+        </span>
+        <span>Next Flow Apps</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+        Menu
+      </button>
+
+      <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="container support-hero">
+      <span class="eyebrow">Support my journey</span>
+      <h1>Hi, I'm Tasfin 👋</h1>
+      <p class="lead">I'm a computer science student and an independent app developer. I build tools that solve real problems and make everyday life a little easier.</p>
+    </div>
+
+    <div class="container">
+
+      <!-- About -->
+      <section class="section fade-in-up">
+        <h2>About Me</h2>
+        <p>My name is <strong>Tasfin Hasan Sakib</strong>. I'm a computer science student with a deep curiosity for building things that help people. I believe technology should not only entertain us — it should help us focus, learn, relax, and live more intentionally.</p>
+        <p>I build apps that solve problems I experience myself. I test them in my own daily routine, and then share them with others who may be facing the same challenges.</p>
+        <p>This curiosity keeps me building. I am continuously learning, experimenting, and creating new apps that I hope will genuinely help people.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Why I Build -->
+      <section class="section fade-in-up delay-1">
+        <h2>Why I Build</h2>
+        <p>Life can sometimes feel overwhelming — full of distractions, monotony, and pressure. I've experienced those moments too. That's why I started building tools to help me navigate my own days more intentionally.</p>
+        <p>Every app I create starts with a personal need:</p>
+        <ul>
+          <li><strong>Reducing distractions</strong> so I can focus on what matters</li>
+          <li><strong>Structuring my time</strong> so I can study and code without burnout</li>
+          <li><strong>Breaking monotony</strong> so I can stay engaged with everyday tasks</li>
+        </ul>
+        <p>I share these tools because I know others face similar challenges. My goal is to build apps that make a real difference in people's daily lives.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Apps I've Built -->
+      <section class="section fade-in-up delay-2">
+        <h2>Apps I've Built</h2>
+
+        <h3>Noctra</h3>
+        <p><span class="app-tag">Digital wellbeing</span></p>
+        <p>Noctra helps reduce distractions, control excessive social media use, and build healthier digital habits. I personally use it when I need to stay away from distracting apps and focus on important work.</p>
+
+        <h3>Temvica</h3>
+        <p><span class="app-tag">Pomodoro timer</span></p>
+        <p>Temvica helps me stay focused while studying and coding. I use its 25‑minute focus sessions followed by 5‑minute breaks to work without becoming overwhelmed.</p>
+
+        <h3>HushFlow</h3>
+        <p><span class="app-tag">Background audio</span></p>
+        <p>HushFlow is one of my favorite projects. It helps make repetitive or tiring tasks feel less monotonous through music, podcasts, and background audio.</p>
+
+        <p style="margin-top:.5rem">I'm always working on new ideas. If you have a suggestion, feel free to reach out!</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- How Support Helps -->
+      <section class="section fade-in-up delay-3">
+        <h2>How Your Support Helps</h2>
+        <p>Building and maintaining apps requires time and resources. Support helps me cover expenses such as:</p>
+        <ul>
+          <li>Development tools and online services</li>
+          <li>App publishing and testing costs</li>
+          <li>Servers, APIs, and cloud services</li>
+          <li>Design resources</li>
+          <li>Improving existing apps</li>
+          <li>Building new projects</li>
+        </ul>
+        <p>Every contribution, regardless of the amount, helps me continue learning and creating useful products.</p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Support CTA -->
+      <section class="section fade-in-up delay-4">
+        <h2>Support My Work</h2>
+        <p>If you find value in what I'm building and would like to support my journey, you can do so through Buy Me a Coffee.</p>
+
+        <div class="btn-group">
+          <a class="btn bmc" href="https://buymeacoffee.com/tasfin165" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M2 20.5c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V10H2v10.5zM22 8c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v1h20V8zM4 4h16v2H4V4z"/>
+            </svg>
+            Support me on Buy Me a Coffee
+          </a>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Thank you:</strong> Every coffee helps me keep building. I am deeply grateful for every person who supports this journey — whether through a donation, a review, or simply using my apps.
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Other Ways to Help -->
+      <section class="section fade-in-up delay-5">
+        <h2>Other Ways to Help</h2>
+        <p>Financial support is never required. You can also help by:</p>
+        <ul>
+          <li><strong>Downloading and using my apps</strong> — your daily use is the best validation</li>
+          <li><strong>Leaving an honest review</strong> — reviews help others discover the apps</li>
+          <li><strong>Reporting bugs</strong> — your feedback makes the apps better</li>
+          <li><strong>Sharing an app</strong> — with someone who may find it useful</li>
+          <li><strong>Sending me feature ideas or suggestions</strong> — I love hearing new perspectives</li>
+        </ul>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Have an Idea -->
+      <section class="section fade-in-up delay-1">
+        <h2>Have an Idea?</h2>
+        <p>I'm always interested in hearing about real problems that could be solved with technology.</p>
+        <p>If you have an app idea, feature suggestion, or feedback, feel free to reach out.</p>
+        <p><strong>Email:</strong> <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></p>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Closing -->
+      <section class="section fade-in-up delay-2" style="padding-bottom:0">
+        <p style="font-size:1.15rem;font-weight:500;margin-bottom:.25rem">Thank you for being part of my journey.</p>
+        <p style="color:var(--secondary);margin-bottom:0">
+          <strong>Tasfin Hasan Sakib</strong><br>
+          Computer Science Student &amp; Independent Developer
+        </p>
+        <div class="btn-group">
+          <a class="btn primary" href="mailto:nextflowapps@gmail.com">Contact me via email</a>
+          <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+        </div>
+      </section>
+
+      <a class="back-link" href="/">← Back to Home</a>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/" aria-label="Next Flow Apps home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+          </span>
+          <span>Next Flow Apps</span>
+        </a>
+        <p>Developer: Tasfin Hasan Sakib</p>
+        <address class="contact-details">
+          <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
+          <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
+        </address>
+        <p>© <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Auto-update year
+    document.querySelectorAll('[data-year]').forEach(el => {
+      el.textContent = new Date().getFullYear() || '2026';
+    });
+  </script>
+
+</body>
+</html>
