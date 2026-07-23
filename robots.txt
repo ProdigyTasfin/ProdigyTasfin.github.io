@@ -3,4 +3,4 @@ Allow: /
 Disallow: /private/
 Disallow: /draft/
 
-Sitemap: https://prodigytasfin.github.io/sitemap.xml
+Sitemap: https://nextflow-apps.com/sitemap.xml
