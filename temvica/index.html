@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temvica: Pomodoro Timer | Next Flow Apps</title>
-  <meta name="description" content="Focus with Pomodoro sessions, tasks, ambient sounds, timer styles and productivity insights." />
+  <title>Temvica: Pomodoro Focus Timer for Study and Work</title>
+  <meta name="description" content="Plan tasks, use Pomodoro focus sessions, play ambient sounds and review productivity insights with Temvica for Android." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://nextflow-apps.com/temvica/" />
   <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Temvica: Pomodoro Timer | Next Flow Apps" />
-  <meta property="og:description" content="Focus with Pomodoro sessions, tasks, ambient sounds, timer styles and productivity insights." />
+  <meta property="og:title" content="Temvica: Pomodoro Focus Timer for Study and Work" />
+  <meta property="og:description" content="Plan tasks, use flexible Pomodoro sessions, play ambient sounds and understand your focus rhythm with Temvica for Android." />
   <meta property="og:url" content="https://nextflow-apps.com/temvica/" />
   <meta property="og:site_name" content="Next Flow Apps" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" />
-  <meta property="og:image:alt" content="Temvica Pomodoro Timer app icon" />
+  <meta property="og:image:alt" content="Temvica Pomodoro focus timer app icon" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Temvica: Pomodoro Focus Timer for Study and Work" />
+  <meta name="twitter:description" content="Use Pomodoro sessions, tasks, ambient sounds and productivity insights to build a calmer focus routine." />
+  <meta name="twitter:image" content="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" />
+  <meta name="twitter:image:alt" content="Temvica Pomodoro focus timer app icon" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -287,6 +294,31 @@
       color: var(--muted)
     }
 
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--secondary);
+    }
+
+    .breadcrumb li+li::before {
+      content: " / ";
+      padding: 0 0.4rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb li[aria-current="page"] {
+      color: var(--text);
+      font-weight: 600;
+    }
+
     .breadcrumb a {
       color: var(--secondary);
       text-decoration: none;
@@ -341,6 +373,10 @@
       grid-template-columns: 1fr 1fr
     }
 
+    .three {
+      grid-template-columns: repeat(3, 1fr)
+    }
+
     .feature,
     .app-card,
     .policy-card,
@@ -370,6 +406,25 @@
       margin-bottom: .2rem;
       color: var(--secondary);
       font-size: .95rem
+    }
+
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem
+    }
+
+    .step .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #111;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: .75rem
     }
 
     .cta-panel {
@@ -435,6 +490,18 @@
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 2px
+    }
+
+    .privacy-link {
+      margin-top: 1rem;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .privacy-link a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
     }
 
     .site-footer {
@@ -550,6 +617,7 @@
       .hero-grid,
       .feature-grid,
       .two,
+      .three,
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem
@@ -595,7 +663,7 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="Next Flow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
         </span>
         <span>Next Flow Apps</span>
       </a>
@@ -609,7 +677,7 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/" aria-current="page">Temvica</a>
-        <a href="/#contact">Contact</a>
+        <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
     </div>
@@ -617,32 +685,62 @@
 
   <main id="main">
 
-    <div class="container breadcrumb">
-      <a href="/">Home</a> / Temvica
-    </div>
+    <nav class="container breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Temvica</li>
+      </ol>
+    </nav>
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div>
           <span class="badge ok">Available on Google Play</span>
-          <h1 id="hero-heading">Choose one task. Start your focus.</h1>
+          <h1 id="hero-heading">Plan one task, start a Pomodoro session and protect your focus</h1>
           <p class="lead">Temvica combines Pomodoro sessions, task planning, ambient sounds, flexible focus modes and productivity insights in one calm Android experience.</p>
           <div class="actions">
             <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Get Temvica on Google Play</a>
             <a class="btn" href="#features">Explore Features</a>
           </div>
-          <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">
-            <a href="/temvica/privacy-policy.html" style="text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>
+          <p class="trust">A calm Android productivity app built independently by Next Flow Apps.</p>
+          <div class="privacy-link">
+            <a href="/temvica/privacy-policy.html">Privacy Policy</a>
             &nbsp;·&nbsp;
-            <a href="/temvica/data-deletion.html" style="text-decoration:underline;text-underline-offset:2px;">Data Deletion</a>
-          </p>
+            <a href="/temvica/data-deletion.html">Data Deletion</a>
+            &nbsp;·&nbsp;
+            <a href="/support.html">Support</a>
+          </div>
         </div>
 
-        <div class="visual" aria-hidden="true">
-          <img class="visual-icon" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" alt="Temvica app icon" />
+        <div class="visual">
+          <img class="visual-icon" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="512" height="512" alt="Temvica Pomodoro focus timer app icon" loading="eager" decoding="async" />
           <strong>Temvica</strong>
           <span>Pomodoro · Tasks · Ambient sounds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why use Temvica? -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="why-heading">Why use Temvica?</h2>
+          <p>Temvica is designed for moments when you want to focus on one thing at a time — studying, coding, writing, or deep work.</p>
+        </div>
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li>Studying for exams or completing assignments</li>
+            <li>Coding or software development sessions</li>
+            <li>Deep work and writing</li>
+            <li>Reading and research</li>
+            <li>Remote work and freelancing</li>
+            <li>Managing one task at a time with clear focus and break intervals</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">Temvica helps you structure your work.</p>
+            <p style="margin-bottom:0">It is not a solution for every productivity challenge, but it offers a simple framework for timed focus sessions, task clarity and a calmer approach to getting things done.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -651,7 +749,7 @@
     <section id="features" class="section" aria-labelledby="features-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="features-heading">A calmer way to build momentum.</h2>
+          <h2 id="features-heading">A calmer way to build momentum</h2>
           <p>Plan the work in front of you, stay with it, and review a rhythm that fits your day.</p>
         </div>
 
@@ -686,6 +784,7 @@
               <li>Keyboard</li>
               <li>Custom device audio for Premium users</li>
             </ul>
+            <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem">Sound availability may vary by app version. Custom audio depends on file access and Android permissions.</p>
           </article>
 
           <article class="feature fade-in-up delay-4">
@@ -709,7 +808,71 @@
               <li>Additional personalisation</li>
               <li>Lifetime Premium support</li>
             </ul>
+            <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem">Premium may include these features. Availability may vary by version and purchase type.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Temvica works -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="how-heading">How Temvica works</h2>
+          <p>A simple process to help you focus, one session at a time.</p>
+        </div>
+        <ol style="padding-left:1.5rem;color:var(--secondary);max-width:660px">
+          <li style="margin-bottom:.5rem"><strong>Create or choose one task</strong> — give your focus session a clear purpose.</li>
+          <li style="margin-bottom:.5rem"><strong>Select a focus mode or custom duration</strong> — choose from Focus, Flow, Deep, Rest, or set your own timings.</li>
+          <li style="margin-bottom:.5rem"><strong>Start the timer</strong> — optionally play an ambient sound to help you settle into the session.</li>
+          <li style="margin-bottom:.5rem"><strong>Complete the session and take a break</strong> — rest, then continue or start a new task.</li>
+          <li style="margin-bottom:.5rem"><strong>Review your progress</strong> — see completed sessions, focused minutes, and patterns over time.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Who Temvica is for -->
+    <section class="section" aria-labelledby="audience-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="audience-heading">Who Temvica is for</h2>
+          <p>Temvica is built for people who want a simple, structured approach to focused work.</p>
+        </div>
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li><strong>Students</strong> — study for exams and complete assignments with timed sessions.</li>
+            <li><strong>Developers</strong> — maintain deep focus during coding sessions.</li>
+            <li><strong>Writers and creatives</strong> — use uninterrupted blocks for writing and research.</li>
+            <li><strong>Remote workers and freelancers</strong> — structure your day with focused work and breaks.</li>
+            <li><strong>Anyone who prefers timed work and break cycles</strong> — build a rhythm that fits your natural energy.</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">Temvica is one approach to focus, not a guarantee.</p>
+            <p style="margin-bottom:0">It provides structure, but your results depend on your own discipline and the work you choose to bring to each session.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy and data -->
+    <section class="section" aria-labelledby="privacy-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="privacy-heading">Privacy and data</h2>
+          <p>We keep things simple and transparent.</p>
+        </div>
+        <div style="max-width:660px">
+          <p>Tasks, focus sessions, and preferences are stored locally on your device. You can review the Privacy Policy and follow the Data Deletion instructions at any time.</p>
+          <ul style="padding-left:1.5rem">
+            <li>Temvica may request notification permission for timer alerts.</li>
+            <li>File or media access may be requested only when you choose custom device audio, depending on your Android version.</li>
+            <li>Google Play handles purchases where applicable.</li>
+          </ul>
+          <div class="actions" style="margin-top:1rem">
+            <a class="btn" href="/temvica/privacy-policy.html">Privacy Policy</a>
+            <a class="btn" href="/temvica/data-deletion.html">Data Deletion</a>
+            <a class="btn" href="/refund-policy.html">Refund Policy</a>
+          </div>
         </div>
       </div>
     </section>
@@ -721,20 +884,43 @@
         <div class="grid two">
           <details>
             <summary>What is Temvica?</summary>
-            <p>Temvica is a Pomodoro timer and focus tool for Android. It combines structured focus sessions, task management, ambient soundscapes, and productivity insights to help you study and work more effectively.</p>
+            <p>Temvica is an Android Pomodoro focus timer that combines timed focus sessions, task planning, ambient sounds, and productivity insights to help you study and work more effectively.</p>
           </details>
           <details>
-            <summary>Is Temvica available on Google Play?</summary>
-            <p>Yes. Temvica is publicly available for Android through Google Play.</p>
-            <p><a href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">View Temvica on Google Play</a></p>
+            <summary>How does the Pomodoro timer work?</summary>
+            <p>Temvica lets you set focus and break durations. You work during the focus period, then take a short break. This cycle can be repeated throughout your work or study session.</p>
+          </details>
+          <details>
+            <summary>What focus modes are available?</summary>
+            <p>Temvica includes Focus, Flow, Deep, and Rest modes, along with the ability to set custom focus and break durations.</p>
+          </details>
+          <details>
+            <summary>Can I create tasks in Temvica?</summary>
+            <p>Yes. You can quickly create tasks, organise them into study, work, or personal categories, and link each task to a focus session.</p>
+          </details>
+          <details>
+            <summary>Can I link a task to a focus session?</summary>
+            <p>Yes. Choose a task before starting a Pomodoro session to keep your work aligned with your chosen focus.</p>
+          </details>
+          <details>
+            <summary>Does Temvica include ambient sounds?</summary>
+            <p>Yes. Temvica includes rain, cafe, fan, and keyboard sounds. Premium users may also access custom device audio.</p>
+          </details>
+          <details>
+            <summary>Does Temvica work offline?</summary>
+            <p>Yes. Temvica supports offline timer functionality. Your tasks, focus sessions, and preferences are stored locally on your device.</p>
           </details>
           <details>
             <summary>Is Temvica free?</summary>
             <p>Temvica offers a free experience with core Pomodoro features, task management, ambient sounds, and basic insights. Premium features are available via subscription or lifetime purchase.</p>
           </details>
           <details>
-            <summary>Does Temvica work offline?</summary>
-            <p>Yes. Temvica supports offline timer functionality. Your tasks, focus sessions, and preferences are stored locally on your device.</p>
+            <summary>What may be included with Temvica Premium?</summary>
+            <p>Premium may include timer styles, custom timers, detailed insights, custom device audio, additional personalisation, and lifetime Premium support. Availability may vary.</p>
+          </details>
+          <details>
+            <summary>What permissions may Temvica request?</summary>
+            <p>Temvica may request notification permission for timer alerts. It may request file or media access only when you choose custom device audio, depending on your Android version.</p>
           </details>
           <details>
             <summary>How do I delete my Temvica data?</summary>
@@ -742,60 +928,215 @@
             <p><a href="/temvica/data-deletion.html">View full data deletion instructions</a></p>
           </details>
           <details>
-            <summary>What permissions does Temvica require?</summary>
-            <p>Temvica may request notification permission for timer alerts and storage permission if you choose to use custom audio files. All permissions are optional.</p>
-          </details>
-          <details>
-            <summary>What devices support Temvica?</summary>
-            <p>Temvica is designed for Android devices running Android 6.0 (Marshmallow) and above. Performance may vary depending on device capabilities.</p>
+            <summary>Where can I download Temvica?</summary>
+            <p>Temvica is available on Google Play. <a href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Download it here</a>.</p>
           </details>
           <details>
             <summary>How can I contact support?</summary>
             <p>You can reach us via email at <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> or through Instagram at <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a>.</p>
           </details>
+          <details>
+            <summary>Is Temvica available for Android?</summary>
+            <p>Yes. Temvica is available for compatible Android devices through Google Play. Device and feature compatibility may vary by Android version and hardware.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- Download CTA -->
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Temvica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica is an Android Pomodoro focus timer that combines timed focus sessions, task planning, ambient sounds, and productivity insights to help you study and work more effectively."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Pomodoro timer work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica lets you set focus and break durations. You work during the focus period, then take a short break. This cycle can be repeated throughout your work or study session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What focus modes are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica includes Focus, Flow, Deep, and Rest modes, along with the ability to set custom focus and break durations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I create tasks in Temvica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can quickly create tasks, organise them into study, work, or personal categories, and link each task to a focus session."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I link a task to a focus session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Choose a task before starting a Pomodoro session to keep your work aligned with your chosen focus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Temvica include ambient sounds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Temvica includes rain, cafe, fan, and keyboard sounds. Premium users may also access custom device audio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Temvica work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Temvica supports offline timer functionality. Your tasks, focus sessions, and preferences are stored locally on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Temvica free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica offers a free experience with core Pomodoro features, task management, ambient sounds, and basic insights. Premium features are available via subscription or lifetime purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What may be included with Temvica Premium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Premium may include timer styles, custom timers, detailed insights, custom device audio, additional personalisation, and lifetime Premium support. Availability may vary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What permissions may Temvica request?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica may request notification permission for timer alerts. It may request file or media access only when you choose custom device audio, depending on your Android version."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I delete my Temvica data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can delete your data by clearing the app storage via Android Settings, uninstalling the app, or using the in-app deletion controls where available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download Temvica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Temvica is available on Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach us via email at nextflowapps@gmail.com or through Instagram at @nextflow_apps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Temvica available for Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Temvica is available for compatible Android devices through Google Play. Device and feature compatibility may vary by Android version and hardware."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Final CTA -->
     <section class="section" aria-labelledby="cta-heading">
       <div class="container cta-panel">
-        <h2 id="cta-heading">Start your focus journey</h2>
-        <p>Download Temvica and experience the power of structured, distraction‑free work.</p>
+        <h2 id="cta-heading">Start your next focus session with Temvica</h2>
+        <p>Choose a task, start a Pomodoro session and build a focus rhythm that fits your day.</p>
         <div class="actions">
           <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Get Temvica on Google Play</a>
           <a class="btn" href="/temvica/privacy-policy.html">Privacy Policy</a>
           <a class="btn" href="/temvica/data-deletion.html">Data Deletion</a>
+          <a class="btn" href="/support.html">Support</a>
         </div>
       </div>
     </section>
 
-    <!-- Structured Data -->
+    <!-- Structured Data: MobileApplication -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Temvica",
-        "alternateName": "Temvica: Pomodoro Timer",
-        "operatingSystem": "Android",
-        "applicationCategory": "ProductivityApplication",
-        "description": "Focus with Pomodoro sessions, tasks, ambient sounds, timer styles and productivity insights.",
-        "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.focusflow",
-        "image": "https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw",
-        "author": {
-          "@type": "Organization",
-          "name": "Next Flow Apps",
-          "url": "https://prodigytasfin.github.io/",
-          "email": "nextflowapps@gmail.com",
-          "sameAs": ["https://www.instagram.com/nextflow_apps/"]
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Temvica",
+      "alternateName": "Temvica: Pomodoro Timer",
+      "url": "https://nextflow-apps.com/temvica/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.focusflow",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.focusflow",
+      "operatingSystem": "Android",
+      "applicationCategory": "ProductivityApplication",
+      "description": "Temvica is an Android Pomodoro focus timer with task planning, ambient sounds, flexible focus modes and productivity insights.",
+      "isAccessibleForFree": true,
+      "image": "https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw",
+      "author": {
+        "@type": "Person",
+        "name": "Tasfin Hasan Sakib"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Flow Apps",
+        "url": "https://nextflow-apps.com/",
+        "email": "nextflowapps@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/nextflow_apps/"
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://play.google.com/store/apps/details?id=com.tasfin.focusflow"
       }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Next Flow Apps",
+          "item": "https://nextflow-apps.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Temvica",
+          "item": "https://nextflow-apps.com/temvica/"
+        }
+      ]
+    }
     </script>
 
   </main>
@@ -805,7 +1146,7 @@
       <div>
         <a class="brand" href="/" aria-label="Next Flow Apps home">
           <span class="brand-mark" aria-hidden="true">
-            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
           </span>
           <span>Next Flow Apps</span>
         </a>
@@ -824,7 +1165,11 @@
         <a href="/temvica/" aria-current="page">Temvica</a>
         <a href="/temvica/privacy-policy.html">Privacy Policy</a>
         <a href="/temvica/data-deletion.html">Data Deletion</a>
-        <a href="/refund-policy">Refund Policy</a>
+        <a href="/support.html">Support</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Temvica on Google Play</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
       </nav>
     </div>
   </footer>
@@ -842,6 +1187,21 @@
         links.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
       }));
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
 
     // Auto-update year
