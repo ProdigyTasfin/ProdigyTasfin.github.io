@@ -3,28 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta
+  <meta
     name="google-site-verification"
     content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc"
   />
-  <title>Next Flow Apps | Focus, Music &amp; Digital Wellbeing</title>
-  <meta name="description" content="Discover Android apps by Next Flow Apps, including HushFlow for background audio, Noctra for dopamine detox, and Temvica for Pomodoro focus." />
+  <title>Next Flow Apps: Android Apps for Focus and Digital Wellbeing</title>
+  <meta
+    name="description"
+    content="Explore Android apps by Next Flow Apps for background audio, app blocking, digital wellbeing, Pomodoro focus, task planning and healthier screen habits."
+  />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://nextflow-apps.com/" />
   <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Next Flow Apps | Focus, Music and Digital Wellbeing Apps" />
-  <meta property="og:description" content="Independent Android apps for background listening, dopamine detox, digital wellbeing and Pomodoro focus." />
+  <meta
+    property="og:title"
+    content="Next Flow Apps: Android Apps for Focus and Digital Wellbeing"
+  />
+  <meta
+    property="og:description"
+    content="Independent Android apps for background audio, digital wellbeing, reducing doomscrolling and Pomodoro focus."
+  />
   <meta property="og:url" content="https://nextflow-apps.com/" />
   <meta property="og:site_name" content="Next Flow Apps" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" />
+  <meta property="og:image:alt" content="Next Flow Apps Android app studio logo" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Next Flow Apps: Android Apps for Focus and Digital Wellbeing"
+  />
+  <meta
+    name="twitter:description"
+    content="Explore independent Android apps for background listening, digital wellbeing, app blocking and Pomodoro focus."
+  />
+  <meta name="twitter:image" content="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" />
+  <meta name="twitter:image:alt" content="Next Flow Apps Android app studio logo" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Next Flow Apps",
+    "url": "https://nextflow-apps.com/",
+    "logo": "https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw",
+    "description": "Next Flow Apps is an independent Android app studio creating tools for background audio, digital wellbeing, healthier screen habits and focused work.",
+    "email": "nextflowapps@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Tasfin Hasan Sakib"
+    },
+    "sameAs": [
+      "https://www.instagram.com/nextflow_apps/",
+      "https://github.com/ProdigyTasfin"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Next Flow Apps",
+    "alternateName": "NextFlow Apps",
+    "url": "https://nextflow-apps.com/",
+    "description": "Official website for Android apps created by Next Flow Apps."
+  }
+  </script>
+
+  <!-- Structured Data: ItemList (Apps) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Android apps by Next Flow Apps",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HushFlow",
+        "url": "https://nextflow-apps.com/hushflow/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Noctra",
+        "url": "https://nextflow-apps.com/noctra/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Temvica",
+        "url": "https://nextflow-apps.com/temvica/"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -379,6 +464,11 @@
       margin-top: 0
     }
 
+    .app-card .actions .btn {
+      font-size: .85rem;
+      padding: .5rem 1rem
+    }
+
     .feature {
       transition: transform .2s ease, box-shadow .2s ease
     }
@@ -416,6 +506,42 @@
       text-underline-offset: 2px
     }
 
+    .faq .grid {
+      gap: 12px
+    }
+
+    .faq details {
+      padding: 16px 20px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: #fff;
+      cursor: pointer;
+      transition: border-color .2s, background .2s
+    }
+
+    .faq details:hover {
+      border-color: #bbb;
+      background: var(--surface)
+    }
+
+    .faq details summary {
+      font-weight: 600;
+      outline: none;
+      cursor: pointer
+    }
+
+    .faq details p {
+      margin-top: 12px;
+      color: var(--secondary);
+      font-size: .95rem
+    }
+
+    .faq details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
     .site-footer {
       padding: 42px 0;
       background: #fafafa;
@@ -438,7 +564,12 @@
     .footer-links a {
       color: var(--secondary);
       font-size: .9rem;
-      font-weight: 600
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--text)
     }
 
     .fade-in-up {
@@ -532,6 +663,10 @@
         width: 64px;
         height: 64px
       }
+
+      .faq .grid.two {
+        gap: 12px
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -560,7 +695,7 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="Next Flow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
         </span>
         <span>Next Flow Apps</span>
       </a>
@@ -574,7 +709,6 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
-        <a href="#contact">Contact</a>
         <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
@@ -588,17 +722,18 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Independent Android app studio</span>
-          <h1 id="hero-heading">Apps designed for focus, calm and better digital habits.</h1>
-          <p class="lead">Next Flow Apps creates focused Android experiences for background listening, dopamine detox, healthier screen habits and productive work sessions.</p>
+          <h1 id="hero-heading">Practical Android apps for focus, listening and healthier digital habits</h1>
+          <p class="lead">Next Flow Apps creates independent Android tools for background audio, reducing doomscrolling, app blocking, Pomodoro focus, task planning and better screen habits.</p>
           <div class="actions">
             <a class="btn primary" href="#apps">Explore Our Apps</a>
+            <a class="btn" href="/support.html">Support Next Flow Apps</a>
             <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
           </div>
           <p class="trust">Independent Android apps by Tasfin Hasan Sakib.</p>
         </div>
 
-        <div class="visual" aria-hidden="true">
-          <img class="visual-icon" src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps icon" />
+        <div class="visual">
+          <img class="visual-icon" src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" width="188" height="188" alt="Next Flow Apps logo" decoding="async" />
           <strong>Next Flow Apps</strong>
           <span>Focus · Calm · Productive</span>
         </div>
@@ -609,8 +744,8 @@
     <section id="apps" class="section" aria-labelledby="apps-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="apps-heading">Android apps for listening, wellbeing and focused work</h2>
-          <p>Explore Android apps for uninterrupted background listening, healthier screen habits, dopamine detox, focused study and productive work sessions.</p>
+          <h2 id="apps-heading">Explore Android apps by Next Flow Apps</h2>
+          <p>Each app solves a different everyday digital problem — from background listening and screen-time control to focused work sessions.</p>
         </div>
 
         <div class="grid app-grid">
@@ -619,41 +754,66 @@
             <img class="app-logo" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="512" height="512" alt="HushFlow background audio player app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
             <span class="badge ok">Available on Google Play</span>
             <h3>HushFlow</h3>
-            <p>A background audio player with screen-off playback, sleep timer, queue controls, playlists and sound customization.</p>
+            <p>An Android background audio player with screen-off playback, sleep timer, queue controls, playlists and sound customization.</p>
             <div class="actions">
-              <a class="btn primary" href="/hushflow/">Explore HushFlow</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+              <a class="btn primary" href="/hushflow/">Explore HushFlow background audio features</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download HushFlow from Google Play</a>
             </div>
           </article>
 
           <!-- Noctra -->
           <article class="app-card fade-in-up delay-2">
-            <img class="app-logo" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="512" height="512" alt="Noctra dopamine detox and digital wellbeing app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            <img class="app-logo" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="512" height="512" alt="Noctra app blocker and digital wellbeing app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
             <span class="badge ok">Available on Google Play</span>
             <h3>Noctra</h3>
-            <p>A dopamine detox and digital wellbeing app designed to reduce doomscrolling, control distracting apps, rebuild focus and support healthier screen habits.</p>
+            <p>An Android app blocker and digital wellbeing tool designed to reduce doomscrolling, limit distracting apps and support healthier screen habits.</p>
             <div class="actions">
-              <a class="btn primary" href="/noctra/">Explore Noctra</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+              <a class="btn primary" href="/noctra/">Explore Noctra app-blocking features</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Download Noctra from Google Play</a>
             </div>
           </article>
 
           <!-- Temvica -->
           <article class="app-card fade-in-up delay-3">
-            <img class="app-logo" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="512" height="512" alt="Temvica Pomodoro Timer app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+            <img class="app-logo" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="512" height="512" alt="Temvica Pomodoro timer app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
             <span class="badge ok">Available on Google Play</span>
             <h3>Temvica</h3>
-            <p>A calm Pomodoro timer for study, deep work, tasks, ambient sounds, focus modes, and productivity insights.</p>
+            <p>A Pomodoro focus timer for Android with tasks, ambient sounds, flexible session modes and productivity insights.</p>
             <div class="actions">
-              <a class="btn primary" href="/temvica/">Explore Temvica</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+              <a class="btn primary" href="/temvica/">Explore Temvica Pomodoro features</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Download Temvica from Google Play</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Why -->
+    <!-- Apps built around real problems -->
+    <section class="section" aria-labelledby="problems-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="problems-heading">Apps built around real everyday problems</h2>
+          <p>Each app is designed to address a specific challenge you might face in your daily digital life.</p>
+        </div>
+
+        <div class="grid feature-grid">
+          <article class="feature fade-in-up delay-1">
+            <h3>Background listening</h3>
+            <p><a href="/hushflow/">HushFlow</a> supports users who want audio to continue while multitasking, locking the screen or using a sleep timer — without needing to keep the app open.</p>
+          </article>
+          <article class="feature fade-in-up delay-2">
+            <h3>Healthier screen habits</h3>
+            <p><a href="/noctra/">Noctra</a> supports users who want stronger boundaries around distracting apps, endless scrolling and mindless phone use — with practical tools to interrupt automatic habits.</p>
+          </article>
+          <article class="feature fade-in-up delay-3">
+            <h3>Structured focus sessions</h3>
+            <p><a href="/temvica/">Temvica</a> supports users who prefer timed work, tasks, ambient sounds and visible progress — a simple framework for focused study or deep work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Next Flow Apps -->
     <section class="section" aria-labelledby="why-heading">
       <div class="container">
         <div class="section-head fade-in-up">
@@ -664,15 +824,15 @@
         <div class="grid feature-grid">
           <article class="feature fade-in-up delay-1">
             <h3>Focused by design</h3>
-            <p>Each app is built around a clear purpose without unnecessary menus or distracting features.</p>
+            <p>Each app has one clear purpose and avoids unnecessary complexity, menus or distracting features that get in the way.</p>
           </article>
           <article class="feature fade-in-up delay-2">
-            <h3>Made for daily use</h3>
-            <p>Practical Android tools for listening, concentration, digital wellbeing and healthier technology habits.</p>
+            <h3>Built for everyday Android use</h3>
+            <p>Practical tools for studying, working, listening and managing screen habits — designed around common routines and real-world use.</p>
           </article>
           <article class="feature fade-in-up delay-3">
-            <h3>Built independently</h3>
-            <p>Products are developed and refined through direct user feedback and real-world testing.</p>
+            <h3>Developed independently</h3>
+            <p>Products are built and refined by independent developer Tasfin Hasan Sakib using direct user feedback and real-world testing.</p>
           </article>
         </div>
       </div>
@@ -682,24 +842,144 @@
     <section class="section" aria-labelledby="developer-heading">
       <div class="container two grid">
         <div>
-          <h2 id="developer-heading">About the developer</h2>
-          <p>Next Flow Apps is an independent Android app brand created by Tasfin Hasan Sakib. The apps focus on background listening, dopamine detox, digital wellbeing, concentration and more intentional technology use.</p>
+          <h2 id="developer-heading">About Next Flow Apps</h2>
+          <p>Next Flow Apps is an independent Android app brand created by <strong>Tasfin Hasan Sakib</strong>, a computer science student and Android developer. The apps are inspired by practical problems involving focus, screen habits, background listening and productivity.</p>
+          <p>User feedback is always welcome. If you have ideas or suggestions, feel free to reach out.</p>
           <address class="contact-details">
             <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
             <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
           </address>
+          <div style="margin-top:1rem">
+            <a class="btn" href="/support.html">Learn about supporting Next Flow Apps</a>
+          </div>
         </div>
 
         <div id="contact" class="cta-panel">
           <h2>Contact Next Flow Apps</h2>
-          <p>Have feedback, a support question, or a business inquiry? Reach Next Flow Apps by email or Instagram.</p>
+          <p>Have product feedback, an app idea, a support request or a business inquiry? Contact Next Flow Apps by email or Instagram.</p>
           <div class="actions">
             <a class="btn primary" href="mailto:nextflowapps@gmail.com">Email Next Flow Apps</a>
             <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow @nextflow_apps</a>
+            <a class="btn" href="/support.html">Visit Support</a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    <section class="section faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <div class="grid two">
+          <details>
+            <summary>What is Next Flow Apps?</summary>
+            <p>Next Flow Apps is an independent Android app studio that builds practical tools for background audio, digital wellbeing, app blocking, Pomodoro focus and task planning.</p>
+          </details>
+          <details>
+            <summary>Who develops the apps?</summary>
+            <p>The apps are created by Tasfin Hasan Sakib, an independent Android developer and computer science student.</p>
+          </details>
+          <details>
+            <summary>Which Android apps are currently available?</summary>
+            <p>Next Flow Apps currently offers three apps: <a href="/hushflow/">HushFlow</a> for background audio, <a href="/noctra/">Noctra</a> for digital wellbeing and app blocking, and <a href="/temvica/">Temvica</a> for Pomodoro focus and task planning.</p>
+          </details>
+          <details>
+            <summary>Where can I download the apps?</summary>
+            <p>All apps are available on Google Play. You can find direct download links on each app's landing page.</p>
+          </details>
+          <details>
+            <summary>Are the apps free?</summary>
+            <p>Each app may offer a free experience and optional paid features, subscriptions or lifetime purchases. Current availability and pricing are shown on Google Play and inside the relevant app.</p>
+          </details>
+          <details>
+            <summary>How can I contact support?</summary>
+            <p>You can reach us by email at <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> or through Instagram at <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a>.</p>
+          </details>
+          <details>
+            <summary>Where can I read the privacy policies?</summary>
+            <p>You can find the main <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/refund-policy.html">Refund Policy</a> on this website. Each app also has its own privacy policy on its landing page.</p>
+          </details>
+          <details>
+            <summary>How can I suggest an app idea?</summary>
+            <p>We're always open to hearing new ideas. Send your suggestions via email or Instagram, and we'll consider them for future development.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Next Flow Apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Next Flow Apps is an independent Android app studio that builds practical tools for background audio, digital wellbeing, app blocking, Pomodoro focus and task planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who develops the apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The apps are created by Tasfin Hasan Sakib, an independent Android developer and computer science student."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Android apps are currently available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Next Flow Apps currently offers three apps: HushFlow for background audio, Noctra for digital wellbeing and app blocking, and Temvica for Pomodoro focus and task planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download the apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All apps are available on Google Play. You can find direct download links on each app's landing page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the apps free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each app may offer a free experience and optional paid features, subscriptions or lifetime purchases. Current availability and pricing are shown on Google Play and inside the relevant app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach us by email at nextflowapps@gmail.com or through Instagram at @nextflow_apps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I read the privacy policies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can find the main Privacy Policy and Refund Policy on this website. Each app also has its own privacy policy on its landing page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I suggest an app idea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're always open to hearing new ideas. Send your suggestions via email or Instagram, and we'll consider them for future development."
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- Instagram CTA -->
     <section class="section" aria-labelledby="instagram-heading">
@@ -717,7 +997,7 @@
       <div>
         <a class="brand" href="/" aria-label="Next Flow Apps home">
           <span class="brand-mark" aria-hidden="true">
-            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
           </span>
           <span>Next Flow Apps</span>
         </a>
@@ -734,7 +1014,7 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
-        <a href="/privacy-policy.html">Privacy policy</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
         <a href="/refund-policy.html">Refund Policy</a>
         <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -744,18 +1024,42 @@
   </footer>
 
   <script>
-    // Mobile menu toggle (matches the CSS .is-open class)
+    // Mobile menu toggle
     const toggle = document.querySelector('.menu-toggle');
     const links = document.querySelector('.nav-links');
     if (toggle && links) {
       toggle.addEventListener('click', () => {
         const open = links.classList.toggle('is-open');
         toggle.setAttribute('aria-expanded', String(open));
+        toggle.textContent = open ? 'Close' : 'Menu';
       });
-      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
+
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        });
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+          toggle.focus();
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        }
+      });
     }
 
     // Auto-update year
