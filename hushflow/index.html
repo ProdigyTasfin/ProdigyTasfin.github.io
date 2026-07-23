@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HushFlow: Background Music Player for Android</title>
-  <meta name="description" content="Play music in the background with screen-off playback, sleep timer, queue controls, playlists and a 10-band equalizer on Android.">
+  <title>HushFlow: Background Audio Player for Android</title>
+  <meta name="description" content="Play supported audio in the background with screen-off playback, sleep timer, queue controls, playlists and sound customization using HushFlow for Android.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://nextflow-apps.com/hushflow/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="HushFlow: Background Music Player for Android">
-  <meta property="og:description" content="Play music in the background with screen-off playback, sleep timer, queue controls, playlists and a 10-band equalizer on Android.">
+  <meta property="og:title" content="HushFlow: Background Audio Player for Android">
+  <meta property="og:description" content="Use background playback, screen-off listening, sleep timer, queues, playlists and sound controls with HushFlow for Android.">
   <meta property="og:url" content="https://nextflow-apps.com/hushflow/">
-  <meta property="og:image" content="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD">
   <meta property="og:site_name" content="Next Flow Apps">
-  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD">
+  <meta property="og:image:alt" content="HushFlow background audio player app icon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HushFlow: Background Audio Player for Android">
+  <meta name="twitter:description" content="Play supported audio with background playback, screen-off listening, sleep timer, queues and sound controls.">
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD">
+  <meta name="twitter:image:alt" content="HushFlow background audio player app icon">
+  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,6 +246,12 @@
       background: #333
     }
 
+    .trust {
+      margin-top: .75rem;
+      font-size: .82rem;
+      color: var(--muted)
+    }
+
     .visual {
       display: flex;
       flex-direction: column;
@@ -285,6 +300,31 @@
 
     .breadcrumb a:hover {
       color: var(--text)
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--secondary);
+    }
+
+    .breadcrumb li+li::before {
+      content: " / ";
+      padding: 0 0.4rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb li[aria-current="page"] {
+      color: var(--text);
+      font-weight: 600;
     }
 
     .section {
@@ -389,6 +429,12 @@
       font-size: .95rem
     }
 
+    .faq details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px
+    }
+
     .contact-details {
       display: flex;
       flex-direction: column;
@@ -401,6 +447,18 @@
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 2px
+    }
+
+    .privacy-link {
+      margin-top: 1rem;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .privacy-link a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
     }
 
     .site-footer {
@@ -425,7 +483,12 @@
     .footer-links a {
       color: var(--secondary);
       font-size: .9rem;
-      font-weight: 600
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      color: var(--text)
     }
 
     .fade-in-up {
@@ -444,6 +507,15 @@
     }
     .delay-4 {
       animation-delay: .4s
+    }
+    .delay-5 {
+      animation-delay: .5s
+    }
+    .delay-6 {
+      animation-delay: .6s
+    }
+    .delay-7 {
+      animation-delay: .7s
     }
 
     @keyframes fadeInUp {
@@ -543,7 +615,7 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="Next Flow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
         </span>
         <span>Next Flow Apps</span>
       </a>
@@ -557,7 +629,7 @@
         <a href="/hushflow/" aria-current="page">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
-        <a href="/#contact">Contact</a>
+        <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
     </div>
@@ -565,30 +637,60 @@
 
   <main id="main">
 
-    <div class="container breadcrumb">
-      <a href="/">Home</a> / HushFlow
-    </div>
+    <nav class="container breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">HushFlow</li>
+      </ol>
+    </nav>
 
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div>
           <span class="badge ok">Available on Google Play</span>
-          <h1 id="hero-heading">Background listening without interruptions.</h1>
-          <p class="lead">Play music in the background with screen-off playback, sleep timer, queue, and EQ.</p>
+          <h1 id="hero-heading">Play audio in the background, even with your screen off</h1>
+          <p class="lead">HushFlow is an Android background audio player with screen‑off playback, queue controls, a sleep timer, playlists, and sound customization.</p>
           <div class="actions">
             <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get HushFlow on Google Play</a>
             <a class="btn" href="#features">Explore Features</a>
           </div>
-          <p style="margin-top:1rem;font-size:.85rem;color:var(--muted)">
-            <a href="/hushflow/privacy-policy" style="text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>
-          </p>
+          <p class="trust">Built independently by Next Flow Apps for Android.</p>
+          <div class="privacy-link">
+            <a href="/hushflow/privacy-policy.html">Privacy Policy</a>
+            &nbsp;·&nbsp;
+            <a href="/support.html">Support</a>
+          </div>
         </div>
 
-        <div class="visual" aria-hidden="true">
-          <img class="visual-icon" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" alt="HushFlow app icon" />
+        <div class="visual">
+          <img class="visual-icon" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" alt="HushFlow app icon" width="512" height="512" loading="eager" decoding="async" />
           <strong>HushFlow</strong>
           <span>Background audio · Sleep timer · Queues</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why use HushFlow? -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="why-heading">Why use HushFlow?</h2>
+          <p>HushFlow is designed for moments when you want to keep listening without being tied to your phone screen.</p>
+        </div>
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li>Listening to music or podcasts while studying or working</li>
+            <li>Playing audio while using another app, such as maps or messaging</li>
+            <li>Keeping audio playing with the phone screen locked</li>
+            <li>Setting a sleep timer before bed</li>
+            <li>Organising a temporary queue of tracks</li>
+            <li>Adjusting sound with equaliser controls</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">HushFlow focuses on the basics that matter for background listening.</p>
+            <p style="margin-bottom:0">It is not a streaming service and does not host or provide access to copyrighted content. It plays audio you already have access to through your device or supported sources.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -597,39 +699,101 @@
     <section id="features" class="section" aria-labelledby="features-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="features-heading">HushFlow features for background music and multitasking</h2>
-          <p>An Android music player built for background listening, queue manager workflows, custom playlists where available, and sound customization.</p>
+          <h2 id="features-heading">Features for background listening and multitasking</h2>
+          <p>HushFlow is built around practical audio tools: background playback, queue management, playlists, sleep timer, and sound customisation.</p>
         </div>
 
         <div class="grid feature-grid">
           <article class="feature fade-in-up delay-1">
-            <h3>Background and screen-off playback</h3>
-            <p>HushFlow can continue playing supported audio while you open another app, minimize the app, lock the screen, study, work or relax.</p>
+            <h3>Background and screen‑off playback</h3>
+            <p>Supported audio can continue playing while you use other apps, minimise HushFlow, or lock the screen — ideal for studying, working, or relaxing.</p>
           </article>
           <article class="feature fade-in-up delay-2">
             <h3>Playback controls</h3>
-            <p>Use notification playback controls, lock-screen controls, an in-app mini player, play and pause controls, track navigation and repeat playback.</p>
+            <p>Control playback from notifications, the lock screen, or the in‑app mini player. Use play, pause, skip, and repeat controls.</p>
           </article>
           <article class="feature fade-in-up delay-3">
-            <h3>Queue and playlists</h3>
-            <p>Add tracks to the queue, reorder queued tracks, remove tracks, repeat playback and use custom playlist support for simple queue management.</p>
+            <h3>Queue management</h3>
+            <p>Add tracks to the queue, reorder them, remove items, and manage what plays next. Simple queue controls keep your listening flow organised.</p>
           </article>
           <article class="feature fade-in-up delay-4">
+            <h3>Playlists</h3>
+            <p>Create and manage custom playlists where supported. Organise your favourite tracks for quick access.</p>
+          </article>
+          <article class="feature fade-in-up delay-5">
             <h3>Sleep timer</h3>
-            <p>Set a music sleep timer with a countdown, stop after the current track, and support sleeping, relaxation or study sessions.</p>
+            <p>Set a countdown timer to stop playback automatically. Optionally stop after the current track — useful for bedtime or relaxation sessions.</p>
           </article>
-          <article class="feature fade-in-up delay-1">
+          <article class="feature fade-in-up delay-6">
             <h3>Audio discovery</h3>
-            <p>Browse supported categories including Focus, Sleep, Mood, Pop and Jazz for focus music, sleep music and background listening.</p>
+            <p>Browse categories including Focus, Sleep, Mood, Pop, and Jazz to find audio that fits your activity.</p>
           </article>
-          <article class="feature fade-in-up delay-2">
+          <article class="feature fade-in-up delay-7">
             <h3>Audio Lab</h3>
-            <p>Shape sound with a 10-band equalizer, bass boost, virtualizer, loudness enhancer, audio presets and saved sound settings.</p>
+            <p>Adjust sound with a 10‑band equaliser, bass boost, virtualizer, loudness enhancer, presets, and saved preferences.</p>
+            <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem">Audio effects may vary by Android device, OS version, and connected audio output.</p>
           </article>
-          <article class="feature fade-in-up delay-3">
-            <h3>Free and Premium</h3>
-            <p>Free includes core background playback, selected ad-supported access and basic listening tools. Premium can include ad-free listening, custom playlist support, full Audio Lab access, and more.</p>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How HushFlow works -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="how-heading">How HushFlow works</h2>
+          <p>Getting started with background listening is straightforward.</p>
+        </div>
+        <ol style="padding-left:1.5rem;color:var(--secondary);max-width:660px">
+          <li style="margin-bottom:.5rem"><strong>Open HushFlow</strong> and choose supported audio from your device or available sources.</li>
+          <li style="margin-bottom:.5rem"><strong>Start playback</strong> and manage your queue or playlists as you go.</li>
+          <li style="margin-bottom:.5rem"><strong>Continue listening</strong> while using other apps or locking the screen — playback continues in the background.</li>
+          <li style="margin-bottom:.5rem"><strong>Use extra controls</strong> like the sleep timer, equaliser, or saved presets when you need them.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Who HushFlow is for -->
+    <section class="section" aria-labelledby="audience-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="audience-heading">Who HushFlow is for</h2>
+          <p>HushFlow is designed for anyone who wants flexible background audio control on Android.</p>
+        </div>
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li><strong>Students</strong> – listen while studying without needing to keep the screen on.</li>
+            <li><strong>Remote workers and developers</strong> – keep audio playing while you focus on other tasks.</li>
+            <li><strong>People who listen during repetitive tasks</strong> – make routine activities more enjoyable with background audio.</li>
+            <li><strong>Users who want screen‑off playback</strong> – save battery and reduce distractions.</li>
+            <li><strong>Anyone who uses a sleep timer</strong> – fall asleep to audio without worrying about it playing all night.</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0">HushFlow is a tool, not a service.</p>
+            <p style="margin-bottom:0">It does not provide music or audio content itself. It plays audio you already have access to through your device or other sources, and gives you better control over how you listen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy and transparency -->
+    <section class="section" aria-labelledby="privacy-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="privacy-heading">Privacy and transparency</h2>
+          <p>We believe in being clear about how HushFlow works and what it can and cannot do.</p>
+        </div>
+        <div style="max-width:660px">
+          <p><strong>Please review the privacy policy before using HushFlow.</strong> It explains how the app handles information, permissions, and third‑party services.</p>
+          <ul style="padding-left:1.5rem">
+            <li>Feature availability may depend on your Android version, device permissions, and hardware capabilities.</li>
+            <li>HushFlow does not guarantee compatibility with every device or audio source.</li>
+            <li>Purchases, where applicable, are processed through Google Play.</li>
+          </ul>
+          <div class="actions" style="margin-top:1rem">
+            <a class="btn" href="/hushflow/privacy-policy.html">Read the privacy policy</a>
+            <a class="btn" href="/refund-policy.html">Refund Policy</a>
+          </div>
         </div>
       </div>
     </section>
@@ -637,76 +801,236 @@
     <!-- FAQ -->
     <section class="section faq" aria-labelledby="faq-heading">
       <div class="container">
-        <h2 id="faq-heading">HushFlow FAQ</h2>
+        <h2 id="faq-heading">Frequently asked questions</h2>
         <div class="grid two">
           <details>
-            <summary>Can HushFlow play while the screen is off?</summary>
-            <p>Yes. HushFlow is designed for screen-off playback of supported audio.</p>
+            <summary>What is HushFlow?</summary>
+            <p>HushFlow is an Android background audio player with screen‑off playback, queue controls, playlists, a sleep timer, and sound customisation.</p>
           </details>
           <details>
-            <summary>Can I use HushFlow while using other apps?</summary>
-            <p>Yes. You can play music in background while using other apps.</p>
+            <summary>Can HushFlow play while the screen is off?</summary>
+            <p>HushFlow is designed to continue supported audio playback while the device screen is locked, subject to Android device and system limitations.</p>
+          </details>
+          <details>
+            <summary>Can I use other apps while HushFlow is playing?</summary>
+            <p>Yes. HushFlow supports background playback, so you can use other apps while audio continues to play.</p>
           </details>
           <details>
             <summary>Does HushFlow include a sleep timer?</summary>
-            <p>Yes. The sleep timer can use a countdown and may stop after the current track.</p>
+            <p>Yes. You can set a countdown timer to stop playback, with an option to stop after the current track.</p>
           </details>
           <details>
             <summary>Can I control playback from the lock screen?</summary>
-            <p>Yes. HushFlow supports lock-screen controls and notification controls where Android allows them.</p>
+            <p>Yes. HushFlow supports lock‑screen and notification controls where Android allows them.</p>
+          </details>
+          <details>
+            <summary>Can I manage the playback queue?</summary>
+            <p>Yes. You can add, reorder, and remove tracks from the queue.</p>
           </details>
           <details>
             <summary>Does HushFlow include an equalizer?</summary>
-            <p>Yes. HushFlow includes a 10-band equalizer and related Audio Lab controls.</p>
-          </details>
-          <details>
-            <summary>Is HushFlow free?</summary>
-            <p>HushFlow offers a free experience with core playback and selected ad-supported access.</p>
-          </details>
-          <details>
-            <summary>What is included with HushFlow Premium?</summary>
-            <p>Premium can include ad-free listening, custom playlist support, full Audio Lab access, saved sound preferences and additional premium features.</p>
+            <p>Yes. HushFlow includes a 10‑band equaliser and related Audio Lab controls.</p>
           </details>
           <details>
             <summary>Do audio effects work on every Android device?</summary>
-            <p>Audio-effect availability and performance may vary depending on device, operating system and connected audio output.</p>
+            <p>Audio effects may vary depending on your device, Android version, and connected audio output.</p>
+          </details>
+          <details>
+            <summary>Is HushFlow free?</summary>
+            <p>HushFlow offers a free experience with core playback and selected ad‑supported access. Premium features are available through optional in‑app purchases.</p>
+          </details>
+          <details>
+            <summary>What may be included with HushFlow Premium?</summary>
+            <p>Premium may include ad‑free listening, custom playlist support, full Audio Lab access, saved sound preferences, and additional features. Availability may vary.</p>
+          </details>
+          <details>
+            <summary>Where can I download HushFlow?</summary>
+            <p>HushFlow is available on Google Play. <a href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download it here</a>.</p>
+          </details>
+          <details>
+            <summary>Where can I read the privacy policy?</summary>
+            <p>You can read the full privacy policy at <a href="/hushflow/privacy-policy.html">/hushflow/privacy-policy.html</a>.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Download CTA -->
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is HushFlow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HushFlow is an Android background audio player with screen-off playback, queue controls, playlists, a sleep timer, and sound customisation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can HushFlow play while the screen is off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HushFlow is designed to continue supported audio playback while the device screen is locked, subject to Android device and system limitations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use other apps while HushFlow is playing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HushFlow supports background playback, so you can use other apps while audio continues to play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does HushFlow include a sleep timer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can set a countdown timer to stop playback, with an option to stop after the current track."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I control playback from the lock screen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HushFlow supports lock-screen and notification controls where Android allows them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage the playback queue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can add, reorder, and remove tracks from the queue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does HushFlow include an equalizer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HushFlow includes a 10-band equaliser and related Audio Lab controls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do audio effects work on every Android device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Audio effects may vary depending on your device, Android version, and connected audio output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is HushFlow free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HushFlow offers a free experience with core playback and selected ad-supported access. Premium features are available through optional in-app purchases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What may be included with HushFlow Premium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Premium may include ad-free listening, custom playlist support, full Audio Lab access, saved sound preferences, and additional features. Availability may vary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download HushFlow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HushFlow is available on Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I read the privacy policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can read the full privacy policy at /hushflow/privacy-policy.html."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Final CTA -->
     <section class="section" aria-labelledby="cta-heading">
       <div class="container cta-panel">
         <h2 id="cta-heading">Start background listening with HushFlow</h2>
-        <p>Get HushFlow from its official Google Play listing.</p>
+        <p>Get HushFlow from Google Play and enjoy screen‑off playback, queue controls, and sound customisation.</p>
         <div class="actions">
           <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get HushFlow on Google Play</a>
-          <a class="btn" href="/hushflow/privacy-policy">Privacy Policy</a>
+          <a class="btn" href="/hushflow/privacy-policy.html">Privacy Policy</a>
+          <a class="btn" href="/support.html">Support</a>
         </div>
       </div>
     </section>
 
+    <!-- Structured Data: MobileApplication -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "HushFlow",
-        "operatingSystem": "Android",
-        "applicationCategory": "MultimediaApplication",
-        "description": "Play music in the background with screen-off playback, sleep timer, queue controls, playlists and a 10-band equalizer on Android.",
-        "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
-        "author": {
-          "@type": "Organization",
-          "name": "Next Flow Apps",
-          "sameAs": ["https://www.instagram.com/nextflow_apps/"]
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "HushFlow",
+      "alternateName": "HushFlow: Music and Podcasts",
+      "url": "https://nextflow-apps.com/hushflow/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
+      "operatingSystem": "Android",
+      "applicationCategory": "MultimediaApplication",
+      "description": "HushFlow is an Android background audio player with screen-off playback, sleep timer, queue controls, playlists and sound customization.",
+      "isAccessibleForFree": true,
+      "image": "https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD",
+      "author": {
+        "@type": "Person",
+        "name": "Tasfin Hasan Sakib"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Flow Apps",
+        "url": "https://nextflow-apps.com/",
+        "sameAs": [
+          "https://www.instagram.com/nextflow_apps/"
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow"
       }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Next Flow Apps",
+          "item": "https://nextflow-apps.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HushFlow",
+          "item": "https://nextflow-apps.com/hushflow/"
+        }
+      ]
+    }
     </script>
 
   </main>
@@ -716,7 +1040,7 @@
       <div>
         <a class="brand" href="/" aria-label="Next Flow Apps home">
           <span class="brand-mark" aria-hidden="true">
-            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="Next Flow Apps logo" />
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
           </span>
           <span>Next Flow Apps</span>
         </a>
@@ -725,7 +1049,7 @@
           Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a><br>
           Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a>
         </p>
-        <p>© <span data-year>2026</span> Next Flow Apps.</p>
+        <p>© <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
       </div>
 
       <nav class="footer-links" aria-label="Footer navigation">
@@ -733,8 +1057,12 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
-        <a href="/hushflow/privacy-policy">Privacy Policy</a>
-        <a href="/refund-policy">Refund Policy</a>
+        <a href="/hushflow/privacy-policy.html">Privacy Policy</a>
+        <a href="/support.html">Support</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">HushFlow on Google Play</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
       </nav>
     </div>
   </footer>
@@ -752,6 +1080,21 @@
         links.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
       }));
+      // Close menu on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
 
     // Auto-update year
