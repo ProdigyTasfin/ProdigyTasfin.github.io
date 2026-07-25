@@ -1,1 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+  ARTICLE: How to Use a Music Sleep Timer on Android
+  URL: https://nextflow-apps.com/articles/how-to-use-a-music-sleep-timer-on-android/
+  ============================================================ -->
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
+
+  <title>How to Use a Music Sleep Timer on Android</title>
+  <meta name="description" content="Learn how to use a music sleep timer on Android to stop music, podcasts or ambient audio automatically after a selected period." />
+
+  <link rel="canonical" href="https://nextflow-apps.com/articles/how-to-use-a-music-sleep-timer-on-android/" />
+
+  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Use a Music Sleep Timer on Android" />
+  <meta property="og:description" content="Learn how to use a music sleep timer on Android to stop music, podcasts or ambient audio automatically after a selected period." />
+  <meta property="og:url" content="https://nextflow-apps.com/articles/how-to-use-a-music-sleep-timer-on-android/" />
+  <meta property="og:site_name" content="Next Flow Apps" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://nextflow-apps.com/assets/articles/how-to-use-a-music-sleep-timer-on-android/music-sleep-timer-android.webp" />
+  <meta property="og:image:alt" content="Android phone beside headphones with a music sleep timer set for bedtime" />
+  <meta property="article:author" content="Tasfin Hasan Sakib" />
+  <meta property="article:section" content="Background Audio" />
+  <meta property="article:published_time" content="2026-07-10" />
+  <meta property="article:modified_time" content="2026-07-24" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Use a Music Sleep Timer on Android" />
+  <meta name="twitter:description" content="Learn how to use a music sleep timer on Android to stop music, podcasts or ambient audio automatically after a selected period." />
+  <meta name="twitter:image" content="https://nextflow-apps.com/assets/articles/how-to-use-a-music-sleep-timer-on-android/music-sleep-timer-android.webp" />
+  <meta name="twitter:image:alt" content="Android phone beside headphones with a music sleep timer set for bedtime" />
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use a Music Sleep Timer on Android",
+    "description": "Learn how to use a music sleep timer on Android to stop music, podcasts or ambient audio automatically after a selected period.",
+    "image": [
+      "https://nextflow-apps.com/assets/articles/how-to-use-a-music-sleep-timer-on-android/music-sleep-timer-android.webp"
+    ],
+    "datePublished": "2026-07-10",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nextflow-apps.com/articles/how-to-use-a-music-sleep-timer-on-android/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Tasfin Hasan Sakib",
+      "url": "https://nextflow-apps.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Next Flow Apps",
+      "url": "https://nextflow-apps.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw"
+      }
+    },
+    "articleSection": "Background Audio",
+    "keywords": [
+      "how to use a music sleep timer on Android",
+      "Android music sleep timer",
+      "audio sleep timer",
+      "stop music automatically on Android",
+      "bedtime music timer"
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Next Flow Apps",
+        "item": "https://nextflow-apps.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://nextflow-apps.com/articles/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Use a Music Sleep Timer on Android",
+        "item": "https://nextflow-apps.com/articles/how-to-use-a-music-sleep-timer-on-android/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --secondary: #444;
+      --muted: #666;
+      --line: #eee;
+      --line-strong: #ddd;
+      --surface: #fafafa;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 999;
+      transform: translateY(-150%);
+      padding: 0.55rem 0.8rem;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: #111;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+    }
+
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.7rem;
+      border-radius: 6px;
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a[aria-current="page"] {
+      color: #111;
+      background: var(--surface);
+    }
+
+    .menu-toggle {
+      display: none;
+      min-height: 40px;
+      padding: 0.4rem 0.7rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: #fff;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       BREADCRUMB
+       ============================================================ */
+    .breadcrumb {
+      padding: 20px 0 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--secondary);
+    }
+
+    .breadcrumb li+li::before {
+      content: " / ";
+      padding: 0 0.4rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb li[aria-current="page"] {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .breadcrumb a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--text);
+    }
+
+    /* ============================================================
+       ARTICLE LAYOUT
+       ============================================================ */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 3rem;
+      padding: 40px 0 60px;
+    }
+
+    .article-main {
+      min-width: 0;
+    }
+
+    /* ============================================================
+       ARTICLE HEADER
+       ============================================================ */
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-category {
+      display: inline-flex;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      color: #555;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .article-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    .article-description {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      max-width: 640px;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .article-meta time {
+      color: var(--secondary);
+    }
+
+    /* ============================================================
+       ARTICLE HERO IMAGE
+       ============================================================ */
+    .article-hero {
+      margin: 1.5rem 0 2.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+    }
+
+    .article-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-hero figcaption {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    /* ============================================================
+       TABLE OF CONTENTS (sidebar)
+       ============================================================ */
+    .table-of-contents {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+    }
+
+    .table-of-contents h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+
+    .table-of-contents ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 0.3rem;
+    }
+
+    .table-of-contents a {
+      display: block;
+      padding: 0.3rem 0;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .table-of-contents a:hover {
+      color: var(--text);
+      border-bottom-color: var(--line-strong);
+    }
+
+    /* ============================================================
+       ARTICLE CONTENT
+       ============================================================ */
+    .article-content {
+      max-width: 760px;
+    }
+
+    .article-content section {
+      margin-bottom: 2.5rem;
+    }
+
+    .article-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+      scroll-margin-top: 90px;
+    }
+
+    .article-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 1.25rem 0 0.5rem;
+      scroll-margin-top: 90px;
+    }
+
+    .article-content p {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.3rem;
+    }
+
+    .article-content li strong {
+      color: var(--text);
+    }
+
+    .article-content .callout {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+      border-left: 4px solid var(--text);
+      background: var(--surface);
+    }
+
+    .article-content .callout strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .article-content .callout p {
+      margin: 0;
+      color: var(--secondary);
+    }
+
+    .article-content .callout-tip {
+      border-left-color: #2e7d32;
+      background: #f5faf5;
+    }
+
+    .article-content .callout-tip strong {
+      color: #2e7d32;
+    }
+
+    .article-content .callout-note {
+      border-left-color: #1a5a8a;
+      background: #f0f5fa;
+    }
+
+    .article-content .callout-note strong {
+      color: #1a5a8a;
+    }
+
+    .article-content figure {
+      margin: 1.5rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+    }
+
+    .article-content figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-content figure figcaption {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 380px;
+    }
+
+    .table-wrapper th,
+    .table-wrapper td {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--line-strong);
+      text-align: left;
+    }
+
+    .table-wrapper th {
+      background: var(--surface);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       RELATED APP
+       ============================================================ */
+    .related-app {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: var(--surface);
+      margin: 2.5rem 0;
+    }
+
+    .related-app .eyebrow {
+      display: inline-flex;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .related-app h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .related-app p {
+      color: var(--secondary);
+      max-width: 640px;
+    }
+
+    .related-app .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.25rem;
+    }
+
+    /* ============================================================
+       AUTHOR BOX
+       ============================================================ */
+    .author-box {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: var(--surface);
+      margin: 2.5rem 0;
+    }
+
+    .author-box h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    .author-box p {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .author-box a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq {
+      margin: 2.5rem 0;
+    }
+
+    .faq h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .faq details {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq details:hover {
+      border-color: #bbb;
+      background: var(--surface);
+    }
+
+    .faq details summary {
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .faq details p {
+      margin-top: 0.75rem;
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    .faq details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       RELATED ARTICLES
+       ============================================================ */
+    .related-articles {
+      margin: 2.5rem 0;
+    }
+
+    .related-articles h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .related-grid article {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      background: #fff;
+      transition: box-shadow 0.2s;
+    }
+
+    .related-grid article:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .related-grid h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem;
+    }
+
+    .related-grid h3 a {
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .related-grid h3 a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    .related-grid p {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin: 0;
+    }
+
+    /* ============================================================
+       ARTICLE CTA
+       ============================================================ */
+    .article-cta {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: var(--surface);
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+
+    .article-cta h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-cta p {
+      color: var(--secondary);
+      max-width: 60ch;
+      margin-inline: auto;
+    }
+
+    .article-cta .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.65rem 1.5rem;
+      border: 1px solid #111;
+      border-radius: 6px;
+      background: #fff;
+      color: #111;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 650;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #333;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer {
+      padding: 42px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem;
+    }
+
+    .footer-grid p {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: 0.5rem 1rem;
+    }
+
+    .footer-links a {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-style: normal;
+    }
+
+    .contact-details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .table-of-contents {
+        position: relative;
+        top: 0;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        width: min(100% - 32px, 1120px);
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        inset: 72px 16px auto;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.6rem 0.7rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .article-header h1 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+      }
+
+      .article-content h2 {
+        scroll-margin-top: 80px;
+      }
+
+      .article-content h3 {
+        scroll-margin-top: 80px;
+      }
+
+      .table-of-contents a {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        min-height: 40px;
+      }
+
+      .article-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .article-meta {
+        font-size: 0.8rem;
+        gap: 0.25rem 0.75rem;
+      }
+
+      .related-app {
+        padding: 1.25rem;
+      }
+
+      .article-cta {
+        padding: 1.25rem;
+      }
+
+      .table-of-contents {
+        padding: 1rem;
+      }
+    }
+
+    /* ============================================================
+       REDUCED MOTION
+       ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
+      }
+
+      .btn:hover {
+        transform: none;
+      }
+
+      .related-grid article:hover {
+        box-shadow: none;
+      }
+
+      .faq details:hover {
+        border-color: var(--line-strong);
+        background: #fff;
+      }
+    }
+
+    /* ============================================================
+       FOCUS VISIBLE
+       ============================================================ */
+    :focus-visible {
+      outline: 3px solid #111;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to article</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Next Flow Apps home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
+        </span>
+        <span>Next Flow Apps</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+        Menu
+      </button>
+
+      <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/articles/" aria-current="page">Articles</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/support.html">Support</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main">
+
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li aria-current="page">How to Use a Music Sleep Timer on Android</li>
+        </ol>
+      </nav>
+
+      <!-- Article Layout -->
+      <div class="article-layout">
+
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <div class="article-main">
+
+          <!-- Article Header -->
+          <header class="article-header">
+            <span class="article-category">Background audio</span>
+
+            <h1>How to Use a Music Sleep Timer on Android</h1>
+
+            <p class="article-description">
+              Set your audio to fade out automatically so you can fall asleep without worrying about playback all night.
+            </p>
+
+            <div class="article-meta">
+              <span>By Tasfin Hasan Sakib</span>
+              <time datetime="2026-07-10">Published Jul 10, 2026</time>
+              <time datetime="2026-07-24">Updated Jul 24, 2026</time>
+              <span>4 min read</span>
+            </div>
+          </header>
+
+          <!-- Hero Image -->
+          <figure class="article-hero">
+            <img
+              src="/assets/articles/how-to-use-a-music-sleep-timer-on-android/music-sleep-timer-android.webp"
+              width="1200"
+              height="630"
+              alt="Android phone beside headphones with a music sleep timer set for bedtime"
+              decoding="async"
+            />
+            <figcaption>A sleep timer can stop supported music, podcasts or ambient audio after a selected period.</figcaption>
+          </figure>
+
+          <!-- ============================================================
+               ARTICLE CONTENT
+               ============================================================ -->
+          <article class="article-content">
+
+            <!-- Introduction -->
+            <section id="introduction">
+              <p>You start a podcast, music, or rain sounds to help you drift off. But then you worry: will it keep playing all night, draining your battery and possibly waking you up later?</p>
+              <p>A <strong>music sleep timer</strong> solves this problem. It stops or pauses playback after a selected period — so you can fall asleep to audio without having to wake up to turn it off.</p>
+              <p>This guide explains what a sleep timer is, how to find and set one in your audio app, how long to choose, and what to do if your app does not include this feature. We will also look at how HushFlow supports bedtime listening.</p>
+            </section>
+
+            <!-- Section 1 -->
+            <section id="what-is-sleep-timer">
+              <h2>What is a music sleep timer?</h2>
+              <p>A music sleep timer is a playback control that stops or pauses audio after a selected amount of time. It is designed for users who want to fall asleep to music, podcasts, audiobooks, or ambient sounds without the audio continuing all night.</p>
+              <p><strong>Common timer options include:</strong></p>
+              <ul>
+                <li>Stop after 15 minutes</li>
+                <li>Stop after 30 minutes</li>
+                <li>Stop after 45 minutes</li>
+                <li>Stop after 1 hour</li>
+                <li>Stop at the end of the current track</li>
+                <li>Stop at the end of the current podcast episode</li>
+              </ul>
+              <p><strong>Reasons to use one:</strong></p>
+              <ul>
+                <li>Falling asleep to calming music or ambient sounds</li>
+                <li>Listening to podcasts in bed</li>
+                <li>Preventing audio from playing all night</li>
+                <li>Reducing unnecessary battery and mobile data use</li>
+                <li>Avoiding being woken up by unexpected audio later in the night</li>
+              </ul>
+              <p>Exact behavior depends on the app — some offer only fixed durations, while others let you stop at the end of a track or episode.</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="how-to-set-timer">
+              <h2>How to set a sleep timer in an Android audio app</h2>
+              <p>The sleep timer is usually located inside the audio app's playback screen. While menus differ between apps, the general steps are similar:</p>
+              <ol>
+                <li>Open the audio app you want to use.</li>
+                <li>Start playing music, a podcast, or an ambient sound.</li>
+                <li>Open the Now Playing screen (the full player view).</li>
+                <li>Look for a <strong>clock</strong>, <strong>timer</strong>, or <strong>moon</strong> icon. Some apps place it inside a three‑dot menu.</li>
+                <li>Select “Sleep timer,” “Timer,” “Stop after,” or a similar option.</li>
+                <li>Choose a duration (e.g., 15, 30, 45, or 60 minutes).</li>
+                <li>Confirm that the timer is active — many apps show the remaining time beside a clock icon.</li>
+                <li>Lock the screen and continue listening as you fall asleep.</li>
+                <li>When the timer expires, playback should stop or pause automatically.</li>
+              </ol>
+              <aside class="callout callout-tip">
+                <strong>Practical tip</strong>
+                <p>If the sleep timer is not visible on the main player screen, check the player menu, playback settings, or episode options. Some apps hide it behind a “More” or “…” button.</p>
+              </aside>
+
+              <figure>
+                <img
+                  src="/assets/articles/how-to-use-a-music-sleep-timer-on-android/android-audio-sleep-timer-controls.webp"
+                  width="800"
+                  height="450"
+                  alt="Android audio player showing sleep-timer duration options"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Many supported audio apps let users choose a fixed timer or stop playback at the end of a track or episode.</figcaption>
+              </figure>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="how-long-timer">
+              <h2>How long should a sleep timer be?</h2>
+              <p>There is no single “right” timer length. It depends on how long it typically takes you to fall asleep and what you are listening to.</p>
+
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Timer length</th>
+                      <th>Useful for</th>
+                      <th>Things to consider</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>15 minutes</strong></td>
+                      <td>Short relaxation or a quick bedtime routine</td>
+                      <td>May end before a long podcast segment finishes</td>
+                    </tr>
+                    <tr>
+                      <td><strong>30 minutes</strong></td>
+                      <td>Music, rain sounds, or a short podcast</td>
+                      <td>A practical starting point for many listeners</td>
+                    </tr>
+                    <tr>
+                      <td><strong>45 minutes</strong></td>
+                      <td>Longer wind-down routine</td>
+                      <td>May continue after you fall asleep</td>
+                    </tr>
+                    <tr>
+                      <td><strong>60 minutes</strong></td>
+                      <td>Long podcasts, audiobooks, or extended ambient sessions</td>
+                      <td>Uses more battery and data than a shorter timer</td>
+                    </tr>
+                    <tr>
+                      <td><strong>End of track</strong></td>
+                      <td>Finishing one song or sound session</td>
+                      <td>Availability depends on the app</td>
+                    </tr>
+                    <tr>
+                      <td><strong>End of episode</strong></td>
+                      <td>Finishing one podcast episode</td>
+                      <td>The episode may be much longer than expected</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <aside class="callout callout-tip">
+                <strong>Finding your ideal length</strong>
+                <p>Start with a 30‑minute timer. If it stops too early, try 45 minutes. If it plays too long, reduce it to 15 or 20 minutes. Adjust based on your own sleep routine.</p>
+              </aside>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="screen-off-playback">
+              <h2>Use screen-off playback with a sleep timer</h2>
+              <p>For a sleep timer to work without keeping your phone unlocked, your audio app must also support <strong>screen-off playback</strong> — the ability to continue playing audio after you lock the screen.</p>
+              <p>Here is a simple way to test both features together:</p>
+              <ol>
+                <li>Start permitted audio.</li>
+                <li>Set a short test timer — 5 or 10 minutes.</li>
+                <li>Confirm that a media notification appears.</li>
+                <li>Lock your screen.</li>
+                <li>Check that audio continues playing.</li>
+                <li>Wait for the timer to expire.</li>
+                <li>Confirm that playback stops automatically.</li>
+              </ol>
+              <p>This test is useful before using a longer bedtime timer. If the timer does not stop playback, review the section below on why it may not work.</p>
+
+              <figure>
+                <img
+                  src="/assets/articles/how-to-use-a-music-sleep-timer-on-android/bedtime-audio-headphones.webp"
+                  width="800"
+                  height="450"
+                  alt="Locked Android phone and headphones prepared for bedtime audio listening"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Screen-off playback lets supported audio continue while the sleep timer counts down.</figcaption>
+              </figure>
+
+              <p>For more detail on keeping audio playing with the screen off, see our guide: <a href="/articles/how-to-play-audio-with-screen-off-android/">how to play audio with the screen off on Android</a>.</p>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="no-sleep-timer">
+              <h2>What if the app has no sleep timer?</h2>
+              <p>Not every audio app includes a built-in sleep timer. If you cannot find one, here are some practical alternatives:</p>
+              <ul>
+                <li><strong>Check the playback menu again</strong> — some apps hide the timer in a settings or advanced menu.</li>
+                <li><strong>Look for “stop after episode” or “stop after track”</strong> — these can serve a similar function if you know the remaining length.</li>
+                <li><strong>Use a different audio app</strong> — several dedicated music, podcast, and ambient‑sound apps include sleep timers.</li>
+                <li><strong>Create a shorter playlist or queue</strong> — if you know your playlist is 30 minutes long, it will end naturally.</li>
+                <li><strong>Manually stop playback before sleeping</strong> — the simplest option if you are still awake when you want it to stop.</li>
+              </ul>
+              <p>If you consider using a third‑party timer app to control other apps, review its permissions, privacy policy, and user ratings carefully. Only use tools that clearly explain why they need each permission and that are from trusted developers.</p>
+              <aside class="callout callout-note">
+                <strong>Important</strong>
+                <p>Do not attempt to bypass another app’s restrictions or use a third‑party tool to control audio in ways the original app does not permit.</p>
+              </aside>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="why-not-working">
+              <h2>Why the sleep timer may not work</h2>
+              <p>If your sleep timer does not stop playback as expected, here are the most common causes:</p>
+              <ol>
+                <li><strong>The timer was not confirmed.</strong> Some apps require you to tap a confirm button after selecting a duration.</li>
+                <li><strong>The timer was canceled when the app restarted.</strong> Closing and reopening the app may reset the timer.</li>
+                <li><strong>The audio app was force-closed.</strong> Swiping the app away from recent apps can stop background activity.</li>
+                <li><strong>Battery restrictions interrupted the app.</strong> Aggressive power management may prevent background timers from firing.</li>
+                <li><strong>Another app took control of audio playback.</strong> A phone call, navigation voice, or another media app can interrupt the timer.</li>
+                <li><strong>Bluetooth headphones disconnected.</strong> Some apps pause playback when the connection drops.</li>
+                <li><strong>The timer applies only to the current track or episode.</strong> If a new track or episode starts, the timer may not carry over.</li>
+                <li><strong>The app does not support timers during casting.</strong> Sleep timers may not work when streaming to external devices.</li>
+                <li><strong>The queue moved to another audio source.</strong> The timer may not stop playback across different sources.</li>
+                <li><strong>The app contains a bug or outdated version.</strong> Updating the app or Android system may help.</li>
+              </ol>
+
+              <h3>Troubleshooting checklist</h3>
+              <ol>
+                <li>Set a short 5‑minute timer to test.</li>
+                <li>Keep the app open initially and confirm the timer indicator appears.</li>
+                <li>Test without casting to Bluetooth or other devices.</li>
+                <li>Check your battery settings (see the previous article on screen‑off playback).</li>
+                <li>Update the app and Android system.</li>
+                <li>Restart the app.</li>
+                <li>Restart the phone.</li>
+                <li>Test with another permitted audio file or source.</li>
+              </ol>
+              <aside class="callout callout-tip">
+                <strong>Pro tip</strong>
+                <p>Change one setting at a time and test the timer after each change. This helps you identify exactly what resolved the issue.</p>
+              </aside>
+            </section>
+
+            <!-- Section 7: HushFlow -->
+            <section id="hushflow">
+              <h2>How HushFlow supports bedtime listening</h2>
+              <p>If you regularly listen to audio before sleeping and want a reliable sleep timer, <strong>HushFlow</strong> is designed with bedtime listening in mind.</p>
+
+              <p>HushFlow is an Android music and podcast player built for flexible background listening. It includes a built‑in sleep timer that lets you choose a duration, then automatically stops playback when the timer expires.</p>
+
+              <p><strong>Key bedtime features:</strong></p>
+              <ul>
+                <li><strong>Sleep timer</strong> — set a duration in minutes. When the timer runs out, playback stops automatically.</li>
+                <li><strong>Screen‑off playback</strong> — audio continues after you lock the screen, so you can fall asleep without keeping the phone unlocked.</li>
+                <li><strong>Notification controls</strong> — pause, adjust, or stop audio from the notification panel without unlocking the phone.</li>
+                <li><strong>Lock‑screen controls</strong> — media controls are available on the lock screen for supported Android devices.</li>
+                <li><strong>Queue management</strong> — organise your listening queue so you do not need to keep unlocking the phone.</li>
+                <li><strong>Audio discovery</strong> — browse categories such as Focus, Sleep, Mood, Pop, and Jazz to find suitable bedtime audio.</li>
+                <li><strong>Audio Lab</strong> — customise sound with a 10‑band equalizer, bass boost, and presets.</li>
+              </ul>
+
+              <p>HushFlow can continue supported audio playback with the screen off and stop it after a selected sleep‑timer period, provided Android allows the app to remain active in the background. It is not designed to bypass other apps, download protected media, or remove third‑party advertisements.</p>
+
+              <figure>
+                <img
+                  src="/assets/articles/how-to-use-a-music-sleep-timer-on-android/hushflow-sleep-timer.webp"
+                  width="800"
+                  height="450"
+                  alt="HushFlow Android app showing music playback and sleep-timer controls"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>HushFlow combines background playback, screen-off listening and a built-in sleep timer.</figcaption>
+              </figure>
+
+              <div class="related-app">
+                <span class="eyebrow">Relevant Android app</span>
+                <h2>HushFlow</h2>
+                <p>HushFlow is an Android background-audio player with screen-off playback, a sleep timer, queue controls, playlists, and sound customization.</p>
+                <div class="actions">
+                  <a class="btn primary" href="/hushflow/">Explore HushFlow</a>
+                  <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download HushFlow from Google Play</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 8: FAQ -->
+            <section id="faq" class="faq" aria-labelledby="faq-heading">
+              <h2 id="faq-heading">Frequently asked questions</h2>
+
+              <details>
+                <summary>Does Android have a built-in music sleep timer?</summary>
+                <p>Android itself does not provide one universal sleep timer for every audio app. The sleep timer is a feature provided by individual media apps. Many popular music and podcast apps include their own timer.</p>
+              </details>
+
+              <details>
+                <summary>Can a sleep timer stop podcasts automatically?</summary>
+                <p>Yes. Supported podcast apps can stop playback after a selected time or at the end of an episode. Check your app's playback menu or settings for the timer option.</p>
+              </details>
+
+              <details>
+                <summary>Will a sleep timer work when the screen is off?</summary>
+                <p>It can, provided the app supports both background playback and sleep-timer controls. The timer runs in the background and stops playback when it expires, even when the screen is locked.</p>
+              </details>
+
+              <details>
+                <summary>Does a sleep timer save battery?</summary>
+                <p>Stopping playback earlier reduces continued audio, network, and Bluetooth use, which may extend battery life compared to letting audio play all night. However, exact battery savings depend on your device, settings, and what you are playing.</p>
+              </details>
+
+              <details>
+                <summary>Can I use a sleep timer with Bluetooth headphones?</summary>
+                <p>Yes. Playback can normally stop through the app timer even while Bluetooth headphones are connected. However, behavior may vary by app and device. Test with a short timer first.</p>
+              </details>
+            </section>
+
+            <!-- Section 9: Final thoughts -->
+            <section id="final-thoughts">
+              <h2>Final thoughts</h2>
+              <p>A music sleep timer is a practical feature for anyone who enjoys falling asleep to audio. It stops playback automatically, saves battery, and removes the worry of audio playing all night.</p>
+              <p>Remember that the timer is usually provided by the audio app itself, not by Android system settings. Start by locating the timer in your preferred app, set a short test duration, and confirm that it works with screen-off playback.</p>
+              <p><strong>One action to try today:</strong> Open your audio app, start permitted audio, set a 5‑minute test timer, lock the screen, and confirm that playback stops correctly. Once it works, you can use a longer timer for bedtime.</p>
+              <p>If you have ongoing sleep difficulties, consider speaking with a qualified professional. A sleep timer is a useful tool, but it is not a treatment for sleep disorders.</p>
+            </section>
+
+          </article>
+
+          <!-- ============================================================
+               RELATED ARTICLES
+               ============================================================ -->
+          <section class="related-articles" aria-labelledby="related-heading">
+            <h2 id="related-heading">Related guide</h2>
+
+            <div class="related-grid">
+              <article>
+                <h3>
+                  <a href="/articles/how-to-play-audio-with-screen-off-android/">
+                    How to Play Audio With the Screen Off on Android
+                  </a>
+                </h3>
+                <p>Learn how to keep music, podcasts and ambient sound playing after locking your Android screen.</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- ============================================================
+               AUTHOR BOX
+               ============================================================ -->
+          <aside class="author-box" aria-labelledby="author-heading">
+            <h2 id="author-heading">About the author</h2>
+
+            <p>
+              Tasfin Hasan Sakib is a computer science student and independent
+              Android developer behind Next Flow Apps.
+            </p>
+
+            <p>
+              He builds practical Android tools for focus, digital wellbeing,
+              background listening and healthier technology habits.
+            </p>
+
+            <a href="/#contact">Contact Tasfin through Next Flow Apps</a>
+          </aside>
+
+          <!-- ============================================================
+               ARTICLE CTA
+               ============================================================ -->
+          <section class="article-cta">
+            <h2>Explore more from Next Flow Apps</h2>
+
+            <p>
+              Discover independent Android tools for background listening,
+              digital wellbeing and focused work.
+            </p>
+
+            <div class="actions">
+              <a class="btn primary" href="/#apps">Explore the apps</a>
+              <a class="btn" href="/articles/">Read more guides</a>
+            </div>
+          </section>
+
+        </div>
+        <!-- /article-main -->
+
+        <!-- ============================================================
+             TABLE OF CONTENTS (sidebar)
+             ============================================================ -->
+        <aside class="table-of-contents" aria-labelledby="toc-heading">
+          <h2 id="toc-heading">In this article</h2>
+
+          <ol>
+            <li><a href="#what-is-sleep-timer">What is a music sleep timer?</a></li>
+            <li><a href="#how-to-set-timer">How to set a sleep timer in an Android audio app</a></li>
+            <li><a href="#how-long-timer">How long should a sleep timer be?</a></li>
+            <li><a href="#screen-off-playback">Use screen-off playback with a sleep timer</a></li>
+            <li><a href="#no-sleep-timer">What if the app has no sleep timer?</a></li>
+            <li><a href="#why-not-working">Why the sleep timer may not work</a></li>
+            <li><a href="#hushflow">How HushFlow supports bedtime listening</a></li>
+            <li><a href="#faq">Frequently asked questions</a></li>
+            <li><a href="#final-thoughts">Final thoughts</a></li>
+          </ol>
+        </aside>
+
+      </div>
+      <!-- /article-layout -->
+
+    </div>
+    <!-- /container -->
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/" aria-label="Next Flow Apps home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
+          </span>
+          <span>Next Flow Apps</span>
+        </a>
+        <p>Independent Android apps by Tasfin Hasan Sakib.</p>
+        <address class="contact-details">
+          <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
+          <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
+        </address>
+        <p>&copy; <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/support.html">Support</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+
+    if (toggle && links) {
+      toggle.addEventListener('click', function() {
+        const open = links.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', String(open));
+        this.textContent = open ? 'Close' : 'Menu';
+      });
+
+      links.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        });
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+          toggle.focus();
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        }
+      });
+    }
+
+    // Auto-update year
+    document.querySelectorAll('[data-year]').forEach(function(el) {
+      el.textContent = new Date().getFullYear() || '2026';
+    });
+
+    // Smooth scroll with header offset for table of contents links
+    document.querySelectorAll('.table-of-contents a, .article-content a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            const headerOffset = 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, targetId);
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
