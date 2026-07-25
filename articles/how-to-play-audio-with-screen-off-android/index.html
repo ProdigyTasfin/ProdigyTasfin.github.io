@@ -1,1 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+  ARTICLE: How to Play Audio With the Screen Off on Android
+  URL: https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/
+  ============================================================ -->
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
+
+  <title>How to Play Audio With the Screen Off on Android</title>
+  <meta name="description" content="Learn how to keep music, podcasts and ambient audio playing after locking your Android screen, plus fixes for battery and background playback issues." />
+
+  <link rel="canonical" href="https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/" />
+
+  <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Play Audio With the Screen Off on Android" />
+  <meta property="og:description" content="Learn how to keep music, podcasts and ambient audio playing after locking your Android screen, plus fixes for battery and background playback issues." />
+  <meta property="og:url" content="https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/" />
+  <meta property="og:site_name" content="Next Flow Apps" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://nextflow-apps.com/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp" />
+  <meta property="og:image:alt" content="Locked Android phone beside headphones while background audio continues playing" />
+  <meta property="article:author" content="Tasfin Hasan Sakib" />
+  <meta property="article:section" content="Background Audio" />
+  <meta property="article:published_time" content="2026-07-12" />
+  <meta property="article:modified_time" content="2026-07-25" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Play Audio With the Screen Off on Android" />
+  <meta name="twitter:description" content="Learn how to keep music, podcasts and ambient audio playing after locking your Android screen, plus fixes for battery and background playback issues." />
+  <meta name="twitter:image" content="https://nextflow-apps.com/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp" />
+  <meta name="twitter:image:alt" content="Locked Android phone beside headphones while background audio continues playing" />
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Play Audio With the Screen Off on Android",
+    "description": "Learn how to keep music, podcasts and ambient audio playing after locking your Android screen, plus fixes for battery and background playback issues.",
+    "image": [
+      "https://nextflow-apps.com/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp"
+    ],
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-25",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Tasfin Hasan Sakib",
+      "url": "https://nextflow-apps.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Next Flow Apps",
+      "url": "https://nextflow-apps.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw"
+      }
+    },
+    "articleSection": "Background Audio",
+    "keywords": [
+      "how to play audio with the screen off on Android",
+      "play music with screen off Android",
+      "background audio player for Android",
+      "keep audio playing after locking phone",
+      "Android background playback"
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Next Flow Apps",
+        "item": "https://nextflow-apps.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://nextflow-apps.com/articles/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Play Audio With the Screen Off on Android",
+        "item": "https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    :root {
+      --bg: #fff;
+      --text: #111;
+      --secondary: #444;
+      --muted: #666;
+      --line: #eee;
+      --line-strong: #ddd;
+      --surface: #fafafa;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 999;
+      transform: translateY(-150%);
+      padding: 0.55rem 0.8rem;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       HEADER
+       ============================================================ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: #111;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+    }
+
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.7rem;
+      border-radius: 6px;
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible,
+    .nav-links a[aria-current="page"] {
+      color: #111;
+      background: var(--surface);
+    }
+
+    .menu-toggle {
+      display: none;
+      min-height: 40px;
+      padding: 0.4rem 0.7rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: #fff;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       BREADCRUMB
+       ============================================================ */
+    .breadcrumb {
+      padding: 20px 0 10px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb ol {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb li {
+      display: flex;
+      align-items: center;
+      color: var(--secondary);
+    }
+
+    .breadcrumb li+li::before {
+      content: " / ";
+      padding: 0 0.4rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb li[aria-current="page"] {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .breadcrumb a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--text);
+    }
+
+    /* ============================================================
+       ARTICLE LAYOUT
+       ============================================================ */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 3rem;
+      padding: 40px 0 60px;
+    }
+
+    .article-main {
+      min-width: 0;
+    }
+
+    /* ============================================================
+       ARTICLE HEADER
+       ============================================================ */
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-category {
+      display: inline-flex;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      color: #555;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .article-header h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    .article-description {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      max-width: 640px;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .article-meta time {
+      color: var(--secondary);
+    }
+
+    /* ============================================================
+       ARTICLE HERO IMAGE
+       ============================================================ */
+    .article-hero {
+      margin: 1.5rem 0 2.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+    }
+
+    .article-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-hero figcaption {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    /* ============================================================
+       TABLE OF CONTENTS (sidebar)
+       ============================================================ */
+    .table-of-contents {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+    }
+
+    .table-of-contents h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+
+    .table-of-contents ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 0.3rem;
+    }
+
+    .table-of-contents a {
+      display: block;
+      padding: 0.3rem 0;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .table-of-contents a:hover {
+      color: var(--text);
+      border-bottom-color: var(--line-strong);
+    }
+
+    /* ============================================================
+       ARTICLE CONTENT
+       ============================================================ */
+    .article-content {
+      max-width: 760px;
+    }
+
+    .article-content section {
+      margin-bottom: 2.5rem;
+    }
+
+    .article-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+      scroll-margin-top: 90px;
+    }
+
+    .article-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 1.25rem 0 0.5rem;
+      scroll-margin-top: 90px;
+    }
+
+    .article-content p {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      padding-left: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.3rem;
+    }
+
+    .article-content li strong {
+      color: var(--text);
+    }
+
+    .article-content .callout {
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+      border-left: 4px solid var(--text);
+      background: var(--surface);
+    }
+
+    .article-content .callout strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .article-content .callout p {
+      margin: 0;
+      color: var(--secondary);
+    }
+
+    .article-content .callout-tip {
+      border-left-color: #2e7d32;
+      background: #f5faf5;
+    }
+
+    .article-content .callout-tip strong {
+      color: #2e7d32;
+    }
+
+    .article-content .callout-note {
+      border-left-color: #1a5a8a;
+      background: #f0f5fa;
+    }
+
+    .article-content .callout-note strong {
+      color: #1a5a8a;
+    }
+
+    .article-content figure {
+      margin: 1.5rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+    }
+
+    .article-content figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-content figure figcaption {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content .checklist {
+      padding-left: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .article-content .checklist li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* ============================================================
+       RELATED APP
+       ============================================================ */
+    .related-app {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: var(--surface);
+      margin: 2.5rem 0;
+    }
+
+    .related-app .eyebrow {
+      display: inline-flex;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .related-app h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0.5rem 0 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .related-app p {
+      color: var(--secondary);
+      max-width: 640px;
+    }
+
+    .related-app .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 1.25rem;
+    }
+
+    /* ============================================================
+       AUTHOR BOX
+       ============================================================ */
+    .author-box {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: var(--surface);
+      margin: 2.5rem 0;
+    }
+
+    .author-box h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    .author-box p {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .author-box a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq {
+      margin: 2.5rem 0;
+    }
+
+    .faq h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .faq details {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq details:hover {
+      border-color: #bbb;
+      background: var(--surface);
+    }
+
+    .faq details summary {
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .faq details p {
+      margin-top: 0.75rem;
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    .faq details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       ARTICLE CTA
+       ============================================================ */
+    .article-cta {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      padding: 2rem;
+      background: var(--surface);
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+
+    .article-cta h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-cta p {
+      color: var(--secondary);
+      max-width: 60ch;
+      margin-inline: auto;
+    }
+
+    .article-cta .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.65rem 1.5rem;
+      border: 1px solid #111;
+      border-radius: 6px;
+      background: #fff;
+      color: #111;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 650;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #333;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .site-footer {
+      padding: 42px 0;
+      background: #fafafa;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 2rem;
+    }
+
+    .footer-grid p {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      gap: 0.5rem 1rem;
+    }
+
+    .footer-links a {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-style: normal;
+    }
+
+    .contact-details a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .table-of-contents {
+        position: relative;
+        top: 0;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        width: min(100% - 32px, 1120px);
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        inset: 72px 16px auto;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem;
+        border: 1px solid var(--line-strong);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.6rem 0.7rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .article-header h1 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+      }
+
+      .article-content h2 {
+        scroll-margin-top: 80px;
+      }
+
+      .article-content h3 {
+        scroll-margin-top: 80px;
+      }
+
+      .table-of-contents a {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        min-height: 40px;
+      }
+
+      .article-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .article-meta {
+        font-size: 0.8rem;
+        gap: 0.25rem 0.75rem;
+      }
+
+      .related-app {
+        padding: 1.25rem;
+      }
+
+      .article-cta {
+        padding: 1.25rem;
+      }
+
+      .table-of-contents {
+        padding: 1rem;
+      }
+    }
+
+    /* ============================================================
+       REDUCED MOTION
+       ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
+      }
+
+      .btn:hover {
+        transform: none;
+      }
+
+      .faq details:hover {
+        border-color: var(--line-strong);
+        background: #fff;
+      }
+    }
+
+    /* ============================================================
+       FOCUS VISIBLE
+       ============================================================ */
+    :focus-visible {
+      outline: 3px solid #111;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to article</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Next Flow Apps home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
+        </span>
+        <span>Next Flow Apps</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+        Menu
+      </button>
+
+      <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/articles/" aria-current="page">Articles</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/support.html">Support</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main">
+
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li aria-current="page">How to Play Audio With the Screen Off on Android</li>
+        </ol>
+      </nav>
+
+      <!-- Article Layout -->
+      <div class="article-layout">
+
+        <!-- ============================================================
+             MAIN CONTENT
+             ============================================================ -->
+        <div class="article-main">
+
+          <!-- Article Header -->
+          <header class="article-header">
+            <span class="article-category">Background audio</span>
+
+            <h1>How to Play Audio With the Screen Off on Android</h1>
+
+            <p class="article-description">
+              Learn how to keep music, podcasts and ambient audio playing after locking your Android screen, plus fixes for battery and background playback issues.
+            </p>
+
+            <div class="article-meta">
+              <span>By Tasfin Hasan Sakib</span>
+              <time datetime="2026-07-12">Published Jul 12, 2026</time>
+              <time datetime="2026-07-25">Updated Jul 25, 2026</time>
+              <span>4 min read</span>
+            </div>
+          </header>
+
+          <!-- Hero Image -->
+          <figure class="article-hero">
+            <img
+              src="/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp"
+              width="1200"
+              height="630"
+              alt="Locked Android phone beside headphones while background audio continues playing"
+              decoding="async"
+            />
+            <figcaption>Android can continue supported audio playback after the screen is locked.</figcaption>
+          </figure>
+
+          <!-- ============================================================
+               ARTICLE CONTENT
+               ============================================================ -->
+          <article class="article-content">
+
+            <!-- Introduction -->
+            <section id="introduction">
+              <p>You start a podcast, lock your phone, and the audio continues playing. Later, you try the same with another app — and it stops the moment the screen turns off. Why?</p>
+              <p>Android supports screen-off audio playback, but not every app is designed to handle it the same way. This guide walks you through the most practical steps to keep music, podcasts, and ambient sound playing after you lock your screen.</p>
+              <p>We will cover app support, battery settings, lock-screen controls, common reasons audio stops, and a quick troubleshooting checklist.</p>
+            </section>
+
+            <!-- Section 1 -->
+            <section id="can-android-play">
+              <h2>Can Android play audio with the screen off?</h2>
+              <p>Yes — Android can continue playing audio after the screen locks, provided the app you are using supports background media playback. When a compatible app plays audio, a media notification typically appears, and you can often control playback from the notification panel or lock screen.</p>
+              <p>Locking the screen does <strong>not</strong> turn off the phone — Android continues running, and properly designed audio apps can keep playing in the background. However, battery optimizations, app design, and manufacturer-specific settings can sometimes interrupt playback.</p>
+              <p>It is worth noting that screen-off playback is different from powering off the device completely. If you turn the phone off, all audio stops.</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="use-background-app">
+              <h2>Use an app that supports background playback</h2>
+              <p>The first requirement for screen-off audio is an app that is built to handle background media. Not all apps support this — some limit background playback based on their features, subscription model, or content licensing agreements.</p>
+              <p><strong>Quick test:</strong></p>
+              <ol>
+                <li>Open the audio app.</li>
+                <li>Start a permitted music track, podcast, or ambient sound.</li>
+                <li>Confirm that a media notification appears.</li>
+                <li>Lock the screen.</li>
+                <li>Wait 20–30 seconds.</li>
+                <li>Unlock the phone and check whether playback continued.</li>
+                <li>Test the lock-screen controls if available.</li>
+              </ol>
+              <aside class="callout callout-tip">
+                <strong>Practical tip</strong>
+                <p>If playback stops only in one specific app, the limitation likely belongs to that app rather than Android itself. Some apps intentionally restrict background playback to encourage using their premium version or to comply with content licensing.</p>
+              </aside>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="check-battery-settings">
+              <h2>Check battery and background settings</h2>
+              <p>Aggressive battery management is one of the most common reasons audio stops when the screen turns off. Android and device manufacturers use various power-saving features that can limit background activity.</p>
+              <p><strong>General menu path:</strong> Settings → Apps → Select the audio app → Battery</p>
+              <p>Possible options may include:</p>
+              <ul>
+                <li><strong>Unrestricted</strong> — allows the app to run freely in the background, which may improve playback reliability but can increase battery consumption.</li>
+                <li><strong>Optimized</strong> — the default setting for most apps, balancing performance and battery life.</li>
+                <li><strong>Restricted</strong> — limits background activity, which may stop audio when the screen is locked.</li>
+                <li><strong>Allow background activity</strong> — a toggle that may appear on some devices.</li>
+              </ul>
+              <p><strong>Other settings to check:</strong></p>
+              <ul>
+                <li>Battery Saver or Power Saving mode</li>
+                <li>Adaptive Battery</li>
+                <li>Sleeping apps or app standby</li>
+                <li>Background usage limits</li>
+                <li>Manufacturer-specific power management tools (e.g., Samsung's "Optimize battery usage," Xiaomi's "Mi Optimization," or Huawei's "PowerGenie")</li>
+              </ul>
+              <aside class="callout callout-note">
+                <strong>Important</strong>
+                <p>Change battery settings only for trusted audio apps that need continuous background playback. Allowing unrestricted background use may increase battery consumption. Do not disable battery optimization for every app on your device.</p>
+              </aside>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="lock-screen-controls">
+              <h2>Use lock-screen and notification media controls</h2>
+              <p>When audio is playing, a properly active media session typically shows controls in:</p>
+              <ul>
+                <li>The notification panel (swipe down from the top of the screen)</li>
+                <li>The lock screen</li>
+                <li>Bluetooth headphones or car media controls</li>
+                <li>Supported wearable devices</li>
+              </ul>
+              <p><strong>Common controls include:</strong></p>
+              <ul>
+                <li>Play / Pause</li>
+                <li>Previous / Next track</li>
+                <li>Stop</li>
+                <li>Seek position or progress bar</li>
+              </ul>
+
+              <figure>
+                <img
+                  src="/assets/articles/how-to-play-audio-with-screen-off-android/android-lock-screen-media-controls.webp"
+                  width="800"
+                  height="450"
+                  alt="Android lock-screen media controls for background audio playback"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Supported media apps can provide playback controls from the lock screen or notification panel.</figcaption>
+              </figure>
+
+              <p><strong>Troubleshooting note:</strong> If audio plays but no media controls appear, check whether notifications are allowed for the audio app.</p>
+              <p>General path: Settings → Notifications → App notifications → Select the audio app → Ensure the notification toggle is enabled.</p>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="why-audio-stops">
+              <h2>Why audio stops when the screen turns off</h2>
+              <p>Here are the most common reasons audio may stop after you lock your Android screen:</p>
+              <ol>
+                <li><strong>The app does not support background playback.</strong> Some apps are designed to stop when the screen locks.</li>
+                <li><strong>Battery restrictions stop background activity.</strong> Aggressive power management can pause or kill background processes.</li>
+                <li><strong>Battery Saver is active.</strong> Power-saving modes often limit background activity to extend battery life.</li>
+                <li><strong>The app's notification permission is disabled.</strong> Without a media notification, Android may not keep the audio process active.</li>
+                <li><strong>The network connection becomes unstable.</strong> Streaming requires a stable Wi-Fi or mobile data connection.</li>
+                <li><strong>The app is manually removed from recent apps.</strong> On some devices, swiping an app away from the recent-apps view can stop background audio.</li>
+                <li><strong>The phone manufacturer applies aggressive background limits.</strong> Some brands impose stricter background controls than stock Android.</li>
+                <li><strong>Bluetooth headphones disconnect.</strong> Audio may pause or stop when the connection is lost.</li>
+                <li><strong>A sleep timer reaches its end.</strong> Many audio apps include a timer that stops playback after a set period.</li>
+                <li><strong>Another app takes control of audio playback.</strong> A phone call, navigation voice, or another media app can interrupt or override the current audio.</li>
+                <li><strong>The content provider limits screen-off playback.</strong> Some services restrict background playback based on your subscription tier.</li>
+              </ol>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="troubleshooting-checklist">
+              <h2>Quick troubleshooting checklist</h2>
+              <p>Work through these steps in order to identify and fix the issue:</p>
+              <ol class="checklist">
+                <li><strong>Confirm that the app supports background playback.</strong> Check the app's settings or documentation.</li>
+                <li><strong>Start audio and look for a media notification.</strong> If no notification appears, check notification permissions.</li>
+                <li><strong>Lock the screen and test playback.</strong> Wait at least 30 seconds to ensure it is not a brief delay.</li>
+                <li><strong>Allow necessary notification categories.</strong> Enable media notifications for the app.</li>
+                <li><strong>Review the app's battery setting.</strong> Set it to Unrestricted or Optimized (not Restricted).</li>
+                <li><strong>Temporarily turn off Battery Saver for testing.</strong> If playback resumes, Battery Saver is the likely cause.</li>
+                <li><strong>Check Wi-Fi or mobile-data stability.</strong> A weak connection can interrupt streaming.</li>
+                <li><strong>Reconnect Bluetooth headphones if needed.</strong> Disconnect and reconnect to refresh the connection.</li>
+                <li><strong>Restart the app.</strong> Force-close and reopen the audio app.</li>
+                <li><strong>Restart the phone.</strong> A simple restart can resolve many background-process issues.</li>
+                <li><strong>Update the app and Android system.</strong> Ensure you have the latest versions installed.</li>
+                <li><strong>Test another legally permitted audio source.</strong> This helps determine whether the issue is with the app or the specific content.</li>
+              </ol>
+              <aside class="callout callout-tip">
+                <strong>Pro tip</strong>
+                <p>Change one setting at a time and test playback after each change. This helps you identify exactly what fixed the problem.</p>
+              </aside>
+            </section>
+
+            <!-- Section 7: HushFlow -->
+            <section id="hushflow">
+              <h2>How HushFlow supports screen-off listening</h2>
+              <p>If you regularly want audio to continue after locking your screen, using a dedicated background-audio app can make the experience more reliable. <strong>HushFlow</strong> is an Android music and podcast player designed around convenient background listening.</p>
+
+              <p>HushFlow is built to continue supported audio playback while the screen is off, provided Android allows the app to remain active in the background. It includes features that make screen-off listening more enjoyable:</p>
+              <ul>
+                <li><strong>Background playback</strong> — audio continues playing after you lock the screen or switch to another app.</li>
+                <li><strong>Notification and lock-screen controls</strong> — play, pause, skip, and adjust playback without unlocking your phone.</li>
+                <li><strong>Queue management</strong> — build and manage a listening queue so you do not need to keep unlocking the phone.</li>
+                <li><strong>Playlists</strong> — create custom playlists for uninterrupted listening sessions.</li>
+                <li><strong>Sleep timer</strong> — set a timer to stop playback automatically, perfect for bedtime listening.</li>
+                <li><strong>Audio discovery</strong> — browse categories such as Focus, Sleep, Mood, Pop, and Jazz.</li>
+                <li><strong>Audio Lab</strong> — customize your sound with a 10-band equalizer, bass boost, virtualizer, loudness enhancer, and audio presets.</li>
+              </ul>
+
+              <p>HushFlow is not designed to bypass other apps, download protected media, remove advertisements from third-party platforms, or unlock paid content. It plays audio that you are legally permitted to access through supported sources and features.</p>
+
+              <figure>
+                <img
+                  src="/assets/articles/how-to-play-audio-with-screen-off-android/hushflow-background-playback.webp"
+                  width="800"
+                  height="450"
+                  alt="HushFlow Android app showing background audio playback controls"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>HushFlow combines background listening, playback controls, queues and a sleep timer.</figcaption>
+              </figure>
+
+              <div class="related-app">
+                <span class="eyebrow">Relevant Android app</span>
+                <h2>HushFlow</h2>
+                <p>HushFlow is an Android background-audio player with screen-off playback, sleep timer, queue controls, playlists, and sound customization.</p>
+                <div class="actions">
+                  <a class="btn primary" href="/hushflow/">Explore HushFlow</a>
+                  <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download HushFlow from Google Play</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 8: FAQ -->
+            <section id="faq" class="faq" aria-labelledby="faq-heading">
+              <h2 id="faq-heading">Frequently asked questions</h2>
+
+              <details>
+                <summary>Can Android play music after the screen is locked?</summary>
+                <p>Yes. Android can continue playing music after the screen is locked, provided the app supports background playback and Android allows the app to remain active in the background.</p>
+              </details>
+
+              <details>
+                <summary>Why does my music stop when my Android screen turns off?</summary>
+                <p>Common causes include app limitations, battery restrictions, Battery Saver mode, network issues, and manufacturer-specific background controls. Check the troubleshooting checklist above for step-by-step guidance.</p>
+              </details>
+
+              <details>
+                <summary>Does screen-off audio use less battery?</summary>
+                <p>Turning off the display usually reduces display-related battery consumption. However, streaming audio, Bluetooth, mobile data, and background processing still consume power. The overall battery impact depends on your device, settings, and what you are playing.</p>
+              </details>
+
+              <details>
+                <summary>Can I control audio from the Android lock screen?</summary>
+                <p>Yes. Supported media apps can provide playback controls through the lock screen and notification panel. These typically include play, pause, skip, and stop.</p>
+              </details>
+
+              <details>
+                <summary>Can a sleep timer stop background audio automatically?</summary>
+                <p>Yes. Many audio apps include a sleep timer that stops playback after a selected period. This can be useful for bedtime listening without needing to unlock your phone to stop playback.</p>
+              </details>
+            </section>
+
+            <!-- Section 9: Final thoughts -->
+            <section id="final-thoughts">
+              <h2>Final thoughts</h2>
+              <p>Screen-off audio is a practical Android feature that works well when the app, settings, and permissions are aligned. Start with a compatible app, check your battery and notification settings, and use the troubleshooting checklist to resolve common issues.</p>
+              <p><strong>One action to try today:</strong> Open a supported audio app, start permitted audio, confirm that the media notification appears, lock the screen, and test playback for 30 seconds. If it works, you have successfully set up screen-off listening. If not, work through the checklist above — one step at a time.</p>
+              <p>Remember to respect the terms of the apps and services you use. Screen-off playback is a feature of Android, not a way to bypass content restrictions or platform limitations.</p>
+            </section>
+
+          </article>
+
+          <!-- ============================================================
+               AUTHOR BOX
+               ============================================================ -->
+          <aside class="author-box" aria-labelledby="author-heading">
+            <h2 id="author-heading">About the author</h2>
+
+            <p>
+              Tasfin Hasan Sakib is a computer science student and independent
+              Android developer behind Next Flow Apps.
+            </p>
+
+            <p>
+              He builds practical Android tools for focus, digital wellbeing,
+              background listening and healthier technology habits.
+            </p>
+
+            <a href="/#contact">Contact Tasfin through Next Flow Apps</a>
+          </aside>
+
+          <!-- ============================================================
+               ARTICLE CTA
+               ============================================================ -->
+          <section class="article-cta">
+            <h2>Explore more from Next Flow Apps</h2>
+
+            <p>
+              Discover independent Android tools for background listening,
+              digital wellbeing and focused work.
+            </p>
+
+            <div class="actions">
+              <a class="btn primary" href="/#apps">Explore the apps</a>
+              <a class="btn" href="/articles/">Read more guides</a>
+            </div>
+          </section>
+
+        </div>
+        <!-- /article-main -->
+
+        <!-- ============================================================
+             TABLE OF CONTENTS (sidebar)
+             ============================================================ -->
+        <aside class="table-of-contents" aria-labelledby="toc-heading">
+          <h2 id="toc-heading">In this article</h2>
+
+          <ol>
+            <li><a href="#can-android-play">Can Android play audio with the screen off?</a></li>
+            <li><a href="#use-background-app">Use an app that supports background playback</a></li>
+            <li><a href="#check-battery-settings">Check battery and background settings</a></li>
+            <li><a href="#lock-screen-controls">Use lock-screen and notification controls</a></li>
+            <li><a href="#why-audio-stops">Why audio stops when the screen turns off</a></li>
+            <li><a href="#troubleshooting-checklist">Quick troubleshooting checklist</a></li>
+            <li><a href="#hushflow">How HushFlow supports screen-off listening</a></li>
+            <li><a href="#faq">Frequently asked questions</a></li>
+            <li><a href="#final-thoughts">Final thoughts</a></li>
+          </ol>
+        </aside>
+
+      </div>
+      <!-- /article-layout -->
+
+    </div>
+    <!-- /container -->
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/" aria-label="Next Flow Apps home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
+          </span>
+          <span>Next Flow Apps</span>
+        </a>
+        <p>Independent Android apps by Tasfin Hasan Sakib.</p>
+        <address class="contact-details">
+          <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
+          <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
+        </address>
+        <p>&copy; <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/hushflow/">HushFlow</a>
+        <a href="/noctra/">Noctra</a>
+        <a href="/temvica/">Temvica</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/support.html">Support</a>
+        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:nextflowapps@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+
+    if (toggle && links) {
+      toggle.addEventListener('click', function() {
+        const open = links.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', String(open));
+        this.textContent = open ? 'Close' : 'Menu';
+      });
+
+      links.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        });
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+          toggle.focus();
+        }
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
+          links.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Menu';
+        }
+      });
+    }
+
+    // Auto-update year
+    document.querySelectorAll('[data-year]').forEach(function(el) {
+      el.textContent = new Date().getFullYear() || '2026';
+    });
+
+    // Smooth scroll with header offset for table of contents links
+    document.querySelectorAll('.table-of-contents a, .article-content a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            const headerOffset = 100;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, targetId);
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
