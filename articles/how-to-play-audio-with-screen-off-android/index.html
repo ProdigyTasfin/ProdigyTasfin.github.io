@@ -29,7 +29,7 @@
   <meta property="og:site_name" content="Next Flow Apps" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://nextflow-apps.com/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp" />
-  <meta property="og:image:alt" content="Locked Android phone beside headphones while background audio continues playing" />
+  <meta property="og:image:alt" content="Android phone playing music with the screen locked beside a pair of headphones" />
   <meta property="article:author" content="Tasfin Hasan Sakib" />
   <meta property="article:section" content="Background Audio" />
   <meta property="article:published_time" content="2026-07-12" />
@@ -40,7 +40,7 @@
   <meta name="twitter:title" content="How to Play Music With the Screen Off on Android" />
   <meta name="twitter:description" content="Learn how to keep music, podcasts and audio playing when your Android screen is off. Fix battery restrictions, background playback and lock-screen controls." />
   <meta name="twitter:image" content="https://nextflow-apps.com/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp" />
-  <meta name="twitter:image:alt" content="Locked Android phone beside headphones while background audio continues playing" />
+  <meta name="twitter:image:alt" content="Android phone playing music with the screen locked beside a pair of headphones" />
 
   <!-- Article JSON-LD -->
   <script type="application/ld+json">
@@ -106,6 +106,80 @@
         "position": 3,
         "name": "How to Play Music With the Screen Off on Android",
         "item": "https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can Android play music with the screen off?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Android can play music with the screen off when the app supports background playback and Android allows it to continue running."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does music stop when I lock my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common causes include battery optimization, background restrictions, missing notifications, or unsupported playback. Check the troubleshooting section above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I allow background music on Samsung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to Settings → Apps → select the audio app → Battery → select Unrestricted. Also check Settings → Battery → Background usage limits → Never sleeping apps. Menu names may vary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I keep music playing on Xiaomi or Redmi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to Settings → Apps → Manage apps → select the audio app → Battery saver → select No restrictions. Also enable Autostart where available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does screen-off playback save battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Turning off the display generally saves power, but streaming, Bluetooth, and audio processing still consume battery. Actual savings vary by device and usage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can podcasts continue playing with the phone locked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when the podcast app supports background playback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are lock-screen media controls missing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This can be due to notification settings, lock-screen notification permissions, battery restrictions, or app compatibility. See the section above for fixes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can every Android app play audio with the screen off?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It depends on app support, source restrictions, and Android settings. Not all apps or media sources support screen-off playback."
+        }
       }
     ]
   }
@@ -929,6 +1003,21 @@
       outline: 3px solid #111;
       outline-offset: 3px;
     }
+
+    /* ============================================================
+       PORTRAIT IMAGE HELPER
+       ============================================================ */
+    .portrait-figure {
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+      .portrait-figure {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -1006,16 +1095,18 @@
             </div>
           </header>
 
-          <!-- Hero Image -->
+          <!-- ============================================================
+               IMAGE 1 — HERO IMAGE
+               ============================================================ -->
           <figure class="article-hero">
             <img
               src="/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp"
               width="1200"
               height="630"
-              alt="Locked Android phone beside headphones while background audio continues playing"
+              alt="Android phone playing music with the screen locked beside a pair of headphones"
               decoding="async"
             />
-            <figcaption>Android can continue supported audio playback after the screen is locked.</figcaption>
+            <figcaption>Android can continue supported music and podcast playback after the screen is locked.</figcaption>
           </figure>
 
           <!-- ============================================================
@@ -1155,6 +1246,21 @@
                 <li>Restart the app.</li>
                 <li>Restart the device if necessary.</li>
               </ol>
+
+              <!-- ============================================================
+                   IMAGE 2 — LOCK-SCREEN CONTROLS IMAGE
+                   ============================================================ -->
+              <figure class="portrait-figure">
+                <img
+                  src="/assets/articles/how-to-play-audio-with-screen-off-android/android-lock-screen-media-controls.webp"
+                  width="460"
+                  height="820"
+                  alt="Android lock screen showing music playback controls"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Supported Android media apps can display playback controls on the lock screen.</figcaption>
+              </figure>
             </section>
 
             <!-- Battery Section -->
@@ -1200,6 +1306,40 @@
                 <li>Restart the phone.</li>
                 <li>Test another audio source.</li>
               </ol>
+            </section>
+
+            <!-- HushFlow Section with Image -->
+            <section id="hushflow">
+              <h2>How HushFlow Supports Screen-Off Listening</h2>
+              <p>If you regularly want audio to continue after locking your screen, using a dedicated background-audio app can make the experience more reliable. <strong>HushFlow</strong> is an Android music and podcast player designed around convenient background listening.</p>
+
+              <p>HushFlow is built to continue supported audio playback while the screen is off, provided Android allows the app to remain active in the background. It includes features that make screen-off listening more enjoyable:</p>
+              <ul>
+                <li><strong>Background playback</strong> — audio continues playing after you lock the screen or switch to another app.</li>
+                <li><strong>Notification and lock-screen controls</strong> — play, pause, skip, and adjust playback without unlocking your phone.</li>
+                <li><strong>Queue management</strong> — build and manage a listening queue so you do not need to keep unlocking the phone.</li>
+                <li><strong>Playlists</strong> — create custom playlists for uninterrupted listening sessions.</li>
+                <li><strong>Sleep timer</strong> — set a timer to stop playback automatically, perfect for bedtime listening.</li>
+                <li><strong>Audio discovery</strong> — browse categories such as Focus, Sleep, Mood, Pop, and Jazz.</li>
+                <li><strong>Audio Lab</strong> — customize your sound with a 10-band equalizer, bass boost, virtualizer, loudness enhancer, and audio presets.</li>
+              </ul>
+
+              <p>HushFlow is not designed to bypass other apps, download protected media, remove advertisements from third-party platforms, or unlock paid content. It plays audio that you are legally permitted to access through supported sources and features.</p>
+
+              <!-- ============================================================
+                   IMAGE 3 — HUSHFLOW IMAGE
+                   ============================================================ -->
+              <figure>
+                <img
+                  src="/assets/articles/how-to-play-audio-with-screen-off-android/hushflow-background-playback.webp"
+                  width="800"
+                  height="450"
+                  alt="HushFlow Android app showing background playback, sleep timer and queue controls"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>HushFlow combines background playback, lock-screen controls, queues and a built-in sleep timer.</figcaption>
+              </figure>
             </section>
 
             <!-- HushFlow CTA (second, smaller) -->
@@ -1266,7 +1406,7 @@
 
             <!-- Final thoughts -->
             <section id="final-thoughts">
-              <h2>Final thoughts</h2>
+              <h2>Final Thoughts</h2>
               <p>Screen-off audio is a practical Android feature that works well when the app, settings, and permissions are aligned. Start with a compatible app, check your battery and notification settings, and use the troubleshooting checklist to resolve common issues.</p>
               <p><strong>One action to try today:</strong> Open a supported audio app, start permitted audio, confirm that the media notification appears, lock the screen, and test playback for 30 seconds. If it works, you have successfully set up screen-off listening. If not, work through the checklist above — one step at a time.</p>
               <p>Remember to respect the terms of the apps and services you use. Screen-off playback is a feature of Android, not a way to bypass content restrictions or platform limitations.</p>
@@ -1328,6 +1468,7 @@
             <li><a href="#lock-screen-controls-missing">Why Are Lock-Screen Controls Missing?</a></li>
             <li><a href="#battery-impact">Does Screen-Off Playback Save Battery?</a></li>
             <li><a href="#troubleshooting-checklist">Troubleshooting Checklist</a></li>
+            <li><a href="#hushflow">How HushFlow Supports Screen-Off Listening</a></li>
             <li><a href="#faq">Frequently asked questions</a></li>
             <li><a href="#final-thoughts">Final thoughts</a></li>
           </ol>
