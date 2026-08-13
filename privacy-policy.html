@@ -385,6 +385,15 @@
     .delay-3 {
       animation-delay: .3s
     }
+    .delay-4 {
+      animation-delay: .4s
+    }
+    .delay-5 {
+      animation-delay: .5s
+    }
+    .delay-6 {
+      animation-delay: .6s
+    }
 
     @keyframes fadeInUp {
       from {
@@ -426,6 +435,9 @@
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
+        <a href="/privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
         <a href="/#contact">Contact</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
@@ -437,7 +449,7 @@
     <div class="container policy-hero">
       <h1>Privacy Policy</h1>
       <p class="lead">This privacy policy applies to all mobile applications published by Next Flow Apps, including HushFlow, Noctra, and Temvica.</p>
-      <p class="last-updated"><strong>Last updated:</strong> <span data-date>July 2026</span></p>
+      <p class="last-updated"><strong>Last updated:</strong> <span data-date>August 2026</span></p>
       <p style="margin-top:0.5rem;font-size:.85rem;color:var(--muted)">
         <a href="#app-policies" style="text-decoration:underline;text-underline-offset:2px;">Jump to app‑specific policies ↓</a>
       </p>
@@ -459,7 +471,7 @@
 
       <section class="policy-section fade-in-up delay-1">
         <h2>2. Information We Collect</h2>
-        <p>Our Apps are designed to collect <strong>minimal information</strong>. Most data stays <strong>locally on your device</strong> and is never transmitted to our servers unless explicitly stated.</p>
+        <p>Our Apps are designed to collect <strong>minimal information</strong>. Most data stays <strong>locally on your device</strong>, and only limited information is processed on our server infrastructure where necessary for app functionality.</p>
 
         <p>The types of information we may collect include:</p>
 
@@ -471,22 +483,61 @@
           <li><strong>Audio preferences:</strong> Equalizer presets, sound settings, and sleep timer configurations</li>
         </ul>
 
-        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Information collected automatically (anonymously)</h3>
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Pseudonymous product analytics (server-side)</h3>
+        <p>Some apps — particularly HushFlow — may transmit limited, pseudonymous analytics to our server infrastructure (powered by Cloudflare Workers and D1). This helps us understand whether the app works correctly and how users interact with important features.</p>
+        <p>Examples of analytics events include:</p>
         <ul>
-          <li><strong>Device information:</strong> Device model, Android version, screen resolution, and system language – used for compatibility and optimisation</li>
-          <li><strong>App version and build:</strong> To ensure you're using the latest version and to troubleshoot issues</li>
-          <li><strong>Crash reports:</strong> Anonymous diagnostic data, stack traces, and device state at the time of a crash – to fix bugs and improve stability</li>
-          <li><strong>General usage patterns:</strong> Aggregated, non‑identifiable data about which features are used most frequently – to help us improve the user experience</li>
+          <li>Onboarding completion and onboarding choices</li>
+          <li>Playback requested / playback started</li>
+          <li>Background playback usage</li>
+          <li>Screen‑off playback usage</li>
+          <li>Premium/paywall views and entry sources</li>
+          <li>Signup completion</li>
+          <li>Session and retention milestones</li>
+          <li>Selected onboarding goals</li>
+          <li>Feature usage</li>
+          <li>Purchase/entitlement‑related status where necessary</li>
+        </ul>
+        <p><strong>Important privacy protections:</strong> Our analytics implementation is designed not to send sensitive media information. For example, playback analytics do not contain:</p>
+        <ul>
+          <li>YouTube/video URLs</li>
+          <li>Signed streaming URLs</li>
+          <li>Video IDs</li>
+          <li>Song titles, artist names, or creator names</li>
+          <li>Search queries</li>
+          <li>Cookies or authentication tokens</li>
+          <li>Google passwords or payment‑card information</li>
+        </ul>
+        <p>Some analytics events use an app‑generated installation identifier so events from the same installation can be associated for analytics and reliability purposes. This identifier is pseudonymous and is not linked to your real‑world identity.</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">c) Information from Google Sign‑In (where used)</h3>
+        <p>Some of our apps — particularly HushFlow — support optional Google Sign‑In. When you sign in, we may receive limited account information made available through the authentication flow, which may include:</p>
+        <ul>
+          <li>Google account identifier</li>
+          <li>Email address</li>
+          <li>Display name</li>
+          <li>Profile information, where provided</li>
+        </ul>
+        <p>We <strong>do not</strong> receive or store your Google password.</p>
+        <p>This information is used for legitimate app functionality including:</p>
+        <ul>
+          <li>Creating and managing your account</li>
+          <li>Associating your account with Premium/Lifetime entitlements</li>
+          <li>Restoring eligible purchases and features</li>
+          <li>Customer support</li>
+          <li>Preventing abuse or fraud</li>
+          <li>Security</li>
+          <li>Service operation and improvement where appropriate</li>
         </ul>
 
-        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">c) Information from third‑party services</h3>
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">d) Information from third‑party services</h3>
         <ul>
-          <li><strong>Subscription status:</strong> Premium or Lifetime purchase status (via Google Play Billing) – used only to unlock features</li>
+          <li><strong>Subscription status:</strong> Premium or Lifetime purchase status (via Google Play Billing) – used only to unlock features and verify entitlement</li>
           <li><strong>Ad interaction data:</strong> If you view rewarded ads, limited interaction data may be processed by our advertising partners (see Section 6)</li>
         </ul>
 
         <div class="highlight-box">
-          <strong>We do NOT collect:</strong> Your name, email address, home address, phone number, payment card details, biometric data, or any other personally identifiable information (PII), unless you voluntarily provide it by contacting us directly via email.
+          <strong>We do NOT collect</strong> your payment card details, CVV, Google password, or other sensitive payment credentials. This information is handled directly by Google Play Billing. We also do not collect personally identifiable information such as your name, email address, home address, or phone number unless you voluntarily provide it by signing in with Google or contacting us via email.
         </div>
       </section>
 
@@ -496,10 +547,11 @@
         <ul>
           <li><strong>To provide and maintain our Apps:</strong> Ensure core functionality works correctly – including background playback, app blocking, focus timers, and task management</li>
           <li><strong>To improve user experience:</strong> Understand which features are most used, and optimise performance and interface design</li>
-          <li><strong>To process subscriptions:</strong> Verify Premium or Lifetime status via Google Play Billing</li>
+          <li><strong>To process subscriptions:</strong> Verify Premium or Lifetime status via Google Play Billing and our backend systems</li>
           <li><strong>To display advertisements:</strong> In our free versions, we may show rewarded ads via third‑party networks (see Section 6)</li>
-          <li><strong>To fix bugs and improve stability:</strong> Through anonymous crash reporting</li>
+          <li><strong>To fix bugs and improve stability:</strong> Through analytics and crash reporting</li>
           <li><strong>To respond to support inquiries:</strong> When you contact us via email, we use your message only to address your specific question or request</li>
+          <li><strong>To prevent fraud and abuse:</strong> Including verification of purchase entitlements and detection of suspicious activity</li>
         </ul>
       </section>
 
@@ -507,39 +559,87 @@
         <h2>4. Legal Basis for Processing (GDPR Compliance)</h2>
         <p>For users in the European Economic Area (EEA), we process your information based on the following legal grounds:</p>
         <ul>
-          <li><strong>Legitimate Interest:</strong> To operate, improve, and secure our Apps, and to show relevant advertisements that fund our free versions</li>
+          <li><strong>Legitimate Interest:</strong> To operate, improve, and secure our Apps, to show relevant advertisements that fund our free versions, and to understand user engagement with features</li>
           <li><strong>Consent:</strong> When you grant permissions (e.g., notifications, storage, Usage Access) or opt‑in to rewarded ads</li>
-          <li><strong>Contractual Necessity:</strong> To fulfil Premium subscription purchases via Google Play</li>
+          <li><strong>Contractual Necessity:</strong> To fulfil Premium subscription purchases and provide the associated features</li>
           <li><strong>Legal Obligation:</strong> Where we are required to retain or disclose information to comply with applicable laws</li>
         </ul>
         <p>You have the right to withdraw your consent at any time by disabling permissions or uninstalling the App.</p>
       </section>
 
-      <section class="policy-section">
-        <h2>5. Data Storage and Security</h2>
-        <p>All your app data – including playback history, playlists, task data, focus logs, and preferences – is stored <strong>locally on your device</strong>. We do not upload this data to our servers or any cloud storage.</p>
-        <p>We implement appropriate technical and organisational measures to protect any data that is processed through our third‑party service providers. However, no method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.</p>
+      <section class="policy-section fade-in-up delay-4">
+        <h2>5. Local Data vs. Server‑Processed Data</h2>
+        <p>It is important to distinguish between data that stays on your device and data that may be processed on our servers.</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">a) Local Data (stored on your device)</h3>
+        <ul>
+          <li>Playlists and queues</li>
+          <li>App preferences and settings</li>
+          <li>Equalizer and audio settings</li>
+          <li>Locally maintained history (where applicable)</li>
+          <li>Tasks, focus data, and progress logs (Temvica)</li>
+          <li>Habit tracking and reflection notes (Noctra)</li>
+        </ul>
+        <p>This data is not uploaded to our servers unless explicitly required for a specific feature (e.g., account sync, which is not currently offered).</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Server‑Processed Data</h3>
+        <ul>
+          <li>Account information for signed‑in users (Google Sign‑In)</li>
+          <li>Pseudonymous installation analytics</li>
+          <li>Feature and event analytics</li>
+          <li>Entitlement and purchase verification information</li>
+          <li>Security and anti‑abuse information</li>
+          <li>Support information (when you contact us)</li>
+        </ul>
+        <p>We do not upload your locally stored media content, playlists, or personal notes to our servers unless you explicitly choose to share them (e.g., via a support request).</p>
       </section>
 
-      <section class="policy-section">
+      <section class="policy-section fade-in-up delay-5">
         <h2>6. Third‑Party Services and Data Sharing</h2>
         <p>We do <strong>not</strong> sell your personal information. However, we rely on trusted third‑party services to operate our Apps and provide certain features. These services process data according to their own privacy policies:</p>
 
         <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">a) Google Play Services</h3>
         <p>All our Apps are distributed through Google Play. Google Play handles app distribution, updates, and billing for Premium subscriptions. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for more information.</p>
 
-        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Google AdMob</h3>
-        <p>Some of our free versions may display rewarded advertisements. AdMob may collect device identifiers, ad interaction data, and approximate location to serve relevant ads. You can opt‑out of personalised ads via your Android device settings (Google → Ads → Opt out of Ads Personalization). See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for more information.</p>
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Google Play Billing</h3>
+        <p>All in‑app purchases are processed through Google Play Billing. Next Flow Apps does not receive or store your full payment‑card numbers, CVV, or Google account password. However, we may receive and retain limited purchase and entitlement information necessary to:</p>
+        <ul>
+          <li>Determine Premium/Lifetime status</li>
+          <li>Associate an entitlement with a user, account, or installation</li>
+          <li>Restore access</li>
+          <li>Prevent purchase abuse or fraud</li>
+          <li>Provide customer support</li>
+          <li>Process or investigate refunds</li>
+          <li>Maintain legally necessary accounting or business records</li>
+        </ul>
+        <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> for more information.</p>
 
-        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">c) Firebase / Crashlytics</h3>
-        <p>We use Firebase and Crashlytics for anonymous crash reporting and stability diagnostics. This may include device type, app version, crash logs, and performance information. This data is <strong>anonymised</strong> and cannot be used to personally identify you. See the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy Policy</a> for more information.</p>
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">c) Cloudflare</h3>
+        <p>Some of our apps (particularly HushFlow) use <strong>Cloudflare Workers</strong> and <strong>Cloudflare D1</strong> as server infrastructure. These services process pseudonymous analytics and entitlement‑related data on our behalf. Cloudflare acts as a data processor and does not use this information for its own purposes. See the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a> for more information.</p>
 
-        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">d) Email Communications</h3>
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">d) Advertising Services</h3>
+        <p>Some of our free versions may display rewarded advertisements. Depending on the app, these ads may be provided by one or more third‑party advertising services, which may collect device identifiers, advertising identifiers, approximate location, and ad‑interaction information according to their own policies. You can opt‑out of personalised ads via your Android device settings (Google → Ads → Opt out of Ads Personalization).</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">e) Email Communications</h3>
         <p>If you contact us via email (<a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a>), we will retain your email address and message only as long as necessary to respond to your inquiry and resolve your issue. We do not use your email for marketing or share it with any third parties.</p>
       </section>
 
+      <section class="policy-section fade-in-up delay-6">
+        <h2>7. Data Retention</h2>
+        <p>We retain different types of information for different periods:</p>
+        <ul>
+          <li><strong>Local app data:</strong> Remains on your device until you delete it, clear app data, or uninstall the App.</li>
+          <li><strong>Account data (Google Sign‑In):</strong> Retained while your account is active. You may request deletion as described in Section 8.</li>
+          <li><strong>Analytics data:</strong> Retained only as long as reasonably necessary for the purposes described in this policy, typically for product improvement and reliability.</li>
+          <li><strong>Entitlement and purchase records:</strong> Retained as long as necessary to verify entitlements, process refunds, maintain business records, and comply with legal obligations.</li>
+          <li><strong>Support emails:</strong> Retained only as long as needed to resolve the inquiry, prevent abuse, maintain necessary support records, or comply with law.</li>
+          <li><strong>Legally required records:</strong> Retained for the period required by applicable law, such as tax or accounting requirements.</li>
+        </ul>
+        <p>We do not retain any information longer than is reasonably necessary for the purposes for which it was collected.</p>
+      </section>
+
       <section class="policy-section">
-        <h2>7. User Rights (GDPR, CCPA, and Other Privacy Laws)</h2>
+        <h2>8. Data Deletion and User Rights</h2>
         <p>Depending on your location, you may have certain rights regarding your personal data:</p>
         <ul>
           <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you</li>
@@ -550,17 +650,29 @@
           <li><strong>Right to Object:</strong> Opt‑out of data processing for marketing, profiling, or other purposes</li>
           <li><strong>Right to Withdraw Consent:</strong> If we rely on your consent, you can withdraw it at any time</li>
         </ul>
-        <p>Since we store almost no data on our servers, most of these rights can be exercised directly by clearing app data or uninstalling the App. For any data held by our third‑party providers (e.g., Google Play, AdMob), please refer to their respective privacy policies or contact us for assistance.</p>
+
+        <p><strong>How to delete your data:</strong></p>
+        <ul>
+          <li><strong>Local data:</strong> Clear app data via Android Settings → Apps → [App Name] → Storage → Clear Data, or uninstall the App.</li>
+          <li><strong>Account data (Google Sign‑In):</strong> Sign out of the app and/or contact us at <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> with a deletion request.</li>
+          <li><strong>Analytics data:</strong> Analytics data is pseudonymous and linked to an installation identifier rather than to your real‑world identity. We do not maintain a direct deletion mechanism for analytics data at this time.</li>
+          <li><strong>Support communications:</strong> Contact us at <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> with a deletion request.</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>Important:</strong> Certain records may need to be retained where required for security, fraud prevention, legal compliance, tax/accounting obligations, or legitimate record‑keeping purposes. Purchase and entitlement records may be retained as long as necessary for these purposes.
+        </div>
+
         <p>To exercise any of these rights, please <a href="mailto:nextflowapps@gmail.com">contact us</a> with your request. We will respond within 30 days.</p>
       </section>
 
       <section class="policy-section">
-        <h2>8. Children's Privacy</h2>
-        <p>Our Apps are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please <a href="mailto:nextflowapps@gmail.com">contact us</a> immediately. We will take steps to remove such information from our systems.</p>
+        <h2>9. Children's Privacy</h2>
+        <p>Our Apps are not intended for children under 13 years of age (or under the applicable age of consent in your jurisdiction). We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please <a href="mailto:nextflowapps@gmail.com">contact us</a> immediately. We will take steps to remove such information from our systems.</p>
       </section>
 
       <section class="policy-section">
-        <h2>9. Permissions</h2>
+        <h2>10. Permissions</h2>
         <p>Our Apps may request the following permissions, each used only for its stated purpose:</p>
         <ul>
           <li><strong>Storage / Media access:</strong> Used by HushFlow to read audio files you choose to play (no upload, no external sharing)</li>
@@ -573,35 +685,33 @@
       </section>
 
       <section class="policy-section">
-        <h2>10. Data Retention and Deletion</h2>
-        <p>Data stored locally on your device remains there unless you choose to delete it. You can clear all app data at any time via your device's Settings → Apps → [App Name] → Storage → Clear Data.</p>
-        <p>If you uninstall the App, all locally stored data will be removed from your device. Analytics and crash data retained by third‑party providers are anonymised and stored only as long as necessary for the purposes described in Section 6.</p>
-        <p>For subscription and payment‑related records, retention is handled by Google Play according to Google's policies.</p>
+        <h2>11. Security</h2>
+        <p>We implement appropriate technical and organisational measures to protect your information against unauthorised access, alteration, disclosure, or destruction. All network transmissions are encrypted using HTTPS where applicable. However, no method of electronic transmission or storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
       </section>
 
       <section class="policy-section">
-        <h2>11. Cookies and Tracking</h2>
-        <p>Our Apps do not use browser cookies or persistent tracking identifiers. However, our advertising partner (Google AdMob) may use device advertising identifiers to serve relevant ads in the free versions. You can reset or opt‑out of personalised ads via your Android device settings (Google → Ads → Opt out of Ads Personalization).</p>
+        <h2>12. Cookies and Tracking</h2>
+        <p>Our Apps do not use browser cookies or persistent tracking identifiers. However, third‑party advertising services may use device advertising identifiers to serve relevant ads in the free versions. You can reset or opt‑out of personalised ads via your Android device settings (Google → Ads → Opt out of Ads Personalization).</p>
       </section>
 
       <section class="policy-section">
-        <h2>12. Links to Other Websites</h2>
+        <h2>13. Links to Other Websites</h2>
         <p>Our Apps and website may contain links to third‑party websites or services (e.g., Google Play, Instagram). This Privacy Policy does <strong>not</strong> apply to those external sites. We encourage you to review the privacy policies of any third‑party sites you visit.</p>
       </section>
 
       <section class="policy-section">
-        <h2>13. Changes to This Policy</h2>
+        <h2>14. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or technological advancements. We will notify you of any material changes by updating the "Last updated" date at the top of this page and, where appropriate, via in‑app notices.</p>
         <p>We encourage you to review this policy periodically. Continued use of our Apps after changes means you accept the updated policy.</p>
       </section>
 
       <section class="policy-section">
-        <h2>14. Contact Us</h2>
+        <h2>15. Contact Us</h2>
         <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
         <p>
           <strong>Email:</strong> <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a><br>
           <strong>Developer:</strong> Tasfin Hasan Sakib<br>
-          <strong>Company:</strong> Next Flow Apps
+          <strong>Brand:</strong> Next Flow Apps
         </p>
         <p>We will respond to your inquiry as quickly as possible, typically within 30 days.</p>
       </section>
@@ -660,8 +770,9 @@
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
         <a href="/privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
         <a href="/temvica/data-deletion.html">Data Deletion</a>
-        <a href="/refund-policy">Refund Policy</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="mailto:nextflowapps@gmail.com">Email</a>
       </nav>
