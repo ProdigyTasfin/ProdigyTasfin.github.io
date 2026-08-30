@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HushFlow: Background Audio Player for Android</title>
-  <meta name="description" content="Play supported audio in the background with screen-off playback, sleep timer, queue controls, playlists and sound customization using HushFlow for Android.">
+  <title>HushFlow: Screen Off Music &amp; Podcast Player</title>
+  <meta name="description" content="Keep music and podcasts playing with your screen off. HushFlow includes background playback, a sleep timer, lyrics and a 10-band EQ for Android.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://nextflow-apps.com/hushflow/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="HushFlow: Background Audio Player for Android">
-  <meta property="og:description" content="Use background playback, screen-off listening, sleep timer, queues, playlists and sound controls with HushFlow for Android.">
+  <meta property="og:title" content="HushFlow: Screen Off Music &amp; Podcast Player">
+  <meta property="og:description" content="Keep music and podcasts playing with your screen off. HushFlow includes background playback, a sleep timer, lyrics and a 10-band EQ for Android.">
   <meta property="og:url" content="https://nextflow-apps.com/hushflow/">
   <meta property="og:site_name" content="Next Flow Apps">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD">
-  <meta property="og:image:alt" content="HushFlow background audio player app icon">
+  <meta property="og:image:alt" content="HushFlow screen off music player app icon">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HushFlow: Background Audio Player for Android">
-  <meta name="twitter:description" content="Play supported audio with background playback, screen-off listening, sleep timer, queues and sound controls.">
+  <meta name="twitter:title" content="HushFlow: Screen Off Music &amp; Podcast Player">
+  <meta name="twitter:description" content="Keep music and podcasts playing with your screen off. HushFlow includes background playback, a sleep timer, lyrics and a 10-band EQ for Android.">
   <meta name="twitter:image" content="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD">
-  <meta name="twitter:image:alt" content="HushFlow background audio player app icon">
+  <meta name="twitter:image:alt" content="HushFlow screen off music player app icon">
   <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -534,6 +534,14 @@
       outline-offset: 3px
     }
 
+    .note-box {
+      background: var(--surface);
+      border-left: 4px solid var(--text);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: .75rem 0
+    }
+
     @media(max-width:820px) {
       .container {
         width: min(100% - 32px, 1120px)
@@ -648,8 +656,8 @@
       <div class="container hero-grid">
         <div>
           <span class="badge ok">Available on Google Play</span>
-          <h1 id="hero-heading">Play audio in the background, even with your screen off</h1>
-          <p class="lead">HushFlow is an Android background audio player with screen‑off playback, queue controls, a sleep timer, playlists, and sound customization.</p>
+          <h1 id="hero-heading">Keep listening when your screen turns off</h1>
+          <p class="lead">HushFlow is an Android music and podcast player with screen‑off playback, background listening, a sleep timer, lyrics, and a 10‑band equalizer.</p>
           <div class="actions">
             <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Get HushFlow on Google Play</a>
             <a class="btn" href="#features">Explore Features</a>
@@ -663,9 +671,73 @@
         </div>
 
         <div class="visual">
-          <img class="visual-icon" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" alt="HushFlow app icon" width="512" height="512" loading="eager" decoding="async" />
+          <img class="visual-icon" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" alt="HushFlow screen off music player app icon" width="512" height="512" loading="eager" decoding="async" />
           <strong>HushFlow</strong>
-          <span>Background audio · Sleep timer · Queues</span>
+          <span>Screen‑off playback · Sleep timer · EQ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen-Off Music Playback -->
+    <section class="section" aria-labelledby="screenoff-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="screenoff-heading">Keep music playing when your screen turns off</h2>
+          <p>HushFlow is built for listeners who want audio to continue after they lock their phone or turn off the display.</p>
+        </div>
+        <div class="grid two">
+          <div>
+            <p><strong>Playback continues when:</strong></p>
+            <ul style="padding-left:1.5rem;">
+              <li>The screen is off</li>
+              <li>The phone is locked</li>
+              <li>You switch to another app</li>
+              <li>The app is minimised</li>
+            </ul>
+            <p>This makes HushFlow ideal for studying, working, commuting, exercising, or any time you want audio without keeping your screen on.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-weight:500;margin-bottom:0;">Background playback that respects your attention.</p>
+            <p style="margin-bottom:0;">HushFlow keeps the audio flowing so you can focus on what matters — not on keeping your phone unlocked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Play Music with the Screen Off -->
+    <section class="section" aria-labelledby="howto-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="howto-heading">How to play music with the screen off on Android</h2>
+          <p>A simple workflow to keep your audio playing after you lock your device.</p>
+        </div>
+        <ol style="padding-left:1.5rem;color:var(--secondary);max-width:660px">
+          <li style="margin-bottom:.5rem"><strong>Start music or a podcast</strong> in HushFlow.</li>
+          <li style="margin-bottom:.5rem"><strong>Confirm playback has started</strong> — check that a media notification appears.</li>
+          <li style="margin-bottom:.5rem"><strong>Lock your phone</strong> or turn the display off.</li>
+          <li style="margin-bottom:.5rem"><strong>Playback continues</strong> in the background where Android allows it.</li>
+          <li style="margin-bottom:.5rem"><strong>Use supported controls</strong> from the notification panel or lock screen.</li>
+        </ol>
+        <div class="note-box" style="max-width:660px;">
+          <strong>Important:</strong> HushFlow supports playback when the <strong>screen is off</strong> or the <strong>phone is locked</strong>. If the Android device itself is completely powered down, applications cannot continue running — this is a limitation of the operating system, not the app.
+        </div>
+        <div class="actions" style="margin-top:1.5rem;">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Try screen‑off playback</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen Off vs Powered Off -->
+    <section class="section" aria-labelledby="clarification-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="clarification-heading">Screen off vs. phone powered off — what's the difference?</h2>
+          <p>This distinction matters for understanding how HushFlow works.</p>
+        </div>
+        <div style="max-width:660px;">
+          <p>When many people say "phone off," they mean the <strong>screen is off</strong> or the <strong>device is locked</strong>. HushFlow can continue playing audio in both of these states.</p>
+          <p>However, if an Android phone is <strong>completely powered down</strong> — turned off entirely — no app can continue running. This is a fundamental limitation of the Android operating system.</p>
+          <p>HushFlow is designed to support the common use case of keeping audio playing <em>while the screen is off</em>, so you can listen without draining your battery on a bright display.</p>
         </div>
       </div>
     </section>
@@ -690,6 +762,80 @@
             <p style="font-weight:500;margin-bottom:0">HushFlow focuses on the basics that matter for background listening.</p>
             <p style="margin-bottom:0">It is not a streaming service and does not host or provide access to copyrighted content. It plays audio you already have access to through your device or supported sources.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music and Podcasts -->
+    <section class="section" aria-labelledby="musicpodcast-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="musicpodcast-heading">Music and podcasts, together</h2>
+          <p>HushFlow brings together your music and podcast listening in one place.</p>
+        </div>
+        <div class="grid two">
+          <ul style="padding-left:1.5rem;margin:0">
+            <li>Music playback with queue and playlist support</li>
+            <li>Podcast playback with episode controls</li>
+            <li>Background playback for both</li>
+            <li>Screen‑off listening for uninterrupted sessions</li>
+          </ul>
+          <div style="display:flex;flex-direction:column;justify-content:center">
+            <p style="font-weight:500;margin-bottom:0;">One app, two ways to listen.</p>
+            <p style="margin-bottom:0;">Switch between music and podcasts without losing your place or your listening flow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sleep Timer -->
+    <section class="section" aria-labelledby="sleeptimer-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="sleeptimer-heading">Fall asleep listening with a music and podcast sleep timer</h2>
+          <p>Set a timer and let HushFlow stop playback automatically — perfect for bedtime listening.</p>
+        </div>
+        <div style="max-width:660px;">
+          <p><strong>How it works:</strong></p>
+          <ul style="padding-left:1.5rem;">
+            <li>Choose a sleep duration</li>
+            <li>Playback stops automatically after the selected period</li>
+            <li>Useful for music or podcasts before bed</li>
+            <li>Prevents unwanted continued playback through the night</li>
+          </ul>
+          <p>Whether you're listening to a calming playlist, a podcast, or ambient sounds, the sleep timer helps you drift off without worrying about the audio playing all night.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lyrics -->
+    <section class="section" aria-labelledby="lyrics-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="lyrics-heading">Follow along with lyrics when available</h2>
+          <p>HushFlow displays lyrics for supported tracks when the information is available.</p>
+        </div>
+        <div style="max-width:660px;">
+          <p>Lyrics are shown in‑app, making it easier to sing along or follow the words of a song. Availability depends on the audio source and whether lyric data is provided.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10-Band Equalizer -->
+    <section class="section" aria-labelledby="eq-heading">
+      <div class="container">
+        <div class="section-head fade-in-up">
+          <h2 id="eq-heading">Shape your sound with a 10‑band equalizer</h2>
+          <p>Adjust your listening experience with granular control over audio frequencies.</p>
+        </div>
+        <div style="max-width:660px;">
+          <p>The 10‑band equalizer lets you tune the sound to your personal preference. Whether you prefer more bass, clearer vocals, or a balanced profile, you can adjust the frequency bands accordingly.</p>
+          <ul style="padding-left:1.5rem;">
+            <li>Adjust bass, midrange, and treble</li>
+            <li>Save custom presets</li>
+            <li>Fine‑tune your listening experience</li>
+          </ul>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:.5rem;">Audio effects may vary by Android device, OS version, and connected audio output.</p>
         </div>
       </div>
     </section>
@@ -804,51 +950,67 @@
         <div class="grid two">
           <details>
             <summary>What is HushFlow?</summary>
-            <p>HushFlow is an Android background audio player with screen‑off playback, queue controls, playlists, a sleep timer, and sound customisation.</p>
+            <p>HushFlow is an Android music and podcast player with screen‑off playback, background listening, a sleep timer, lyrics, and a 10‑band equalizer.</p>
           </details>
           <details>
-            <summary>Can HushFlow play while the screen is off?</summary>
-            <p>HushFlow is designed to continue supported audio playback while the device screen is locked, subject to Android device and system limitations.</p>
+            <summary>Can HushFlow keep music playing when my screen turns off?</summary>
+            <p>Yes. HushFlow is designed to continue supported audio playback while the screen is off or the device is locked, subject to Android device and system limitations.</p>
           </details>
           <details>
-            <summary>Can I use other apps while HushFlow is playing?</summary>
-            <p>Yes. HushFlow supports background playback, so you can use other apps while audio continues to play.</p>
+            <summary>Can HushFlow play music while my phone is locked?</summary>
+            <p>Yes. HushFlow supports playback while the phone is locked, provided Android allows the app to remain active in the background.</p>
           </details>
           <details>
-            <summary>Does HushFlow include a sleep timer?</summary>
-            <p>Yes. You can set a countdown timer to stop playback, with an option to stop after the current track.</p>
+            <summary>Can music play when my phone is completely powered off?</summary>
+            <p>No. If an Android device is completely powered down, no app can continue running. HushFlow supports playback when the screen is off or the device is locked.</p>
           </details>
           <details>
-            <summary>Can I control playback from the lock screen?</summary>
-            <p>Yes. HushFlow supports lock‑screen and notification controls where Android allows them.</p>
+            <summary>Does HushFlow support background playback?</summary>
+            <p>Yes. HushFlow is built for background playback, allowing you to use other apps while audio continues to play.</p>
           </details>
           <details>
-            <summary>Can I manage the playback queue?</summary>
-            <p>Yes. You can add, reorder, and remove tracks from the queue.</p>
+            <summary>Can I listen to podcasts with the screen off?</summary>
+            <p>Yes. Podcast playback works with screen‑off and background playback just like music.</p>
+          </details>
+          <details>
+            <summary>Does HushFlow have a sleep timer?</summary>
+            <p>Yes. You can set a countdown timer to stop playback automatically, with an option to stop after the current track.</p>
+          </details>
+          <details>
+            <summary>Can I use the sleep timer for podcasts?</summary>
+            <p>Yes. The sleep timer works with both music and podcast playback.</p>
+          </details>
+          <details>
+            <summary>Does HushFlow show lyrics?</summary>
+            <p>Lyrics are displayed when available for the track you're listening to. Availability depends on the audio source.</p>
           </details>
           <details>
             <summary>Does HushFlow include an equalizer?</summary>
-            <p>Yes. HushFlow includes a 10‑band equaliser and related Audio Lab controls.</p>
+            <p>Yes. HushFlow includes a 10‑band equalizer and related Audio Lab controls.</p>
           </details>
           <details>
-            <summary>Do audio effects work on every Android device?</summary>
-            <p>Audio effects may vary depending on your device, Android version, and connected audio output.</p>
+            <summary>What is a 10‑band equalizer?</summary>
+            <p>A 10‑band equalizer lets you adjust ten frequency bands — from bass to treble — to shape the sound to your personal preference.</p>
+          </details>
+          <details>
+            <summary>Can I control HushFlow from the lock screen?</summary>
+            <p>Yes. HushFlow supports lock‑screen and notification controls where Android allows them.</p>
+          </details>
+          <details>
+            <summary>Is HushFlow available for Android?</summary>
+            <p>Yes. HushFlow is available for compatible Android devices through Google Play.</p>
           </details>
           <details>
             <summary>Is HushFlow free?</summary>
             <p>HushFlow offers a free experience with core playback and selected ad‑supported access. Premium features are available through optional in‑app purchases.</p>
           </details>
           <details>
-            <summary>What may be included with HushFlow Premium?</summary>
-            <p>Premium may include ad‑free listening, custom playlist support, full Audio Lab access, saved sound preferences, and additional features. Availability may vary.</p>
-          </details>
-          <details>
             <summary>Where can I download HushFlow?</summary>
             <p>HushFlow is available on Google Play. <a href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download it here</a>.</p>
           </details>
           <details>
-            <summary>Where can I read the privacy policy?</summary>
-            <p>You can read the full privacy policy at <a href="/hushflow/privacy-policy.html">/hushflow/privacy-policy.html</a>.</p>
+            <summary>How do I delete my HushFlow data?</summary>
+            <p>You can delete your data by clearing the app storage via Android Settings, uninstalling the app, or using the in‑app deletion controls where available. <a href="/hushflow/privacy-policy.html">View full privacy information</a>.</p>
           </details>
         </div>
       </div>
@@ -865,47 +1027,71 @@
           "name": "What is HushFlow?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HushFlow is an Android background audio player with screen-off playback, queue controls, playlists, a sleep timer, and sound customisation."
+            "text": "HushFlow is an Android music and podcast player with screen-off playback, background listening, a sleep timer, lyrics, and a 10-band equalizer."
           }
         },
         {
           "@type": "Question",
-          "name": "Can HushFlow play while the screen is off?",
+          "name": "Can HushFlow keep music playing when my screen turns off?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "HushFlow is designed to continue supported audio playback while the device screen is locked, subject to Android device and system limitations."
+            "text": "Yes. HushFlow is designed to continue supported audio playback while the screen is off or the device is locked, subject to Android device and system limitations."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I use other apps while HushFlow is playing?",
+          "name": "Can HushFlow play music while my phone is locked?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. HushFlow supports background playback, so you can use other apps while audio continues to play."
+            "text": "Yes. HushFlow supports playback while the phone is locked, provided Android allows the app to remain active in the background."
           }
         },
         {
           "@type": "Question",
-          "name": "Does HushFlow include a sleep timer?",
+          "name": "Can music play when my phone is completely powered off?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can set a countdown timer to stop playback, with an option to stop after the current track."
+            "text": "No. If an Android device is completely powered down, no app can continue running. HushFlow supports playback when the screen is off or the device is locked."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I control playback from the lock screen?",
+          "name": "Does HushFlow support background playback?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. HushFlow supports lock-screen and notification controls where Android allows them."
+            "text": "Yes. HushFlow is built for background playback, allowing you to use other apps while audio continues to play."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I manage the playback queue?",
+          "name": "Can I listen to podcasts with the screen off?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can add, reorder, and remove tracks from the queue."
+            "text": "Yes. Podcast playback works with screen-off and background playback just like music."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does HushFlow have a sleep timer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can set a countdown timer to stop playback automatically, with an option to stop after the current track."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the sleep timer for podcasts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The sleep timer works with both music and podcast playback."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does HushFlow show lyrics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lyrics are displayed when available for the track you're listening to. Availability depends on the audio source."
           }
         },
         {
@@ -913,15 +1099,31 @@
           "name": "Does HushFlow include an equalizer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. HushFlow includes a 10-band equaliser and related Audio Lab controls."
+            "text": "Yes. HushFlow includes a 10-band equalizer and related Audio Lab controls."
           }
         },
         {
           "@type": "Question",
-          "name": "Do audio effects work on every Android device?",
+          "name": "What is a 10-band equalizer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Audio effects may vary depending on your device, Android version, and connected audio output."
+            "text": "A 10-band equalizer lets you adjust ten frequency bands — from bass to treble — to shape the sound to your personal preference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I control HushFlow from the lock screen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HushFlow supports lock-screen and notification controls where Android allows them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is HushFlow available for Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HushFlow is available for compatible Android devices through Google Play."
           }
         },
         {
@@ -934,14 +1136,6 @@
         },
         {
           "@type": "Question",
-          "name": "What may be included with HushFlow Premium?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Premium may include ad-free listening, custom playlist support, full Audio Lab access, saved sound preferences, and additional features. Availability may vary."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Where can I download HushFlow?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -950,10 +1144,10 @@
         },
         {
           "@type": "Question",
-          "name": "Where can I read the privacy policy?",
+          "name": "How do I delete my HushFlow data?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can read the full privacy policy at /hushflow/privacy-policy.html."
+            "text": "You can delete your data by clearing the app storage via Android Settings, uninstalling the app, or using the in-app deletion controls where available."
           }
         }
       ]
@@ -979,13 +1173,13 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "HushFlow",
-      "alternateName": "HushFlow: Music and Podcasts",
+      "alternateName": "HushFlow: Music, Podcasts & EQ",
       "url": "https://nextflow-apps.com/hushflow/",
       "downloadUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
       "installUrl": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
       "operatingSystem": "Android",
       "applicationCategory": "MultimediaApplication",
-      "description": "HushFlow is an Android background audio player with screen-off playback, sleep timer, queue controls, playlists and sound customization.",
+      "description": "HushFlow is an Android music and podcast player with screen-off playback, background listening, a sleep timer, lyrics, and a 10-band equalizer.",
       "isAccessibleForFree": true,
       "image": "https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD",
       "author": {
