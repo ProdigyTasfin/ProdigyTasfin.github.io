@@ -7,10 +7,10 @@
     name="google-site-verification"
     content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc"
   />
-  <title>NextFlow Apps: Android Apps for Focus and Digital Wellbeing</title>
+  <title>NextFlow Apps | Technology That Respects Your Attention</title>
   <meta
     name="description"
-    content="Explore Android apps by NextFlow Apps for background audio, app blocking, digital wellbeing, Pomodoro focus, task planning and healthier screen habits."
+    content="NextFlow Apps is a small independent team building thoughtful, accessible software for real human problems. Explore HushFlow, Noctra, Temvica, and what comes next."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
@@ -19,31 +19,25 @@
   <link rel="icon" href="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" type="image/png" />
 
   <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="NextFlow Apps: Android Apps for Focus and Digital Wellbeing"
-  />
+  <meta property="og:title" content="NextFlow Apps | Technology That Respects Your Attention" />
   <meta
     property="og:description"
-    content="Independent Android apps for background audio, digital wellbeing, reducing doomscrolling and Pomodoro focus."
+    content="A small independent team building thoughtful, accessible software for real human problems."
   />
   <meta property="og:url" content="https://nextflow-apps.com/" />
   <meta property="og:site_name" content="NextFlow Apps" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" />
-  <meta property="og:image:alt" content="NextFlow Apps Android app studio logo" />
+  <meta property="og:image:alt" content="NextFlow Apps logo" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="NextFlow Apps: Android Apps for Focus and Digital Wellbeing"
-  />
+  <meta name="twitter:title" content="NextFlow Apps | Technology That Respects Your Attention" />
   <meta
     name="twitter:description"
-    content="Explore independent Android apps for background listening, digital wellbeing, app blocking and Pomodoro focus."
+    content="A small independent team building thoughtful, accessible software for real human problems."
   />
   <meta name="twitter:image" content="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" />
-  <meta name="twitter:image:alt" content="NextFlow Apps Android app studio logo" />
+  <meta name="twitter:image:alt" content="NextFlow Apps logo" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,12 +51,8 @@
     "name": "NextFlow Apps",
     "url": "https://nextflow-apps.com/",
     "logo": "https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw",
-    "description": "NextFlow Apps is an independent Android app studio creating tools for background audio, digital wellbeing, healthier screen habits and focused work.",
+    "description": "NextFlow Apps is a small independent team building thoughtful, accessible software for real human problems.",
     "email": "nextflowapps@gmail.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Tasfin Hasan Sakib"
-    },
     "sameAs": [
       "https://www.instagram.com/nextflow_apps/",
       "https://github.com/ProdigyTasfin"
@@ -76,9 +66,9 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "NextFlow Apps",
-    "alternateName": "NextFlow Apps",
+    "alternateName": "NextFlow",
     "url": "https://nextflow-apps.com/",
-    "description": "Official website for Android apps created by NextFlow Apps."
+    "description": "Official website for apps built by NextFlow Apps."
   }
   </script>
 
@@ -87,7 +77,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Android apps by NextFlow Apps",
+    "name": "Apps by NextFlow Apps",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -120,7 +110,9 @@
       --line: #eee;
       --line-strong: #ddd;
       --surface: #fafafa;
-      --radius: 10px
+      --radius: 10px;
+      --radius-lg: 16px;
+      --accent: #0a79df
     }
 
     * {
@@ -137,15 +129,27 @@
       color: var(--text);
       font-family: 'Inter', Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.65
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
     }
 
     a {
       color: inherit
     }
 
+    img {
+      max-width: 100%;
+      height: auto
+    }
+
     .container {
       width: min(1120px, calc(100% - 48px));
+      margin-inline: auto
+    }
+
+    .container-narrow {
+      width: min(820px, calc(100% - 48px));
       margin-inline: auto
     }
 
@@ -166,13 +170,17 @@
       transform: translateY(0)
     }
 
+    /* ============================================================
+       HEADER / NAV
+       ============================================================ */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
       background: rgba(255, 255, 255, .92);
-      backdrop-filter: blur(12px)
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px)
     }
 
     .nav {
@@ -203,7 +211,8 @@
       color: #fff;
       font-size: .72rem;
       font-weight: 700;
-      overflow: hidden
+      overflow: hidden;
+      flex-shrink: 0
     }
 
     .brand-mark img {
@@ -242,79 +251,80 @@
       display: none
     }
 
+    /* ============================================================
+       HERO
+       ============================================================ */
     .hero {
-      padding: 96px 0 72px
+      padding: 104px 0 88px
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.1fr .9fr;
       align-items: center;
-      gap: 4rem
+      gap: 4.5rem
     }
 
-    .hero-centered {
-      text-align: center
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      padding: .3rem .65rem;
+      color: #555;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase
     }
 
-    .hero-centered h1,
-    .hero-centered .lead {
-      margin-inline: auto
+    .eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block
     }
 
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
       margin: 0 0 .75rem;
-      line-height: 1.12;
-      letter-spacing: -.04em
+      line-height: 1.13;
+      letter-spacing: -.03em
     }
 
     h1 {
-      max-width: 13ch;
-      font-size: clamp(2.6rem, 6vw, 5rem);
+      max-width: 15ch;
+      font-size: clamp(2.4rem, 5.6vw, 4.4rem);
       font-weight: 700
     }
 
-    .hero-centered h1 {
-      max-width: none
+    h2 {
+      font-size: clamp(1.75rem, 3.6vw, 2.7rem);
+      font-weight: 700
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700
     }
 
     .lead {
-      max-width: 62ch;
+      max-width: 58ch;
       color: var(--secondary);
-      font-size: 1.08rem
-    }
-
-    .eyebrow,
-    .badge {
-      display: inline-flex;
-      margin-bottom: 1rem;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      padding: .25rem .55rem;
-      color: #555;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase
-    }
-
-    .badge.ok {
-      border-color: #b7e0b7;
-      background: #edf7ed;
-      color: #1e6b1e
+      font-size: 1.1rem;
+      line-height: 1.6
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 1.5rem
-    }
-
-    .hero-centered .actions {
-      justify-content: center
+      margin-top: 1.75rem
     }
 
     .btn {
@@ -322,15 +332,17 @@
       align-items: center;
       justify-content: center;
       min-height: 44px;
-      padding: .65rem 1.5rem;
+      padding: .65rem 1.4rem;
       border: 1px solid #111;
       border-radius: 6px;
       background: #fff;
       color: #111;
+      font-family: inherit;
       font-size: .92rem;
       font-weight: 650;
       text-decoration: none;
-      transition: transform .2s ease, background .2s ease, color .2s ease
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      cursor: pointer
     }
 
     .btn:hover {
@@ -349,182 +361,443 @@
     }
 
     .trust {
-      margin-top: .75rem;
+      margin-top: 1rem;
       font-size: .82rem;
       color: var(--muted)
     }
 
+    /* ============================================================
+       HERO VISUAL — flow constellation
+       ============================================================ */
     .visual {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 310px;
+      position: relative;
       padding: 2rem;
       border: 1px solid var(--line-strong);
-      border-radius: var(--radius);
-      background: var(--surface);
-      text-align: center;
-      gap: .75rem
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 25% 20%, rgba(10, 121, 223, .07), transparent 45%),
+        radial-gradient(circle at 80% 90%, rgba(10, 121, 223, .05), transparent 50%),
+        var(--surface);
+      overflow: hidden
     }
 
-    .visual .visual-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 20px;
+    .visual-ecosystem {
+      display: grid;
+      gap: 1.35rem;
+      position: relative;
+      z-index: 1
+    }
+
+    .visual-brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding-bottom: 1.35rem;
+      border-bottom: 1px solid var(--line-strong)
+    }
+
+    .visual-brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
       object-fit: cover;
-      border: 2px solid var(--line-strong);
+      border: 1px solid var(--line-strong);
       background: #fff;
-      padding: 4px
+      padding: 2px
     }
 
-    .visual strong {
-      font-size: 1.65rem;
-      letter-spacing: -.04em
+    .visual-brand .visual-brand-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.02em
     }
 
-    .visual span {
-      color: var(--secondary);
-      font-size: .95rem
+    .visual-brand .visual-brand-sub {
+      display: block;
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-top: .1rem
     }
 
+    .visual-row {
+      display: flex;
+      align-items: center;
+      gap: .85rem
+    }
+
+    .visual-row img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line-strong);
+      background: #fff;
+      flex-shrink: 0
+    }
+
+    .visual-row .visual-row-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3
+    }
+
+    .visual-row .visual-row-name {
+      font-size: .88rem;
+      font-weight: 650
+    }
+
+    .visual-row .visual-row-tag {
+      font-size: .74rem;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .visual-row--ghost {
+      opacity: .55
+    }
+
+    .visual-row--ghost .visual-ghost-plus {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px dashed var(--line-strong);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 400;
+      flex-shrink: 0
+    }
+
+    /* ============================================================
+       SECTIONS
+       ============================================================ */
     .section {
-      padding: 72px 0;
+      padding: 88px 0;
       border-top: 1px solid var(--line)
     }
 
     .section-head {
-      max-width: 660px;
-      margin-bottom: 2rem
+      max-width: 700px;
+      margin-bottom: 2.5rem
     }
 
-    .section-head p,
-    .feature p,
-    .app-card p,
-    .policy-card p,
-    .contact-details,
-    footer p,
-    li {
-      color: var(--secondary)
+    .section-head p {
+      color: var(--secondary);
+      margin: .35rem 0 0
     }
 
-    h2 {
-      font-size: clamp(1.85rem, 3.5vw, 3rem);
-      font-weight: 700
+    .section-head .eyebrow {
+      margin-bottom: 1rem
     }
 
-    h3 {
-      font-size: 1.08rem;
-      font-weight: 700
+    .section-intro {
+      color: var(--secondary);
+      font-size: 1.02rem
     }
 
-    .grid {
+    /* ============================================================
+       PRODUCTS
+       ============================================================ */
+    .product-grid {
       display: grid;
-      gap: 16px
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
     }
 
-    .app-grid {
-      grid-template-columns: repeat(3, 1fr)
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.75rem;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: #fff;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease
     }
 
-    .feature-grid {
-      grid-template-columns: repeat(3, 1fr)
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .06);
+      border-color: #c9c9c9
     }
 
-    .feature,
-    .app-card,
-    .policy-card,
-    .cta-panel {
+    .product-card .product-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem
+    }
+
+    .product-card .app-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 13px;
+      object-fit: cover;
+      border: 1px solid var(--line-strong);
+      background: #fff;
+      flex-shrink: 0
+    }
+
+    .product-card .product-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin: 0
+    }
+
+    .product-card .product-kicker {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent)
+    }
+
+    .product-card .product-tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111;
+      margin: 0
+    }
+
+    .product-card .product-desc {
+      color: var(--secondary);
+      font-size: .94rem;
+      margin: 0
+    }
+
+    .product-card .product-foot {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      padding-top: .25rem
+    }
+
+    .product-card .btn {
+      font-size: .85rem;
+      padding: .5rem 1rem;
+      min-height: 40px
+    }
+
+    .product-card .play-link {
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      padding: .5rem 0
+    }
+
+    .product-card .play-link:hover {
+      color: #111;
+      text-decoration: underline;
+      text-underline-offset: 3px
+    }
+
+    .products-note {
+      margin-top: 2rem;
+      color: var(--secondary);
+      font-size: .98rem;
+      font-style: italic
+    }
+
+    /* ============================================================
+       MISSION
+       ============================================================ */
+    .mission {
+      background: var(--surface);
+      border-top: 1px solid var(--line)
+    }
+
+    .mission-inner {
+      text-align: center
+    }
+
+    .mission h2 {
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      letter-spacing: -.045em;
+      margin-bottom: 1.5rem
+    }
+
+    .mission-lead {
+      font-size: 1.18rem;
+      color: var(--secondary);
+      margin: 0 auto 1.4rem;
+      max-width: 62ch;
+      line-height: 1.7
+    }
+
+    .mission-emphasis {
+      display: block;
+      margin-top: 1.75rem;
+      font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: #111
+    }
+
+    /* ============================================================
+       WHY WE BUILD
+       ============================================================ */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start
+    }
+
+    .why-grid h2 {
+      max-width: 18ch
+    }
+
+    .why-copy p {
+      color: var(--secondary);
+      margin: 0 0 .9rem;
+      font-size: 1.02rem
+    }
+
+    .why-copy p:last-child {
+      margin-bottom: 0
+    }
+
+    .why-copy .why-line {
+      display: block;
+      color: #111;
+      font-weight: 650;
+      margin-top: 1.25rem;
+      font-size: 1.05rem
+    }
+
+    /* ============================================================
+       PRINCIPLES
+       ============================================================ */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .principle {
+      padding: 1.5rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
       background: #fff
     }
 
-    .feature,
-    .app-card,
-    .policy-card {
-      padding: 1.35rem
+    .principle .principle-num {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: .5rem
     }
 
-    .app-card .app-logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 14px;
-      object-fit: cover;
-      margin-bottom: 1rem;
+    .principle h3 {
+      margin-bottom: .5rem
+    }
+
+    .principle p {
+      color: var(--secondary);
+      font-size: .95rem;
+      margin: 0
+    }
+
+    /* ============================================================
+       TEAM
+       ============================================================ */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 4rem;
+      align-items: start
+    }
+
+    .team-copy p {
+      color: var(--secondary);
+      margin: 0 0 .9rem;
+      font-size: 1.02rem
+    }
+
+    .team-copy p:last-child {
+      margin-bottom: 0
+    }
+
+    .team-meta {
       border: 1px solid var(--line-strong);
-      background: #fff
-    }
-
-    .app-card .badge {
-      margin-top: 0
-    }
-
-    .app-card .actions {
-      margin-top: 0
-    }
-
-    .app-card .actions .btn {
-      font-size: .85rem;
-      padding: .5rem 1rem
-    }
-
-    .feature {
-      transition: transform .2s ease, box-shadow .2s ease
-    }
-
-    .feature:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .06)
-    }
-
-    .cta-panel {
-      padding: 2rem;
+      border-radius: var(--radius);
       background: var(--surface);
-      text-align: center
+      padding: 1.5rem;
+      display: grid;
+      gap: 1.15rem
     }
 
-    .cta-panel .actions {
-      justify-content: center
-    }
-
-    .two {
-      grid-template-columns: 1fr 1fr
-    }
-
-    .contact-details {
+    .team-meta .meta-row {
       display: flex;
       flex-direction: column;
-      gap: .25rem;
-      font-style: normal;
-      margin-top: .5rem
+      gap: .15rem
     }
 
-    .contact-details a {
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 2px
+    .team-meta .meta-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted)
     }
 
-    .legal-note {
-      font-size: .82rem;
-      color: var(--muted);
-      margin-top: .75rem;
-      line-height: 1.6
-    }
-
-    .legal-note a {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      font-weight: 600;
+    .team-meta .meta-value {
+      font-size: .95rem;
       color: var(--secondary)
     }
 
-    .legal-note a:hover {
-      color: var(--text)
+    .team-meta a.meta-value {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600
     }
 
-    .faq .grid {
+    /* ============================================================
+       WHAT'S NEXT
+       ============================================================ */
+    .next {
+      background: var(--surface);
+      border-top: 1px solid var(--line)
+    }
+
+    .next-inner {
+      text-align: center
+    }
+
+    .next h2 {
+      font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+      margin-bottom: 1.15rem
+    }
+
+    .next p {
+      color: var(--secondary);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin: 0 auto 1rem;
+      line-height: 1.7
+    }
+
+    .next p:last-child {
+      margin-bottom: 0
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 12px
     }
 
@@ -560,61 +833,114 @@
       text-underline-offset: 2px
     }
 
+    /* ============================================================
+       FOOTER
+       ============================================================ */
     .site-footer {
-      padding: 42px 0;
+      padding: 64px 0 42px;
       background: #fafafa;
       border-top: 1px solid var(--line)
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 2rem
+      grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+      gap: 2.5rem
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: start;
-      gap: .5rem 1rem
-    }
-
-    .footer-links a {
+    .footer-brand p {
       color: var(--secondary);
       font-size: .9rem;
-      font-weight: 600;
-      text-decoration: none
+      margin: .75rem 0 .25rem
     }
 
-    .footer-links a:hover {
+    .footer-brand .footer-tagline {
+      font-weight: 650;
+      color: #111;
+      font-size: .95rem;
+      margin-top: 1rem
+    }
+
+    .footer-brand .legal-note {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      line-height: 1.55
+    }
+
+    .footer-brand .legal-note a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      color: var(--secondary)
+    }
+
+    .footer-brand .legal-note a:hover {
       color: var(--text)
     }
 
+    .footer-col h4 {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 .85rem
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: .5rem
+    }
+
+    .footer-col a {
+      color: var(--secondary);
+      font-size: .9rem;
+      font-weight: 500;
+      text-decoration: none
+    }
+
+    .footer-col a:hover {
+      color: var(--text)
+    }
+
+    .footer-bottom {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: .82rem;
+      color: var(--muted)
+    }
+
+    /* ============================================================
+       ANIMATION
+       ============================================================ */
     .fade-in-up {
       opacity: 0;
-      animation: fadeInUp .65s ease forwards
+      animation: fadeInUp .7s ease forwards
     }
 
     .delay-1 {
-      animation-delay: .1s
+      animation-delay: .08s
     }
-
     .delay-2 {
-      animation-delay: .2s
+      animation-delay: .16s
     }
-
     .delay-3 {
-      animation-delay: .3s
-    }
-
-    .delay-4 {
-      animation-delay: .4s
+      animation-delay: .24s
     }
 
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(24px)
+        transform: translateY(20px)
       }
       to {
         opacity: 1;
@@ -627,8 +953,40 @@
       outline-offset: 3px
     }
 
-    @media(max-width:820px) {
-      .container {
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media(max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 2rem
+      }
+    }
+
+    @media(max-width: 900px) {
+      .product-grid,
+      .principles-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .why-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem
+      }
+
+      .hero {
+        padding: 76px 0 60px
+      }
+
+      .section {
+        padding: 68px 0
+      }
+    }
+
+    @media(max-width: 820px) {
+      .container,
+      .container-narrow {
         width: min(100% - 32px, 1120px)
       }
 
@@ -640,6 +998,8 @@
         border-radius: 6px;
         background: #fff;
         font-weight: 700;
+        font-family: inherit;
+        font-size: .9rem;
         cursor: pointer
       }
 
@@ -660,34 +1020,75 @@
         display: flex
       }
 
-      .hero {
-        padding: 64px 0 52px
+      .nav-links a {
+        padding: .65rem .8rem
       }
 
-      .hero-grid,
-      .app-grid,
-      .feature-grid,
-      .two,
-      .footer-grid {
+      .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2rem
+        gap: 3rem
       }
 
-      .visual {
-        min-height: 220px
-      }
-
-      .visual .visual-icon {
-        width: 64px;
-        height: 64px
-      }
-
-      .faq .grid.two {
-        gap: 12px
+      .faq-grid {
+        grid-template-columns: 1fr
       }
     }
 
-    @media(prefers-reduced-motion:reduce) {
+    @media(max-width: 560px) {
+      .product-grid,
+      .principles-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding: 56px 0 44px
+      }
+
+      .section {
+        padding: 56px 0
+      }
+
+      h1 {
+        font-size: clamp(2rem, 8.2vw, 2.6rem)
+      }
+
+      .visual {
+        padding: 1.5rem
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1
+      }
+
+      .footer-bottom {
+        flex-direction: column
+      }
+    }
+
+    @media(max-width: 380px) {
+      .container,
+      .container-narrow {
+        width: min(100% - 24px, 1120px)
+      }
+
+      .btn {
+        padding-inline: 1rem;
+        font-size: .88rem
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* ============================================================
+       REDUCED MOTION
+       ============================================================ */
+    @media(prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto
       }
@@ -697,9 +1098,14 @@
         animation: none
       }
 
-      .feature,
-      .btn {
+      .btn,
+      .product-card {
         transition: none
+      }
+
+      .btn:hover,
+      .product-card:hover {
+        transform: none
       }
     }
   </style>
@@ -724,204 +1130,319 @@
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/" aria-current="page">Home</a>
+        <a href="#products">Products</a>
+        <a href="#mission">Mission</a>
+        <a href="#team">Team</a>
         <a href="/articles/">Articles</a>
-        <a href="/hushflow/">HushFlow</a>
-        <a href="/noctra/">Noctra</a>
-        <a href="/temvica/">Temvica</a>
         <a href="/support.html">Support</a>
-        <a href="/terms-policy.html">Terms</a>
-        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- Hero -->
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Independent Android app studio</span>
-          <h1 id="hero-heading">Practical Android apps for focus, listening and healthier digital habits</h1>
-          <p class="lead">NextFlow Apps creates independent Android tools for background audio, reducing doomscrolling, app blocking, Pomodoro focus, task planning and better screen habits.</p>
+        <div class="fade-in-up">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> NextFlow Apps</span>
+          <h1 id="hero-heading">Technology that respects your attention.</h1>
+          <p class="lead">We build thoughtful software that helps people listen, focus, work, learn, and live a little better — starting with a few problems we think deserve better tools.</p>
           <div class="actions">
-            <a class="btn primary" href="#apps">Explore Our Apps</a>
-            <a class="btn" href="/support.html">Support NextFlow Apps</a>
-            <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+            <a class="btn primary" href="#products">Explore our products</a>
+            <a class="btn" href="#mission">Why we build</a>
           </div>
-          <p class="trust">Independent Android apps by Tasfin Hasan Sakib.</p>
+          <p class="trust">Independent · Free to try</p>
         </div>
 
-        <div class="visual">
-          <img class="visual-icon" src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" width="188" height="188" alt="NextFlow Apps logo" decoding="async" />
-          <strong>NextFlow Apps</strong>
-          <span>Focus · Calm · Productive</span>
+        <div class="visual fade-in-up delay-1" aria-label="NextFlow Apps and its current products">
+          <div class="visual-ecosystem">
+
+            <div class="visual-brand">
+              <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" width="80" height="80" alt="" decoding="async" />
+              <div>
+                <span class="visual-brand-name">NextFlow Apps</span>
+                <span class="visual-brand-sub">Humans first.</span>
+              </div>
+            </div>
+
+            <div class="visual-row">
+              <img src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <span class="visual-row-meta">
+                <span class="visual-row-name">HushFlow</span>
+                <span class="visual-row-tag">Listen</span>
+              </span>
+            </div>
+
+            <div class="visual-row">
+              <img src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <span class="visual-row-meta">
+                <span class="visual-row-name">Noctra</span>
+                <span class="visual-row-tag">Protect</span>
+              </span>
+            </div>
+
+            <div class="visual-row">
+              <img src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <span class="visual-row-meta">
+                <span class="visual-row-name">Temvica</span>
+                <span class="visual-row-tag">Focus</span>
+              </span>
+            </div>
+
+            <div class="visual-row visual-row--ghost">
+              <span class="visual-ghost-plus" aria-hidden="true">+</span>
+              <span class="visual-row-meta">
+                <span class="visual-row-name">More to come</span>
+                <span class="visual-row-tag">In development</span>
+              </span>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Apps -->
-    <section id="apps" class="section" aria-labelledby="apps-heading">
+    <!-- ============================================================
+         PRODUCTS
+         ============================================================ -->
+    <section id="products" class="section" aria-labelledby="products-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="apps-heading">Explore Android apps by NextFlow Apps</h2>
-          <p>Each app solves a different everyday digital problem — from background listening and screen-time control to focused work sessions.</p>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Products</span>
+          <h2 id="products-heading">What we've built so far.</h2>
+          <p class="section-intro">Different problems. Same standard: make something genuinely useful.</p>
         </div>
 
-        <div class="grid app-grid">
+        <div class="product-grid">
+
           <!-- HushFlow -->
-          <article class="app-card fade-in-up delay-1">
-            <img class="app-logo" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="512" height="512" alt="HushFlow background audio player app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-            <span class="badge ok">Available on Google Play</span>
-            <h3>HushFlow</h3>
-            <p>An Android background audio player with screen-off playback, sleep timer, queue controls, playlists and sound customization.</p>
-            <div class="actions">
-              <a class="btn primary" href="/hushflow/">Explore HushFlow background audio features</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Download HushFlow from Google Play</a>
+          <article class="product-card fade-in-up delay-1" aria-labelledby="product-hushflow">
+            <div class="product-header">
+              <img class="app-logo" src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="512" height="512" alt="HushFlow app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <div>
+                <p class="product-kicker">Listen</p>
+                <h3 id="product-hushflow" class="product-name">HushFlow</h3>
+              </div>
+            </div>
+            <p class="product-tagline">Listen on your terms.</p>
+            <p class="product-desc">Music, podcasts, and learning audio built around how you actually listen — screen-off playback, offline listening where supported, sleep timer, lyrics, and a 10-band equalizer.</p>
+            <div class="product-foot">
+              <a class="btn primary" href="/hushflow/">Explore HushFlow →</a>
+              <a class="play-link" href="https://play.google.com/store/apps/details?id=com.tasfin.hushflow" target="_blank" rel="noopener noreferrer">Google Play</a>
             </div>
           </article>
 
           <!-- Noctra -->
-          <article class="app-card fade-in-up delay-2">
-            <img class="app-logo" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="512" height="512" alt="Noctra app blocker and digital wellbeing app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-            <span class="badge ok">Available on Google Play</span>
-            <h3>Noctra</h3>
-            <p>An Android app blocker and digital wellbeing tool designed to reduce doomscrolling, limit distracting apps and support healthier screen habits.</p>
-            <div class="actions">
-              <a class="btn primary" href="/noctra/">Explore Noctra app-blocking features</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Download Noctra from Google Play</a>
+          <article class="product-card fade-in-up delay-2" aria-labelledby="product-noctra">
+            <div class="product-header">
+              <img class="app-logo" src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="512" height="512" alt="Noctra app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <div>
+                <p class="product-kicker">Protect</p>
+                <h3 id="product-noctra" class="product-name">Noctra</h3>
+              </div>
+            </div>
+            <p class="product-tagline">Make space for what matters.</p>
+            <p class="product-desc">Step away from distracting apps, create focus sessions, and build healthier digital habits — with on-device behavioural signals and practical blocking tools.</p>
+            <div class="product-foot">
+              <a class="btn primary" href="/noctra/">Explore Noctra →</a>
+              <a class="play-link" href="https://play.google.com/store/apps/details?id=com.tasfin.noctra" target="_blank" rel="noopener noreferrer">Google Play</a>
             </div>
           </article>
 
           <!-- Temvica -->
-          <article class="app-card fade-in-up delay-3">
-            <img class="app-logo" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="512" height="512" alt="Temvica Pomodoro timer app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-            <span class="badge ok">Available on Google Play</span>
-            <h3>Temvica</h3>
-            <p>A Pomodoro focus timer for Android with tasks, ambient sounds, flexible session modes and productivity insights.</p>
-            <div class="actions">
-              <a class="btn primary" href="/temvica/">Explore Temvica Pomodoro features</a>
-              <a class="btn" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Download Temvica from Google Play</a>
+          <article class="product-card fade-in-up delay-3" aria-labelledby="product-temvica">
+            <div class="product-header">
+              <img class="app-logo" src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="512" height="512" alt="Temvica app icon" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+              <div>
+                <p class="product-kicker">Focus</p>
+                <h3 id="product-temvica" class="product-name">Temvica</h3>
+              </div>
+            </div>
+            <p class="product-tagline">Focus on the work in front of you.</p>
+            <p class="product-desc">Simple focus sessions, Pomodoro tools, tasks, and ambient audio for studying, creating, and deep work.</p>
+            <div class="product-foot">
+              <a class="btn primary" href="/temvica/">Explore Temvica →</a>
+              <a class="play-link" href="https://play.google.com/store/apps/details?id=com.tasfin.focusflow" target="_blank" rel="noopener noreferrer">Google Play</a>
             </div>
           </article>
+
         </div>
+
+        <p class="products-note fade-in-up">These are only the problems we've started with. More useful things are coming.</p>
       </div>
     </section>
 
-    <!-- Apps built around real problems -->
-    <section class="section" aria-labelledby="problems-heading">
-      <div class="container">
-        <div class="section-head fade-in-up">
-          <h2 id="problems-heading">Apps built around real everyday problems</h2>
-          <p>Each app is designed to address a specific challenge you might face in your daily digital life.</p>
-        </div>
+    <!-- ============================================================
+         MISSION — Humans first
+         ============================================================ -->
+    <section id="mission" class="section mission" aria-labelledby="mission-heading">
+      <div class="container-narrow mission-inner fade-in-up">
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Our mission</span>
+        <h2 id="mission-heading">Humans first.</h2>
 
-        <div class="grid feature-grid">
-          <article class="feature fade-in-up delay-1">
-            <h3>Background listening</h3>
-            <p><a href="/hushflow/">HushFlow</a> supports users who want audio to continue while multitasking, locking the screen or using a sleep timer — without needing to keep the app open.</p>
-          </article>
-          <article class="feature fade-in-up delay-2">
-            <h3>Healthier screen habits</h3>
-            <p><a href="/noctra/">Noctra</a> supports users who want stronger boundaries around distracting apps, endless scrolling and mindless phone use — with practical tools to interrupt automatic habits.</p>
-          </article>
-          <article class="feature fade-in-up delay-3">
-            <h3>Structured focus sessions</h3>
-            <p><a href="/temvica/">Temvica</a> supports users who prefer timed work, tasks, ambient sounds and visible progress — a simple framework for focused study or deep work.</p>
-          </article>
-        </div>
+        <p class="mission-lead">
+          Technology reaches people across different languages, beliefs, incomes, cultures, abilities, and lives. We don't believe any of those things make one user more important than another.
+        </p>
+
+        <p class="mission-lead">
+          Wherever you are, if you're using something we've built, you deserve a product made with care.
+        </p>
+
+        <span class="mission-emphasis">Everyone matters.</span>
       </div>
     </section>
 
-    <!-- Why NextFlow Apps -->
+    <!-- ============================================================
+         WHY WE BUILD
+         ============================================================ -->
     <section class="section" aria-labelledby="why-heading">
+      <div class="container why-grid">
+        <div class="fade-in-up">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Why we build</span>
+          <h2 id="why-heading">Technology should work for people.</h2>
+        </div>
+
+        <div class="why-copy fade-in-up delay-1">
+          <p>Technology can save time. It can teach. It can entertain. It can remove friction. It can help someone focus. It can make an ordinary day slightly easier.</p>
+          <p>It can also waste time, manipulate behaviour, create dependency that wasn't asked for, and treat people like metrics on a dashboard.</p>
+          <p>We want to build more of the first kind.</p>
+          <span class="why-line">We're not against technology. We're against technology that forgets the person using it.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRINCIPLES
+         ============================================================ -->
+    <section class="section" aria-labelledby="principles-heading">
       <div class="container">
         <div class="section-head fade-in-up">
-          <h2 id="why-heading">Why NextFlow Apps</h2>
-          <p>NextFlow Apps creates calm, practical Android tools built around clear purposes. Each product is designed to be useful in everyday life without unnecessary complexity or distracting interfaces.</p>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> How we work</span>
+          <h2 id="principles-heading">A few things we try to hold to.</h2>
+          <p class="section-intro">Not a manifesto. Just the rules we keep coming back to.</p>
         </div>
 
-        <div class="grid feature-grid">
-          <article class="feature fade-in-up delay-1">
-            <h3>Focused by design</h3>
-            <p>Each app has one clear purpose and avoids unnecessary complexity, menus or distracting features that get in the way.</p>
+        <div class="principles-grid">
+          <article class="principle fade-in-up delay-1">
+            <span class="principle-num">01</span>
+            <h3>Humans first</h3>
+            <p>Start with the person, not the metric. Every decision we make has to make sense from their side of the screen.</p>
           </article>
-          <article class="feature fade-in-up delay-2">
-            <h3>Built for everyday Android use</h3>
-            <p>Practical tools for studying, working, listening and managing screen habits — designed around common routines and real-world use.</p>
+          <article class="principle fade-in-up delay-2">
+            <span class="principle-num">02</span>
+            <h3>Useful before impressive</h3>
+            <p>A product should solve something real before it tries to look clever. Real problems first, aesthetics second.</p>
           </article>
-          <article class="feature fade-in-up delay-3">
-            <h3>Developed independently</h3>
-            <p>Products are built and refined by independent developer Tasfin Hasan Sakib using direct user feedback and real-world testing.</p>
+          <article class="principle fade-in-up delay-3">
+            <span class="principle-num">03</span>
+            <h3>Respect attention</h3>
+            <p>We don't design unnecessary addiction into products. No dark patterns, no fake urgency, no engagement mechanics that don't serve the user.</p>
+          </article>
+          <article class="principle fade-in-up delay-1">
+            <span class="principle-num">04</span>
+            <h3>Accessible by default</h3>
+            <p>Everyone should be able to use the core experience of our products, regardless of where they are or what they can afford.</p>
+          </article>
+          <article class="principle fade-in-up delay-2">
+            <span class="principle-num">05</span>
+            <h3>Privacy with purpose</h3>
+            <p>Collect only what a feature genuinely needs. Prefer on-device processing where it's practical and honest.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Developer & Contact -->
-    <section class="section" aria-labelledby="developer-heading">
-      <div class="container two grid">
-        <div>
-          <h2 id="developer-heading">About NextFlow Apps</h2>
-          <p>NextFlow Apps is an independent Android app brand created by <strong>Tasfin Hasan Sakib</strong>, a computer science student and Android developer. The apps are inspired by practical problems involving focus, screen habits, background listening and productivity.</p>
-          <p>User feedback is always welcome. If you have ideas or suggestions, feel free to reach out.</p>
-          <address class="contact-details">
-            <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
-            <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
-          </address>
-          <div style="margin-top:1rem">
-            <a class="btn" href="/support.html">Learn about supporting NextFlow Apps</a>
-          </div>
+    <!-- ============================================================
+         TEAM
+         ============================================================ -->
+    <section id="team" class="section" aria-labelledby="team-heading">
+      <div class="container team-grid">
+        <div class="team-copy fade-in-up">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Who we are</span>
+          <h2 id="team-heading">A small independent team.</h2>
+          <p>NextFlow Apps is built by a small group of people working across product thinking, engineering, design, testing, and everything else that goes into turning ideas into real products.</p>
+          <p><strong>Tasfin Hasan Sakib</strong> currently leads much of the product direction, design, and day-to-day development across NextFlow Apps. Other team members contribute behind the scenes and prefer to remain private.</p>
+          <p>We're fully independent — no outside owners, no parent company, no one telling us what to build next.</p>
         </div>
 
-        <div id="contact" class="cta-panel">
-          <h2>Contact NextFlow Apps</h2>
-          <p>Have product feedback, an app idea, a support request or a business inquiry? Contact NextFlow Apps by email or Instagram.</p>
-          <div class="actions">
-            <a class="btn primary" href="mailto:nextflowapps@gmail.com">Email NextFlow Apps</a>
-            <a class="btn" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow @nextflow_apps</a>
-            <a class="btn" href="/support.html">Visit Support</a>
+        <aside class="team-meta fade-in-up delay-1" aria-label="Team details">
+          <div class="meta-row">
+            <span class="meta-label">Team</span>
+            <span class="meta-value">Small, independent</span>
           </div>
-        </div>
+          <div class="meta-row">
+            <span class="meta-label">Currently led by</span>
+            <span class="meta-value">Tasfin Hasan Sakib (product direction &amp; engineering)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Products</span>
+            <span class="meta-value">HushFlow · Noctra · Temvica · more in development</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Contact</span>
+            <a class="meta-value" href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- ============================================================
+         WHAT'S NEXT
+         ============================================================ -->
+    <section class="section next" aria-labelledby="next-heading">
+      <div class="container-narrow next-inner fade-in-up">
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> What's next</span>
+        <h2 id="next-heading">Still building.</h2>
+        <p>HushFlow, Noctra, and Temvica are not the finish line. They're three places we've started.</p>
+        <p>We expect NextFlow Apps to keep exploring problems where thoughtful software can make someone's day, work, learning, or life a little better — not just in the areas we build in today.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
     <section class="section faq" aria-labelledby="faq-heading">
       <div class="container">
-        <h2 id="faq-heading">Frequently asked questions</h2>
-        <div class="grid two">
+        <div class="section-head fade-in-up">
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> FAQ</span>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-grid">
           <details>
             <summary>What is NextFlow Apps?</summary>
-            <p>NextFlow Apps is an independent Android app studio that builds practical tools for background audio, digital wellbeing, app blocking, Pomodoro focus and task planning.</p>
+            <p>NextFlow Apps is a small independent team building thoughtful, accessible software for real human problems. We're not limited to any one category — the products we ship today just happen to be about attention, focus, and listening.</p>
           </details>
           <details>
-            <summary>Who develops the apps?</summary>
-            <p>The apps are created by Tasfin Hasan Sakib, an independent Android developer and computer science student.</p>
+            <summary>What does "Humans first" mean?</summary>
+            <p>It means we start from the person using the product, not the metric we could extract from them. Where someone is from, what they believe, what they look like, or how much they earn doesn't change how much they matter to us.</p>
           </details>
           <details>
-            <summary>Which Android apps are currently available?</summary>
-            <p>NextFlow Apps currently offers three apps: <a href="/hushflow/">HushFlow</a> for background audio, <a href="/noctra/">Noctra</a> for digital wellbeing and app blocking, and <a href="/temvica/">Temvica</a> for Pomodoro focus and task planning.</p>
-          </details>
-          <details>
-            <summary>Where can I download the apps?</summary>
-            <p>All apps are available on Google Play. You can find direct download links on each app's landing page.</p>
+            <summary>Who builds NextFlow Apps?</summary>
+            <p>A small team of people working across product thinking, engineering, design, and testing. Tasfin Hasan Sakib currently leads much of the product direction and development. Other team members contribute behind the scenes and prefer not to be named publicly.</p>
           </details>
           <details>
             <summary>Are the apps free?</summary>
-            <p>Each app may offer a free experience and optional paid features, subscriptions or lifetime purchases. Current availability and pricing are shown on Google Play and inside the relevant app.</p>
+            <p>Yes. The core experience of every NextFlow app is free to use, and some apps offer optional premium features for people who want more.</p>
           </details>
           <details>
-            <summary>How can I contact support?</summary>
-            <p>You can reach us by email at <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> or through Instagram at <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a>.</p>
+            <summary>Which products exist today?</summary>
+            <p><a href="/hushflow/">HushFlow</a> for listening, <a href="/noctra/">Noctra</a> for digital wellbeing and app blocking, and <a href="/temvica/">Temvica</a> for focus and Pomodoro sessions. All three are available on Google Play.</p>
           </details>
           <details>
-            <summary>Where can I read the privacy policies?</summary>
-            <p>You can find the main <a href="/privacy-policy.html">Privacy Policy</a>, <a href="/refund-policy.html">Refund Policy</a>, and <a href="/terms-policy.html">Terms &amp; Conditions</a> on this website. Each app also has its own privacy policy on its landing page.</p>
+            <summary>Are you building more?</summary>
+            <p>Yes — we're actively exploring new products. We don't announce them until they're ready, and we don't want to over-promise. When something is ready, it'll show up here first.</p>
           </details>
           <details>
-            <summary>How can I suggest an app idea?</summary>
-            <p>We're always open to hearing new ideas. Send your suggestions via email or Instagram, and we'll consider them for future development.</p>
+            <summary>How can I suggest an app idea or report an issue?</summary>
+            <p>Send ideas, feedback, or bug reports to <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a> or message <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a> on Instagram. We read every message.</p>
+          </details>
+          <details>
+            <summary>Where can I read the legal policies?</summary>
+            <p>Our <a href="/privacy-policy.html">Privacy Policy</a>, <a href="/refund-policy.html">Refund Policy</a>, and <a href="/terms-policy.html">Terms &amp; Conditions</a> are on this website. Each app also has its own privacy policy on its landing page.</p>
           </details>
         </div>
       </div>
@@ -938,31 +1459,23 @@
           "name": "What is NextFlow Apps?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NextFlow Apps is an independent Android app studio that builds practical tools for background audio, digital wellbeing, app blocking, Pomodoro focus and task planning."
+            "text": "NextFlow Apps is a small independent team building thoughtful, accessible software for real human problems. We are not limited to any one category."
           }
         },
         {
           "@type": "Question",
-          "name": "Who develops the apps?",
+          "name": "What does Humans first mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The apps are created by Tasfin Hasan Sakib, an independent Android developer and computer science student."
+            "text": "It means we start from the person using the product, not the metric we could extract from them. Where someone is from, what they believe, what they look like, or how much they earn does not change how much they matter to us."
           }
         },
         {
           "@type": "Question",
-          "name": "Which Android apps are currently available?",
+          "name": "Who builds NextFlow Apps?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NextFlow Apps currently offers three apps: HushFlow for background audio, Noctra for digital wellbeing and app blocking, and Temvica for Pomodoro focus and task planning."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where can I download the apps?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All apps are available on Google Play. You can find direct download links on each app's landing page."
+            "text": "A small team of people working across product thinking, engineering, design, and testing. Tasfin Hasan Sakib currently leads much of the product direction and development. Other team members contribute behind the scenes and prefer not to be named publicly."
           }
         },
         {
@@ -970,84 +1483,114 @@
           "name": "Are the apps free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Each app may offer a free experience and optional paid features, subscriptions or lifetime purchases. Current availability and pricing are shown on Google Play and inside the relevant app."
+            "text": "Yes. The core experience of every NextFlow app is free to use, and some apps offer optional premium features for people who want more."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I contact support?",
+          "name": "Which products exist today?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can reach us by email at nextflowapps@gmail.com or through Instagram at @nextflow_apps."
+            "text": "HushFlow for listening, Noctra for digital wellbeing and app blocking, and Temvica for focus and Pomodoro sessions. All three are available on Google Play."
           }
         },
         {
           "@type": "Question",
-          "name": "Where can I read the privacy policies?",
+          "name": "Are you building more?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can find the main Privacy Policy, Refund Policy, and Terms & Conditions on this website. Each app also has its own privacy policy on its landing page."
+            "text": "Yes. NextFlow Apps is actively exploring new products and does not announce them until they are ready."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I suggest an app idea?",
+          "name": "How can I suggest an app idea or report an issue?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We're always open to hearing new ideas. Send your suggestions via email or Instagram, and we'll consider them for future development."
+            "text": "Send ideas, feedback, or bug reports to nextflowapps@gmail.com or via Instagram at @nextflow_apps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I read the legal policies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Privacy Policy, Refund Policy, and Terms & Conditions are on the NextFlow Apps website. Each app also has its own privacy policy on its landing page."
           }
         }
       ]
     }
     </script>
 
-    <!-- Instagram CTA -->
-    <section class="section" aria-labelledby="instagram-heading">
-      <div class="container cta-panel">
-        <h2 id="instagram-heading">Follow the app journey</h2>
-        <p>Follow NextFlow Apps on Instagram for product news, development updates and new release announcements.</p>
-        <a class="btn primary" href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Follow NextFlow Apps on Instagram</a>
-      </div>
-    </section>
-
   </main>
 
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="/" aria-label="NextFlow Apps home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
-          </span>
-          <span>NextFlow Apps</span>
-        </a>
-        <p>Independent Android apps by Tasfin Hasan Sakib.</p>
-        <address class="contact-details">
-          <span>Email: <a href="mailto:nextflowapps@gmail.com">nextflowapps@gmail.com</a></span>
-          <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
-        </address>
-        <p>&copy; <span data-year>2026</span> NextFlow Apps. All rights reserved.</p>
-        <p class="legal-note">
-          Read our <a href="/terms-policy.html">Terms &amp; Conditions</a>,
-          <a href="/privacy-policy.html">Privacy Policy</a>, and
-          <a href="/refund-policy.html">Refund Policy</a>.
-          NextFlow Apps does not host, own, or claim rights over third‑party content accessible through its apps.
-        </p>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="NextFlow Apps home">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="https://play-lh.googleusercontent.com/aTB9fAnjB-dhwNNZGtATUN21qTRNtm6F4404nucNccLPux9eegwm93SCnMITYU0e9_k=s188-rw" alt="" />
+            </span>
+            <span>NextFlow Apps</span>
+          </a>
+          <p class="footer-tagline">Technology that respects your attention.</p>
+          <p class="legal-note">
+            NextFlow Apps does not host or claim rights over third-party content accessible through its apps.
+            See <a href="/terms-policy.html">Terms</a>,
+            <a href="/privacy-policy.html">Privacy</a>,
+            and <a href="/refund-policy.html">Refunds</a>.
+          </p>
+        </div>
+
+        <nav class="footer-col" aria-label="Products">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="/hushflow/">HushFlow</a></li>
+            <li><a href="/noctra/">Noctra</a></li>
+            <li><a href="/temvica/">Temvica</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="/articles/">Articles</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Support and legal">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="/support.html">Support</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/refund-policy.html">Refund Policy</a></li>
+            <li><a href="/terms-policy.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Connect">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://github.com/ProdigyTasfin" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:nextflowapps@gmail.com">Email</a></li>
+          </ul>
+        </nav>
+
       </div>
 
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/">Home</a>
-        <a href="/articles/">Articles</a>
-        <a href="/hushflow/">HushFlow</a>
-        <a href="/noctra/">Noctra</a>
-        <a href="/temvica/">Temvica</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/refund-policy.html">Refund Policy</a>
-        <a href="/terms-policy.html">Terms &amp; Conditions</a>
-        <a href="/support.html">Support</a>
-        <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="mailto:nextflowapps@gmail.com">Email</a>
-      </nav>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> NextFlow Apps. All rights reserved.</span>
+        <span>Humans first.</span>
+      </div>
     </div>
   </footer>
 
@@ -1070,7 +1613,6 @@
         });
       });
 
-      // Close menu on Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && links.classList.contains('is-open')) {
           links.classList.remove('is-open');
@@ -1080,7 +1622,6 @@
         }
       });
 
-      // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
           links.classList.remove('is-open');
