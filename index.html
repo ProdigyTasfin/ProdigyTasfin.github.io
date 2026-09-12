@@ -506,6 +506,24 @@
       text-underline-offset: 2px
     }
 
+    .legal-note {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-top: .75rem;
+      line-height: 1.6
+    }
+
+    .legal-note a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 600;
+      color: var(--secondary)
+    }
+
+    .legal-note a:hover {
+      color: var(--text)
+    }
+
     .faq .grid {
       gap: 12px
     }
@@ -706,11 +724,12 @@
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/" aria-current="page">Home</a>
-        <a href="/articles/">Articles
+        <a href="/articles/">Articles</a>
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
         <a href="/support.html">Support</a>
+        <a href="/terms.html">Terms</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
     </div>
@@ -898,7 +917,7 @@
           </details>
           <details>
             <summary>Where can I read the privacy policies?</summary>
-            <p>You can find the main <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/refund-policy.html">Refund Policy</a> on this website. Each app also has its own privacy policy on its landing page.</p>
+            <p>You can find the main <a href="/privacy-policy.html">Privacy Policy</a>, <a href="/refund-policy.html">Refund Policy</a>, and <a href="/terms.html">Terms &amp; Conditions</a> on this website. Each app also has its own privacy policy on its landing page.</p>
           </details>
           <details>
             <summary>How can I suggest an app idea?</summary>
@@ -967,7 +986,7 @@
           "name": "Where can I read the privacy policies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can find the main Privacy Policy and Refund Policy on this website. Each app also has its own privacy policy on its landing page."
+            "text": "You can find the main Privacy Policy, Refund Policy, and Terms & Conditions on this website. Each app also has its own privacy policy on its landing page."
           }
         },
         {
@@ -1008,15 +1027,23 @@
           <span>Instagram: <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">@nextflow_apps</a></span>
         </address>
         <p>&copy; <span data-year>2026</span> Next Flow Apps. All rights reserved.</p>
+        <p class="legal-note">
+          Read our <a href="/terms.html">Terms &amp; Conditions</a>,
+          <a href="/privacy-policy.html">Privacy Policy</a>, and
+          <a href="/refund-policy.html">Refund Policy</a>.
+          Next Flow Apps does not host, own, or claim rights over third‑party content accessible through its apps.
+        </p>
       </div>
 
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
         <a href="/privacy-policy.html">Privacy Policy</a>
         <a href="/refund-policy.html">Refund Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
         <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="mailto:nextflowapps@gmail.com">Email</a>
