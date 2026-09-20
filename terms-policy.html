@@ -527,7 +527,7 @@
         </p>
       </div>
 
-      <p class="last-updated"><strong>Last updated:</strong> <span data-date>August 2026</span></p>
+      <p class="last-updated"><strong>Last updated:</strong> September 2026</p>
     </div>
 
     <div class="container">
@@ -616,6 +616,12 @@
         <p><strong>Existing Lifetime purchasers:</strong> Nothing in this definition limits any non‑waivable consumer rights. Lifetime purchases made before this definition took effect remain subject to the terms, representations, and applicable rights associated with the purchase at the time it was made.</p>
 
         <p><strong>Feature changes:</strong> We reserve the right to update, improve, or modify Premium features over time. Minor updates, design changes, or feature replacements do not automatically entitle you to a refund. If we remove a core feature that was central to the Lifetime offer, we will communicate this and consider proportionate remedies in accordance with applicable law and our <a href="/refund-policy.html">Refund Policy</a>.</p>
+
+        <h3>Third‑Party Content and Lifetime Premium</h3>
+        <p>Lifetime Premium provides ongoing access to eligible HushFlow Premium features for the supported lifetime of the product. It does not guarantee permanent access to any specific song, artist, album, podcast, content catalogue, third‑party platform, content source, playback method, download method, or third‑party integration.</p>
+        <p>Third‑party content and related functionality may change, become restricted, be replaced, or become unavailable because of licensing requirements, legal obligations, rights‑holder requests, platform policies, technical changes, security requirements, or changes made by third‑party providers.</p>
+        <p>Where reasonably possible, NextFlow Apps may provide alternative or replacement functionality while preserving the user's applicable Premium entitlement.</p>
+        <p>A user's Lifetime Premium entitlement remains valid for the supported lifetime of the product, subject to these Terms, even if specific third‑party content, catalogues, or integrations change. The entitlement and the availability of specific third‑party content are separate matters.</p>
       </div>
 
       <!-- 8. Subscriptions -->
@@ -657,6 +663,10 @@
           <li><strong>Material loss of a core paid feature:</strong> If a feature that was central to the purchase is permanently removed, you may be entitled to a proportionate remedy in accordance with applicable law and our <a href="/refund-policy.html">Refund Policy</a>.</li>
         </ul>
         <p>Some features may depend on third‑party services, content providers, or technical dependencies. We do not guarantee that these will remain available forever.</p>
+
+        <h3>Legal, Platform, and Compliance Changes</h3>
+        <p>NextFlow Apps may modify, restrict, replace, or discontinue a feature, content source, integration, playback method, download capability, or other functionality where reasonably necessary to comply with applicable law, intellectual‑property requirements, rights‑holder requests, third‑party platform policies, security requirements, or technical changes outside our reasonable control.</p>
+        <p>Where such a change materially affects a paid core feature, we will consider reasonable replacement functionality or other appropriate remedies in accordance with applicable law and our <a href="/refund-policy.html">Refund Policy</a>.</p>
       </div>
 
       <!-- 11. Third‑Party Services and Content -->
@@ -669,8 +679,10 @@
           <li>Authentication and billing services (Google Play, Google Sign‑In)</li>
           <li>Platform services (Android, Google Play)</li>
         </ul>
-        <p>Third‑party services and content are governed by their own terms and policies. NextFlow Apps does not claim ownership over third‑party content. We are not responsible for the availability, accuracy, or legality of third‑party content or services.</p>
-        <p>Your use of third‑party services is at your own risk.</p>
+        <p>Third‑party content and services remain subject to the rights, terms, policies, restrictions, and availability determined by their respective providers and rights holders.</p>
+        <p>NextFlow Apps does not claim ownership over third‑party content and does not control the continued availability of third‑party platforms, catalogues, services, integrations, or content.</p>
+        <p>NextFlow Apps does not guarantee that any specific third‑party content, catalogue, provider, integration, playback method, or related functionality will remain available indefinitely.</p>
+        <p>Nothing in these Terms is intended to exclude any responsibility, obligation, consumer right, or remedy that cannot lawfully be excluded or waived.</p>
 
         <h3>11.1 Third‑Party Content and Intellectual Property</h3>
         <p>HushFlow is a software application developed and operated by NextFlow Apps. Unless expressly stated otherwise, HushFlow and NextFlow Apps do not claim ownership of music, audio recordings, videos, podcasts, album artwork, thumbnails, artist names, channel names, trademarks, lyrics, metadata, or other third‑party content accessible through the application.</p>
@@ -684,8 +696,17 @@
 
         <h3>11.3 Copyright Complaints</h3>
         <p>NextFlow Apps respects the intellectual property rights of artists, creators, publishers, record labels, and other rights holders.</p>
-        <p>If you believe that content accessible through HushFlow infringes copyright or another intellectual property right, please contact NextFlow Apps through the contact information provided on our website and include sufficient information to identify the copyrighted work, the allegedly infringing material, your relationship to the rights involved, and reliable contact information.</p>
-        <p>We may investigate valid intellectual property complaints and, where appropriate, restrict or remove access to relevant material or functionality.</p>
+        <p>If you believe that content accessible through HushFlow infringes copyright or another intellectual property right, please contact NextFlow Apps through the contact information provided on our website. A copyright or intellectual‑property complaint should, where possible, include:</p>
+        <ul>
+          <li>identification of the copyrighted work or other protected material;</li>
+          <li>identification of the content or functionality complained of;</li>
+          <li>sufficient information for us to locate or identify the relevant material;</li>
+          <li>the complainant's name and reliable contact information;</li>
+          <li>an explanation of the complainant's relationship to the relevant rights; and</li>
+          <li>any additional information reasonably necessary for us to evaluate the request.</li>
+        </ul>
+        <p>Where appropriate, NextFlow Apps may restrict, disable, remove, or modify access to content or functionality while a valid complaint is reviewed or where reasonably necessary to comply with legal, rights‑holder, or platform requirements.</p>
+        <p>We may investigate valid intellectual property complaints and, where appropriate, restrict or remove access to relevant material or functionality. We do not remove content merely because an unsupported complaint is received.</p>
 
         <h3>11.4 No Affiliation or Endorsement</h3>
         <p>References to artists, creators, songs, albums, podcasts, brands, platforms, or other third parties are provided for identification and functionality purposes only. Unless expressly stated otherwise, their appearance in HushFlow does not indicate that they sponsor, endorse, operate, or are affiliated with HushFlow or NextFlow Apps.</p>
@@ -927,13 +948,9 @@
       }));
     }
 
-    // Auto-update year & date
+    // Auto-update copyright year only
     document.querySelectorAll('[data-year]').forEach(el => {
       el.textContent = new Date().getFullYear() || '2026';
-    });
-    document.querySelector('[data-date]')?.textContent = new Date().toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long'
     });
   </script>
 
