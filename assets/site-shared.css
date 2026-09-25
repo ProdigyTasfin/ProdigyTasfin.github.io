@@ -1,0 +1,156 @@
+/* Shared NextFlow footer and interactive disclosure styles. */
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  padding: 64px 0 42px;
+  border-top: 0;
+  background:
+    linear-gradient(100deg, rgba(5, 10, 18, .94), rgba(5, 10, 18, .78)),
+    url("https://play-lh.googleusercontent.com/lvFkWLsizysi67XgOj8trYQFjJnMq87RYXSAXNzyc6sT3pG9cLYKr8G3yX2s__RmFw=w7680-h4320-rw") center / cover no-repeat;
+  color: #fff;
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.4fr) repeat(4, minmax(110px, 1fr));
+  gap: 2.5rem;
+}
+
+.site-footer .brand,
+.site-footer .footer-tagline {
+  color: #fff;
+}
+
+.site-footer .footer-brand p,
+.site-footer .legal-note {
+  color: rgba(255, 255, 255, .74);
+}
+
+.site-footer .footer-tagline {
+  margin: 1rem 0 .25rem;
+  font-size: .95rem;
+  font-weight: 650;
+}
+
+.site-footer .legal-note {
+  margin-top: 1rem;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.site-footer .legal-note a {
+  color: rgba(255, 255, 255, .86);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer .footer-col h4 {
+  margin: 0 0 .85rem;
+  color: rgba(255, 255, 255, .6);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.site-footer .footer-col ul {
+  display: grid;
+  gap: .5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer .footer-col a {
+  color: rgba(255, 255, 255, .82);
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-footer .footer-col a:hover,
+.site-footer .footer-col a:focus-visible,
+.site-footer .legal-note a:hover {
+  color: #fff;
+}
+
+.site-footer .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, .65);
+  font-size: .82rem;
+}
+
+/* Keep each FAQ card independent so opening one does not stretch its neighbor. */
+.faq-grid,
+.faq .grid {
+  align-items: start;
+}
+
+.faq details {
+  overflow: hidden;
+}
+
+.faq details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+}
+
+.faq details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer {
+    padding: 48px 0 32px;
+    background-position: 60% center;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+
+  .site-footer .footer-bottom {
+    display: grid;
+    margin-top: 2.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq details,
+  .faq details summary::after {
+    transition: none;
+  }
+}
