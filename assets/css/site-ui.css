@@ -1,0 +1,78 @@
+/* Shared footer and interaction styles used on every NextFlow Apps page. */
+html {
+  scroll-behavior: smooth;
+}
+
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 72px 0 28px !important;
+  color: #fff;
+  border-top: 0 !important;
+  background:
+    linear-gradient(110deg, rgba(7, 10, 18, .96), rgba(7, 10, 18, .82)),
+    url("https://play-lh.googleusercontent.com/lvFkWLsizysi67XgOj8trYQFjJnMq87RYXSAXNzyc6sT3pG9cLYKr8G3yX2s__RmFw=w7680-h4320-rw") center / cover no-repeat !important;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 80% 15%, rgba(255,255,255,.12), transparent 34%);
+  pointer-events: none;
+}
+
+.site-footer .footer-grid {
+  display: grid !important;
+  grid-template-columns: minmax(240px, 1.5fr) repeat(4, minmax(120px, 1fr)) !important;
+  gap: 2rem 2.5rem !important;
+  align-items: start;
+}
+
+.site-footer .brand,
+.site-footer .footer-col a,
+.site-footer .legal-note a { color: #fff !important; }
+.site-footer .brand-mark { background: rgba(255,255,255,.95); }
+.site-footer .footer-tagline { color: #fff !important; margin: 1rem 0 .6rem; font-weight: 700; }
+.site-footer .legal-note { color: rgba(255,255,255,.72) !important; font-size: .82rem; line-height: 1.65; }
+.site-footer .footer-col h4 { color: rgba(255,255,255,.58) !important; margin: .35rem 0 1rem; }
+.site-footer .footer-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .65rem; }
+.site-footer .footer-col a { opacity: .78; text-decoration: none; transition: opacity .2s ease, transform .2s ease; display: inline-block; }
+.site-footer .footer-col a:hover { opacity: 1; transform: translateX(3px); }
+.site-footer .footer-bottom {
+  display: flex !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem !important;
+  padding-top: 1.5rem !important;
+  color: rgba(255,255,255,.62) !important;
+  border-top: 1px solid rgba(255,255,255,.16) !important;
+}
+
+/* A single column prevents one open answer from displacing a neighbouring card. */
+.faq-grid,
+.faq .grid.two { grid-template-columns: minmax(0, 1fr) !important; max-width: 880px; margin-inline: auto; }
+.faq details { width: 100%; overflow: clip; transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease !important; }
+.faq details:hover { transform: translateY(-2px) !important; }
+.faq details summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.faq details summary::after { flex: 0 0 auto; transition: transform .3s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq-answer { height: 0; overflow: hidden; }
+.faq details[open] .faq-answer { height: auto; }
+
+@media (max-width: 1024px) {
+  .site-footer .footer-grid { grid-template-columns: 1.4fr repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .site-footer { padding-top: 52px !important; background-position: 62% center !important; }
+  .site-footer .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem 1.25rem !important; }
+  .site-footer .footer-brand { grid-column: 1 / -1; }
+  .site-footer .footer-bottom { display: grid !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-footer .footer-col a, .faq details, .faq details summary::after { transition: none !important; }
+}
