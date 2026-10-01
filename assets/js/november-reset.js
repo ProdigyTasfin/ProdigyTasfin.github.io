@@ -22,6 +22,10 @@
     link.addEventListener('click', () => emit(link.dataset.event, { destination: 'google_play' }));
   });
 
+  document.querySelectorAll('.tracked-link[data-event]').forEach((link) => {
+    link.addEventListener('click', () => emit(link.dataset.event, { destination: 'youtube' }));
+  });
+
   const seen = new Set();
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
