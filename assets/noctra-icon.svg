@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Noctra</title>
+  <desc id="desc">A gold compass mark on a dark rounded square.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20242d"/>
+      <stop offset="1" stop-color="#080a0e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1bd"/>
+      <stop offset=".45" stop-color="#e4b95f"/>
+      <stop offset="1" stop-color="#9d6821"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="18" y="18" width="476" height="476" rx="96" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="4"/>
+  <circle cx="256" cy="256" r="138" fill="none" stroke="url(#gold)" stroke-width="13" opacity=".92"/>
+  <circle cx="256" cy="256" r="112" fill="none" stroke="#e8c875" stroke-opacity=".22" stroke-width="3"/>
+  <path d="M256 118 363 349 256 302 149 349Z" fill="none" stroke="url(#gold)" stroke-linejoin="round" stroke-width="14" filter="url(#glow)"/>
+  <path d="m256 154 69 149-69-30-69 30Z" fill="#e8bf68" fill-opacity=".12"/>
+  <circle cx="256" cy="256" r="16" fill="#f5d98c"/>
+</svg>
