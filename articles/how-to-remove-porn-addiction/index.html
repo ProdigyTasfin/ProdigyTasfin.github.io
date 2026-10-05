@@ -3,7 +3,7 @@
 <head>
   <!-- ============================================================
   ARTICLE: Porn Addiction, Gooning, and Young People
-  URL: https://nextflow-apps.com/articles/porn-addiction-gooning-young-people/
+  URL: https://nextflow-apps.com/articles/how-to-remove-porn-addiction/
   ============================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,9 +15,9 @@
   <title>Porn Addiction, Gooning, and Young People | NextFlow Apps</title>
   <meta
     name="description"
-    content="An evidence-aware guide to what people commonly call porn addiction, what gooning actually means, why compulsive patterns can disrupt young lives, and where Noctra fits."
+    content="Understand compulsive pornography use, recognize warning signs, build healthier digital boundaries, and learn when to seek professional support."
   />
-  <link rel="canonical" href="https://nextflow-apps.com/articles/porn-addiction-gooning-young-people/" />
+  <link rel="canonical" href="https://nextflow-apps.com/articles/how-to-remove-porn-addiction/" />
   <link rel="icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" type="image/png" />
   <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" />
 
@@ -27,15 +27,21 @@
     property="og:description"
     content="What people commonly call porn addiction, what gooning actually means, and how young people can build healthier digital boundaries."
   />
-  <meta property="og:url" content="https://nextflow-apps.com/articles/porn-addiction-gooning-young-people/" />
+  <meta property="og:url" content="https://nextflow-apps.com/articles/how-to-remove-porn-addiction/" />
   <meta property="og:site_name" content="NextFlow Apps" />
   <meta property="og:locale" content="en_US" />
-  <meta property="article:author" content="Tasfin Hasan Sakib" />
+  <meta property="article:author" content="https://nextflow-apps.com/#team" />
   <meta property="article:section" content="Digital Wellbeing" />
   <meta property="article:published_time" content="2026-10-04" />
-  <meta property="article:modified_time" content="2026-10-04" />
+  <meta property="article:modified_time" content="2026-10-06" />
+  <meta property="og:image" content="https://nextflow-apps.com/assets/articles/how-to-block-distracting-apps-on-android/phone-away-from-workspace.webp" />
+  <meta property="og:image:alt" content="A phone placed away from someone writing at a desk" />
+  <meta property="og:image:width" content="1731" />
+  <meta property="og:image:height" content="909" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nextflow-apps.com/assets/articles/how-to-block-distracting-apps-on-android/phone-away-from-workspace.webp" />
+  <meta name="twitter:image:alt" content="A phone placed away from someone writing at a desk" />
   <meta name="twitter:title" content="Porn Addiction, Gooning, and Young People" />
   <meta
     name="twitter:description"
@@ -57,15 +63,17 @@
     "headline": "Porn Addiction, Gooning, and Young People: When an Online Habit Becomes a Problem",
     "description": "An evidence-aware guide to what people commonly call porn addiction, what gooning actually means, why compulsive pornography use can become especially disruptive during adolescence and young adulthood, and how tools such as Noctra can help create stronger digital boundaries.",
     "datePublished": "2026-10-04",
-    "dateModified": "2026-10-04",
+    "dateModified": "2026-10-06",
+    "image": ["https://nextflow-apps.com/assets/articles/how-to-block-distracting-apps-on-android/phone-away-from-workspace.webp"],
+    "inLanguage": "en",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://nextflow-apps.com/articles/porn-addiction-gooning-young-people/"
+      "@id": "https://nextflow-apps.com/articles/how-to-remove-porn-addiction/"
     },
     "author": {
       "@type": "Person",
       "name": "Tasfin Hasan Sakib",
-      "url": "https://nextflow-apps.com/"
+      "url": "https://nextflow-apps.com/#team"
     },
     "publisher": {
       "@type": "Organization",
@@ -100,7 +108,7 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "NextFlow Apps", "item": "https://nextflow-apps.com/"},
       {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://nextflow-apps.com/articles/"},
-      {"@type": "ListItem", "position": 3, "name": "Porn Addiction, Gooning, and Young People", "item": "https://nextflow-apps.com/articles/porn-addiction-gooning-young-people/"}
+      {"@type": "ListItem", "position": 3, "name": "Porn Addiction, Gooning, and Young People", "item": "https://nextflow-apps.com/articles/how-to-remove-porn-addiction/"}
     ]
   }
   </script>
@@ -572,6 +580,8 @@
        SIDEBAR TOC
        ============================================================ */
     .table-of-contents {
+      max-height: calc(100dvh - 112px);
+      overflow-y: auto;
       position: sticky;
       top: 96px;
       align-self: start;
@@ -1469,6 +1479,7 @@
        RESPONSIVE
        ============================================================ */
     @media (max-width: 1024px) {
+      .table-of-contents { max-height: none; overflow-y: visible; }
       .article-layout {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -1645,14 +1656,14 @@
         type="button"
         aria-expanded="false"
         aria-controls="site-menu"
-        aria-label="Open navigation menu"
+        aria-label="Navigation menu"
       >
         Menu
       </button>
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="/articles/" aria-current="page">Articles</a>
+        <a href="/articles/">Articles</a>
         <a href="/hushflow/">HushFlow</a>
         <a href="/noctra/">Noctra</a>
         <a href="/temvica/">Temvica</a>
@@ -1698,8 +1709,9 @@
             </p>
             <div class="article-meta">
               <span>By Tasfin Hasan Sakib</span>
-              <time datetime="2026-10-04">Published October 2026</time>
-              <span>14 min read</span>
+              <time datetime="2026-10-04">Published Oct 4, 2026</time>
+              <time datetime="2026-10-06">Updated Oct 6, 2026</time>
+              <span>20 min read</span>
               <span>Digital Wellbeing</span>
             </div>
           </header>
@@ -1707,6 +1719,11 @@
           <!-- ============================================================
                ARTICLE CONTENT
                ============================================================ -->
+          <figure class="article-hero">
+            <img src="/assets/articles/how-to-block-distracting-apps-on-android/phone-away-from-workspace.webp" alt="A phone placed away from someone writing at a desk" width="1731" height="909" fetchpriority="high" />
+            <figcaption>Build digital boundaries that make room for the rest of your life.</figcaption>
+          </figure>
+
           <article class="article-content">
             <section id="introduction">
               <p>Pornography has changed.</p>
@@ -3161,6 +3178,15 @@
               </div>
             </div>
 
+            <section aria-labelledby="related-guides-heading">
+              <h2 id="related-guides-heading">Related guides</h2>
+              <ul>
+                <li><a href="/articles/how-to-block-distracting-apps-on-android/">How to block distracting apps on Android</a></li>
+                <li><a href="/articles/how-to-reduce-doomscrolling-on-android/">How to reduce doomscrolling on Android</a></li>
+                <li><a href="/articles/no-goon-november-no-nut-november-2026/">No Goon November and No Nut November 2026 (18+)</a></li>
+              </ul>
+            </section>
+
             <!-- ============================================================
                  SOURCES
                  ============================================================ -->
@@ -3170,7 +3196,7 @@
                 <li>
                   <strong>World Health Organization</strong> &mdash;
                   <a
-                    href="https://icd.who.int/browse11/l-m/en"
+                    href="https://icd.who.int/browse/2026-01/mms/en#1630268048"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -3180,21 +3206,14 @@
                 </li>
                 <li>
                   <strong>Mestre-Bach &amp; Potenza (2025)</strong> &mdash;
-                  <em>
-                    Adolescents, Pornography Use, and Problematic Pornography
-                    Use: A Rapid Systematic Review of Longitudinal Studies
-                  </em>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/40631652/" target="_blank" rel="noopener noreferrer">Adolescents, Pornography Use, and Problematic Pornography Use: A Rapid Systematic Review of Longitudinal Studies</a>
                 </li>
                 <li>
                   <strong>Di Caro et al. (2026)</strong> &mdash;
-                  <em>
-                    Adolescents' online pornography use and psychopathological
-                    symptoms: insights from a systematic review and meta-analysis
-                  </em>
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/41081900/" target="_blank" rel="noopener noreferrer">Adolescents' online pornography use and psychopathological symptoms: insights from a systematic review and meta-analysis</a>
                 </li>
                 <li>
-                  <strong>Systematic review literature</strong> on pornography
-                  exposure and adolescent sexual behavior &mdash; evidence
+                  <a href="https://www.jmir.org/2023/1/e43116" target="_blank" rel="noopener noreferrer">Exposure to Pornography and Adolescent Sexual Behavior: Systematic Review (2023)</a> &mdash; evidence
                   includes associations in some outcomes but substantial
                   limitations around causal inference.
                 </li>
@@ -3244,7 +3263,7 @@
                   and digital-wellbeing guide informed by published research,
                   not medical advice.
                 </p>
-                <a href="/#contact">Contact Tasfin through NextFlow Apps</a>
+                <a href="/support.html">Contact Tasfin through NextFlow Apps</a>
               </div>
             </aside>
 
@@ -3438,19 +3457,9 @@
       el.textContent = new Date().getFullYear() || "2026";
     });
 
-    /* Smooth-scroll TOC links with a small offset for the sticky header */
-    document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        var target = document.querySelector(this.getAttribute("href"));
-        if (!target) return;
-        e.preventDefault();
-        var top = target.getBoundingClientRect().top + window.scrollY - 96;
-        window.scrollTo({ top: top, behavior: "smooth" });
-        history.replaceState(null, "", this.getAttribute("href"));
-      });
-    });
   </script>
 
   <script src="/assets/js/site-ui.js" defer></script>
 </body>
 </html>
+

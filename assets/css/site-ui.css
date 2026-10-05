@@ -60,7 +60,7 @@ html {
 .faq details summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .faq details summary::after { flex: 0 0 auto; transition: transform .3s ease; }
 .faq details[open] summary::after { transform: rotate(45deg); }
-.faq-answer { height: 0; overflow: hidden; }
+.faq .faq-answer { height: 0; overflow: hidden; }
 .faq details[open] .faq-answer { height: auto; }
 
 @media (max-width: 1024px) {
