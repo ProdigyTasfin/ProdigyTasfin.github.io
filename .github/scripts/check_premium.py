@@ -35,7 +35,7 @@ def run():
                         q.goto(f'{origin}/{file.relative_to(ROOT).as_posix()}')
                         assert q.locator('html').get_attribute('data-theme') == theme, file
                         assert q.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'{file}: {width}px {theme} overflow'
-                        assert q.locator('.brand-mark img').first.evaluate('(el) => el.naturalWidth > 0'), 'Local brand mark failed'
+                        assert q.locator('.brand-mark img').first.get_attribute('src') == 'https://play-lh.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ=s188-rw', 'Official brand logo must be preserved'
                         if width == 320:
                             q.locator('.menu-toggle').click()
                             assert q.locator('.nav-links').is_visible()
