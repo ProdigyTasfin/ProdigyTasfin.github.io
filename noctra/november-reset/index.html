@@ -44,7 +44,7 @@
   <meta property="og:url" content="https://nextflow-apps.com/noctra/november-reset/" />
   <meta property="og:site_name" content="NextFlow Apps" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:image" content="https://nextflow-apps.com/1.png" />
+  <meta property="og:image" content="https://nextflow-apps.com/assets/noctra/november-reset.webp" />
   <meta property="og:image:width" content="1734" />
   <meta property="og:image:height" content="907" />
   <meta property="og:image:alt" content="Noctra November Reset campaign — $11.11 Lifetime, App Blocking, and Adult Shield" />
@@ -53,7 +53,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="No Nut November 2026 App &amp; 30-Day Reset | Noctra" />
   <meta name="twitter:description" content="Set digital boundaries for November with Noctra on Android." />
-  <meta name="twitter:image" content="https://nextflow-apps.com/1.png" />
+  <meta name="twitter:image" content="https://nextflow-apps.com/assets/noctra/november-reset.webp" />
   <meta name="twitter:image:alt" content="Noctra November Reset campaign poster" />
 
   <!-- Fonts -->
@@ -1546,7 +1546,7 @@
         box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
       }
 
-      .nav-links.open {
+      .nav-links.is-open {
         display: flex;
       }
 
@@ -1884,7 +1884,7 @@
 
         <figure class="hero-art">
           <img
-            src="/1.png"
+            src="/assets/noctra/november-reset.webp"
             width="1734"
             height="907"
             fetchpriority="high"
@@ -2029,7 +2029,7 @@
       <div class="container story-grid">
         <figure class="story-figure">
           <img
-            src="/3.png"
+            src="/assets/noctra/november-progress.webp"
             width="1734"
             height="907"
             loading="lazy"
@@ -2637,47 +2637,6 @@
   <script src="/assets/js/site-ui.js" defer></script>
   <script>
     /* ============================================================
-       MOBILE NAV TOGGLE
-       ============================================================ */
-    (function () {
-      var toggle = document.querySelector(".menu-toggle");
-      var links = document.querySelector(".nav-links");
-
-      if (!toggle || !links) return;
-
-      toggle.addEventListener("click", function () {
-        var open = links.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.textContent = open ? "Close" : "Menu";
-      });
-
-      links.querySelectorAll("a").forEach(function (a) {
-        a.addEventListener("click", function () {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-        });
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && links.classList.contains("open")) {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-          toggle.focus();
-        }
-      });
-
-      document.addEventListener("click", function (e) {
-        if (!e.target.closest(".nav") && links.classList.contains("open")) {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-        }
-      });
-    })();
-
-    /* ============================================================
        MOBILE STICKY CTA VISIBILITY
        ============================================================ */
     (function () {
@@ -2702,12 +2661,7 @@
       observer.observe(hero);
     })();
 
-    /* ============================================================
-       AUTO-UPDATE YEAR
-       ============================================================ */
-    document.querySelectorAll("[data-year]").forEach(function (el) {
-      el.textContent = new Date().getFullYear() || "2026";
-    });
   </script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

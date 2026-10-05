@@ -1513,7 +1513,7 @@
         box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
       }
 
-      .nav-links.open {
+      .nav-links.is-open {
         display: flex;
       }
 
@@ -3413,53 +3413,10 @@
   <!-- ============================================================
        SCRIPTS
        ============================================================ -->
-  <script>
-    /* Mobile nav toggle */
-    (function () {
-      var toggle = document.querySelector(".menu-toggle");
-      var links = document.querySelector(".nav-links");
-      if (!toggle || !links) return;
 
-      toggle.addEventListener("click", function () {
-        var open = links.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.textContent = open ? "Close" : "Menu";
-      });
-
-      links.querySelectorAll("a").forEach(function (a) {
-        a.addEventListener("click", function () {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-        });
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && links.classList.contains("open")) {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-          toggle.focus();
-        }
-      });
-
-      document.addEventListener("click", function (e) {
-        if (!e.target.closest(".nav") && links.classList.contains("open")) {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.textContent = "Menu";
-        }
-      });
-    })();
-
-    /* Auto-update year */
-    document.querySelectorAll("[data-year]").forEach(function (el) {
-      el.textContent = new Date().getFullYear() || "2026";
-    });
-
-  </script>
 
   <script src="/assets/js/site-ui.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
 
