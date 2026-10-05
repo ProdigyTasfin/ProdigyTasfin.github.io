@@ -82,14 +82,14 @@ def run():
                 native.goto(f'{origin}/{relative}')
                 assert native.locator('.nav-links').is_visible(), f'{relative}: no-JS navigation missing'
                 assert native.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'{relative}: no-JS overflow'
-                faq = native.locator('details')
+                faq = native.locator('main details')
                 if faq.count():
                     faq.first.locator('summary').click()
                     assert faq.first.evaluate('(el) => el.open'), relative
                     assert faq.first.locator('p').first.is_visible(), relative
             context.close()
             # Policy dates must never be changed to the visitor's current date.
-            for relative, date in [('privacy-policy.html', 'August 2026'), ('refund-policy.html', 'August 2026'), ('hushflow/privacy-policy.html', 'July 2026')]:
+            for relative, date in [('privacy-policy.html', 'October 5, 2026'), ('refund-policy.html', 'August 2026'), ('hushflow/privacy-policy.html', 'July 2026')]:
                 page.goto(f'{origin}/{relative}')
                 assert date in page.locator('.last-updated').inner_text(), relative
             page.goto(f'{origin}/articles/how-to-use-pomodoro-for-studying/')

@@ -22,7 +22,7 @@
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="canonical" href="https://nextflow-apps.com/noctra/november-reset/" />
   <link
     rel="icon"
@@ -175,25 +175,34 @@
   }
   </script>
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     /* ============================================================
        1. DESIGN TOKENS
        ============================================================ */
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --secondary: #444444;
-      --muted: #666666;
-      --muted-light: #8a8a8a;
-      --line: #eeeeee;
-      --line-strong: #dddddd;
-      --surface: #fafafa;
-      --surface-strong: #f4f4f4;
-      --dark: #111111;
-      --accent: #0a79df;
-      --accent-ink: #ffffff;
-      --success: #1e6b1e;
-      --success-soft: #edf7ed;
+      --bg: var(--nf-card);
+      --text: var(--nf-text);
+      --secondary: var(--nf-secondary);
+      --muted: var(--nf-muted);
+      --muted-light: var(--nf-muted);
+      --line: var(--nf-line);
+      --line-strong: var(--nf-line-strong);
+      --surface: var(--nf-surface);
+      --surface-strong: var(--nf-surface);
+      --dark: var(--nf-text);
+      --accent: var(--nf-accent);
+      --accent-ink: var(--nf-card);
+      --success: var(--nf-success);
+      --success-soft: var(--nf-success-bg);
       --radius: 10px;
       --radius-sm: 6px;
       --radius-lg: 16px;
@@ -281,7 +290,7 @@
       padding: 0.55rem 0.85rem;
       border-radius: var(--radius-sm);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: 0.85rem;
       font-weight: 700;
       text-decoration: none;
@@ -307,7 +316,7 @@
       z-index: 50;
       top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(var(--nf-card-rgb), 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -382,7 +391,7 @@
       padding: 0.55rem 0.8rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--text);
       font-size: 0.88rem;
       font-weight: 650;
@@ -443,7 +452,7 @@
       padding: 0.28rem 0.65rem;
       border: 1px solid var(--line-strong);
       border-radius: 999px;
-      color: #555555;
+      color: var(--nf-secondary);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.06em;
@@ -459,8 +468,8 @@
     }
 
     .kicker-dark {
-      border-color: #2a2a2a;
-      color: #b8b8b8;
+      border-color: var(--nf-text);
+      color: var(--nf-line-strong);
     }
 
     /* ============================================================
@@ -475,7 +484,7 @@
       padding: 0.7rem 1.4rem;
       border: 1px solid var(--dark);
       border-radius: var(--radius-sm);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--text);
       font-size: 0.9rem;
       font-weight: 650;
@@ -492,31 +501,31 @@
     .btn:hover {
       transform: translateY(-2px);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .btn.primary,
     .btn.dark {
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .btn.primary:hover,
     .btn.dark:hover {
-      background: #333333;
-      color: #ffffff;
+      background: var(--nf-text);
+      color: var(--nf-card);
     }
 
     .btn.ghost {
       border-color: var(--line-strong);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--secondary);
     }
 
     .btn.ghost:hover {
       border-color: var(--dark);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .actions {
@@ -531,7 +540,7 @@
        ============================================================ */
     .campaign-hero {
       padding: 72px 0 64px;
-      background: #ffffff;
+      background: var(--nf-card);
       border-bottom: 1px solid var(--line);
     }
 
@@ -657,7 +666,7 @@
       padding: 8px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
-      background: #ffffff;
+      background: var(--nf-card);
       box-shadow: var(--shadow-hero);
     }
 
@@ -666,7 +675,7 @@
       aspect-ratio: 1734 / 907;
       border-radius: 10px;
       object-fit: cover;
-      background: #0a0a0a;
+      background: var(--nf-text);
     }
 
     .hero-art figcaption {
@@ -812,7 +821,7 @@
       padding: 26px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       transition:
         border-color 0.2s ease,
         box-shadow 0.25s ease,
@@ -820,7 +829,7 @@
     }
 
     .tool-card:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
       transform: translateY(-2px);
     }
@@ -867,7 +876,7 @@
       padding: 8px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
-      background: #ffffff;
+      background: var(--nf-card);
       box-shadow: var(--shadow-hero);
     }
 
@@ -876,7 +885,7 @@
       aspect-ratio: 1734 / 907;
       border-radius: 10px;
       object-fit: cover;
-      background: #0a0a0a;
+      background: var(--nf-text);
     }
 
     .story-figure figcaption {
@@ -936,7 +945,7 @@
       overflow: hidden;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
-      background: #0a0a0a;
+      background: var(--nf-text);
       box-shadow: var(--shadow-hero);
     }
 
@@ -985,7 +994,7 @@
       padding: 26px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       transition:
         border-color 0.2s ease,
         box-shadow 0.25s ease,
@@ -993,7 +1002,7 @@
     }
 
     .steps li:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
       transform: translateY(-2px);
     }
@@ -1027,7 +1036,7 @@
       padding: clamp(36px, 5.5vw, 60px);
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
-      background: #ffffff;
+      background: var(--nf-card);
       box-shadow: var(--shadow-hero);
     }
 
@@ -1134,14 +1143,14 @@
       padding: 26px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       transition:
         border-color 0.2s ease,
         box-shadow 0.25s ease;
     }
 
     .permission-card:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
     }
 
@@ -1173,7 +1182,7 @@
       padding: 0.55rem 0.8rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--secondary);
       font-size: 0.78rem;
       font-weight: 650;
@@ -1187,7 +1196,7 @@
     .legal-links a:hover {
       border-color: var(--dark);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     /* ============================================================
@@ -1206,14 +1215,14 @@
       padding: 26px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       transition:
         border-color 0.2s ease,
         box-shadow 0.25s ease;
     }
 
     .rule-card:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
     }
 
@@ -1247,7 +1256,7 @@
       padding: 18px 20px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--secondary);
       font-size: 0.85rem;
       line-height: 1.65;
@@ -1319,30 +1328,30 @@
     .final-cta {
       padding: 104px 0;
       border-top: 1px solid var(--line);
-      background: #0a0a0a;
-      color: #ffffff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       text-align: center;
     }
 
     .final-cta .kicker {
       margin-inline: auto;
-      border-color: #2a2a2a;
-      color: #b8b8b8;
+      border-color: var(--nf-text);
+      color: var(--nf-line-strong);
     }
 
     .final-cta .kicker .kicker-dot {
-      background: #ffffff;
+      background: var(--nf-card);
     }
 
     .final-cta h2 {
       margin-bottom: 1rem;
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: clamp(2.2rem, 5vw, 3.8rem);
       letter-spacing: -0.04em;
     }
 
     .final-cta p {
-      color: #b8b8b8;
+      color: var(--nf-line-strong);
       max-width: 56ch;
       margin-inline: auto;
       font-size: 1.05rem;
@@ -1350,21 +1359,21 @@
 
     .final-cta .btn.primary {
       margin-top: 1.5rem;
-      background: #ffffff;
-      color: #0a0a0a;
-      border-color: #ffffff;
+      background: var(--nf-card);
+      color: var(--nf-text);
+      border-color: var(--nf-card);
     }
 
     .final-cta .btn.primary:hover {
-      background: #e5e5e5;
-      border-color: #e5e5e5;
-      color: #0a0a0a;
+      background: var(--nf-line);
+      border-color: var(--nf-line);
+      color: var(--nf-text);
     }
 
     .final-cta small {
       display: block;
       margin-top: 1rem;
-      color: #8a8a8a;
+      color: var(--nf-muted);
       font-size: 0.78rem;
     }
 
@@ -1384,7 +1393,7 @@
       padding: 10px 10px 10px 14px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.98);
+      background: rgba(var(--nf-card-rgb), 0.98);
       box-shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
       transform: translateY(calc(100% + 24px));
       transition: transform 0.25s ease;
@@ -1415,7 +1424,7 @@
       padding: 0.7rem 0.95rem;
       border-radius: var(--radius-sm);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: 0.78rem;
       font-weight: 700;
       text-decoration: none;
@@ -1426,7 +1435,7 @@
        ============================================================ */
     .site-footer {
       padding: 64px 0 42px;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--line);
       font-size: 15px;
       line-height: 1.65;
@@ -1542,7 +1551,7 @@
         padding: 10px;
         border: 1px solid var(--line-strong);
         border-radius: var(--radius);
-        background: #ffffff;
+        background: var(--nf-card);
         box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
       }
 
@@ -1787,8 +1796,9 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
-<body>
+<body class="page-campaign">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============================================================
@@ -1799,7 +1809,7 @@
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
           <img
-            src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ"
+            src="/assets/nextflow-mark.svg"
             alt=""
             width="64"
             height="64"
@@ -1808,14 +1818,7 @@
         <span>NextFlow Apps</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-menu"
-      >
-        Menu
-      </button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
@@ -1825,6 +1828,27 @@
         <a href="/articles/">Articles</a>
         <a href="/support.html">Support</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        Menu
+      </button>
+      </div>
     </div>
   </header>
 
@@ -2565,7 +2589,7 @@
           <a class="brand" href="/" aria-label="NextFlow Apps home">
             <span class="brand-mark" aria-hidden="true">
               <img
-                src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ"
+                src="/assets/nextflow-mark.svg"
                 alt=""
                 width="64"
                 height="64"
@@ -2663,5 +2687,6 @@
 
   </script>
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>

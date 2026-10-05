@@ -7,7 +7,7 @@
   <meta name="description" content="Keep music and podcasts playing when your Android screen turns off. HushFlow adds background playback, offline downloads, sleep timer, lyrics and a 10-band EQ.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://nextflow-apps.com/hushflow/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="HushFlow: Screen-Off Music &amp; Podcast Player for Android">
@@ -29,15 +29,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     :root {
-      --bg: #fff;
-      --text: #111;
-      --secondary: #444;
-      --muted: #666;
-      --line: #eee;
-      --line-strong: #ddd;
-      --surface: #fafafa;
+      --bg: var(--nf-card);
+      --text: var(--nf-text);
+      --secondary: var(--nf-secondary);
+      --muted: var(--nf-muted);
+      --line: var(--nf-line);
+      --line-strong: var(--nf-line-strong);
+      --surface: var(--nf-surface);
       --radius: 10px
     }
 
@@ -74,8 +83,8 @@
       z-index: 20;
       transform: translateY(-150%);
       padding: .55rem .8rem;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       border-radius: 6px;
       text-decoration: none
     }
@@ -89,7 +98,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, .92);
+      background: rgba(var(--nf-card-rgb), .92);
       backdrop-filter: blur(12px)
     }
 
@@ -117,8 +126,8 @@
       width: 32px;
       height: 32px;
       border-radius: 7px;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       font-size: .72rem;
       font-weight: 700;
       overflow: hidden
@@ -152,7 +161,7 @@
     .nav-links a:hover,
     .nav-links a:focus-visible,
     .nav-links a[aria-current="page"] {
-      color: #111;
+      color: var(--nf-text);
       background: var(--surface)
     }
 
@@ -196,7 +205,7 @@
       border: 1px solid var(--line-strong);
       border-radius: 999px;
       padding: .25rem .55rem;
-      color: #555;
+      color: var(--nf-secondary);
       font-size: .72rem;
       font-weight: 700;
       letter-spacing: .06em;
@@ -204,9 +213,9 @@
     }
 
     .badge.ok {
-      border-color: #b7e0b7;
-      background: #edf7ed;
-      color: #1e6b1e
+      border-color: var(--nf-line-strong);
+      background: var(--nf-success-bg);
+      color: var(--nf-success)
     }
 
     .actions {
@@ -222,10 +231,10 @@
       justify-content: center;
       min-height: 44px;
       padding: .65rem 1.5rem;
-      border: 1px solid #111;
+      border: 1px solid var(--nf-text);
       border-radius: 6px;
-      background: #fff;
-      color: #111;
+      background: var(--nf-card);
+      color: var(--nf-text);
       font-size: .92rem;
       font-weight: 650;
       text-decoration: none;
@@ -234,17 +243,17 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary {
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary:hover {
-      background: #333
+      background: var(--nf-text)
     }
 
     .trust {
@@ -273,7 +282,7 @@
       border-radius: 24px;
       object-fit: cover;
       border: 2px solid var(--line-strong);
-      background: #fff;
+      background: var(--nf-card);
       padding: 4px
     }
 
@@ -377,7 +386,7 @@
     .cta-panel {
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #fff
+      background: var(--nf-card)
     }
 
     .feature {
@@ -408,13 +417,13 @@
       padding: 16px 20px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #fff;
+      background: var(--nf-card);
       cursor: pointer;
       transition: border-color .2s, background .2s
     }
 
     .faq details:hover {
-      border-color: #bbb;
+      border-color: var(--nf-line-strong);
       background: var(--surface)
     }
 
@@ -464,7 +473,7 @@
 
     .site-footer {
       padding: 42px 0;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--line)
     }
 
@@ -531,7 +540,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid #111;
+      outline: 3px solid var(--nf-text);
       outline-offset: 3px
     }
 
@@ -554,7 +563,7 @@
         padding: .4rem .7rem;
         border: 1px solid var(--line-strong);
         border-radius: 6px;
-        background: #fff;
+        background: var(--nf-card);
         font-weight: 700;
         cursor: pointer
       }
@@ -568,7 +577,7 @@
         padding: .5rem;
         border: 1px solid var(--line-strong);
         border-radius: 8px;
-        background: #fff;
+        background: var(--nf-card);
         box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
       }
 
@@ -615,9 +624,10 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
 
-<body>
+<body class="page-product">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -625,14 +635,12 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" />
+          <img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" />
         </span>
         <span>NextFlow Apps</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
-        Menu
-      </button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
@@ -641,6 +649,22 @@
         <a href="/temvica/">Temvica</a>
         <a href="/support.html">Support</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
+        Menu
+      </button>
+      </div>
     </div>
   </header>
 
@@ -1355,7 +1379,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/" aria-label="NextFlow Apps home">
-            <span class="brand-mark" aria-hidden="true"><img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" /></span>
+            <span class="brand-mark" aria-hidden="true"><img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" /></span>
             <span>NextFlow Apps</span>
           </a>
           <p class="footer-tagline">Technology that respects your attention.</p>
@@ -1389,5 +1413,6 @@
 
   <script src="/assets/js/site-ui.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>

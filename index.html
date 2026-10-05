@@ -14,7 +14,7 @@
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="canonical" href="https://nextflow-apps.com/" />
   <link rel="icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" type="image/png" />
   <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" />
@@ -100,18 +100,27 @@
   }
   </script>
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     :root {
-      --bg: #fff;
-      --text: #111;
-      --secondary: #444;
-      --muted: #666;
-      --line: #eee;
-      --line-strong: #ddd;
-      --surface: #fafafa;
+      --bg: var(--nf-card);
+      --text: var(--nf-text);
+      --secondary: var(--nf-secondary);
+      --muted: var(--nf-muted);
+      --line: var(--nf-line);
+      --line-strong: var(--nf-line-strong);
+      --surface: var(--nf-surface);
       --radius: 10px;
       --radius-lg: 16px;
-      --accent: #0a79df
+      --accent: var(--nf-accent)
     }
 
     * {
@@ -159,8 +168,8 @@
       z-index: 20;
       transform: translateY(-150%);
       padding: .55rem .8rem;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       border-radius: 6px;
       text-decoration: none
     }
@@ -177,7 +186,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, .92);
+      background: rgba(var(--nf-card-rgb), .92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px)
     }
@@ -206,8 +215,8 @@
       width: 32px;
       height: 32px;
       border-radius: 7px;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       font-size: .72rem;
       font-weight: 700;
       overflow: hidden;
@@ -242,7 +251,7 @@
     .nav-links a:hover,
     .nav-links a:focus-visible,
     .nav-links a[aria-current="page"] {
-      color: #111;
+      color: var(--nf-text);
       background: var(--surface)
     }
 
@@ -272,7 +281,7 @@
       border: 1px solid var(--line-strong);
       border-radius: 999px;
       padding: .3rem .65rem;
-      color: #555;
+      color: var(--nf-secondary);
       font-size: .72rem;
       font-weight: 700;
       letter-spacing: .08em;
@@ -332,10 +341,10 @@
       justify-content: center;
       min-height: 44px;
       padding: .65rem 1.4rem;
-      border: 1px solid #111;
+      border: 1px solid var(--nf-text);
       border-radius: 6px;
-      background: #fff;
-      color: #111;
+      background: var(--nf-card);
+      color: var(--nf-text);
       font-family: inherit;
       font-size: .92rem;
       font-weight: 650;
@@ -346,17 +355,17 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary {
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary:hover {
-      background: #333
+      background: var(--nf-text)
     }
 
     .trust {
@@ -412,7 +421,7 @@
       border-radius: 10px;
       object-fit: cover;
       border: 1px solid var(--line-strong);
-      background: #fff;
+      background: var(--nf-card);
       padding: 2px
     }
 
@@ -443,7 +452,7 @@
       border-radius: 8px;
       object-fit: cover;
       border: 1px solid var(--line-strong);
-      background: #fff;
+      background: var(--nf-card);
       flex-shrink: 0
     }
 
@@ -526,14 +535,14 @@
       padding: 1.75rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
-      background: #fff;
+      background: var(--nf-card);
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease
     }
 
     .product-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, .06);
-      border-color: #c9c9c9
+      border-color: var(--nf-line-strong)
     }
 
     .product-card .product-header {
@@ -548,7 +557,7 @@
       border-radius: 13px;
       object-fit: cover;
       border: 1px solid var(--line-strong);
-      background: #fff;
+      background: var(--nf-card);
       flex-shrink: 0
     }
 
@@ -570,7 +579,7 @@
     .product-card .product-tagline {
       font-size: 1rem;
       font-weight: 600;
-      color: #111;
+      color: var(--nf-text);
       margin: 0
     }
 
@@ -605,7 +614,7 @@
     }
 
     .product-card .play-link:hover {
-      color: #111;
+      color: var(--nf-text);
       text-decoration: underline;
       text-underline-offset: 3px
     }
@@ -649,7 +658,7 @@
       font-size: clamp(1.6rem, 3.4vw, 2.2rem);
       font-weight: 700;
       letter-spacing: -.03em;
-      color: #111
+      color: var(--nf-text)
     }
 
     /* ============================================================
@@ -678,7 +687,7 @@
 
     .why-copy .why-line {
       display: block;
-      color: #111;
+      color: var(--nf-text);
       font-weight: 650;
       margin-top: 1.25rem;
       font-size: 1.05rem
@@ -697,7 +706,7 @@
       padding: 1.5rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #fff
+      background: var(--nf-card)
     }
 
     .principle .principle-num {
@@ -815,13 +824,13 @@
       padding: 16px 20px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #fff;
+      background: var(--nf-card);
       cursor: pointer;
       transition: border-color .2s, background .2s
     }
 
     .faq details:hover {
-      border-color: #bbb;
+      border-color: var(--nf-line-strong);
       background: var(--surface)
     }
 
@@ -848,7 +857,7 @@
        ============================================================ */
     .site-footer {
       padding: 64px 0 42px;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--line)
     }
 
@@ -866,7 +875,7 @@
 
     .footer-brand .footer-tagline {
       font-weight: 650;
-      color: #111;
+      color: var(--nf-text);
       font-size: .95rem;
       margin-top: 1rem
     }
@@ -959,7 +968,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid #111;
+      outline: 3px solid var(--nf-text);
       outline-offset: 3px
     }
 
@@ -1006,7 +1015,7 @@
         padding: .4rem .7rem;
         border: 1px solid var(--line-strong);
         border-radius: 6px;
-        background: #fff;
+        background: var(--nf-card);
         font-weight: 700;
         font-family: inherit;
         font-size: .9rem;
@@ -1022,7 +1031,7 @@
         padding: .5rem;
         border: 1px solid var(--line-strong);
         border-radius: 8px;
-        background: #fff;
+        background: var(--nf-card);
         box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
       }
 
@@ -1120,9 +1129,10 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
 
-<body>
+<body class="page-home">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -1130,14 +1140,12 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" />
+          <img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" />
         </span>
         <span>NextFlow Apps</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
-        Menu
-      </button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/" aria-current="page">Home</a>
@@ -1148,6 +1156,22 @@
         <a href="/partnerships.html">Partners</a>
         <a href="/support.html">Support</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
+        Menu
+      </button>
+      </div>
     </div>
   </header>
 
@@ -1160,59 +1184,31 @@
       <div class="container hero-grid">
         <div class="fade-in-up">
           <span class="eyebrow"><span class="dot" aria-hidden="true"></span> NextFlow Apps</span>
-          <h1 id="hero-heading">Technology that respects your attention.</h1>
+          <h1 id="hero-heading">Technology that respects your <span class="hero-emphasis">attention.</span></h1>
           <p class="lead">We build thoughtful software that helps people listen, focus, work, learn, and live a little better — starting with a few problems we think deserve better tools.</p>
           <div class="actions">
             <a class="btn primary" href="#products">Explore our products</a>
             <a class="btn" href="#mission">Why we build</a>
           </div>
-          <p class="trust">Independent · Free to try</p>
+          <p class="trust"><span>Independent by design</span><span>Made for Android</span><span>Free to try</span></p>
         </div>
 
-        <div class="visual fade-in-up delay-1" aria-label="NextFlow Apps and its current products">
-          <div class="visual-ecosystem">
-
-            <div class="visual-brand">
-              <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" width="80" height="80" alt="" decoding="async" />
-              <div>
-                <span class="visual-brand-name">NextFlow Apps</span>
-                <span class="visual-brand-sub">Humans first.</span>
-              </div>
-            </div>
-
-            <div class="visual-row">
-              <img src="https://lh3.googleusercontent.com/wpsyy7GrBdTJJx8Xh0SyS57p1JBq0B3pHwSF7p7dzIG6SyA5zIIXqNkgjmHEM5wAnur4y26ptpfjRP2K4GqD" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-              <span class="visual-row-meta">
-                <span class="visual-row-name">HushFlow</span>
-                <span class="visual-row-tag">Listen</span>
-              </span>
-            </div>
-
-            <div class="visual-row">
-              <img src="https://play-lh.googleusercontent.com/F-xA5w7NwTVG3GwLloF5f8f8_HJhd0DyzVYMsd8sm0qGLd1KvScvBrmTWD9vYUqHxPOvXoI0FL7tIyrR8GjgRY0=w480-h960-rw" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-              <span class="visual-row-meta">
-                <span class="visual-row-name">Noctra</span>
-                <span class="visual-row-tag">Protect</span>
-              </span>
-            </div>
-
-            <div class="visual-row">
-              <img src="https://play-lh.googleusercontent.com/Fx2cq8MpuyWjgUJbfcfjk_Nv0rL2Srlh1DeVwB_i0mQE0wp_CD0aT5Vu8bZ1qYFGu_m50FTmdUOowYNZljqcyg=w480-h960-rw" width="64" height="64" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-              <span class="visual-row-meta">
-                <span class="visual-row-name">Temvica</span>
-                <span class="visual-row-tag">Focus</span>
-              </span>
-            </div>
-
-            <div class="visual-row visual-row--ghost">
-              <span class="visual-ghost-plus" aria-hidden="true">+</span>
-              <span class="visual-row-meta">
-                <span class="visual-row-name">More to come</span>
-                <span class="visual-row-tag">In development</span>
-              </span>
-            </div>
-
+        <div class="visual flow-finder" aria-labelledby="finder-heading">
+          <div class="finder-topline"><span class="finder-status"><span></span> A little more room to breathe</span><span class="finder-mark">NF / 01</span></div>
+          <h2 id="finder-heading">Find your flow.</h2>
+          <p class="finder-intro">What would you like more space for?</p>
+          <div class="finder-choices" role="group" aria-label="Choose a goal" data-finder-choices hidden>
+            <button type="button" data-goal="focus" aria-pressed="true">Focus</button>
+            <button type="button" data-goal="listen" aria-pressed="false">Listening</button>
+            <button type="button" data-goal="protect" aria-pressed="false">Better habits</button>
           </div>
+          <div class="finder-scene" aria-hidden="true"><div class="focus-ring"><span data-finder-symbol>25:00</span><small data-finder-caption>ONE THING AT A TIME</small></div><span class="scene-label">A calmer digital day</span></div>
+          <div class="finder-recommendation" aria-live="polite" aria-atomic="true">
+            <span class="finder-app" data-finder-app>Temvica</span>
+            <p data-finder-description>Focus sessions, Pomodoro tools, and ambient audio for the work in front of you.</p>
+            <a href="/temvica/" class="finder-link" data-finder-link>Explore Temvica <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18 18 6M6 6h12v12" /></svg></a>
+          </div>
+          <span class="finder-note">A guide to our apps. Your rhythm, your choice.</span>
         </div>
       </div>
     </section>
@@ -1545,7 +1541,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/" aria-label="NextFlow Apps home">
-            <span class="brand-mark" aria-hidden="true"><img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" /></span>
+            <span class="brand-mark" aria-hidden="true"><img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" /></span>
             <span>NextFlow Apps</span>
           </a>
           <p class="footer-tagline">Technology that respects your attention.</p>
@@ -1579,5 +1575,6 @@
 
   <script src="/assets/js/site-ui.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>

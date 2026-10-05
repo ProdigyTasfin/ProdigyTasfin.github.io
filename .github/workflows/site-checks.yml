@@ -33,3 +33,5 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Check responsive layouts and interactions
         run: python .github/scripts/check_ui.py
+      - name: Check themes, discovery and reading tools
+        run: python .github/scripts/check_premium.py

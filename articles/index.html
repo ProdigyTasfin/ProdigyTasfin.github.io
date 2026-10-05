@@ -14,7 +14,7 @@
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="canonical" href="https://nextflow-apps.com/articles/" />
   <link rel="icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" type="image/png" />
   <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" />
@@ -134,15 +134,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     :root {
-      --bg: #fff;
-      --text: #111;
-      --secondary: #444;
-      --muted: #666;
-      --line: #eee;
-      --line-strong: #ddd;
-      --surface: #fafafa;
+      --bg: var(--nf-card);
+      --text: var(--nf-text);
+      --secondary: var(--nf-secondary);
+      --muted: var(--nf-muted);
+      --line: var(--nf-line);
+      --line-strong: var(--nf-line-strong);
+      --surface: var(--nf-surface);
       --radius: 10px
     }
 
@@ -203,8 +212,8 @@
       z-index: 20;
       transform: translateY(-150%);
       padding: .55rem .8rem;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       border-radius: 6px;
       text-decoration: none
     }
@@ -218,7 +227,7 @@
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, .92);
+      background: rgba(var(--nf-card-rgb), .92);
       backdrop-filter: blur(12px)
     }
 
@@ -246,8 +255,8 @@
       width: 32px;
       height: 32px;
       border-radius: 7px;
-      background: #111;
-      color: #fff;
+      background: var(--nf-text);
+      color: var(--nf-card);
       font-size: .72rem;
       font-weight: 700;
       overflow: hidden
@@ -281,7 +290,7 @@
     .nav-links a:hover,
     .nav-links a:focus-visible,
     .nav-links a[aria-current="page"] {
-      color: #111;
+      color: var(--nf-text);
       background: var(--surface)
     }
 
@@ -312,7 +321,7 @@
       border: 1px solid var(--line-strong);
       border-radius: 999px;
       padding: .25rem .55rem;
-      color: #555;
+      color: var(--nf-secondary);
       font-size: .72rem;
       font-weight: 700;
       letter-spacing: .06em;
@@ -350,7 +359,7 @@
     .article-card {
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #fff;
+      background: var(--nf-card);
       padding: 1.5rem;
       transition: transform .2s ease, box-shadow .2s ease;
       display: flex;
@@ -440,10 +449,10 @@
       justify-content: center;
       min-height: 44px;
       padding: .65rem 1.5rem;
-      border: 1px solid #111;
+      border: 1px solid var(--nf-text);
       border-radius: 6px;
-      background: #fff;
-      color: #111;
+      background: var(--nf-card);
+      color: var(--nf-text);
       font-size: .92rem;
       font-weight: 650;
       text-decoration: none;
@@ -452,17 +461,17 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary {
-      background: #111;
-      color: #fff
+      background: var(--nf-text);
+      color: var(--nf-card)
     }
 
     .btn.primary:hover {
-      background: #333
+      background: var(--nf-text)
     }
 
     .actions {
@@ -488,7 +497,7 @@
 
     .site-footer {
       padding: 42px 0;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--line)
     }
 
@@ -577,7 +586,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid #111;
+      outline: 3px solid var(--nf-text);
       outline-offset: 3px
     }
 
@@ -592,7 +601,7 @@
         padding: .4rem .7rem;
         border: 1px solid var(--line-strong);
         border-radius: 6px;
-        background: #fff;
+        background: var(--nf-card);
         font-weight: 700;
         cursor: pointer
       }
@@ -606,7 +615,7 @@
         padding: .5rem;
         border: 1px solid var(--line-strong);
         border-radius: 8px;
-        background: #fff;
+        background: var(--nf-card);
         box-shadow: 0 12px 28px rgba(0, 0, 0, .08)
       }
 
@@ -645,9 +654,10 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
 
-<body>
+<body class="page-library">
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -655,14 +665,12 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" />
+          <img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" />
         </span>
         <span>NextFlow Apps</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
-        Menu
-      </button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
@@ -673,6 +681,22 @@
         <a href="/support.html">Support</a>
         <a href="https://www.instagram.com/nextflow_apps/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
+        Menu
+      </button>
+      </div>
     </div>
   </header>
 
@@ -699,10 +723,24 @@
           <p>Browse our collection of practical guides to help you use your Android phone more intentionally.</p>
         </div>
 
+        <div class="library-tools" data-library-tools hidden>
+          <div class="library-search"><label for="article-search">Find your next read</label><input type="search" id="article-search" placeholder="Search guides, habits, or an app…" autocomplete="off" /></div>
+          <div class="topic-filters" role="group" aria-label="Filter articles by topic">
+            <button type="button" data-topic="all" aria-pressed="true">All guides</button>
+            <button type="button" data-topic="digital wellbeing" aria-pressed="false">Digital wellbeing</button>
+            <button type="button" data-topic="background audio" aria-pressed="false">Audio</button>
+            <button type="button" data-topic="focus &amp; productivity" aria-pressed="false">Focus</button>
+            <button type="button" data-topic="saved" aria-pressed="false">Saved</button>
+          </div>
+          <p class="library-count" role="status" aria-live="polite" data-library-count>9 guides to explore</p>
+        </div>
+        <div class="library-empty" data-library-empty hidden><h3>No guides found</h3><p>Try a different search or topic. Saved guides are stored on this device.</p><button type="button" class="btn" data-library-reset>Show all guides</button></div>
+
         <div class="grid articles-grid">
 
           <!-- Article: Compulsive pornography use and healthier boundaries -->
-          <article class="article-card fade-in-up">
+          <article class="article-card fade-in-up" data-article-category="digital wellbeing">
+            <a class="article-cover" href="/articles/how-to-remove-porn-addiction/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-block-distracting-apps-on-android/phone-away-from-workspace.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Digital wellbeing</span>
             <h3><a href="/articles/how-to-remove-porn-addiction/">Porn Addiction, Gooning, and Young People: When an Online Habit Becomes a Problem</a></h3>
             <p>Understand compulsive pornography use, recognize warning signs, and build healthier digital boundaries with practical steps and professional support.</p>
@@ -715,7 +753,8 @@
           </article>
 
           <!-- Article: No Nut November 2026 and No Goon November -->
-          <article class="article-card fade-in-up">
+          <article class="article-card fade-in-up" data-article-category="digital wellbeing">
+            <a class="article-cover" href="/articles/no-goon-november-no-nut-november-2026/" tabindex="-1" aria-hidden="true"><img src="/articles/no-goon-november-no-nut-november-2026/nnn-digital-boundaries.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Digital Wellbeing</span>
             <h3><a href="/articles/no-goon-november-no-nut-november-2026/">No Nut November 2026, No Goon November, and the Harder Part No One Talks About</a></h3>
             <p>A practical look at NNN, compulsive digital habits, stronger boundaries, and Noctra's 30-Day Reset.</p>
@@ -728,7 +767,8 @@
           </article>
 
           <!-- Article 1: Reduce Doomscrolling -->
-          <article class="article-card fade-in-up delay-1">
+          <article class="article-card fade-in-up delay-1" data-article-category="digital wellbeing">
+            <a class="article-cover" href="/articles/how-to-reduce-doomscrolling-on-android/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-reduce-doomscrolling-on-android/doomscrolling-at-night.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Digital wellbeing</span>
             <h3><a href="/articles/how-to-reduce-doomscrolling-on-android/">How to Reduce Doomscrolling on Android: 9 Practical Steps</a></h3>
             <p>Practical steps to break the endless scrolling cycle and use your phone more intentionally.</p>
@@ -741,7 +781,8 @@
           </article>
 
           <!-- Article 2: Block Distracting Apps -->
-          <article class="article-card fade-in-up delay-2">
+          <article class="article-card fade-in-up delay-2" data-article-category="digital wellbeing">
+            <a class="article-cover" href="/articles/how-to-block-distracting-apps-on-android/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-block-distracting-apps-on-android/block-distracting-apps-android.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Digital wellbeing</span>
             <h3><a href="/articles/how-to-block-distracting-apps-on-android/">How to Block Distracting Apps on Android</a></h3>
             <p>A guide to setting boundaries around social media, games, and other apps that pull you away from focus.</p>
@@ -754,7 +795,8 @@
           </article>
 
           <!-- Article 3: Digital Detox Plan for Students -->
-          <article class="article-card fade-in-up delay-3">
+          <article class="article-card fade-in-up delay-3" data-article-category="digital wellbeing">
+            <a class="article-cover" href="/articles/digital-detox-plan-for-students/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/digital-detox-plan-for-students/student-digital-detox-plan.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Digital wellbeing</span>
             <h3><a href="/articles/digital-detox-plan-for-students/">7-Day Digital Detox Plan for Students</a></h3>
             <p>How to reduce phone distractions during study sessions, protect your focus, and build healthier screen habits.</p>
@@ -767,7 +809,8 @@
           </article>
 
           <!-- Article 4: Play Audio with Screen Off -->
-          <article class="article-card fade-in-up delay-4">
+          <article class="article-card fade-in-up delay-4" data-article-category="background audio">
+            <a class="article-cover" href="/articles/how-to-play-audio-with-screen-off-android/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-play-audio-with-screen-off-android/audio-playing-screen-off-android.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Background audio</span>
             <h3><a href="/articles/how-to-play-audio-with-screen-off-android/">How to Play Music With the Screen Off on Android</a></h3>
             <p>Learn how to keep music, podcasts and ambient sound playing after you lock your Android screen.</p>
@@ -780,7 +823,8 @@
           </article>
 
           <!-- Article 5: Music Sleep Timer -->
-          <article class="article-card fade-in-up delay-5">
+          <article class="article-card fade-in-up delay-5" data-article-category="background audio">
+            <a class="article-cover" href="/articles/how-to-use-a-music-sleep-timer-on-android/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-use-a-music-sleep-timer-on-android/music-sleep-timer-android.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Background audio</span>
             <h3><a href="/articles/how-to-use-a-music-sleep-timer-on-android/">How to Set a Music Sleep Timer on Android</a></h3>
             <p>Set your audio to fade out automatically so you can fall asleep without worrying about playback all night.</p>
@@ -793,7 +837,8 @@
           </article>
 
           <!-- Article 6: Pomodoro for Studying -->
-          <article class="article-card fade-in-up delay-6">
+          <article class="article-card fade-in-up delay-6" data-article-category="focus & productivity">
+            <a class="article-cover" href="/articles/how-to-use-pomodoro-for-studying/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/how-to-use-pomodoro-for-studying/pomodoro-technique-studying.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Focus &amp; productivity</span>
             <h3><a href="/articles/how-to-use-pomodoro-for-studying/">Pomodoro Technique for Studying: How to Use the 25/5 Method</a></h3>
             <p>A practical guide to using timed focus sessions and breaks to study more effectively without burnout.</p>
@@ -806,7 +851,8 @@
           </article>
 
           <!-- Article 7: Pomodoro for Coding -->
-          <article class="article-card fade-in-up delay-7">
+          <article class="article-card fade-in-up delay-7" data-article-category="focus & productivity">
+            <a class="article-cover" href="/articles/pomodoro-timer-for-coding/" tabindex="-1" aria-hidden="true"><img src="/assets/articles/pomodoro-timer-for-coding/pomodoro-coding-session.webp" alt="" width="800" height="420" loading="lazy" decoding="async" /></a>
             <span class="card-category">Focus &amp; productivity</span>
             <h3><a href="/articles/pomodoro-timer-for-coding/">Pomodoro Timer for Coding: A Developer’s Guide</a></h3>
             <p>How to structure your coding sessions with Pomodoro intervals to maintain deep focus and avoid fatigue.</p>
@@ -843,7 +889,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/" aria-label="NextFlow Apps home">
-            <span class="brand-mark" aria-hidden="true"><img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" /></span>
+            <span class="brand-mark" aria-hidden="true"><img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" /></span>
             <span>NextFlow Apps</span>
           </a>
           <p class="footer-tagline">Technology that respects your attention.</p>
@@ -877,5 +923,6 @@
 
   <script src="/assets/js/site-ui.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>
