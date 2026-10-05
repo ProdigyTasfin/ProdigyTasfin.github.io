@@ -69,6 +69,10 @@ def run():
             card.locator('.save-guide').click()
             q.locator('[data-topic="saved"]').click();assert q.locator('.article-card:visible').count() == 1
             q.reload();q.locator('[data-topic="saved"]').click();assert q.locator('.article-card:visible').count() == 1
+            q.locator('.article-card:visible .save-guide').click()
+            assert q.locator('.article-card:visible').count() == 0
+            assert q.locator('[data-topic="saved"]').evaluate('(el)=>el===document.activeElement'), 'Removing the last saved guide must preserve keyboard focus'
+            q.locator('[data-topic="all"]').click();q.locator('.article-card').first.locator('.save-guide').click()
             q.goto(origin + link)
             assert q.locator('.guide-tools .save-guide').get_attribute('aria-pressed') == 'true'
             q.locator('.guide-tools .save-guide').click()

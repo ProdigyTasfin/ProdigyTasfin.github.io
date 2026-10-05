@@ -71,6 +71,10 @@
       button.setAttribute('aria-label', `${saved.has(url) ? 'Remove saved' : 'Save'} ${title}`);
       if (status) status.textContent = saved.has(url) ? (persisted ? 'Saved on this device.' : 'Saved for this visit; browser storage is unavailable.') : 'Removed from saved guides.';
       filterLibrary();
+      if (button.closest('.article-card')?.hidden) {
+        const next = cards.find((card) => !card.hidden)?.querySelector('.save-guide');
+        (next || document.querySelector('[data-topic="saved"]')).focus();
+      }
     });
     return button;
   };
