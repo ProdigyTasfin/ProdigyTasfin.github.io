@@ -20,9 +20,16 @@ To run responsive browser checks:
 python -m pip install playwright==1.62.0
 python -m playwright install chromium
 python .github/scripts/check_ui.py
+python .github/scripts/check_premium.py
 ```
 
-`CHROMIUM_PATH` can select an already installed Chromium binary. Browser tests block external services and test local site files. The Site checks workflow runs both validators on pull requests and pushes to main; it does not replace the managed Pages deployment workflow.
+`CHROMIUM_PATH` can select an already installed Chromium binary. Browser tests block external services and test local site files. The Site checks workflow runs all three validators on pull requests and pushes to main; it does not replace the managed Pages deployment workflow.
+
+## Appearance and browsing
+
+The shared palette and layout refinements are in `assets/css/premium.css`. Every public page has a small startup script to apply the saved appearance before rendering; `assets/js/premium.js` handles System, Light and Dark choices and updates when the device appearance changes. Motion respects `prefers-reduced-motion`.
+
+The homepage app finder links visitors to the product that fits their goal. The article library supports search, topic filters and saved guides. Articles include save and copy-link controls, reading progress and highlighted contents links. Appearance (`nextflow-theme`) and saved guide URLs (`nextflow-saved-guides`) use browser local storage on the current device, without an account or server. If storage is unavailable, the controls work for the current visit and explain the limitation. Articles and navigation remain usable without JavaScript.
 
 ## Deployment
 

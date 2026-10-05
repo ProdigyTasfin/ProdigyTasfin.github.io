@@ -6,7 +6,7 @@
   <meta name="google-site-verification" content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f6f3ec" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <title>Partnerships &amp; Investment | NextFlow Apps</title>
   <meta name="description" content="A memo from NextFlow Apps on partnerships, investment, and the principles behind HushFlow, Noctra, and Temvica." />
   <link rel="canonical" href="https://nextflow-apps.com/partnerships.html" />
@@ -66,19 +66,28 @@
   }
   </script>
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     :root {
-      --paper: #ffffff;
-      --cream: #f6f3ec;
-      --cream-2: #efeae0;
-      --ink: #0b0b0b;
-      --ink-2: #3a3a3a;
-      --ink-3: #6b6b6b;
-      --ink-4: #9a9a9a;
-      --rule: #e3ded1;
-      --rule-2: #cec8b9;
-      --accent: #dfff52;
-      --accent-ink: #0b0b0b;
+      --paper: var(--nf-card);
+      --cream: var(--nf-bg);
+      --cream-2: var(--nf-surface);
+      --ink: var(--nf-text);
+      --ink-2: var(--nf-secondary);
+      --ink-3: var(--nf-muted);
+      --ink-4: var(--nf-muted);
+      --rule: var(--nf-line);
+      --rule-2: var(--nf-line-strong);
+      --accent: var(--nf-accent);
+      --accent-ink: var(--nf-text);
       --f-display: Georgia, 'Times New Roman', Times, serif;
       --f-body: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       --f-mono: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
@@ -110,7 +119,7 @@
       z-index: 60;
       transform: translateY(-150%);
       padding: .5rem .75rem;
-      background: #0b0b0b; color: #fff;
+      background: var(--nf-text); color: var(--nf-card);
       border-radius: 4px;
       text-decoration: none;
       font-size: .8rem;
@@ -142,7 +151,7 @@
       display: grid; place-items: center;
       width: 30px; height: 30px;
       border-radius: 7px;
-      background: #0b0b0b; color: #fff;
+      background: var(--nf-text); color: var(--nf-card);
       overflow: hidden; flex-shrink: 0
     }
     .brand-mark img { width: 100%; height: 100%; object-fit: cover; display: block }
@@ -166,7 +175,7 @@
       padding: .35rem .7rem;
       border: 1px solid var(--rule-2);
       border-radius: 6px;
-      background: #fff;
+      background: var(--nf-card);
       font-family: inherit;
       font-size: .85rem; font-weight: 700;
       cursor: pointer
@@ -248,15 +257,15 @@
       cursor: pointer
     }
     .btn:hover { transform: translateY(-1px) }
-    .btn.solid { background: var(--ink); color: #fff }
-    .btn.solid:hover { background: #262626 }
+    .btn.solid { background: var(--ink); color: var(--nf-card) }
+    .btn.solid:hover { background: var(--nf-text) }
     .btn.accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
-    .btn.accent:hover { background: var(--ink); border-color: var(--ink); color: #fff }
+    .btn.accent:hover { background: var(--ink); border-color: var(--ink); color: var(--nf-card) }
 
     /* Reference card (right rail) */
     .ref-card {
       border: 1px solid var(--rule-2);
-      background: #fff;
+      background: var(--nf-card);
       padding: 1.5rem 1.4rem;
       border-radius: 2px
     }
@@ -690,7 +699,7 @@
        ---------------------------------------------------------------- */
     .site-footer {
       padding: 64px 0 42px;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--rule);
       font-size: 15px;
       line-height: 1.65
@@ -744,7 +753,7 @@
         padding: .5rem;
         border: 1px solid var(--rule-2);
         border-radius: 8px;
-        background: #fff;
+        background: var(--nf-card);
         box-shadow: 0 12px 28px rgba(0,0,0,.08)
       }
       .nav-links.is-open { display: flex }
@@ -783,8 +792,9 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
-<body>
+<body class="page-general">
 
   <a class="skip" href="#main">Skip to content</a>
 
@@ -792,12 +802,12 @@
     <div class="wrap nav">
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" />
+          <img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" />
         </span>
         <span>NextFlow Apps</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">Menu</button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
@@ -808,6 +818,20 @@
         <a href="/partnerships.html" aria-current="page">Partners</a>
         <a href="/support.html">Support</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">Menu</button>
+      </div>
     </div>
   </header>
 
@@ -1207,7 +1231,7 @@
         <div class="footer-brand">
           <a class="brand" href="/" aria-label="NextFlow Apps home">
             <span class="brand-mark" aria-hidden="true">
-              <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" />
+              <img src="/assets/nextflow-mark.svg" alt="" width="32" height="32" />
             </span>
             <span>NextFlow Apps</span>
           </a>
@@ -1264,5 +1288,6 @@
 
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/site-ui.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>

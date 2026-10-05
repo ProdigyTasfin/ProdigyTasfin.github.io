@@ -10,7 +10,7 @@
   <meta name="google-site-verification" content="mXuQL7Ujvr-3F2sNQ66ViCHp4LSfzy1bU0Wd83-WKQc" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
 
   <title>Porn Addiction, Gooning, and Young People | NextFlow Apps</title>
   <meta
@@ -219,29 +219,38 @@
   }
   </script>
 
+  <script>
+    (() => {
+      let preference = 'system';
+      try { preference = localStorage.getItem('nextflow-theme') || 'system'; } catch (_) {}
+      const dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
   <style>
     /* ============================================================
        DESIGN TOKENS
        ============================================================ */
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --secondary: #444444;
-      --muted: #666666;
-      --muted-light: #8a8a8a;
-      --line: #eeeeee;
-      --line-strong: #dddddd;
-      --surface: #fafafa;
-      --surface-strong: #f4f4f4;
-      --dark: #111111;
-      --accent: #0a79df;
-      --accent-soft: #eef7ff;
-      --success: #1e6b1e;
-      --success-soft: #edf7ed;
-      --warning: #8a5a00;
-      --warning-soft: #fdf5e6;
-      --danger: #8a1a1a;
-      --danger-soft: #fbeaea;
+      --bg: var(--nf-card);
+      --text: var(--nf-text);
+      --secondary: var(--nf-secondary);
+      --muted: var(--nf-muted);
+      --muted-light: var(--nf-muted);
+      --line: var(--nf-line);
+      --line-strong: var(--nf-line-strong);
+      --surface: var(--nf-surface);
+      --surface-strong: var(--nf-surface);
+      --dark: var(--nf-text);
+      --accent: var(--nf-accent);
+      --accent-soft: var(--nf-info-bg);
+      --success: var(--nf-success);
+      --success-soft: var(--nf-success-bg);
+      --warning: var(--nf-warning);
+      --warning-soft: var(--nf-warning-bg);
+      --danger: var(--nf-danger);
+      --danger-soft: var(--nf-danger-bg);
       --radius: 10px;
       --radius-sm: 6px;
       --radius-lg: 16px;
@@ -332,7 +341,7 @@
       padding: 0.55rem 0.85rem;
       border-radius: var(--radius-sm);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: 0.85rem;
       font-weight: 700;
       text-decoration: none;
@@ -351,7 +360,7 @@
       z-index: 50;
       top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(var(--nf-card-rgb), 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -424,7 +433,7 @@
       padding: 0.55rem 0.8rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-sm);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--text);
       font-size: 0.88rem;
       font-weight: 650;
@@ -507,7 +516,7 @@
       padding: 0.28rem 0.65rem;
       border: 1px solid var(--line-strong);
       border-radius: 999px;
-      color: #555555;
+      color: var(--nf-secondary);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.06em;
@@ -565,7 +574,7 @@
       width: 100%;
       aspect-ratio: 1734 / 907;
       object-fit: cover;
-      background: #0a0a0a;
+      background: var(--nf-text);
     }
 
     .article-hero figcaption {
@@ -588,7 +597,7 @@
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
       padding: 1.25rem 1.4rem;
-      background: #ffffff;
+      background: var(--nf-card);
       font-size: 0.86rem;
     }
 
@@ -759,7 +768,7 @@
       place-items: center;
       border-radius: 50%;
       background: var(--text);
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: 0.72rem;
       font-weight: 700;
       margin-top: 2px;
@@ -781,7 +790,7 @@
 
     .callout.note {
       background: var(--accent-soft);
-      border-color: #d5e8f7;
+      border-color: var(--nf-line-strong);
     }
 
     .callout.note .callout-icon {
@@ -790,7 +799,7 @@
 
     .callout.warning {
       background: var(--warning-soft);
-      border-color: #f0dfb8;
+      border-color: var(--nf-line-strong);
     }
 
     .callout.warning .callout-icon {
@@ -799,7 +808,7 @@
 
     .callout.success {
       background: var(--success-soft);
-      border-color: #cfe5cf;
+      border-color: var(--nf-line-strong);
     }
 
     .callout.success .callout-icon {
@@ -808,7 +817,7 @@
 
     .callout.danger {
       background: var(--danger-soft);
-      border-color: #f0c8c8;
+      border-color: var(--nf-line-strong);
     }
 
     .callout.danger .callout-icon {
@@ -832,12 +841,12 @@
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
       margin-bottom: 0.85rem;
-      background: #ffffff;
+      background: var(--nf-card);
       transition: box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .step-list li:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
     }
 
@@ -850,7 +859,7 @@
       height: 34px;
       border-radius: 50%;
       border: 1px solid var(--line-strong);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--text);
       font-size: 0.72rem;
       font-weight: 700;
@@ -940,7 +949,7 @@
       padding: 1.5rem 1.5rem 1.5rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       margin: 1.5rem 0;
     }
 
@@ -1003,13 +1012,13 @@
       padding: 1.5rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
       margin: 1.25rem 0;
       transition: border-color 0.2s ease, box-shadow 0.25s ease;
     }
 
     .noctra-card:hover {
-      border-color: #c9c9c9;
+      border-color: var(--nf-line-strong);
       box-shadow: var(--shadow-card);
     }
 
@@ -1058,8 +1067,8 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #555;
-      background: #ffffff;
+      color: var(--nf-secondary);
+      background: var(--nf-card);
       margin-bottom: 0.75rem;
     }
 
@@ -1095,7 +1104,7 @@
       padding: 0.7rem 1.4rem;
       border: 1px solid var(--dark);
       border-radius: var(--radius-sm);
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--text);
       font-size: 0.9rem;
       font-weight: 650;
@@ -1108,16 +1117,16 @@
     .btn:hover {
       transform: translateY(-2px);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .btn.primary {
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .btn.primary:hover {
-      background: #333333;
+      background: var(--nf-text);
     }
 
     /* ============================================================
@@ -1142,7 +1151,7 @@
       place-items: center;
       border-radius: 50%;
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.02em;
@@ -1254,7 +1263,7 @@
       padding: 1.5rem;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius);
-      background: #ffffff;
+      background: var(--nf-card);
     }
 
     .sources h2 {
@@ -1336,12 +1345,12 @@
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-lg);
       background: var(--dark);
-      color: #ffffff;
+      color: var(--nf-card);
       text-align: center;
     }
 
     .final-cta h2 {
-      color: #ffffff;
+      color: var(--nf-card);
       font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 700;
       letter-spacing: -0.025em;
@@ -1349,7 +1358,7 @@
     }
 
     .final-cta p {
-      color: #b8b8b8;
+      color: var(--nf-line-strong);
       max-width: 52ch;
       margin: 0 auto 1.5rem;
       font-size: 1rem;
@@ -1364,24 +1373,24 @@
     }
 
     .final-cta .btn {
-      border-color: #ffffff;
-      background: #ffffff;
+      border-color: var(--nf-card);
+      background: var(--nf-card);
       color: var(--dark);
     }
 
     .final-cta .btn:hover {
       background: transparent;
-      color: #ffffff;
+      color: var(--nf-card);
     }
 
     .final-cta .btn.ghost-dark {
       background: transparent;
-      color: #ffffff;
-      border-color: #ffffff;
+      color: var(--nf-card);
+      border-color: var(--nf-card);
     }
 
     .final-cta .btn.ghost-dark:hover {
-      background: #ffffff;
+      background: var(--nf-card);
       color: var(--dark);
     }
 
@@ -1390,7 +1399,7 @@
        ============================================================ */
     .site-footer {
       padding: 64px 0 42px;
-      background: #fafafa;
+      background: var(--nf-surface);
       border-top: 1px solid var(--line);
       font-size: 15px;
       line-height: 1.65;
@@ -1509,7 +1518,7 @@
         padding: 10px;
         border: 1px solid var(--line-strong);
         border-radius: var(--radius);
-        background: #ffffff;
+        background: var(--nf-card);
         box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
       }
 
@@ -1629,9 +1638,10 @@
   </style>
 
   <link rel="stylesheet" href="/assets/css/site-ui.css" />
+  <link rel="stylesheet" href="/assets/css/premium.css" />
 </head>
 
-<body>
+<body class="page-guide">
   <a class="skip-link" href="#main">Skip to article</a>
 
   <!-- ============================================================
@@ -1642,7 +1652,7 @@
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
           <img
-            src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ"
+            src="/assets/nextflow-mark.svg"
             alt=""
             width="64"
             height="64"
@@ -1651,15 +1661,7 @@
         <span>NextFlow Apps</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-menu"
-        aria-label="Navigation menu"
-      >
-        Menu
-      </button>
+
 
       <nav id="site-menu" class="nav-links" aria-label="Primary navigation">
         <a href="/">Home</a>
@@ -1669,6 +1671,28 @@
         <a href="/temvica/">Temvica</a>
         <a href="/support.html">Support</a>
       </nav>
+      <div class="nav-tools">
+        <details class="theme-menu" data-theme-menu hidden>
+          <summary aria-label="Choose color theme" title="Appearance">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg>
+          </summary>
+          <fieldset class="theme-options">
+            <legend>Appearance</legend>
+            <label><input type="radio" name="appearance" value="system" data-theme-choice /> System</label>
+            <label><input type="radio" name="appearance" value="light" data-theme-choice /> Light</label>
+            <label><input type="radio" name="appearance" value="dark" data-theme-choice /> Dark</label>
+          </fieldset>
+        </details>
+        <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Navigation menu"
+      >
+        Menu
+      </button>
+      </div>
     </div>
   </header>
 
@@ -3337,7 +3361,7 @@
           <a class="brand" href="/" aria-label="NextFlow Apps home">
             <span class="brand-mark" aria-hidden="true">
               <img
-                src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ"
+                src="/assets/nextflow-mark.svg"
                 alt=""
                 width="64"
                 height="64"
@@ -3417,6 +3441,7 @@
 
   <script src="/assets/js/site-ui.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/premium.js" defer></script>
 </body>
 </html>
 
