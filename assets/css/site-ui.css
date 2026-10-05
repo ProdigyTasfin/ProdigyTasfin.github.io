@@ -76,3 +76,39 @@ html {
   html { scroll-behavior: auto; }
   .site-footer .footer-col a, .faq details, .faq details summary::after { transition: none !important; }
 }
+
+/* Native anchors preserve focus/history and respect the user's motion setting. */
+html { scroll-padding-top: 88px; }
+.site-footer :focus-visible { outline-color: #fff; }
+.site-footer .footer-grid > * { min-width: 0; }
+.site-footer a { overflow-wrap: anywhere; }
+
+/* Hide mobile navigation only after the shared controller is ready. */
+html:not(.nav-enhanced) .menu-toggle { display: none; }
+html:not(.nav-enhanced) .site-header { position: static; }
+@media (max-width: 900px) {
+  html:not(.nav-enhanced) .nav { flex-wrap: wrap; }
+  html:not(.nav-enhanced) .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: none;
+  }
+  .nav-enhanced .nav-links { max-height: calc(100dvh - 100px); overflow-y: auto; }
+}
+
+/* Long article contents must remain reachable in a short desktop viewport. */
+@media (min-width: 1025px) {
+  .table-of-contents { max-height: calc(100dvh - 112px); overflow-y: auto; }
+}
+/* Offscreen campaign controls should not receive keyboard focus or cover footer links. */
+.mobile-cta { visibility: hidden; pointer-events: none; }
+.mobile-cta.visible { visibility: visible; pointer-events: auto; }
+@media (max-width: 680px) {
+  body:has(.mobile-cta) { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+  .mobile-cta { bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+
+body:has(.nav-links.is-open) .mobile-cta { visibility: hidden; pointer-events: none; }

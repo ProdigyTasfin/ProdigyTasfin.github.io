@@ -484,12 +484,12 @@
     <div class="container nav">
       <a class="brand" href="/" aria-label="NextFlow Apps home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="NextFlow Apps logo" />
+          <img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="NextFlow Apps logo" width="32" height="32" />
         </span>
         <span>NextFlow Apps</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Navigation menu">
         Menu
       </button>
 
@@ -510,7 +510,7 @@
       <span class="eyebrow">Data deletion</span>
       <h1>Delete your Noctra data</h1>
       <p class="lead">Noctra does not currently require or provide user accounts. Most Noctra data is stored locally on your Android device.</p>
-      <p class="last-updated"><strong>Last updated:</strong> <span data-date>July 2026</span></p>
+      <p class="last-updated"><strong>Last updated:</strong> <span>July 2026</span></p>
     </div>
 
     <section class="section">
@@ -636,7 +636,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/" aria-label="NextFlow Apps home">
-            <span class="brand-mark" aria-hidden="true"><img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" /></span>
+            <span class="brand-mark" aria-hidden="true"><img src="https://lh3.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ" alt="" width="32" height="32" /></span>
             <span>NextFlow Apps</span>
           </a>
           <p class="footer-tagline">Technology that respects your attention.</p>
@@ -666,31 +666,9 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const links = document.querySelector('.nav-links');
-    if (toggle && links) {
-      toggle.addEventListener('click', () => {
-        const open = links.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }));
-    }
 
-    // Auto-update year & date
-    document.querySelectorAll('[data-year]').forEach(el => {
-      el.textContent = new Date().getFullYear() || '2026';
-    });
-    document.querySelector('[data-date]')?.textContent = new Date().toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long'
-    });
-  </script>
 
   <script src="/assets/js/site-ui.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
