@@ -20,7 +20,7 @@ def run():
     server = ThreadingHTTPServer(('127.0.0.1', 0), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     origin = f'http://127.0.0.1:{server.server_port}'
-    pages = sorted(path for path in ROOT.rglob('*.html') if '.github' not in path.parts and not path.name.startswith('google'))
+    pages = sorted(path for path in ROOT.rglob('*.html') if '.github' not in path.parts and not path.name.startswith('google') and 'http-equiv="refresh"' not in path.read_text())
     errors = []
     try:
         with sync_playwright() as p:
@@ -82,18 +82,20 @@ def run():
                 native.goto(f'{origin}/{relative}')
                 assert native.locator('.nav-links').is_visible(), f'{relative}: no-JS navigation missing'
                 assert native.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'{relative}: no-JS overflow'
-                faq = native.locator('main details')
+                faq = native.locator('main details:not(.table-of-contents)')
                 if faq.count():
                     faq.first.locator('summary').click()
                     assert faq.first.evaluate('(el) => el.open'), relative
                     assert faq.first.locator('p').first.is_visible(), relative
             context.close()
             # Policy dates must never be changed to the visitor's current date.
-            for relative, date in [('privacy-policy.html', 'October 5, 2026'), ('refund-policy.html', 'August 2026'), ('hushflow/privacy-policy.html', 'July 2026')]:
+            for relative, date in [('privacy-policy.html', 'October 7, 2026'), ('refund-policy.html', 'August 2026'), ('hushflow/privacy-policy.html', 'July 2026')]:
                 page.goto(f'{origin}/{relative}')
                 assert date in page.locator('.last-updated').inner_text(), relative
             page.goto(f'{origin}/articles/how-to-use-pomodoro-for-studying/')
             page.emulate_media(reduced_motion='reduce')
+            if not page.locator('.table-of-contents').evaluate('(el)=>el.open'):
+                page.locator('.table-of-contents summary').click()
             link = page.locator('.table-of-contents a').first
             target = link.get_attribute('href')
             link.click()
@@ -102,12 +104,12 @@ def run():
             page.set_viewport_size({'width': 320, 'height': 900})
             page.goto(f'{origin}/noctra/november-reset/')
             assert not page.locator('.mobile-cta').is_visible(), 'Offscreen CTA must not receive focus'
-            page.evaluate('window.scrollTo(0, document.documentElement.scrollHeight)')
+            page.evaluate("window.scrollTo(0, document.querySelector('.campaign-hero').offsetTop + document.querySelector('.campaign-hero').offsetHeight + 40)")
             page.wait_for_timeout(300)
             assert page.locator('.mobile-cta').is_visible()
-            bottom = page.locator('.footer-bottom').bounding_box()
-            cta = page.locator('.mobile-cta').bounding_box()
-            assert bottom['y'] + bottom['height'] <= cta['y'], 'CTA covers the footer'
+            page.evaluate('window.scrollTo(0, document.documentElement.scrollHeight)')
+            page.wait_for_timeout(300)
+            assert not page.locator('.mobile-cta').is_visible(), 'CTA must hide when the footer is visible'
             assert not errors, '\n'.join(errors)
             browser.close()
             print(f'PASS: {len(pages)} pages at three widths; native navigation/FAQ, policy dates, reduced motion, campaign CTA and no JS errors.')

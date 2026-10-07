@@ -12,6 +12,9 @@ Open http://localhost:8000/. To check local links, fragments, sitemap coverage, 
 
 ```sh
 python .github/scripts/check_site.py
+python .github/scripts/sync_acquisition.py --check
+python .github/scripts/optimize_images.py --check
+python .github/scripts/check_acquisition.py
 ```
 
 To run responsive browser checks:
@@ -21,9 +24,34 @@ python -m pip install playwright==1.62.0
 python -m playwright install chromium
 python .github/scripts/check_ui.py
 python .github/scripts/check_premium.py
+python .github/scripts/check_acquisition_ui.py
 ```
 
-`CHROMIUM_PATH` can select an already installed Chromium binary. Browser tests block external services and test local site files. The Site checks workflow runs all three validators on pull requests and pushes to main; it does not replace the managed Pages deployment workflow.
+`CHROMIUM_PATH` can select an already installed Chromium binary. Browser tests block external services and test local site files. The Site checks workflow runs these validators on pull requests and pushes to main; it does not replace the managed Pages deployment workflow.
+
+## Organic acquisition maintenance
+
+The site remains static and crawlable without JavaScript. `content/acquisition.json` owns app package/Play URLs, one primary app per guide and contextual CTA copy. Marked HTML fragments are generated with:
+
+```sh
+python .github/scripts/sync_acquisition.py
+```
+
+Edit article content normally, then synchronize to keep product guide links, library schema and catalog fragments current. Use `--check` in CI; do not edit generated fragments alone. For a new guide, add its catalog relationship, CTA markers, library card, sitemap entry and real authored metadata/date. Preserve existing canonical URLs and use descriptive app-specific actions.
+
+Original artwork is retained. To add/change local WebP artwork, install Pillow in a local development environment and regenerate responsive variants:
+
+```sh
+python -m pip install Pillow
+python .github/scripts/optimize_images.py
+python .github/scripts/sync_acquisition.py
+```
+
+Commit original artwork, responsive derivatives and their manifest together. Image validation in CI uses only the standard library and verifies source/derivative hashes. Never change all content dates simply because assets or shared scripts were regenerated.
+
+Measurement hooks are local by default; no analytics collector, install or purchase attribution is configured. See [measurement setup](docs/acquisition-measurement.md), [audit](docs/organic-growth-audit.md), [A–N changelog](docs/organic-growth-changelog.md), [ten-candidate content roadmap](docs/content-roadmap.md) and [hosting/Search Console release steps](docs/search-console-release.md).
+
+`content/redirects.json` documents the two known static redirect fallbacks. They are immediate meta refreshes, not HTTP 301/308 responses. Keep aliases and `404.html` out of the sitemap. Hosting-level HTTPS/www/slash response verification is a separate release step.
 
 ## Appearance and browsing
 

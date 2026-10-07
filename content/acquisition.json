@@ -1,0 +1,107 @@
+{
+  "origin": "https://nextflow-apps.com",
+  "apps": {
+    "hushflow": {
+      "name": "HushFlow", "path": "/hushflow/", "package": "com.tasfin.hushflow",
+      "play_url": "https://play.google.com/store/apps/details?id=com.tasfin.hushflow",
+      "free": "Core playback and selected ad-supported access are available to start listening.",
+      "premium": "Download supported audio for offline playback when you have permission to access it. Availability depends on the source.",
+      "screenshot": "https://play-lh.googleusercontent.com/6ZGyi6tcBwb3mukR5e1mo1H4KaT0ZeCsuKgVI6PcahP5XsqDeqSuJtedv9Bm8OvhKVa_GaGF9umsBITqBEmBlg=w526-h296"
+    },
+    "noctra": {
+      "name": "Noctra", "path": "/noctra/", "package": "com.tasfin.noctra",
+      "play_url": "https://play.google.com/store/apps/details?id=com.tasfin.noctra",
+      "screenshot": "https://play-lh.googleusercontent.com/ssPzBYyxtQQDCbcWmuzPxJaafc1VWdDOYZGtPm-iHmNNbyKOvMdNI7sooqh23Z718Xl9e4YY1nzqhZZHlxnA7w=w526-h296"
+    },
+    "temvica": {
+      "name": "Temvica", "path": "/temvica/", "package": "com.tasfin.focusflow",
+      "play_url": "https://play.google.com/store/apps/details?id=com.tasfin.focusflow",
+      "free": "Core study planning and focus tools are free to start with.",
+      "premium": "Optional on-device study assistance after a model download on supported devices, plus additional customization. Verify generated study material.",
+      "screenshot": "https://play-lh.googleusercontent.com/tTNhoctsZEKjOGdopWEHDU5QxpCIxeQR84zgQTVLMCe4H6NRUM9Iz7Tcl8p6J3aCHLEqYzRWJ1ih8Kb1ul-c=w526-h296"
+    }
+  },
+  "articles": {
+    "how-to-play-audio-with-screen-off-android": {
+      "app": "hushflow", "intent": "screen-off", "insert_after": "quick-steps",
+      "headline": "Want a player designed for screen-off listening?",
+      "description": "HushFlow is an Android music and podcast player for supported background audio. It still depends on your phone allowing the app to run in the background.",
+      "benefits": ["Supported screen-off and background playback", "Notification and lock-screen playback controls", "A built-in sleep timer"],
+      "note": "Offline downloads for supported audio are a Premium feature.",
+      "end_headline": "Keep listening with your screen locked.",
+      "end_description": "If background listening is part of your routine, try HushFlow or explore its features before choosing a player."
+    },
+    "how-to-use-a-music-sleep-timer-on-android": {
+      "app": "hushflow", "intent": "sleep-timer", "insert_after": "no-sleep-timer",
+      "headline": "Your player has no sleep timer?",
+      "description": "HushFlow includes its own sleep timer for supported audio playing in HushFlow. It does not control playback in an unrelated music app.",
+      "benefits": ["Choose a duration and stop playback automatically", "Listen with the screen off while the phone stays on", "Manage playback from supported Android media controls"],
+      "note": "Android battery restrictions can still affect background playback.",
+      "end_headline": "Give bedtime audio a stopping point.",
+      "end_description": "Try HushFlow's built-in timer for your next listening session. Premium offline downloads are optional."
+    },
+    "how-to-block-distracting-apps-on-android": {
+      "app": "noctra", "intent": "app-blocking", "insert_after": "eight-methods",
+      "headline": "Need stronger boundaries than an app timer?",
+      "description": "Noctra lets you choose distracting Android apps and create blocking rules around the time you want to protect.",
+      "benefits": ["Block selected distracting apps", "Create focused periods", "Review screen-time patterns"],
+      "note": "App blocking uses Android Accessibility with your permission; it cannot guarantee a change in habits.",
+      "end_headline": "Protect one useful block of time.",
+      "end_description": "Start with one distracting app and a realistic boundary. Noctra is a tool to support that plan."
+    },
+    "how-to-reduce-doomscrolling-on-android": {
+      "app": "noctra", "intent": "doomscrolling", "insert_after": "nine-steps",
+      "headline": "Make the next automatic app-open less automatic.",
+      "description": "Noctra adds user-chosen app limits and blocking rules when ordinary reminders are too easy to ignore.",
+      "benefits": ["Block selected scrolling apps", "Protect focus periods", "Notice repeated opens and usage patterns"],
+      "note": "Pair software boundaries with a replacement activity and a realistic routine.",
+      "end_headline": "Turn a scrolling plan into a phone boundary.",
+      "end_description": "Try Noctra for the apps that repeatedly interrupt your day. Keep the changes that help you."
+    },
+    "digital-detox-plan-for-students": {
+      "app": "noctra", "intent": "student-detox", "insert_after": "day-4",
+      "headline": "Protect your study block from distracting apps.",
+      "description": "If your biggest distraction keeps returning, Noctra can add app boundaries around the study period you chose.",
+      "benefits": ["Choose the apps to limit", "Create a focused study period", "Review usage without giving up useful technology"],
+      "note": "Keep essential communication available and choose limits that fit your responsibilities.",
+      "end_headline": "Keep one study boundary after the seven-day plan.",
+      "end_description": "Use Noctra to support a practical limit rather than trying to remove every app from your life."
+    },
+    "no-goon-november-no-nut-november-2026": {
+      "app": "noctra", "intent": "november-2026", "insert_after": "system", "destination": "campaign",
+      "headline": "Looking for a structured November Reset?",
+      "description": "Noctra's separate November 2026 campaign is for adults who want a fixed 30-day digital boundary. Review its protection requirements and eligibility before joining.",
+      "benefits": ["Selected-app blocking", "Adult Shield for supported domains", "A defined 30-day commitment with progress tracking"],
+      "note": "18+ campaign. Filtering has limitations; Noctra is not medical treatment.",
+      "end_headline": "Read the November Reset details before joining.",
+      "end_description": "See the Noctra campaign rules, supported protection, eligible-market offer and Google Play download in one place."
+    },
+    "how-to-remove-porn-addiction": {
+      "app": "noctra", "intent": "digital-boundaries", "insert_after": "what-noctra-cannot-do",
+      "headline": "Build a digital boundary alongside your support plan.",
+      "description": "Noctra can add friction around selected apps and supported adult domains. It is a digital-boundary tool, not a diagnosis or treatment.",
+      "benefits": ["Block selected triggering apps", "Adult Shield for supported adult domains", "Protect focused periods on your phone"],
+      "note": "If the behavior causes distress or affects daily life, seek qualified professional support. A blocker cannot replace it.",
+      "end_headline": "Choose boundaries without shame.",
+      "end_description": "Explore Noctra's tools and limitations before using it as one part of a broader support plan."
+    },
+    "how-to-use-pomodoro-for-studying": {
+      "app": "temvica", "intent": "study-pomodoro", "insert_after": "sample-study-plan",
+      "headline": "Want a timer that fits your study plan?",
+      "description": "Temvica combines an Android Pomodoro timer with study planning, so the next focus session begins with a clear task.",
+      "benefits": ["Custom focus and break durations", "Study tasks and planned sessions", "Ambient sound for focused work"],
+      "note": "The offline on-device study helper is an optional Premium feature on supported devices.",
+      "end_headline": "Start one focused study session.",
+      "end_description": "Choose a task, set a realistic interval and take a proper break. Temvica can help organize that routine."
+    },
+    "pomodoro-timer-for-coding": {
+      "app": "temvica", "intent": "coding-pomodoro", "insert_after": "structure-session",
+      "headline": "Set a coding interval around one clear objective.",
+      "description": "Temvica provides custom Android focus and break durations for a coding task, debugging pass or documentation session.",
+      "benefits": ["Custom focus and break intervals", "Focus, Flow, Deep and Rest modes", "Session planning and progress insights"],
+      "note": "The timer supports your workflow; it does not guarantee productivity or solve coding tasks.",
+      "end_headline": "Plan your next coding focus block.",
+      "end_description": "Try a Temvica timer for one well-defined coding task, then adjust the interval to fit the work."
+    }
+  }
+}

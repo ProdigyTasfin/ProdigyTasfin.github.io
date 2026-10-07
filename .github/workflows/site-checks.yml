@@ -27,6 +27,11 @@ jobs:
           node-version: '24'
       - name: Check links, SEO metadata and JavaScript syntax
         run: python .github/scripts/check_site.py
+      - name: Check acquisition catalog, content and responsive assets
+        run: |
+          python .github/scripts/sync_acquisition.py --check
+          python .github/scripts/optimize_images.py --check
+          python .github/scripts/check_acquisition.py
       - name: Install browser test dependency
         run: |
           python -m pip install playwright==1.62.0
@@ -35,3 +40,5 @@ jobs:
         run: python .github/scripts/check_ui.py
       - name: Check themes, discovery and reading tools
         run: python .github/scripts/check_premium.py
+      - name: Check acquisition funnel, redirects and privacy boundaries
+        run: python .github/scripts/check_acquisition_ui.py

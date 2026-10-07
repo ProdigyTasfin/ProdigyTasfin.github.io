@@ -55,20 +55,19 @@
     saveButtons.forEach(({ button, url, title }) => {
       const active = saved.has(url);
       button.setAttribute('aria-pressed', String(active));
-      button.textContent = active ? 'Saved ✓' : 'Save guide';
-      button.setAttribute('aria-label', `${active ? 'Remove saved' : 'Save'} ${title}`);
+      button.textContent = active ? 'Saved guide' : 'Save guide';
+      button.setAttribute('aria-label', active ? `Saved guide: ${title}. Activate to remove.` : `Save guide: ${title}`);
     });
   };
   const makeSaveButton = (url, title, status) => {
     const button = document.createElement('button');
     button.type = 'button'; button.className = 'save-guide';
-    button.setAttribute('aria-label', `Save ${title}`);
+    button.setAttribute('aria-label', `Save guide: ${title}`);
     saveButtons.push({ button, url, title });
     button.addEventListener('click', () => {
       if (saved.has(url)) saved.delete(url); else saved.add(url);
       const persisted = write('nextflow-saved-guides', JSON.stringify([...saved]));
       syncSaves();
-      button.setAttribute('aria-label', `${saved.has(url) ? 'Remove saved' : 'Save'} ${title}`);
       if (status) status.textContent = saved.has(url) ? (persisted ? 'Saved on this device.' : 'Saved for this visit; browser storage is unavailable.') : 'Removed from saved guides.';
       filterLibrary();
       if (button.closest('.article-card')?.hidden) {
@@ -91,7 +90,7 @@
       const url = card.querySelector('h3 a').getAttribute('href');
       const category = card.dataset.articleCategory;
       const text = `${card.querySelector('h3').textContent} ${card.querySelector('p').textContent} ${category}`.toLocaleLowerCase();
-      const show = (topic === 'all' || (topic === 'saved' ? saved.has(url) : category === topic)) && text.includes(query);
+      const show = (topic === 'all' || (topic === 'saved' ? saved.has(url) : category === topic || card.dataset.articleSeason === topic)) && text.includes(query);
       card.hidden = !show;
       if (show) { count++; card.classList.remove('reveal-pending'); }
     });
@@ -134,7 +133,7 @@
       document.querySelector('[data-finder-symbol]').replaceChildren(app.icon ? icon(app.icon, 40) : document.createTextNode(app.symbol));
       document.querySelector('[data-finder-caption]').textContent = app.caption;
       const link = document.querySelector('[data-finder-link]');
-      link.href = app.path; link.replaceChildren(document.createTextNode(`Explore ${app.name}`), icon(outwardArrow));
+      link.href = app.path; link.dataset.app = app.name.toLowerCase(); link.replaceChildren(document.createTextNode(`Explore ${app.name}`), icon(outwardArrow));
       const scene = document.querySelector('.finder-scene');
       if (!motion.matches) { scene.classList.remove('is-changing'); void scene.offsetWidth; scene.classList.add('is-changing'); }
     }));
@@ -143,6 +142,13 @@
   const article = document.querySelector('.page-guide .article-content');
   let progress, contents = [];
   if (article) {
+    const toc = document.querySelector('details.table-of-contents');
+    if (toc) {
+      const wide = matchMedia('(min-width: 1025px)');
+      const updateContents = () => { toc.open = wide.matches; };
+      wide.addEventListener('change', updateContents);
+      updateContents();
+    }
     progress = document.createElement('div');
     progress.className = 'reading-progress'; progress.setAttribute('aria-hidden', 'true');
     progress.append(document.createElement('span')); document.body.append(progress);

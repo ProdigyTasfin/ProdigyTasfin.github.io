@@ -20,6 +20,7 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.ids, self.references, self.canonicals = [], [], []
         self.scripts, self.metadata = [], {}
+        self.refreshes = []
         self.h1_count = 0
         self.script = None
         self.feed(source)
@@ -32,6 +33,8 @@ class Page(HTMLParser):
             self.h1_count += 1
         if tag == 'meta':
             self.metadata[a.get('name', a.get('property', ''))] = a.get('content', '')
+            if a.get('http-equiv', '').lower() == 'refresh':
+                self.refreshes.append(a.get('content', ''))
         if tag == 'link' and a.get('rel') == 'canonical':
             self.canonicals.append(a.get('href', ''))
         if tag == 'a' or (tag == 'link' and a.get('rel') in ('stylesheet', 'icon', 'apple-touch-icon')):
@@ -62,7 +65,11 @@ def check_site():
     failures = []
     paths = sorted(path for path in ROOT.rglob('*.html') if '.git' not in path.parts and '.github' not in path.parts)
     pages = {path: Page(path.read_text()) for path in paths}
-    public = {path: page for path, page in pages.items() if not path.name.startswith('google') and path.name != '404.html'}
+    redirects = json.loads((ROOT / 'content/redirects.json').read_text())
+    aliases = {ROOT / alias.lstrip('/') / 'index.html': target for alias, target in redirects.items()}
+    for missing in set(aliases) - set(pages):
+        failures.append(f'Missing redirect fallback: {missing.relative_to(ROOT)}')
+    public = {path: page for path, page in pages.items() if not path.name.startswith('google') and path.name != '404.html' and path not in aliases}
     for path, page in pages.items():
         label = path.relative_to(ROOT).as_posix()
         for ident, count in Counter(page.ids).items():
@@ -95,6 +102,17 @@ def check_site():
             main_scripts = [a for a, _ in page.scripts if a.get('src') == '/assets/js/main.js']
             if len(main_scripts) != 1:
                 failures.append(f'{label}: needs exactly one shared navigation script')
+            if page.refreshes or any(word in page.metadata.get('robots', '').lower() for word in ('noindex', 'nofollow')):
+                failures.append(f'{label}: public page must be indexable without redirects')
+        elif path in aliases:
+            destination = ORIGIN + aliases[path]
+            if page.refreshes != [f'0; url={destination}'] or page.canonicals != [destination] or page.metadata.get('robots') != 'noindex, follow':
+                failures.append(f'{label}: invalid static redirect fallback')
+            if aliases[path] in redirects or not (ROOT / aliases[path].lstrip('/') / 'index.html').is_file():
+                failures.append(f'{label}: redirect target missing or chained')
+        elif path.name == '404.html':
+            if page.canonicals or page.metadata.get('robots') != 'noindex, follow' or page.h1_count != 1:
+                failures.append('404.html: needs one H1, noindex and no canonical')
         for a, source in page.scripts:
             if a.get('type') == 'application/ld+json':
                 try:
