@@ -18,7 +18,7 @@ def run():
     server = ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(Quiet, directory=str(ROOT)))
     threading.Thread(target=server.serve_forever, daemon=True).start()
     origin = f'http://127.0.0.1:{server.server_port}'
-    pages = [p for p in ROOT.rglob('*.html') if '.github' not in p.parts and not p.name.startswith('google')]
+    pages = [p for p in ROOT.rglob('*.html') if '.github' not in p.parts and not p.name.startswith('google') and 'http-equiv="refresh"' not in p.read_text()]
     errors = []
     try:
         with sync_playwright() as p:
@@ -61,7 +61,7 @@ def run():
             assert q.locator('.article-card .article-cover').count() == 9
             q.locator('#article-search').fill('pomodoro');assert q.locator('.article-card:visible').count() == 2
             q.locator('#article-search').fill('')
-            for topic, count in [('background audio', 2), ('focus & productivity', 2), ('digital wellbeing', 5), ('all', 9)]:
+            for topic, count in [('background audio', 2), ('focus & productivity', 2), ('digital wellbeing', 5), ('november reset', 1), ('all', 9)]:
                 q.locator(f'[data-topic="{topic}"]').click()
                 assert q.locator('.article-card:visible').count() == count, topic
             card = q.locator('.article-card').first
