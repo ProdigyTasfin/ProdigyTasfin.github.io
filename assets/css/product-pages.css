@@ -1,0 +1,51 @@
+/* Product and policy layouts using the existing NextFlow tokens and components. */
+.page-salvera {
+  --bg: var(--nf-bg); --text: var(--nf-text); --secondary: var(--nf-secondary);
+  --muted: var(--nf-muted); --line: var(--nf-line); --line-strong: var(--nf-line-strong);
+  --surface: var(--nf-surface);
+}
+.product-breadcrumb { padding-block: 22px 0; font-size: 13px; }
+.product-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.product-breadcrumb li + li::before { content: '/'; margin-right: 8px; color: var(--nf-muted); }
+.product-subnav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-block: 20px; border-block: 1px solid var(--nf-line); }
+.product-subnav a { color: var(--nf-accent); font-size: 14px; text-underline-offset: 4px; padding-block: 6px; }
+.product-subnav [aria-current] { font-weight: 700; }
+.page-salvera .visual-icon { display: block; width: 144px; height: auto; margin: 0 auto 20px; object-fit: contain; }
+.page-salvera .hero .visual { gap: 8px; }
+.product-details-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.product-details-grid > * { min-width: 0; }
+.page-salvera .feature h3 { line-height: 1.35; }
+.page-salvera .feature p { margin-bottom: 0; }
+.release-note { padding: 20px 24px; border: 1px solid var(--nf-line-strong); border-radius: 16px; background: var(--nf-surface); }
+.release-note p { margin-block: 8px 0; color: var(--nf-secondary); }
+.page-salvera .badge { color: var(--nf-accent); }
+.page-salvera .faq details { padding: 20px 24px; border: 1px solid var(--nf-line); margin-bottom: 12px; }
+.page-salvera .faq summary { cursor: pointer; min-height: 44px; font-weight: 600; }
+.page-salvera .faq summary::after { content: '+'; font-size: 24px; }
+.page-salvera .faq p { color: var(--nf-secondary); }
+.page-salvera .policy-hero { padding-block: 44px 28px; }
+.page-salvera .policy-hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); max-width: 24ch; }
+.page-salvera .policy-body { max-width: 850px; padding-bottom: 56px; }
+.page-salvera .policy-section { padding-block: 26px; border-bottom: 1px solid var(--nf-line); }
+.page-salvera .policy-section h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); line-height: 1.25; }
+.page-salvera .policy-section p { color: var(--nf-secondary); }
+.page-salvera .last-updated { color: var(--nf-muted); font-size: 13px; }
+.page-salvera .policy-body a:not(.btn) { color: var(--nf-accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.page-salvera .actions .btn { white-space: normal; text-align: center; }
+.app-logo-salvera { object-fit: contain; }
+.product-card .eyebrow { align-self: flex-start; }
+.focus-ring img { object-fit: contain; border-radius: 8px; }
+.page-home .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .product-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 820px) {
+  .page-salvera .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .page-home .product-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .product-details-grid { grid-template-columns: 1fr; }
+  .page-salvera .actions { flex-direction: column; align-items: stretch; }
+  .page-salvera .actions .btn { width: 100%; }
+  .page-home .finder-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

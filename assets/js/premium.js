@@ -123,14 +123,20 @@
     const apps = {
       focus: { name: 'Temvica', path: '/temvica/', symbol: '25:00', caption: 'ONE THING AT A TIME', description: 'Focus sessions, Pomodoro tools, and ambient audio for the work in front of you.' },
       listen: { name: 'HushFlow', path: '/hushflow/', icon: 'M9 18V5l11-2v13M9 8l11-2M9 18c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3 3 1.3 3 3Zm11-2c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3 3 1.3 3 3Z', caption: 'LISTEN ON YOUR TERMS', description: 'Screen-off audio and a sleep timer for music, podcasts, and moments of quiet.' },
-      protect: { name: 'Noctra', path: '/noctra/', icon: outwardArrow, caption: 'MAKE ROOM FOR LIFE', description: 'App blocking and digital boundaries to help you step away from distracting habits.' }
+      protect: { name: 'Noctra', path: '/noctra/', icon: outwardArrow, caption: 'MAKE ROOM FOR LIFE', description: 'App blocking and digital boundaries to help you step away from distracting habits.' },
+      care: { name: 'Salvera', path: '/salvera/', image: '/assets/salvera/logo-96.png', caption: 'CARE, WITH CONSENT', description: 'Medication management and family care, in development. Explore the planned scope and contact the team.' }
     };
     choices.querySelectorAll('[data-goal]').forEach((button) => button.addEventListener('click', () => {
       const app = apps[button.dataset.goal];
       choices.querySelectorAll('button').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
       document.querySelector('[data-finder-app]').textContent = app.name;
       document.querySelector('[data-finder-description]').textContent = app.description;
-      document.querySelector('[data-finder-symbol]').replaceChildren(app.icon ? icon(app.icon, 40) : document.createTextNode(app.symbol));
+      let symbol = app.icon ? icon(app.icon, 40) : document.createTextNode(app.symbol || '');
+      if (app.image) {
+        symbol = document.createElement('img');
+        symbol.src = app.image; symbol.alt = ''; symbol.width = 48; symbol.height = 48;
+      }
+      document.querySelector('[data-finder-symbol]').replaceChildren(symbol);
       document.querySelector('[data-finder-caption]').textContent = app.caption;
       const link = document.querySelector('[data-finder-link]');
       link.href = app.path; link.dataset.app = app.name.toLowerCase(); link.replaceChildren(document.createTextNode(`Explore ${app.name}`), icon(outwardArrow));

@@ -27,8 +27,14 @@ jobs:
           node-version: '24'
       - name: Check links, SEO metadata and JavaScript syntax
         run: python .github/scripts/check_site.py
+      - name: Install HTML validation tooling
+        run: npm install --prefix "$RUNNER_TEMP/html-validation" --no-audit --no-fund html-validate@10.17.0
+      - name: Check structural HTML
+        run: HTML_VALIDATE_MODULE="$RUNNER_TEMP/html-validation/node_modules/html-validate" node .github/scripts/check_html.cjs
       - name: Check acquisition catalog, content and responsive assets
         run: |
+          python .github/scripts/sync_products.py --check
+          python .github/scripts/check_products.py
           python .github/scripts/sync_acquisition.py --check
           python .github/scripts/optimize_images.py --check
           python .github/scripts/check_acquisition.py
@@ -42,3 +48,5 @@ jobs:
         run: python .github/scripts/check_premium.py
       - name: Check acquisition funnel, redirects and privacy boundaries
         run: python .github/scripts/check_acquisition_ui.py
+      - name: Check Salvera discovery, policies and original assets
+        run: python .github/scripts/check_salvera_ui.py

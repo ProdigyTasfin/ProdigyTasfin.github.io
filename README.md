@@ -12,6 +12,8 @@ Open http://localhost:8000/. To check local links, fragments, sitemap coverage, 
 
 ```sh
 python .github/scripts/check_site.py
+python .github/scripts/sync_products.py --check
+python .github/scripts/check_products.py
 python .github/scripts/sync_acquisition.py --check
 python .github/scripts/optimize_images.py --check
 python .github/scripts/check_acquisition.py
@@ -25,9 +27,27 @@ python -m playwright install chromium
 python .github/scripts/check_ui.py
 python .github/scripts/check_premium.py
 python .github/scripts/check_acquisition_ui.py
+python .github/scripts/check_salvera_ui.py
 ```
 
 `CHROMIUM_PATH` can select an already installed Chromium binary. Browser tests block external services and test local site files. The Site checks workflow runs these validators on pull requests and pushes to main; it does not replace the managed Pages deployment workflow.
+
+Structural HTML checks use development-only tooling, with no website runtime dependency:
+
+```sh
+npm install --prefix /tmp/nextflow-html-check --no-audit --no-fund html-validate@10.17.0
+HTML_VALIDATE_MODULE=/tmp/nextflow-html-check/node_modules/html-validate node .github/scripts/check_html.cjs
+```
+
+## Product portfolio and Salvera
+
+`content/products.json` lists all four company products. Run `python .github/scripts/sync_products.py` after navigation or portfolio changes; its check mode prevents shared product navigation and homepage ItemList schema from drifting. The existing acquisition catalog continues to contain the three apps with verified Play destinations. Do not invent a Salvera package ID, store listing, price or rating.
+
+Salvera uses the current NextFlow palette, Inter, theme controller and shared layouts. `assets/css/product-pages.css` adds token-based layout rules, not a new brand theme. Its five routes are `/salvera/`, `/salvera/privacy-policy.html`, `/salvera/data-deletion.html`, `/salvera/terms.html` and `/salvera/support.html`.
+
+The official root PNG is retained unchanged and copied exactly to `assets/salvera/logo.png`. Smaller PNGs retain the same artwork and aspect ratio; the manifest verifies source/derivative hashes and dimensions. Reuse this artwork rather than generating or recoloring a replacement. Company and existing product logos remain unchanged.
+
+Salvera is presented as in development. Public download, backend deletion and app-data/security claims are not inferred from the website brief. The user waived Android/backend inspection; the pre-release privacy and deletion pages clearly identify unconfirmed app-specific behavior and provide the real support-email request route. They must not be treated as proof of audited app behavior or Google Play policy compliance. See [Salvera integration report](docs/salvera-integration.md) for the full audit, routes, file list and validation results. The user has authorized publication through the existing pull-request and GitHub Pages deployment workflow.
 
 ## Organic acquisition maintenance
 
