@@ -82,9 +82,10 @@ def run():
             q.locator('[data-library-reset]').click();assert q.locator('.article-card:visible').count() == 9
             q.locator('#article-search').fill('no-such-guide');assert q.locator('.article-card:visible').count() == 0
             q.goto(origin)
-            for goal, app in [('listen', 'HushFlow'), ('protect', 'Noctra'), ('focus', 'Temvica')]:
+            for goal, app in [('listen', 'HushFlow'), ('protect', 'Noctra'), ('focus', 'Temvica'), ('care', 'Salvera')]:
                 q.locator(f'[data-goal="{goal}"]').click()
                 assert q.locator('[data-finder-app]').inner_text() == app
+                assert q.locator('[data-finder-link]').get_attribute('href') == f'/{app.lower()}/'
                 assert q.locator(f'[data-goal="{goal}"]').get_attribute('aria-pressed') == 'true'
             q.goto(origin + '/articles/how-to-use-pomodoro-for-studying/')
             start = q.locator('.reading-progress span').evaluate('(el)=>getComputedStyle(el).transform')

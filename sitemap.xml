@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://nextflow-apps.com/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <url>
@@ -98,15 +98,17 @@
 
   <url>
     <loc>https://nextflow-apps.com/partnerships.html</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <url>
     <loc>https://nextflow-apps.com/support.html</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <url>
     <loc>https://nextflow-apps.com/privacy-policy.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <url>
@@ -115,6 +117,32 @@
 
   <url>
     <loc>https://nextflow-apps.com/terms-policy.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://nextflow-apps.com/salvera/</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://nextflow-apps.com/salvera/privacy-policy.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://nextflow-apps.com/salvera/data-deletion.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://nextflow-apps.com/salvera/terms.html</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+
+  <url>
+    <loc>https://nextflow-apps.com/salvera/support.html</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
 </urlset>

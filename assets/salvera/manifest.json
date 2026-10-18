@@ -1,0 +1,44 @@
+{
+  "source": "/Minimal Red Heartcare Triangle Icon.png",
+  "original_copy": "/assets/salvera/logo.png",
+  "source_sha256": "f85bc4d01c27ff107cbb3f2e7a389376513f0e69bfd0789717fd4f4309b7cdd7",
+  "width": 1254,
+  "height": 1254,
+  "variants": [
+    {
+      "path": "/assets/salvera/logo-32.png",
+      "width": 32,
+      "height": 32,
+      "bytes": 1388,
+      "sha256": "224a20815b8e7ef67d857d19322ecac0e8afcffb2c78e212fe62b059126769cb"
+    },
+    {
+      "path": "/assets/salvera/logo-96.png",
+      "width": 96,
+      "height": 96,
+      "bytes": 7724,
+      "sha256": "5a7e85e77f68a0d5ec40bb08ea8ad302c77dc4906c390b19bce5e3ff9911732d"
+    },
+    {
+      "path": "/assets/salvera/logo-180.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 23330,
+      "sha256": "dcda84d2f21aee0272c4a8c33b899ecac2a16e0399995b44d711b88a3966a032"
+    },
+    {
+      "path": "/assets/salvera/logo-192.png",
+      "width": 192,
+      "height": 192,
+      "bytes": 26324,
+      "sha256": "9d9e4f5e23f93cf6767df6db4de8c14c1c88020c09c9b5f9045434b1d2240a4c"
+    },
+    {
+      "path": "/assets/salvera/logo-384.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 115824,
+      "sha256": "e9421735e29b543b186f51ad74cf603ca36caca9782939b070e3316c28210d38"
+    }
+  ]
+}

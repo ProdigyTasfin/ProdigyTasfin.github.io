@@ -1,0 +1,29 @@
+{
+  "origin": "https://nextflow-apps.com",
+  "products": [
+    {
+      "key": "hushflow",
+      "name": "HushFlow",
+      "path": "/hushflow/",
+      "status": "Available on Google Play"
+    },
+    {
+      "key": "noctra",
+      "name": "Noctra",
+      "path": "/noctra/",
+      "status": "Available on Google Play"
+    },
+    {
+      "key": "temvica",
+      "name": "Temvica",
+      "path": "/temvica/",
+      "status": "Available on Google Play"
+    },
+    {
+      "key": "salvera",
+      "name": "Salvera",
+      "path": "/salvera/",
+      "status": "In development"
+    }
+  ]
+}
