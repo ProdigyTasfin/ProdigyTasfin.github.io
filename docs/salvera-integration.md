@@ -200,3 +200,11 @@ The CI workflow is updated with portfolio, structural HTML and Salvera browser c
 Run the sync/check commands in README when adding products. Use the official asset manifest rather than replacing logos. Keep app-data statements separate from website preferences and local measurement hooks. Replace pre-release policy specifics only with facts confirmed for the actual app/backend build, and verify a public Play listing before adding a download action.
 
 The user subsequently approved publication by asking to make the changes publicly visible. Publish through a pull request, verify CI, merge to main and confirm the resulting Pages deployment; do not treat an open pull request alone as a live website update.
+
+## Visual refinement — October 20, 2026
+
+The five Salvera pages now use a shared product identity bar and readable, formatted HTML. The overview adds a balanced official-logo panel, numbered feature cards, three care roles, a five-step workflow and the existing animated FAQ pattern. Support has direct topic links; support and deletion pages offer progressive copy-email controls. Policies have a responsive native contents disclosure, desktop sidebar and section highlighting. Core navigation and email links work without JavaScript.
+
+The shared logo frame now controls its image size, aspect ratio and rounded clipping on every rendered page, including mobile. All official image sources and Salvera asset hashes are preserved. Salvera remains labeled in development; this visual update does not announce a release or confirm app behavior. Existing policy dates remain unchanged.
+
+Validation covers all 31 rendered pages in both themes at mobile, tablet and desktop widths, logo frame/image geometry, the five Salvera routes at five widths, contents navigation, clipboard success, no-JavaScript access, existing product funnels, structural HTML, internal links, metadata, sitemap and asset provenance. Automated WCAG A/AA checks on the Salvera pages found no violations after correcting contact-panel contrast.

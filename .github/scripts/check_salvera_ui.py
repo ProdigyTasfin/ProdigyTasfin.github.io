@@ -45,6 +45,25 @@ def run():
                         image.scroll_into_view_if_needed()
                         q.wait_for_function('(src)=>{const image=[...document.images].find(i=>i.getAttribute("src")===src); return image?.complete && image.naturalWidth>0}', arg=image.get_attribute('src'))
                     assert q.locator('a[href*="play.google.com"]').count() == 0
+                for route in routes[1:]:
+                    q.set_viewport_size({'width':1440,'height':900})
+                    q.goto(origin + route)
+                    contents = q.locator('[data-policy-contents]')
+                    assert contents.get_attribute('open') is not None
+                    assert contents.locator('a').count() == q.locator('.policy-section').count()
+                    contents.locator('a').last.click()
+                    q.wait_for_function("[...document.querySelectorAll('.policy-contents a')].at(-1).getAttribute('aria-current') === 'location'")
+                    q.set_viewport_size({'width':390,'height':900})
+                    q.wait_for_function("!document.querySelector('[data-policy-contents]').open")
+                    contents.locator('summary').click()
+                    assert contents.locator('a').first.is_visible()
+                context.grant_permissions(['clipboard-read', 'clipboard-write'])
+                q.goto(origin + '/salvera/support.html')
+                q.locator('[data-copy-email]').click()
+                assert q.evaluate('navigator.clipboard.readText()') == 'support@nextflow-apps.com'
+                assert q.locator('[data-copy-status]').inner_text() == 'Email address copied.'
+                q.locator('.support-topics a[href="#reminders"]').click()
+                assert q.url.endswith('#reminders')
                 q.goto(origin)
                 assert q.locator('.product-card').count() == 4
                 q.locator('#product-salvera').scroll_into_view_if_needed()
