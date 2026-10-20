@@ -55,8 +55,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 88px;
+      scroll-behavior: smooth
     }
 
     [hidden] {
@@ -448,9 +447,16 @@
       transition: color .2s ease, border-color .2s ease
     }
 
-    .policy-contents a:hover {
+    .policy-contents a:hover,
+    .policy-contents a:focus-visible {
       color: var(--text);
       border-bottom-color: var(--line-strong)
+    }
+
+    .policy-contents a[aria-current="location"] {
+      color: var(--nf-text);
+      font-weight: 650;
+      border-bottom-color: var(--nf-text)
     }
 
     .policy-help {
@@ -503,8 +509,7 @@
     .policy-section {
       padding-bottom: 2rem;
       margin-bottom: 2rem;
-      border-bottom: 1px solid var(--line);
-      scroll-margin-top: 96px
+      border-bottom: 1px solid var(--line)
     }
 
     .policy-section:last-of-type {
@@ -825,7 +830,7 @@
     <div class="container policy-layout">
 
       <aside class="policy-sidebar" aria-label="Page navigation">
-        <details class="policy-contents" data-policy-contents>
+        <details class="policy-contents" data-policy-contents open>
           <summary>On this page</summary>
           <ol>
             <li><a href="#request">Request account and data deletion</a></li>
@@ -833,7 +838,7 @@
             <li><a href="#local">Device-local records</a></li>
             <li><a href="#cloud">Cloud records and caregiver access</a></li>
             <li><a href="#retention">Retention, backups and confirmation</a></li>
-            <li><a href="#help">Need assistance?</a></li>
+            <li><a href="#help" aria-current="location">Need assistance?</a></li>
           </ol>
         </details>
 
@@ -940,7 +945,7 @@
         </nav>
         <nav class="footer-col" aria-label="Support and legal">
           <h4>Salvera help</h4>
-          <ul><li><a href="/salvera/support.html">Salvera Support</a></li><li><a href="/salvera/privacy-policy.html">Salvera Privacy</a></li><li><a href="/salvera/terms.html">Salvera Terms</a></li><li><a href="/salvera/data-deletion.html">Account and Data Deletion</a></li><li><a href="/refund-policy.html">Refund Policy</a></li></ul>
+          <ul><li><a href="/salvera/support.html">Salvera Support</a></li><li><a href="/salvera/privacy-policy.html">Salvera Privacy</a></li><li><a href="/salvera/terms.html">Salvera Terms</a></li><li><a href="/salvera/data-deletion.html" aria-current="page">Account and Data Deletion</a></li><li><a href="/refund-policy.html">Refund Policy</a></li></ul>
         </nav>
         <nav class="footer-col" aria-label="Connect">
           <h4>Connect</h4>
