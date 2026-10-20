@@ -416,6 +416,78 @@
       font-weight: 600;
     }
 
+    .product-bar {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .product-identity {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .product-identity img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .product-identity span {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .product-identity strong {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .product-identity small {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .product-subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .product-subnav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .product-subnav a:hover,
+    .product-subnav a:focus-visible {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    .product-subnav a[aria-current="page"] {
+      background: var(--nf-text);
+      color: var(--nf-card);
+      border-color: var(--nf-text);
+    }
+
     .section {
       padding: 64px 0;
       border-top: 1px solid var(--line)
@@ -650,27 +722,13 @@
       animation: fadeInUp .65s ease forwards
     }
 
-    .delay-1 {
-      animation-delay: .1s
-    }
-    .delay-2 {
-      animation-delay: .2s
-    }
-    .delay-3 {
-      animation-delay: .3s
-    }
-    .delay-4 {
-      animation-delay: .4s
-    }
-    .delay-5 {
-      animation-delay: .5s
-    }
-    .delay-6 {
-      animation-delay: .6s
-    }
-    .delay-7 {
-      animation-delay: .7s
-    }
+    .delay-1 { animation-delay: .1s }
+    .delay-2 { animation-delay: .2s }
+    .delay-3 { animation-delay: .3s }
+    .delay-4 { animation-delay: .4s }
+    .delay-5 { animation-delay: .5s }
+    .delay-6 { animation-delay: .6s }
+    .delay-7 { animation-delay: .7s }
 
     @keyframes fadeInUp {
       from {
@@ -774,6 +832,12 @@
       .footer-bottom {
         flex-direction: column
       }
+
+      .product-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -849,6 +913,23 @@
         <li aria-current="page">Salvera</li>
       </ol>
     </nav>
+
+    <div class="container product-bar">
+      <a class="product-identity" href="/salvera/" aria-label="Salvera overview">
+        <img src="/assets/salvera/logo-96.png" alt="" width="40" height="40" />
+        <span>
+          <strong>Salvera</strong>
+          <small>Medication &amp; care</small>
+        </span>
+      </a>
+      <nav class="product-subnav" aria-label="Salvera information">
+        <a href="/salvera/" aria-current="page">Overview</a>
+        <a href="/salvera/support.html">Support</a>
+        <a href="/salvera/privacy-policy.html">Privacy</a>
+        <a href="/salvera/terms.html">Terms</a>
+        <a href="/salvera/data-deletion.html">Account deletion</a>
+      </nav>
+    </div>
 
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
@@ -1093,53 +1174,9 @@
     </div>
   </footer>
 
-  <script>
-    (() => {
-      const toggle = document.querySelector('.menu-toggle');
-      const links = document.querySelector('.nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', () => {
-          const open = links.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(open));
-          toggle.textContent = open ? 'Close' : 'Menu';
-        });
-
-        links.querySelectorAll('a').forEach(a => {
-          a.addEventListener('click', () => {
-            links.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.textContent = 'Menu';
-          });
-        });
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && links.classList.contains('is-open')) {
-            links.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.textContent = 'Menu';
-            toggle.focus();
-          }
-        });
-
-        document.addEventListener('click', (e) => {
-          if (!e.target.closest('.nav') && links.classList.contains('is-open')) {
-            links.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.textContent = 'Menu';
-          }
-        });
-      }
-
-      document.querySelectorAll('[data-year]').forEach(el => {
-        el.textContent = new Date().getFullYear() || '2026';
-      });
-    })();
-  </script>
-
   <script src="/assets/js/site-ui.js" defer></script>
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/premium.js" defer></script>
   <script src="/assets/js/acquisition.js" defer></script>
-  <script src="/assets/js/product-pages.js" defer></script>
 </body>
 </html>
