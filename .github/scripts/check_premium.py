@@ -36,6 +36,19 @@ def run():
                         assert q.locator('html').get_attribute('data-theme') == theme, file
                         assert q.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'{file}: {width}px {theme} overflow'
                         assert q.locator('.brand-mark img').first.get_attribute('src') == 'https://play-lh.googleusercontent.com/6WnXZqXM-VVJLyX_THGoTLeQNs9bMKT9j6-U01e1HbqCGkWukRmtyoFuRF9AQxxjdQ=s188-rw', 'Official brand logo must be preserved'
+                        for mark in q.locator('.brand-mark').all():
+                            geometry = mark.evaluate("""el => {
+                                const image = el.querySelector('img');
+                                const box = el.getBoundingClientRect();
+                                const icon = image.getBoundingClientRect();
+                                return {width: box.width, height: box.height, imageWidth: icon.width,
+                                  imageHeight: icon.height, radius: parseFloat(getComputedStyle(el).borderRadius),
+                                  overflow: getComputedStyle(el).overflow};
+                            }""")
+                            assert abs(geometry['width'] - geometry['height']) < 1, (file, geometry)
+                            assert abs(geometry['width'] - geometry['imageWidth']) < 1, (file, geometry)
+                            assert abs(geometry['height'] - geometry['imageHeight']) < 1, (file, geometry)
+                            assert geometry['radius'] >= 8 and geometry['overflow'] == 'hidden', (file, geometry)
                         if width == 320:
                             q.locator('.menu-toggle').click()
                             assert q.locator('.nav-links').is_visible()

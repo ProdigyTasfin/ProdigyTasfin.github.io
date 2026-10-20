@@ -61,7 +61,21 @@ svg { flex-shrink: 0; }
 }
 .nav { min-height: 76px; gap: 16px; }
 .brand { font-size: 15px; letter-spacing: -.035em; flex-shrink: 0; }
-.brand-mark { border-radius: 10px; background: var(--nf-text); }
+.brand-mark {
+  display: block;
+  width: 32px; height: 32px; flex: 0 0 32px;
+  border-radius: 10px; overflow: hidden; isolation: isolate;
+  background: var(--nf-text);
+}
+.site-header .brand-mark img, .site-footer .brand-mark img {
+  display: block; width: 100%; height: 100%;
+  object-fit: contain; border-radius: inherit;
+}
+.visual .visual-icon { object-fit: contain; }
+.app-policy-links .app-icon {
+  display: block; width: 32px; height: 32px; flex: 0 0 32px;
+  object-fit: contain; border-radius: 9px;
+}
 .nav-links { margin-left: auto; gap: 2px; }
 .nav-links a { font-size: 13px; font-weight: 550; padding-inline: 10px; border-radius: 10px; }
 .nav-links a:hover, .nav-links a[aria-current] { color: var(--nf-accent); background: var(--nf-accent-soft); }
@@ -102,7 +116,7 @@ h1 { font-weight: 600; }
 }
 .product-card { padding: 28px; }
 .product-kicker { color: var(--nf-accent); letter-spacing: .12em; }
-.product-header .app-logo { width: 52px; height: 52px; border-radius: 14px; }
+.product-header .app-logo { display: block; width: 52px; height: 52px; flex: 0 0 52px; border-radius: 14px; object-fit: contain; }
 .product-name { font-size: 23px; font-weight: 600; }
 .product-desc { color: var(--nf-secondary); }
 .product-card:hover, .article-card:hover { border-color: var(--nf-line-strong); box-shadow: 0 22px 65px -35px rgba(19,52,32,.35); }
@@ -206,7 +220,7 @@ body:has(.mobile-cta.visible) .back-to-top { bottom: 100px; }
 @media (max-width: 480px) {
   .nav { min-height: 72px; gap: 8px; }
   .brand { font-size: 13px; gap: 7px; }
-  .brand-mark { width: 28px; height: 28px; }
+  .brand-mark { width: 28px; height: 28px; flex-basis: 28px; border-radius: 9px; }
   .menu-toggle { padding: 7px 9px; min-height: 40px; }
   .theme-menu summary { width: 40px; min-height: 40px; }
   .nav-tools { gap: 6px; }

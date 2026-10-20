@@ -82,7 +82,7 @@ def run():
                 native.goto(f'{origin}/{relative}')
                 assert native.locator('.nav-links').is_visible(), f'{relative}: no-JS navigation missing'
                 assert native.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'{relative}: no-JS overflow'
-                faq = native.locator('main details:not(.table-of-contents)')
+                faq = native.locator('.faq details')
                 if faq.count():
                     faq.first.locator('summary').click()
                     assert faq.first.evaluate('(el) => el.open'), relative
