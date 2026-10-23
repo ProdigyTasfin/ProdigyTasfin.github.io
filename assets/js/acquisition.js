@@ -2,7 +2,7 @@
 (() => {
   if (window.NextFlowAnalytics) return;
   const events = [];
-  const validNames = new Set(['acquisition_page_view', 'app_cta_view', 'article_app_cta_click', 'article_product_click', 'product_google_play_click', 'pricing_interest_click', 'november_reset_cta_click']);
+  const validNames = new Set(['acquisition_page_view', 'app_cta_view', 'article_app_cta_click', 'article_product_click', 'product_guide_click', 'product_google_play_click', 'pricing_interest_click', 'november_reset_cta_click']);
   const appKeys = new Set(['hushflow', 'noctra', 'temvica']);
   const canonical = document.querySelector('link[rel="canonical"]')?.href;
   const pagePath = canonical ? new URL(canonical).pathname : null;
@@ -18,7 +18,7 @@
       ...(slug ? { article_slug: slug } : {}),
       ...(detail.cta_location ? { cta_location: String(detail.cta_location).slice(0, 40) } : {}),
       ...(validNames.has(detail.cta_action) ? { cta_action: detail.cta_action } : {}),
-      ...(detail.destination === 'google_play' || detail.destination === 'product' || detail.destination === 'campaign' ? { destination: detail.destination } : {}) });
+      ...(detail.destination === 'google_play' || detail.destination === 'product' || detail.destination === 'campaign' || detail.destination === 'guide' ? { destination: detail.destination } : {}) });
     events.push(event); if (events.length > 100) events.shift();
     window.dispatchEvent(new CustomEvent('nextflow:analytics', { detail: event }));
     if (permitted() && adapter) { try { adapter(event); } catch (_) { /* Measurement must never block navigation. */ } }
@@ -40,7 +40,7 @@
     clicked.add(link);
     const target = new URL(link.href, location.href);
     record(link.dataset.event, { app: link.dataset.app, cta_location: link.dataset.ctaLocation || 'body',
-      destination: target.hostname === 'play.google.com' ? 'google_play' : target.pathname === '/noctra/november-reset/' ? 'campaign' : 'product' });
+      destination: target.hostname === 'play.google.com' ? 'google_play' : target.pathname === '/noctra/november-reset/' ? 'campaign' : target.pathname.startsWith('/articles/') ? 'guide' : 'product' });
   });
   // Auxclick covers opening the same links with the mouse's middle button.
   document.addEventListener('auxclick', (event) => {
@@ -50,7 +50,7 @@
     clicked.add(link);
     const target = new URL(link.href, location.href);
     record(link.dataset.event, { app: link.dataset.app, cta_location: link.dataset.ctaLocation || 'body',
-      destination: target.hostname === 'play.google.com' ? 'google_play' : target.pathname === '/noctra/november-reset/' ? 'campaign' : 'product' });
+      destination: target.hostname === 'play.google.com' ? 'google_play' : target.pathname === '/noctra/november-reset/' ? 'campaign' : target.pathname.startsWith('/articles/') ? 'guide' : 'product' });
   });
   if ('IntersectionObserver' in window) {
     const seen = new WeakSet();

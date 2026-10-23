@@ -290,3 +290,29 @@ body:has(.mobile-cta.visible) .back-to-top { bottom: 100px; }
   .page-product .hero .lead { font-size: 16px; }
   .page-guide .article-hero img { max-height: 360px; }
 }
+/* Editorial answers and campaign information share the existing visual tokens. */
+.answer-links { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 20px; }
+.answer-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--nf-line-strong); border-radius: 10px; background: var(--nf-card); color: var(--nf-accent); font-size: 12px; font-weight: 600; text-underline-offset: 3px; }
+.answer-links a:hover { background: var(--nf-accent-soft); }
+.campaign-notice { color: var(--nf-secondary); font-size: 13px; line-height: 1.7; }
+.hero-copy > .campaign-notice { max-width: 52ch; margin-top: 14px; }
+.article-content > .campaign-notice { padding: 20px; margin-bottom: 24px; border: 1px solid var(--nf-line-strong); border-radius: 16px; background: var(--nf-surface); }
+.campaign-notice strong, .campaign-notice span { display: block; }
+.campaign-notice p { margin-block: 8px 0; }
+.campaign-summary { display: flex; align-items: center; gap: 32px; padding: 28px; border: 1px solid var(--nf-line-strong); border-radius: 20px; background: var(--nf-card); }
+.campaign-summary > div { flex: 1; min-width: 0; }
+.campaign-summary > .btn { flex-shrink: 0; }
+.campaign-summary h3 { font-size: 22px; }
+.campaign-summary p { max-width: 65ch; }
+.setup-help { max-width: 72ch; margin-top: 28px; color: var(--nf-secondary); }
+.setup-help a { color: var(--nf-accent); text-underline-offset: 4px; }
+.video-shell .video-load { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; text-decoration: none; background: #12291e; color: #edf5ed; }
+.video-load .video-play-icon { display: grid; place-items: center; width: 64px; height: 64px; padding-left: 3px; border: 1px solid #7c9986; border-radius: 50%; color: #b3e2c2; font-size: 23px; }
+.video-load strong { font-size: clamp(16px, 2vw, 24px); }
+.video-load small { color: #c0d3c4; font-size: 12px; }
+.video-load:hover .video-play-icon { background: #203c2b; }
+.video-load:focus-visible { outline-color: #b3e2c2; outline-offset: -6px; }
+@media (max-width: 760px) {
+  .campaign-summary { flex-direction: column; align-items: stretch; gap: 16px; padding: 22px; }
+  .answer-links a { flex-grow: 1; justify-content: center; }
+}

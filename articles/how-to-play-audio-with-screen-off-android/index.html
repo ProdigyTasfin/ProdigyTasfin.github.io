@@ -9,7 +9,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <meta name="theme-color" content="#ffffff" />
   <meta name="color-scheme" content="light dark" />
@@ -54,7 +54,7 @@
     "https://nextflow-apps.com/assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-1440.webp"
   ],
   "datePublished": "2026-07-12",
-  "dateModified": "2026-10-07",
+  "dateModified": "2026-10-23",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://nextflow-apps.com/articles/how-to-play-audio-with-screen-off-android/"
@@ -1039,7 +1039,7 @@
             <div class="article-meta">
               <span>By <a href="/#team" rel="author">NextFlow Apps</a></span>
               <time datetime="2026-07-12">Published Jul 12, 2026</time>
-              <time datetime="2026-10-07">Updated October 7, 2026</time>
+              <time datetime="2026-10-23">Updated October 23, 2026</time>
               <span>6 min read</span>
             </div>
           </header>
@@ -1055,16 +1055,15 @@
           <article class="article-content">
 
             <!-- Introduction -->
-            <section id="introduction">
-              <p>Android can play music while the screen is off when the audio app supports background playback. Start playing the audio, confirm that media controls appear in the notification area, and then lock the phone. If playback stops, battery optimization, background activity, or manufacturer restrictions may be blocking the app.</p>
-            </section>
+            <section id="introduction"><p><strong>To keep music playing when your Android screen turns off, start audio in an app that supports background playback, then lock the phone.</strong> If it stops, check that app’s background battery settings first. A powered-off phone cannot play audio.</p><p class="source-note">Prefer a player built around background audio? <a href="/hushflow/" data-event="article_product_click" data-app="hushflow" data-cta-location="answer">Explore HushFlow’s screen-off playback and sleep timer</a>. NextFlow Apps develops HushFlow; the troubleshooting steps below also apply to other supported players.</p>
+<nav class="answer-links" aria-label="Quick playback help"><a href="#why-music-stops">Music stops when locked</a><a href="#device-specific-fixes">Samsung and other phones</a><a href="/articles/how-to-use-a-music-sleep-timer-on-android/">Set a sleep timer</a></nav></section>
 <figure class="article-hero">
             <img
               src="/assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-1440.webp"
               width="1440"
               height="760"
               alt="Android phone playing music with the screen locked beside a pair of headphones"
-              decoding="async" srcset="/assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-480.webp 480w, /assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-960.webp 960w, /assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-1440.webp 1440w" sizes="(max-width: 1024px) calc(100vw - 32px), 760px" loading="lazy" />
+              decoding="async" srcset="/assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-480.webp 480w, /assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-960.webp 960w, /assets/responsive/assets-articles-how-to-play-audio-with-screen-off-android-audio-playing-screen-off-android-1440.webp 1440w" sizes="(max-width: 1024px) calc(100vw - 32px), 760px" loading="eager" fetchpriority="high" />
             <figcaption>Android can continue supported music and podcast playback after the screen is locked.</figcaption>
           </figure>
 
@@ -1158,7 +1157,7 @@
               <h2>How to Allow Background Music on Different Android Phones</h2>
               <p>Menu names can vary by Android version and manufacturer skin. Below are common paths for popular brands.</p>
 
-              <h3>Samsung Galaxy</h3>
+              <h3 id="samsung-background-playback">Samsung Galaxy: music stops when the screen locks</h3>
               <ol>
                 <li>Open Settings.</li>
                 <li>Go to Apps.</li>
@@ -1166,8 +1165,8 @@
                 <li>Tap Battery.</li>
                 <li>Select Unrestricted.</li>
               </ol>
-              <p>Also check: Settings → Battery → Background usage limits → Never sleeping apps. Add the audio app to the list.</p>
-              <p><em>Note: Names may vary across One UI versions.</em></p>
+              <p>Search Settings for <strong>Sleeping apps</strong>. Remove the player from both Sleeping apps and Deep sleeping apps if it appears there. On supported One UI versions, you can also add it to Never sleeping apps. Change only the affected player’s settings, then test again; unrestricted background use can increase battery consumption.</p>
+              <p class="source-note">Samsung documents these checks in its <a href="https://www.samsung.com/us/support/troubleshoot/TSG10001337/" target="_blank" rel="noopener noreferrer">guide to audio stopping on Galaxy devices</a>. Names vary across One UI versions.</p>
 
               <h3>Xiaomi and Redmi</h3>
               <ol>
@@ -1189,7 +1188,7 @@
                 <li>Open App battery usage.</li>
                 <li>Allow background usage.</li>
               </ol>
-              <p><em>Note: The exact wording may differ by Android version.</em></p>
+              <p class="source-note">Google explains the <a href="https://support.google.com/pixelphone/answer/6090599?hl=en" target="_blank" rel="noopener noreferrer">Pixel background battery controls</a>. Keep normal optimization enabled for other apps; wording varies by Android version.</p>
 
               <h3>Motorola</h3>
               <p>Motorola devices often use near‑stock Android with a few Moto additions:</p>
@@ -1281,7 +1280,8 @@
             <!-- Troubleshooting Checklist -->
             <section id="troubleshooting-checklist">
               <h2>Screen-Off Audio Troubleshooting Checklist</h2>
-              <ol class="checklist">
+              <p><strong>Isolate the cause:</strong> test one track for two minutes with the screen locked, then try a second supported source. If permitted downloaded audio works but streaming stops, check the network or Data Saver. If both stop, review the player’s battery and background settings.</p>
+<ol class="checklist">
                 <li>Confirm the app supports background playback.</li>
                 <li>Start playback before locking the phone.</li>
                 <li>Allow notifications.</li>

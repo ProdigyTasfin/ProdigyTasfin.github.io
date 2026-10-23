@@ -12,6 +12,7 @@ There is **no configured collector or aggregate dashboard**. This is a working i
 | `app_cta_view` | An instrumented anchor is at least 50% visible, once per anchor per page | `app`, `cta_location`, `cta_action` identifying the corresponding click event |
 | `article_app_cta_click` | An article's Play action | App, canonical article path/slug, mid/end/body location, destination |
 | `article_product_click` | A guide's relevant product-page link | Same context, destination `product` |
+| `product_guide_click` | Product-page help or campaign-guide link | App, product path, placement, destination `guide` |
 | `product_google_play_click` | A product's Play link | App, product path, hero/body/product-visual location |
 | `pricing_interest_click` | Free/Premium comparison link | App, source page and location |
 | `november_reset_cta_click` | November campaign discovery or its Play action | Noctra, source page, location, destination `campaign` or `google_play` |
@@ -58,4 +59,4 @@ If consent is granted after initial page/anchor impressions, those impressions a
 
 The current payload does **not** classify organic traffic: no referrer or campaign information is captured. Website click totals therefore cover all measured acquisition sources. Compare them with Search Console separately. A future consent-approved source classification may be added only with a defined minimal payload and privacy update; do not label all website Play clicks “organic installs.”
 
-Google Play destinations are centralized in `content/acquisition.json`, and the sync/check scripts keep static links consistent. The Android repositories and Install Referrer support were not supplied, so no attribution capability or referrer parameter has been invented here.
+Google Play destinations are documented in `content/acquisition.json`; maintain their matching static links directly in HTML. The Python sync/check scripts were removed at the owner’s request. The Android repositories and Install Referrer support were not supplied, so no attribution capability or referrer parameter has been invented here.
