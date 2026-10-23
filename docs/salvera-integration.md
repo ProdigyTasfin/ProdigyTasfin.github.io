@@ -1,5 +1,8 @@
 # Salvera website integration — October 18, 2026
 
+> Maintenance update — October 23, 2026: the Python scripts and custom Site checks workflow referenced below were removed at the owner’s request. Validation results below are historical. Edit static HTML and catalogs directly; see README.md for current preview and deployment instructions.
+
+
 ## Result and authorization
 
 Salvera is integrated locally as the fourth NextFlow Apps product. The current NextFlow palette, Inter typography, CSS tokens, corporate logo, existing product icons, theme behavior and navigation patterns remain. No new framework or Salvera-specific color theme was introduced.
@@ -118,7 +121,7 @@ The mandatory repository image `Minimal Red Heartcare Triangle Icon.png` is pres
 - All 31 rendered pages now expose Salvera in their shared primary navigation and four-product footers. Header behavior remains responsive and keyboard-accessible.
 - All Salvera pages provide a five-link information menu near the top. Their footers also link directly to Salvera support, privacy, terms and account deletion, while retaining company legal references.
 - Homepage finder includes a real Family care action and the official Salvera image; it updates the recommendation, link and app attribute correctly.
-- `content/products.json` owns the four-product inventory. `sync_products.py` keeps crawlable navigation and homepage ItemList schema synchronized. The three-app acquisition catalog continues to represent only apps with verified Play destinations.
+- `content/products.json` owns the four-product inventory. Navigation and homepage ItemList schema were originally synchronized with `sync_products.py`; maintain those HTML entries directly now. The three-app acquisition catalog continues to represent only apps with verified Play destinations.
 - `assets/css/product-pages.css` contains layout rules using existing tokens and patterns. It does not define a new color palette, introduce a new font or replace theme behavior.
 
 ## 6. Policy, support and partnership changes

@@ -2,7 +2,7 @@
 
 ## Hosting verification
 
-The repository remains a plain static GitHub Pages site. Merging the reviewed branch into `main` is the deployment trigger; passing Site checks is separate from a successful Pages deployment. Preserve the existing custom domain, `.nojekyll`, verification HTML, `app-ads.txt` and Android asset associations.
+The repository remains a plain static GitHub Pages site. Merging the reviewed branch into `main` is the deployment trigger; the custom Site checks workflow has been removed, so confirm success in the managed pages build and deployment run. Preserve the existing custom domain, `.nojekyll`, verification HTML, `app-ads.txt` and Android asset associations.
 
 GitHub Pages does not support arbitrary repository `.htaccess` or `_redirects` rules. The two aliases in `content/redirects.json` use zero-second meta refresh, a canonical link to the established article, `noindex, follow`, and a useful fallback link. Google documents an [immediate meta refresh as a permanent redirect signal](https://developers.google.com/search/docs/crawling-indexing/301-redirects). The static file still returns HTTP 200; this implementation is **not an HTTP 301/308**. If actual server responses are required for those aliases, use a configured edge/hosting redirect service, with each alias pointing directly to the established URL and no chain.
 
@@ -20,12 +20,12 @@ Verify response codes and Location headers for:
 | A genuinely missing nested route | HTTP 404 with the custom recovery page, noindex, no canonical |
 | Canonical screen-off, sleep, Noctra and campaign URLs | HTTP 200, correct canonical, no noindex |
 
-A normal local Python server automatically redirects directory slash variants, and the browser tests simulate GitHub Pages' custom 404 serving. These checks exercise the code; they do not prove production hosting response headers. Use browser Network tools or `curl -I` / `curl -IL --max-redirs 5` against deployed URLs to verify the actual hosting configuration. If `www` is not configured, inspect DNS before enabling it. Keep every indexable internal link on the canonical host/path.
+Local static-server previews do not prove production hosting response headers. Use browser Network tools or `curl -I` / `curl -IL --max-redirs 5` against deployed URLs to verify the actual hosting configuration. If `www` is not configured, inspect DNS before enabling it. Keep every indexable internal link on the canonical host/path.
 
 ## Search Console actions after successful deployment
 
 1. Save an export of the **same supplied baseline period**, if available, including page/query, device, country, search type and average position. The original date range was not provided; record the actual deployment date separately.
-2. Re-submit or revalidate `https://nextflow-apps.com/sitemap.xml` in the existing domain property. It contains the same 25 canonical indexable pages, no aliases or 404, with October 7 lastmod only for the materially updated home, library, nine guides, products, campaign and website privacy content.
+2. Re-submit or revalidate `https://nextflow-apps.com/sitemap.xml` in the existing domain property. Keep the sitemap aligned with the current canonical indexable pages; exclude aliases and the 404 page, and change lastmod only for materially updated content.
 3. Inspect and test the live screen-off URL, sleep-timer guide, HushFlow, NNN pillar, November Reset, Noctra and both Temvica guides/product. Confirm fetch success, rendered answer/CTA, self-canonical and crawlable CSS/JS. Request indexing for materially updated priorities after the live test succeeds; avoid repeated requests for unchanged legal pages.
 4. Inspect the two typo URLs, non-slash screen-off URL, HTTP sleep/study URLs and `www` if relevant. Compare user-declared with Google-selected canonical. The selected canonical should converge on the established HTTPS URL; do not request indexing of aliases as new content.
 5. Monitor Page indexing and duplicate/canonical exclusions. “Page with redirect” and consolidation exclusions can be expected for aliases; investigate any canonical product/article that becomes noindex, soft-404, blocked or chooses another canonical. There is no need to use the removals tool merely to consolidate normal aliases.
