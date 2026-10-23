@@ -1,5 +1,8 @@
 # Organic acquisition implementation — October 7, 2026
 
+> Maintenance update — October 23, 2026: the Python scripts and custom Site checks workflow referenced below were removed at the owner’s request. Validation results below are historical. Edit static HTML and catalogs directly; see README.md for current preview and deployment instructions.
+
+
 The implementation keeps the static GitHub Pages architecture and the existing premium palette, navigation, themes, search, saves and reading tools. It strengthens the path from a useful answer to the matching Android app. The supplied search evidence prioritizes screen-off audio/HushFlow, then sleep timers, the November/evergreen Noctra cluster, and Temvica.
 
 ## A. SEO issues discovered
