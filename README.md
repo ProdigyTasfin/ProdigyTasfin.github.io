@@ -35,6 +35,8 @@ Salvera is presented as in development. Public download, backend deletion and ap
 
 ## Organic acquisition maintenance
 
+See the [October 23 SEO implementation and measurement report](docs/seo-organic-growth-2026-10.md) for the current campaign behavior, file changes, validation evidence and the latest supplied Search Console baseline.
+
 The site remains static and crawlable without JavaScript. `content/acquisition.json` documents app package/Play URLs, one primary app per guide and contextual CTA copy. Edit the published HTML directly, including any previously generated fragments; no generator runs at deployment. Keep catalog relationships and corresponding product links, article-library cards, JSON-LD and CTAs consistent when editing them.
 
 For a new guide, add its catalog relationship, relevant product links, library card, sitemap entry and real authored metadata/date. Preserve existing canonical URLs and use descriptive app-specific actions.
