@@ -399,16 +399,51 @@
 
       <section class="policy-section">
         <h2>2. Information We Collect</h2>
-        <p>HushFlow collects minimal information to provide and improve our service. Most data stays <strong>locally on your device</strong>.</p>
+        <p>HushFlow collects minimal information to provide and improve our service. Most data stays <strong>locally on your device</strong>. Some optional features, such as listening-history synchronization, upload eligible data only after you give explicit consent.</p>
         <p>We may collect the following types of information:</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">a) Information stored locally on your device</h3>
+        <ul>
+          <li><strong>Audio Preferences:</strong> Your equalizer presets, playlist names, and sleep timer settings – all stored locally on your device.</li>
+          <li><strong>Playback history:</strong> Your listening history is stored locally by default. It is only uploaded if you explicitly enable optional synchronization (see Section 2(c)).</li>
+          <li><strong>App preferences and settings:</strong> Theme choices, feature toggles, and other customisations.</li>
+        </ul>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">b) Product analytics and private founder metrics (server-side)</h3>
+        <p>HushFlow transmits limited analytics to our server infrastructure. This helps us understand whether the app works correctly and how users interact with important features. We also use private, internal metrics to run our business.</p>
+        <p>Examples of analytics events include:</p>
+        <ul>
+          <li>Basic interaction events and feature usage</li>
+          <li>Onboarding completion and onboarding choices</li>
+          <li>Playback requested / playback started</li>
+          <li>Background and screen-off playback usage</li>
+          <li>Premium/paywall views and entry sources</li>
+          <li>Signup completion</li>
+          <li>Session and retention milestones</li>
+          <li>Selected onboarding goals</li>
+          <li>Purchase/entitlement-related status where necessary</li>
+        </ul>
+        <p>Our playback analytics are designed not to send sensitive media information. Playback analytics do not contain YouTube or video URLs, signed streaming URLs, video IDs, song titles, artist names, creator names, or search queries.</p>
+        <p>Most analytics events use an app-generated installation identifier so events from the same installation can be associated for analytics and reliability purposes. This identifier is pseudonymous and is not linked to your real-world identity. Where you sign in and enable an account-linked feature, eligible records may also be associated with your account, as described below.</p>
+        <p><strong>Private founder analytics:</strong> We use aggregated and account-level metrics for our own internal product and business analysis. These metrics may include monthly listening hours, the number of listening sessions, the number of active listeners, and country information already associated with an account (for example, the country associated with the account or its store region). Founder analytics are private and internal: they are not published, sold, or shared with advertisers. We do not enable city- or region-level location tracking.</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">c) Optional listening-history synchronization</h3>
+        <p>HushFlow offers an optional feature that synchronizes eligible listening information for signed-in users across their devices. It is <strong>disabled by default</strong>, and no eligible listening data is uploaded unless you give explicit consent in the app.</p>
+        <p>Where you enable it, the information transmitted may include listening sessions, session duration, timestamps, content classifications (for example, the type or category of content played), and app-generated identifiers, together with an association to your account if you are signed in. The synchronization payload is designed not to include YouTube or video URLs, signed streaming URLs, video IDs, song titles, artist names, creator names, or search queries. We do not collect city- or region-level location data for this feature.</p>
+        <p><strong>Guest use and account linkage:</strong> If you use HushFlow without signing in, records are associated with an app-generated installation identifier rather than an account, and account-based synchronization is not available. If you sign in and enable synchronization, eligible records may be linked to your account so they can be restored on your other devices.</p>
+        <p><strong>Withdrawing consent:</strong> You can withdraw synchronization consent at any time in the app's settings. Withdrawing consent stops future uploads. Data already stored may remain until it is deleted as described in Sections 7 and 8.</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">d) Information from Google Sign-In</h3>
+        <p>HushFlow supports optional Google Sign-In. When you sign in, we may receive limited account information made available through the authentication flow, which may include your Google account identifier, email address, display name, and profile information where provided.</p>
+        <p>We <strong>do not</strong> receive or store your Google password. This information is used for legitimate app functionality including creating and managing your account, associating your account with Premium/Lifetime entitlements, restoring eligible purchases and features, providing optional account-based features you enable (such as listening-history synchronization), customer support, preventing abuse or fraud, security, and service operation and improvement where appropriate.</p>
+
+        <h3 style="font-size:1.1rem;font-weight:600;margin:1rem 0 .25rem">e) Other information</h3>
         <ul>
           <li><strong>Device Information:</strong> Device model, Android version, screen resolution, and system language – used for compatibility and crash analysis.</li>
-          <li><strong>App Usage Data:</strong> Basic interaction events (e.g., which features are used) to help us understand usage patterns and improve the app.</li>
           <li><strong>Crash Reports:</strong> Diagnostic data, stack traces, and device state at the time of a crash – to fix bugs and improve stability.</li>
-          <li><strong>Subscription Status:</strong> Premium or Lifetime purchase status (via Google Play Billing) – used only to unlock features.</li>
-          <li><strong>Audio Preferences:</strong> Your equalizer presets, playlist names, and sleep timer settings – all stored locally on your device.</li>
+          <li><strong>Subscription Status:</strong> Premium or Lifetime purchase status (via Google Play Billing) – used only to unlock features and verify entitlement.</li>
         </ul>
-        <p>We do <strong>not</strong> collect personally identifiable information (PII) such as your name, email, or payment details.</p>
+        <p>We do <strong>not</strong> collect payment card details, CVV, Google passwords, or other sensitive payment credentials. We also do not collect personally identifiable information such as your name, email address, home address, or phone number unless you voluntarily provide it by signing in with Google or contacting us via email.</p>
       </section>
 
       <section class="policy-section">
@@ -416,10 +451,13 @@
         <p>We use the information we collect for the following purposes:</p>
         <ul>
           <li><strong>To provide and maintain the App:</strong> Ensure core functionality like background playback, queue management, and sleep timer works correctly.</li>
+          <li><strong>To provide optional features you enable:</strong> Such as listening-history synchronization, which only operates after you give explicit consent.</li>
           <li><strong>To improve user experience:</strong> Understand which features are most used, and optimise performance.</li>
           <li><strong>To process subscriptions:</strong> Verify Premium status via Google Play Billing.</li>
           <li><strong>To display advertisements:</strong> In the free version, we may show rewarded ads via third-party networks. These ads may use device identifiers to serve relevant content.</li>
+          <li><strong>To operate optional public leaderboards:</strong> Where HushFlow offers a public leaderboard, participation requires your separate and explicit consent, and declining does not affect core app functionality.</li>
           <li><strong>To fix bugs and improve stability:</strong> Through anonymous crash reporting.</li>
+          <li><strong>To run our business:</strong> Through private, internal metrics such as monthly listening hours, session counts, active listeners, and account country already associated with an account.</li>
         </ul>
       </section>
 
@@ -428,9 +466,10 @@
         <p>We process your information based on the following legal grounds:</p>
         <ul>
           <li><strong>Legitimate Interest:</strong> To operate, improve, and secure the App, and to show relevant advertisements that fund the free version.</li>
-          <li><strong>Consent:</strong> When you grant permissions (e.g., notifications, storage) or opt-in to rewarded ads.</li>
+          <li><strong>Consent:</strong> When you grant permissions (e.g., notifications, storage), opt-in to rewarded ads, enable optional synchronization, or agree to participate in a public leaderboard.</li>
           <li><strong>Contractual Necessity:</strong> To fulfil Premium subscription purchases via Google Play.</li>
         </ul>
+        <p>You have the right to withdraw your consent at any time by disabling permissions, turning off the relevant optional feature in the app, or uninstalling the App.</p>
       </section>
 
       <section class="policy-section">
@@ -440,20 +479,26 @@
           <li><strong>Google Play Services:</strong> For distribution, billing, and authentication.</li>
           <li><strong>Google AdMob:</strong> For displaying rewarded ads in the free version. AdMob may collect device identifiers and interaction data according to their <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</li>
           <li><strong>Firebase / Crashlytics:</strong> For anonymous crash reporting and stability diagnostics.</li>
+          <li><strong>Cloudflare:</strong> HushFlow uses Cloudflare Workers and D1 as server infrastructure for analytics, consented synchronization data, and entitlement-related data. Cloudflare acts as a data processor and does not use this information for its own purposes. See the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.</li>
         </ul>
-        <p>These third parties are contractually obligated to protect your data and use it only for the purposes specified.</p>
+        <p>These third parties are contractually obligated to protect your data and use it only for the purposes specified. We do not share consented listening-synchronization data or private founder metrics with advertising services.</p>
       </section>
 
       <section class="policy-section">
         <h2>6. Data Storage and Security</h2>
-        <p>All your playback history, playlists, equalizer presets, and preferences are stored <strong>locally on your device</strong>. We do not upload this data to our servers.</p>
-        <p>We implement appropriate technical and organisational measures to protect any data that is processed through our third-party service providers. However, no method of electronic transmission or storage is 100% secure.</p>
+        <p>Your playlists, equalizer presets, preferences, and playback history are stored <strong>locally on your device</strong> by default. HushFlow's optional listening-history synchronization is disabled by default and only uploads eligible listening data after you give explicit consent. Where you enable synchronization, the transmitted information is described in Section 2(c).</p>
+        <p>We implement appropriate technical and organisational measures to protect any data that is processed through our server infrastructure and third-party service providers. However, no method of electronic transmission or storage is 100% secure.</p>
       </section>
 
       <section class="policy-section">
         <h2>7. Data Retention and Deletion</h2>
         <p>Your locally stored data remains on your device until you choose to delete it. You can clear all app data at any time via your device's Settings → Apps → HushFlow → Storage → Clear Data.</p>
-        <p>If you uninstall the App, all locally stored data will be removed from your device. Analytics and crash data retained by third-party providers are anonymised and stored only as long as necessary.</p>
+        <p>If you uninstall the App, all locally stored data will be removed from your device.</p>
+        <p><strong>Account data and account-linked data:</strong> If you sign in, account data is retained while your account is active. You may request deletion by signing out and/or contacting us at <a href="mailto:support@nextflow-apps.com">support@nextflow-apps.com</a>. Deleting your account removes associated account records and account-linked synchronization and analytics data, subject to the retention exceptions described below.</p>
+        <p><strong>Installation-level analytics:</strong> Analytics that is not linked to an account is pseudonymous and associated with an installation identifier rather than your real-world identity. We do not maintain a separate deletion mechanism for unlinked installation-level analytics at this time.</p>
+        <p><strong>Manual backups:</strong> Where you create a manual backup of your data, that backup is retained for no longer than 30 calendar days. This is separate from any recovery or backup systems operated by Cloudflare as our infrastructure provider, which are governed by Cloudflare's own retention practices.</p>
+        <p><strong>Purchase and Lifetime entitlements:</strong> Deleting your account does not automatically cancel or revoke a Lifetime entitlement. Limited purchase and entitlement records may be retained so the entitlement continues to work, to prevent fraud, to process refunds, and to meet legal or accounting obligations.</p>
+        <p>Certain records may need to be retained where required for security, fraud prevention, legal compliance, tax/accounting obligations, or legitimate record-keeping purposes. Analytics and crash data retained by third-party providers are stored only as long as necessary.</p>
       </section>
 
       <section class="policy-section">
@@ -466,8 +511,9 @@
           <li><strong>Right to Restrict Processing:</strong> Limit how we use your data.</li>
           <li><strong>Right to Data Portability:</strong> Receive your data in a structured format.</li>
           <li><strong>Right to Object:</strong> Opt-out of data processing for marketing or profiling.</li>
+          <li><strong>Right to Withdraw Consent:</strong> If we rely on your consent, you can withdraw it at any time.</li>
         </ul>
-        <p>Since we store almost no data on our servers, most of these rights can be exercised directly by clearing app data or uninstalling the App. For any data held by our third-party providers, please contact us and we will assist you.</p>
+        <p>Many of these rights can be exercised directly by clearing app data, uninstalling the App, or withdrawing synchronization consent in the app's settings. For account-linked data or data held by our third-party providers, please contact us at <a href="mailto:support@nextflow-apps.com">support@nextflow-apps.com</a> and we will assist you. We will respond within 30 days.</p>
       </section>
 
       <section class="policy-section">
@@ -477,7 +523,7 @@
 
       <section class="policy-section">
         <h2>10. Cookies and Tracking</h2>
-        <p>HushFlow does not use browser cookies or persistent tracking identifiers. However, our advertising partner (Google AdMob) may use device advertising identifiers to serve relevant ads. You can reset or opt-out of personalized ads via your Android device's settings (Google → Ads → Opt out of Ads Personalization).</p>
+        <p>HushFlow does not use browser cookies or persistent tracking identifiers. However, our advertising partner (Google AdMob) may use device advertising identifiers to serve relevant ads. We do not share consented listening-synchronization data or private founder metrics with advertising services. You can reset or opt-out of personalized ads via your Android device's settings (Google → Ads → Opt out of Ads Personalization).</p>
       </section>
 
       <section class="policy-section">
